@@ -1,7 +1,20 @@
 #!/bin/bash
 set -e
 
-groupadd -r -g $GID builders
-useradd -m builder -u $UID -g builders
+if [ "$GID" != "0" ]
+then
+    groupadd -r -g $GID builders
+    GROUP=builders
+else
+    GROUP=root
+fi
 
-exec gosu builder "$@"
+if [ "$UID" != "0" ]
+then
+    useradd -m builder -u $UID -g $GROUP
+    USER=builder
+else
+    USER=root
+fi
+
+exec gosu $USER "$@"

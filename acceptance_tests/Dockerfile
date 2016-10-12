@@ -11,8 +11,8 @@ RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" >> /etc/apt/
     apt-get install -y docker-engine=${DOCKER_VERSION}* libpq-dev && \
     pip3 install psycopg2 && \
     apt-get clean && \
-    rm -r /var/lib/apt/lists/*
-RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose && \
+    rm -r /var/lib/apt/lists/* && \
+    curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose && \
     chmod a+x /usr/bin/docker-compose
 
 COPY . /acceptance_tests/

@@ -11,9 +11,8 @@ RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y cmake flex bison 
     lighttpd locales pkg-config poppler-utils pyqt4-dev-tools python python-dev \
     python-qt4 python-qt4-dev python-qt4-sql python-sip python-sip-dev \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    git
-RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y ninja-build curl
-RUN curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" > /usr/bin/gosu && \
+    git ninja-build curl && \
+    curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" > /usr/bin/gosu && \
     chmod a+x /usr/bin/gosu
 
 
