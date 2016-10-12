@@ -66,3 +66,7 @@ acceptance: build-acceptance build
 .PHONY: acceptance-quick
 acceptance-quick: build-acceptance
 	docker run --rm -ti --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -e ACCEPTANCE_DIR=${ROOT}/acceptance -v /var/run/docker.sock:/var/run/docker.sock $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+
+.PHONY: pull
+pull:
+	for image in `find -name Dockerfile | xargs grep --no-filename FROM | awk '{print $$2}'`; do docker pull $$image; done
