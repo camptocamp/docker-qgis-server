@@ -1,3 +1,5 @@
+[![Build Status](https://ci.lb.infra.caas-camptocamp.net/buildStatus/icon?job=docker-images/docker-qgis-server/master)](https://ci.lb.infra.caas-camptocamp.net/job/docker-images/job/docker-qgis-server/job/master/)
+
 # Docker image for QGIS server
 
 ## Usage
