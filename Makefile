@@ -40,7 +40,7 @@ build-builder:
 .PHONY: build-src
 build-src: build-builder update-src
 	mkdir -p server/build server/target
-	docker run --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local $(DOCKER_BASE)-builder:$(DOCKER_TAG)
+	docker run --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
 
 .PHONY: build-server
 build-server: build-src
@@ -65,7 +65,7 @@ acceptance: build-acceptance build
 
 .PHONY: acceptance-quick
 acceptance-quick: build-acceptance
-	docker run --rm -ti --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -e ACCEPTANCE_DIR=${ROOT}/acceptance -v /var/run/docker.sock:/var/run/docker.sock $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -e ACCEPTANCE_DIR=${ROOT}/acceptance -v /var/run/docker.sock:/var/run/docker.sock $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
 
 .PHONY: pull
 pull:

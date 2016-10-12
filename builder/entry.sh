@@ -13,6 +13,7 @@ if [ "$UID" != "0" ]
 then
     useradd -m builder -u $UID -g $GROUP
     USER=builder
+    chown builder: /home/builder/.ccache
 else
     USER=root
 fi

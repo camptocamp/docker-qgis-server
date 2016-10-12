@@ -3,7 +3,7 @@ set -e
 
 cd /build
 
-#TODO: remove desktop
+export PATH=/usr/lib/ccache:$PATH
 cmake /src \
       -GNinja \
       -DQWT_INCLUDE_DIR=/usr/include/qwt \
@@ -19,3 +19,4 @@ cmake /src \
       #-DWITH_INTERNAL_QWTPOLAR=ON
 
 ninja install
+ccache -s

@@ -11,10 +11,9 @@ RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y cmake flex bison 
     lighttpd locales pkg-config poppler-utils pyqt4-dev-tools python python-dev \
     python-qt4 python-qt4-dev python-qt4-sql python-sip python-sip-dev \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    git ninja-build curl && \
+    git ninja-build curl ccache && \
     curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" > /usr/bin/gosu && \
     chmod a+x /usr/bin/gosu
-
 
 COPY . /
 
