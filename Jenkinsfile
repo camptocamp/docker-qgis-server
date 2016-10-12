@@ -18,11 +18,11 @@ node('docker') {
   }
   stage('Build') {
     checkout scm
-    sh 'make build'
+    sh 'make -j3 build'
   }
   stage('Test') {
     checkout scm
-    sh 'make acceptance'
+    sh 'make -j3 acceptance'
   }
 
   if (finalTag ==~ /\d+(?:\.\d+)*/) {
