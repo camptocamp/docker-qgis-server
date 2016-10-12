@@ -22,9 +22,10 @@ node('docker') {
   }
   stage('Test') {
     checkout scm
-    sh 'make -j3 acceptance'
+    sh 'make -j3 acceptance-quick'  //quick because we don't want to rebuild the image
   }
 
+  //compute the list of tags we are going to push
   if (finalTag ==~ /\d+(?:\.\d+)*/) {
     parts = finalTag.tokenize('.')
     tags = []
@@ -43,14 +44,19 @@ node('docker') {
   stage("Publish ${tags}") {
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub',
                     usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+      //login in docker hub
       sh 'docker login -u "$USERNAME" -p "$PASSWORD"'
-      for (String tag: tags) {
-        //give the final tag to the image
-        sh "docker tag ${IMAGE_NAME}:${env.DOCKER_TAG} ${IMAGE_NAME}:${tag}"
-        //push it
-        docker.image("${IMAGE_NAME}:${tag}").push()
+      try {
+        for (String tag: tags) {
+            //give the final tag to the image
+            sh "docker tag ${IMAGE_NAME}:${env.DOCKER_TAG} ${IMAGE_NAME}:${tag}"
+            //push it
+            docker.image("${IMAGE_NAME}:${tag}").push()
+        }
+      } finally {
+        //logout from docker hub
+        sh 'rm -rf ~/.docker*'
       }
-      sh 'rm -rf ~/.docker*'
     }
   }
 }
