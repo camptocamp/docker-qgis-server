@@ -1,0 +1,24 @@
+mapserver:
+  image: camptocamp/qgis-server:${DOCKER_TAG}
+  environment:
+    QGIS_SERVER_LOG_LEVEL: 0
+  links:
+    - db
+  ports:
+    - 8380:80
+  volumes_from:
+    - acceptance_config
+
+db:
+  image: camptocamp/postgresql:pg9.5-latest
+  environment:
+    POSTGRES_USER: www-data
+    POSTGRES_PASSWORD: www-data
+    POSTGRES_DB: test
+  ports:
+    - 15432:5432
+  volumes_from:
+    - acceptance_config
+
+acceptance_config:
+  image: camptocamp/qgis-server-acceptance_config:${DOCKER_TAG}
