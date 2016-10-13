@@ -19,7 +19,8 @@ RUN apt-get -y update && \
       libqtwebkit4 libqwt6abi1 libspatialindex4v5 libspatialite7 libsqlite3-0 \
       python python-qt4 python-qt4-sql \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-      apache2 libapache2-mod-fcgid && \
+      apache2 libapache2-mod-fcgid \
+      python-gdal python-psycopg2 python-qscintilla2 python-pil python-shapely && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -47,6 +48,7 @@ ENV QGIS_PLUGINPATH /var/www/plugins
 
 COPY runtime /
 COPY target /usr/local/
+COPY start-client.sh /usr/local/bin
 
 RUN ldconfig
 

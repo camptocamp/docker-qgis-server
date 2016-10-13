@@ -22,3 +22,10 @@ You can use the following variables (`-e` option in `docker run`):
 * QGIS_SERVER_LOG_FILE: To output the logs to a file (default to stdout)
 * PGSERVICEFILE: If you want to change the default of `/project/pg_service.conf`
 * QGIS_PROJECT_FILE: If you want to change the default of `/project/project.qgs`
+
+## Running the client
+
+If you want to edit a project file, you can run the client with the following command:
+```bash
+make run-client
+```

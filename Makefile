@@ -72,3 +72,7 @@ acceptance-quick: build-acceptance
 .PHONY: pull
 pull:
 	for image in `find -name Dockerfile | xargs grep --no-filename FROM | awk '{print $$2}'`; do docker pull $$image; done
+
+.PHONY: run-client
+run-client: build-server
+	docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG) /usr/local/bin/start-client.sh

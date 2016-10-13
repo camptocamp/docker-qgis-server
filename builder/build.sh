@@ -16,7 +16,5 @@ cmake /src \
       -DWITH_SERVER=ON \
       -DBUILD_TESTING=OFF  \
 
-      #-DWITH_INTERNAL_QWTPOLAR=ON
-
 ninja install
 ccache -s
