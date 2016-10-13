@@ -26,6 +26,7 @@ lock('docker-qgis-server_tag_' + finalTag) {
       lock("acceptance-${env.NODE_NAME}") {
         sh 'make -j3 acceptance-quick'  //quick because we don't want to rebuild the image
       }
+      junit keepLongStdio: true, testResults: 'acceptance_tests/junitxml/*.xml'
     }
 
     //compute the list of tags we are going to push

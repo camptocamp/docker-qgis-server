@@ -13,10 +13,12 @@ RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" >> /etc/apt/
     apt-get clean && \
     rm -r /var/lib/apt/lists/* && \
     curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose && \
-    chmod a+x /usr/bin/docker-compose
+    chmod a+x /usr/bin/docker-compose && \
+    mkdir -p /tmp/junitxml
 
 COPY . /acceptance_tests/
 
 ENV DOCKER_RUN 1
 WORKDIR /acceptance_tests
-CMD py.test -s
+
+CMD py.test -s --junitxml /tmp/junitxml/results.xml

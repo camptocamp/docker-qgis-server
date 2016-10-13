@@ -61,11 +61,13 @@ build-acceptance: build-acceptance-config
 
 .PHONY: acceptance
 acceptance: build-acceptance build
-	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -e ACCEPTANCE_DIR=${ROOT}/acceptance -v /var/run/docker.sock:/var/run/docker.sock $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
+	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
 
 .PHONY: acceptance-quick
 acceptance-quick: build-acceptance
-	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -e ACCEPTANCE_DIR=${ROOT}/acceptance -v /var/run/docker.sock:/var/run/docker.sock $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
+	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
 
 .PHONY: pull
 pull:

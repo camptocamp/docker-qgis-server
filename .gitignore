@@ -1,3 +1,4 @@
-/src
+/acceptance_tests/junitxml/
 /server/build
 /server/target
+/src
