@@ -1,5 +1,10 @@
 #!groovy
 
+properties([
+  //rebuild every nights
+  pipelineTriggers([cron('H H(0-8) * * *')])
+])
+
 IMAGE_NAME = 'camptocamp/qgis-server'
 
 if (env.BRANCH_NAME == 'master') {
