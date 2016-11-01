@@ -5,7 +5,7 @@ GID = $(shell id -g)
 UID = $(shell id -u)
 
 #Get the IP address of the docker interface
-DOCKER_HOST = $(shell ifconfig docker0 | head -n 2 | tail -n 1 | awk -F : '{print $$2}' | awk '{print $$1}')
+DOCKER_HOST = $(shell ip address show dev docker0 | grep inet | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
 
 #Get the docker version (must use the same version for acceptance tests)
 DOCKER_VERSION_ACTUAL = $(shell docker version --format '{{.Server.Version}}')
