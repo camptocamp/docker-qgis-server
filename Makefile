@@ -27,7 +27,7 @@ endif
 all: build acceptance
 
 src:
-	git clone git://github.com/qgis/QGIS.git src && cd src && git checkout release-2_16
+	git clone git://github.com/qgis/QGIS.git src && cd src && git checkout master
 
 .PHONY: update-src
 update-src: src

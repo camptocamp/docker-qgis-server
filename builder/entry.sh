@@ -18,4 +18,7 @@ else
     USER=root
 fi
 
+export PATH=/usr/lib/ccache:$PATH
+export QT_SELECT=5
+
 exec gosu $USER "$@"

@@ -14,15 +14,16 @@ ENV LANG C
 
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y libproj9 libgeos-3.5.0 libgdal1i \
-      libexpat1 libfcgi libgsl2 libpq5 libqca2 libqca2-plugin-ossl \
-      libqscintilla2-12v5 libqt4-opengl libqt4-sql-sqlite \
-      libqtwebkit4 libqwt6abi1 libspatialindex4v5 libspatialite7 libsqlite3-0 \
-      python python-qt4 python-qt4-sql \
+      libexpat1 libfcgi libgsl2 libpq5 libqca-qt5-2 libqca2-plugin-ossl \
+      libqt5scintilla2-12v5 libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
+      libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 \
+      python3 python3-pip python3-pyqt5 python3-pyqt5.qtsql \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
       apache2 libapache2-mod-fcgid \
-      python-gdal python-psycopg2 python-qscintilla2 python-pil python-shapely && \
+      python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    pip3 install future numpy pyyaml && \
+    rm -rf /var/lib/apt/lists/* ~/.cache/pip
 
 RUN a2enmod fcgid && \
     a2dismod -f auth_basic authn_file authn_core authz_host authz_user autoindex dir status && \
@@ -32,9 +33,9 @@ RUN a2enmod fcgid && \
       s!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g; \
       s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
       ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
-    mkdir -p /var/www/.qgis2 && \
+    mkdir -p /var/www/.qgis3 && \
     mkdir -p /var/www/plugins && \
-    chown www-data: /var/www/.qgis2 && \
+    chown www-data: /var/www/.qgis3 && \
     mknod /var/log/docker p && \
     chown www-data: /var/log/docker
 
