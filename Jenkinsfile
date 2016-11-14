@@ -38,21 +38,8 @@ lock('docker-qgis-server_tag_' + finalTag) {
         }
       }
 
-      //compute the list of tags we are going to push
-      if (finalTag ==~ /\d+(?:\.\d+)*/) {
-        parts = finalTag.tokenize('.')
-        tags = []
-        for (int i=1; i<=parts.size(); ++i) {
-          curTag = "";
-          for (int j = 0; j < i; ++j) {
-            if (j > 0) curTag += '.'
-            curTag += parts[j]
-          }
-          tags << curTag
-        }
-      } else {
-        tags = [finalTag]
-      }
+      //compute the list of tags we are going to push (old branch => only one)
+      tags = [finalTag]
 
       stage("Publish ${tags}") {
         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub',
