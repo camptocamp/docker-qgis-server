@@ -5,9 +5,6 @@ ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 GID = $(shell id -g)
 UID = $(shell id -u)
 
-#Get the IP address of the docker interface
-DOCKER_HOST = $(shell ip address show dev docker0 | grep inet | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-
 #Get the docker version (must use the same version for acceptance tests)
 DOCKER_VERSION_ACTUAL = $(shell docker version --format '{{.Server.Version}}')
 ifeq ($(DOCKER_VERSION_ACTUAL),)
@@ -63,12 +60,12 @@ build-acceptance: build-acceptance-config
 .PHONY: acceptance
 acceptance: build-acceptance build
 	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
-	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+	docker run --rm -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
 
 .PHONY: acceptance-quick
 acceptance-quick: build-acceptance
 	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
-	docker run --rm --add-host=host:${DOCKER_HOST} -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
+	docker run --rm -e DOCKER_TAG=$(DOCKER_TAG) -v /var/run/docker.sock:/var/run/docker.sock -v $(ROOT)/acceptance_tests/junitxml:/tmp/junitxml $(DOCKER_BASE)-acceptance:$(DOCKER_TAG)
 
 .PHONY: pull
 pull:
