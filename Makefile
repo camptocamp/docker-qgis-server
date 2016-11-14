@@ -1,3 +1,4 @@
+QGIS_BRANCH = release-2_16
 DOCKER_TAG ?= latest
 DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
@@ -27,11 +28,11 @@ endif
 all: build acceptance
 
 src:
-	git clone git://github.com/qgis/QGIS.git src && cd src && git checkout release-2_16
+	git clone git://github.com/qgis/QGIS.git src
 
 .PHONY: update-src
 update-src: src
-	cd src; git pull --rebase
+	cd src && git checkout $(QGIS_BRANCH) && git pull --rebase
 
 .PHONY: build-builder
 build-builder:
