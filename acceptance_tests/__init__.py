@@ -100,7 +100,7 @@ def wait_mapserver():
     while True:
         try:
             LOG.info("Trying to connect to MapServer... ")
-            r = requests.get(BASE_URL + '?SERVICE=WFS&VERSION=2.0.0&REQUEST=describeFeaturetype&TYPENAME=polygons')
+            r = requests.get(BASE_URL + '?SERVICE=WFS&VERSION=1.0.0&REQUEST=DescribeFeatureType&TYPENAME=polygons')
             if r.status_code == 200 and 'complexType' in r.text:
                 LOG.info("MapServer started")
                 break
