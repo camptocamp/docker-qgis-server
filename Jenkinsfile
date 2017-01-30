@@ -25,7 +25,7 @@ lock('docker-qgis-server_tag_' + finalTag) {
       }
       stage('Build') {
         checkout scm
-        sh 'make -j3 build'
+        sh 'make -j3 clean build'
       }
       stage('Test') {
         checkout scm
