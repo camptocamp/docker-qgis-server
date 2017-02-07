@@ -9,7 +9,7 @@ RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" >> /etc/apt/
     apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
     apt-get update && \
     apt-get install -y docker-engine=${DOCKER_VERSION}* libpq-dev && \
-    pip3 install psycopg2 && \
+    pip3 install psycopg2 c2cwsgiutils==0.3.0 && \
     apt-get clean && \
     rm -r /var/lib/apt/lists/* && \
     curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose && \
