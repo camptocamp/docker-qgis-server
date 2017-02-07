@@ -25,7 +25,7 @@ RUN apt-get -y update && \
     pip3 install future numpy pyyaml && \
     rm -rf /var/lib/apt/lists/* ~/.cache/pip
 
-RUN a2enmod fcgid && \
+RUN a2enmod fcgid headers && \
     a2dismod -f auth_basic authn_file authn_core authz_host authz_user autoindex dir status && \
     rm /etc/apache2/mods-enabled/alias.conf && \
     mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR && \
