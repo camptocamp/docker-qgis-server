@@ -10,7 +10,8 @@ RUN apt-get -y update && \
         lighttpd locales pkg-config poppler-utils python3 python3-dev python3-pip pyqt5-dev pyqt5-dev-tools \
         python3-pyqt5.qtsql pyqt5.qsci-dev python3-sip python3-sip-dev python3-gdal python3-geolinks qtscript5-dev python3-pyqt5.qsci python3-qwt \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-        git ninja-build curl ccache
+        git ninja-build curl ccache \
+        python-pyspatialite
 
 RUN pip3 install future psycopg2 numpy nose2 pyyaml mock termcolor && \
     curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" > /usr/bin/gosu && \
