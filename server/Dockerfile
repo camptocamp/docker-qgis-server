@@ -54,4 +54,5 @@ COPY start-client.sh /usr/local/bin
 RUN ldconfig
 
 EXPOSE 80
-CMD rm -f $APACHE_RUN_DIR/apache2.pid; while true; do echo "Listening"; cat /var/log/docker; done & apache2 -DFOREGROUND
+CMD while true; do echo "Listening"; cat /var/log/docker; done & (rm -f $APACHE_RUN_DIR/apache2.pid
+; apache2 -DFOREGROUND)
