@@ -9,6 +9,11 @@ if (env.BRANCH_NAME == 'master') {
   finalTag = env.BRANCH_NAME
 }
 
+selectNodes {
+    it.kernel == 'Linux' &&
+    (it.memorysize_mb as Float) > 6000
+}
+
 dockerBuild {
     //rebuild every nights
     setCronTrigger('H H(0-8) * * *')
