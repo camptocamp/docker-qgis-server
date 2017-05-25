@@ -16,7 +16,7 @@ RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y libproj9 libgeos-3.5.0 libgdal20 \
       libexpat1 libfcgi libgsl2 libpq5 libqca-qt5-2 libqca2-plugin-ossl \
       libqt5scintilla2-12v5 libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
-      libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 \
+      libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 libqt5keychain0 \
       python3 python3-pip python3-pyqt5 python3-pyqt5.qtsql \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
       apache2 libapache2-mod-fcgid \
