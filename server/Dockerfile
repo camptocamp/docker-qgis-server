@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER Camptocamp<info@camptocamp.com>
 
 # A few variables needed by apache
@@ -13,14 +13,15 @@ ENV APACHE_LOG_DIR /var/log/apache2
 ENV LANG C
 
 RUN apt-get -y update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y libproj9 libgeos-3.5.0 libgdal1i \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y libproj12 libgeos-3.5.1 libgdal20 \
       libexpat1 libfcgi libgsl2 libpq5 libqca2 libqca2-plugin-ossl \
       libqscintilla2-12v5 libqt4-opengl libqt4-sql-sqlite \
       libqtwebkit4 libqwt6abi1 libspatialindex4v5 libspatialite7 libsqlite3-0 \
       python python-qt4 python-qt4-sql \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
       apache2 libapache2-mod-fcgid \
-      python-gdal python-psycopg2 python-qscintilla2 python-pil python-shapely && \
+      python-gdal python-psycopg2 python-qscintilla2 python-pil python-shapely \
+      python-qscintilla2 libqjson0 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

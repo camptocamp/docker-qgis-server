@@ -1,9 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER Camptocamp<info@camptocamp.com>
 
 RUN apt-get -y update && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y cmake flex bison libproj-dev \
-        libgeos-dev libgdal1-dev \
+        libgeos-dev libgdal-dev libqjson-dev python-qscintilla2 \
         libexpat1-dev libfcgi-dev libgsl0-dev libpq-dev libqca2-dev libqca2-plugin-ossl \
         libqscintilla2-dev libqt4-dev libqt4-opengl-dev libqt4-sql-sqlite \
         libqtwebkit-dev libqwt-dev libspatialindex-dev libspatialite-dev libsqlite3-dev \
