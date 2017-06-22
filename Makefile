@@ -40,6 +40,10 @@ build-src: build-builder update-src
 	mkdir -p server/build server/target
 	docker run --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
 
+run-builder: build-builder update-src
+	mkdir -p server/build server/target
+	docker run -ti --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG) bash
+
 .PHONY: build-server
 build-server: build-src
 	docker build --tag $(DOCKER_BASE):$(DOCKER_TAG) server
