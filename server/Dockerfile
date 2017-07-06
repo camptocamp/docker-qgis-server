@@ -17,7 +17,8 @@ RUN apt-get -y update && \
       libexpat1 libfcgi libgsl2 libpq5 libqca-qt5-2 libqca2-plugin-ossl \
       libqt5scintilla2-12v5 libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
       libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 libqt5keychain1 \
-      python3 python3-pip python3-pyqt5 python3-pyqt5.qtsql \
+      python3 python3-pip python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
+      python3-pyqt5.qtsql PyQt5.QtSvg \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
       apache2 libapache2-mod-fcgid \
       python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely \
