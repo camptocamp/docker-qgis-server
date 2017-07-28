@@ -9,11 +9,11 @@ then
 fi
 
 BRANCH=$1
+TAG_PREFIX=`echo $BRANCH | sed -e 's/release-/final-/'`
 
 cd src
 git fetch --tags
-git checkout --detach origin/$BRANCH
-LAST_RELEASE=`git log --format=%H --tags=final-* --no-walk | head -1`
+LAST_RELEASE=`git log --format=%H --tags=$TAG_PREFIX* --no-walk | head -1`
 git checkout --detach $LAST_RELEASE
 
 echo
