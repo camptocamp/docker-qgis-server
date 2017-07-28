@@ -4,6 +4,8 @@ set -e
 cd /build
 
 export PATH=/usr/lib/ccache:$PATH
+export CC=/usr/lib/ccache/gcc
+export CXX=/usr/lib/ccache/g++
 cmake /src \
       -GNinja \
       -DQWT_INCLUDE_DIR=/usr/include/qwt \
