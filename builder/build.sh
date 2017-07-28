@@ -3,8 +3,8 @@ set -e
 
 cd /build
 
-export CXX="clang++"
-export CC="clang"
+export CXX="/usr/lib/ccache/clang++"
+export CC="/usr/lib/ccache/clang"
 
 cmake /src \
       -GNinja \
