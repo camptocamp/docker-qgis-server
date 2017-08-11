@@ -3,7 +3,7 @@ MAINTAINER Camptocamp<info@camptocamp.com>
 
 RUN apt-get -y update && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y cmake flex bison libproj-dev \
-        libgeos-dev libgdal-dev python-qscintilla2 \
+        libgeos-dev libgdal-dev python-qscintilla2 libzip-dev \
         libexpat1-dev libfcgi-dev libgsl-dev libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
         libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev \
         libqwt-qt5-dev libspatialindex-dev libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev \
