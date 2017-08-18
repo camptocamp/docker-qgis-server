@@ -2,15 +2,15 @@ FROM ubuntu:17.04
 MAINTAINER Camptocamp<info@camptocamp.com>
 
 # A few variables needed by apache
-ENV APACHE_CONFDIR /etc/apache2
-ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
-ENV APACHE_RUN_USER www-data
-ENV APACHE_RUN_GROUP www-data
-ENV APACHE_RUN_DIR /var/run/apache2
-ENV APACHE_PID_FILE $APACHE_RUN_DIR/apache2.pid
-ENV APACHE_LOCK_DIR /var/lock/apache2
-ENV APACHE_LOG_DIR /var/log/apache2
-ENV LANG C
+ENV APACHE_CONFDIR=/etc/apache2 \
+    APACHE_ENVVARS=$APACHE_CONFDIR/envvars \
+    APACHE_RUN_USER=www-data \
+    APACHE_RUN_GROUP=www-data \
+    APACHE_RUN_DIR=/var/run/apache2 \
+    APACHE_PID_FILE=$APACHE_RUN_DIR/apache2.pid \
+    APACHE_LOCK_DIR=/var/lock/apache2 \
+    APACHE_LOG_DIR=/var/log/apache2 \
+    LANG=C
 
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y libproj12 libgeos-3.5.1 libgdal20 \
@@ -40,12 +40,13 @@ RUN a2enmod fcgid headers && \
     chown www-data: /var/log/docker
 
 # A few tunable variables for QGIS
-ENV QGIS_SERVER_LOG_LEVEL 0
-ENV QGIS_SERVER_LOG_FILE /var/log/docker
-ENV PGSERVICEFILE /project/pg_service.conf
-ENV QGIS_PROJECT_FILE /project/project.qgs
-ENV MAX_CACHE_LAYERS ""
-ENV QGIS_PLUGINPATH /var/www/plugins
+ENV QGIS_SERVER_LOG_LEVEL=0 \
+    QGIS_SERVER_LOG_FILE=/var/log/docker \
+    PGSERVICEFILE=/project/pg_service.conf \
+    QGIS_PROJECT_FILE=/project/project.qgs \
+    MAX_CACHE_LAYERS="" \
+    QGIS_PLUGINPATH=/var/www/plugins \
+    MAX_REQUESTS_PER_PROCESS=1000
 
 COPY runtime /
 COPY target /usr/local/
