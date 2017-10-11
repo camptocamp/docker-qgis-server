@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:17.10
 MAINTAINER Camptocamp<info@camptocamp.com>
 
 RUN apt-get -y update && \
@@ -11,7 +11,8 @@ RUN apt-get -y update && \
         python3-pyqt5.qtsql pyqt5.qsci-dev python3-sip python3-sip-dev python3-gdal python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci python3-qwt \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         git ninja-build curl ccache clang \
-        python-pyspatialite
+        python-pyspatialite libpython3.7-dev \
+        libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5
 
 RUN pip3 install future psycopg2 numpy nose2 pyyaml mock termcolor && \
     rm -r ~/.cache/pip && \
