@@ -12,7 +12,8 @@ RUN apt-get -y update && \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         git ninja-build curl ccache clang \
         python-pyspatialite libpython3.7-dev \
-        libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5
+        libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
+        qt3d5-dev qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin
 
 RUN pip3 install future psycopg2 numpy nose2 pyyaml mock termcolor && \
     rm -r ~/.cache/pip && \

@@ -12,7 +12,7 @@ cmake /src \
       -DCMAKE_INSTALL_PREFIX=/usr/local \
       -DWITH_DESKTOP=ON \
       -DWITH_SERVER=ON \
-      -DWITH_3D=OFF \
+      -DWITH_3D=ON \
       -DBUILD_TESTING=OFF
 
 ccache -M10G
