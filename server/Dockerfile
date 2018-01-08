@@ -49,10 +49,8 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 
 COPY runtime /
 COPY target /usr/local/
-COPY start-client.sh /usr/local/bin
 
 RUN ldconfig
 
 EXPOSE 80
-CMD while true; do echo "Listening"; cat /var/log/docker; done & (rm -f $APACHE_RUN_DIR/apache2.pid; apache2 -DFOREGROUND)
-
+CMD ["/bin/bash", "/usr/local/bin/start-server.sh"]
