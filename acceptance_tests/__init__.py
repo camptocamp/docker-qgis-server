@@ -5,12 +5,9 @@ import sys
 import time
 
 
-
 BASE_URL = 'http://' + utils.DOCKER_GATEWAY + ':8380/'
 DB_ADDR = utils.DOCKER_GATEWAY
 LOG = logging.getLogger(__name__)
-logging.basicConfig(level=logging.DEBUG, format="TEST                 | %(asctime)-15s %(levelname)5s %(name)s %(message)s", stream=sys.stdout)
-logging.getLogger("requests.packages.urllib3.connectionpool").setLevel(logging.WARN)
 PROJECT_NAME='qgis'
 
 
