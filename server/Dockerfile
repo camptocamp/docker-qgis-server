@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:17.10
 MAINTAINER Camptocamp<info@camptocamp.com>
 
 # A few variables needed by apache
@@ -14,7 +14,7 @@ ENV APACHE_CONFDIR=/etc/apache2 \
 
 RUN apt-get -y update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y libproj12 libgeos-3.5.1 libgdal20 \
-      libexpat1 libfcgi libgsl2 libpq5 libqca2 libqca2-plugin-ossl \
+      libexpat1 libfcgi libgsl23 libpq5 libqca2 libqca2-plugin-ossl \
       libqscintilla2-12v5 libqt4-opengl libqt4-sql-sqlite \
       libqtwebkit4 libqwt6abi1 libspatialindex4v5 libspatialite7 libsqlite3-0 \
       python python-qt4 python-qt4-sql \
