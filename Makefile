@@ -1,4 +1,4 @@
-QGIS_BRANCH = master
+QGIS_BRANCH = release-3_0
 DOCKER_TAG ?= latest
 DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
@@ -29,7 +29,7 @@ src:
 
 .PHONY: update-src
 update-src: src
-	cd src && git checkout $(QGIS_BRANCH) && git pull --rebase && git log -n 1
+	./checkout_release.sh $(QGIS_BRANCH)
 
 .PHONY: build-builder
 build-builder:
