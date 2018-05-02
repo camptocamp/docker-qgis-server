@@ -13,7 +13,8 @@ cmake /src \
       -DWITH_DESKTOP=ON \
       -DWITH_SERVER=ON \
       -DWITH_3D=ON \
-      -DBUILD_TESTING=OFF
+      -DBUILD_TESTING=OFF \
+      -DENABLE_TESTS=OFF
 
 ccache -M10G
 ninja install

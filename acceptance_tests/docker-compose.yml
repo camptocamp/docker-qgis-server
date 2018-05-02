@@ -1,7 +1,8 @@
 mapserver:
   image: camptocamp/qgis-server:${DOCKER_TAG}
   environment:
-    QGIS_SERVER_LOG_LEVEL: 0
+    QGIS_SERVER_LOG_LEVEL: "0"
+    QGIS_CATCH_SEGV: "1"
   links:
     - db
   ports:
