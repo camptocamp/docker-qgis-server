@@ -16,7 +16,8 @@ cmake /src \
       -DQWT_LIBRARY=/usr/lib/libqwt.so \
       -DWITH_DESKTOP=ON \
       -DWITH_SERVER=ON \
-      -DBUILD_TESTING=OFF
+      -DBUILD_TESTING=OFF \
+      -DENABLE_TESTS=OFF
 
 ninja install
 ccache -s
