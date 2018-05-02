@@ -23,6 +23,7 @@ You can use the following variables (`-e` option in `docker run`):
 * PGSERVICEFILE: If you want to change the default of `/project/pg_service.conf`
 * QGIS_PROJECT_FILE: If you want to change the default of `/project/project.qgs`
 * MAX_REQUESTS_PER_PROCESS: The number of requests a QGIS server will serve before being restarted by apache
+* QGIS_CATCH_SEGV: Set to "1" if you want stacktraces in the logs in case of segmentation faults.
 
 ## Running the client
 
