@@ -40,7 +40,9 @@ RUN a2enmod fcgid headers && \
     mkdir -p /var/www/plugins && \
     chown www-data: /var/www/.qgis3 && \
     mknod /var/log/docker p && \
-    chown www-data: /var/log/docker
+    chown www-data: /var/log/docker && \
+    ln --symbolic /project /etc/qgisserver
+
 
 # A few tunable variables for QGIS
 ENV QGIS_SERVER_LOG_LEVEL=0 \
