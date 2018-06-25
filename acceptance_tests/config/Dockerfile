@@ -1,7 +1,7 @@
 FROM tianon/true
 
-COPY project /etc/qgisserver
+COPY project /project
 COPY db /docker-entrypoint-initdb.d
 
-VOLUME /etc/qgisserver
+VOLUME /project
 VOLUME /docker-entrypoint-initdb.d
