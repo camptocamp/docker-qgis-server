@@ -29,7 +29,7 @@ src:
 
 .PHONY: update-src
 update-src: src
-	./checkout_release.sh $(QGIS_BRANCH)
+	./checkout_release $(QGIS_BRANCH)
 
 .PHONY: build-builder
 build-builder:
