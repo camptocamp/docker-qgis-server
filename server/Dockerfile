@@ -60,7 +60,7 @@ COPY target /usr/local/
 
 RUN adduser www-data root && \
     chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
-    chown :root ${APACHE_LOG_DIR}
+    chgrp -R root ${APACHE_LOG_DIR}
 
 RUN ldconfig
 
