@@ -49,6 +49,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
     QGIS_SERVER_LOG_FILE=/var/log/docker \
     PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
     QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
+    QGIS_CUSTOM_CONFIG_PATH=/tmp \
     MAX_CACHE_LAYERS="" \
     QGIS_PLUGINPATH=/var/www/plugins \
     MAX_REQUESTS_PER_PROCESS=1000
