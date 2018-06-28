@@ -31,10 +31,7 @@ RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolo
 RUN a2enmod fcgid headers && \
     a2dismod -f auth_basic authn_file authn_core authz_host authz_user autoindex dir status && \
     rm /etc/apache2/mods-enabled/alias.conf && \
-    adduser www-data root && \
     mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
-    chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
-    chown :root ${APACHE_LOG_DIR} && \
     sed -ri ' \
       s!^(\s*CustomLog)\s+\S+!#\1 /proc/self/fd/1!g; \
       s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
@@ -58,6 +55,10 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 
 COPY runtime /
 COPY target /usr/local/
+
+RUN adduser www-data root && \
+    chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
+    chown :root ${APACHE_LOG_DIR}
 
 RUN ldconfig
 
