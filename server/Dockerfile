@@ -49,8 +49,10 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
     QGIS_SERVER_LOG_FILE=/var/log/docker \
     PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
     QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
+    QGIS_CUSTOM_CONFIG_PATH=/tmp \
     MAX_CACHE_LAYERS="" \
     QGIS_PLUGINPATH=/var/www/plugins \
+    QGIS_AUTH_DB_DIR_PATH=/etc/qgisserver/ \
     MAX_REQUESTS_PER_PROCESS=1000
 
 COPY runtime /
@@ -58,7 +60,7 @@ COPY target /usr/local/
 
 RUN adduser www-data root && \
     chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
-    chown :root ${APACHE_LOG_DIR}
+    chgrp -R root ${APACHE_LOG_DIR}
 
 RUN ldconfig
 
