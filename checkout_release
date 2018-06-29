@@ -14,7 +14,7 @@ BRANCH=$1
 
 if [ ${BRANCH} == master ]
 then
-    git checkout ${QGIS_BRANCH}
+    git checkout ${BRANCH}
     git pull --rebase
 else
     TAG_PREFIX=`echo ${BRANCH} | sed -e 's/release-/final-/'`
