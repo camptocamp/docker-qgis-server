@@ -18,4 +18,6 @@ else
     USER=root
 fi
 
+export PATH=/usr/lib/ccache:$PATH
+
 exec gosu $USER "$@"

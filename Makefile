@@ -29,7 +29,7 @@ src:
 
 .PHONY: update-src
 update-src: src
-	./checkout_release.sh $(QGIS_BRANCH)
+	./checkout_release $(QGIS_BRANCH)
 
 .PHONY: build-builder
 build-builder:
@@ -41,6 +41,10 @@ build-src: build-builder update-src
 	docker run --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
 
 run-builder: build-builder update-src
+	mkdir -p server/build server/target
+	docker run -ti --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG) bash
+
+rerun-builder:
 	mkdir -p server/build server/target
 	docker run -ti --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG) bash
 
@@ -77,7 +81,7 @@ pull:
 
 .PHONY: run-client
 run-client: build-server
-	docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG) /usr/local/bin/start-client.sh
+	docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG) /usr/local/bin/start-client
 
 clean:
 	rm -rf acceptance_tests/junitxml/ server/build server/target

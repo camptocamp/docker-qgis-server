@@ -3,7 +3,7 @@ from xml.etree import ElementTree
 
 
 def test_get_feature(connection):
-    answer = connection.get_xml('?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAME=polygons',
+    answer = connection.get_xml('?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=polygons',
                                 cache_expected=CacheExpected.DONT_CARE)
     ns = '{http://www.qgis.org/gml}'
     features = answer.findall(".//%spolygons" % ns)

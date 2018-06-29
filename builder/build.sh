@@ -3,7 +3,6 @@ set -e
 
 cd /build
 
-export PATH=/usr/lib/ccache:$PATH
 export CC=/usr/lib/ccache/gcc
 export CXX=/usr/lib/ccache/g++
 cmake /src \
@@ -19,5 +18,6 @@ cmake /src \
       -DBUILD_TESTING=OFF \
       -DENABLE_TESTS=OFF
 
+ccache -M10G
 ninja install
 ccache -s
