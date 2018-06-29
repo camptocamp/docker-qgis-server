@@ -29,7 +29,7 @@ src:
 
 .PHONY: update-src
 update-src: src
-	cd src && git checkout $(QGIS_BRANCH) && git pull --rebase && git log -n 1 && git status
+	./checkout_release $(QGIS_BRANCH)
 
 .PHONY: build-builder
 build-builder:
