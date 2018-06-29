@@ -3,7 +3,7 @@
 # add the evironment variables that were set when apache was started
 export HOME=/var/www
 export QT_QPA_PLATFORM=offscreen
-source /tmp/init_env.sh
+source /tmp/init-env
 
 # GDAL uses CWD to write temporary files. So we better be in a location writable by www-data.
 cd /tmp
