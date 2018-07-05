@@ -13,7 +13,7 @@ then
     echo "Switching listen port to 8080"
     cd /tmp
     sed -i -e 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-available/000-default.conf
-    sed -i -e 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf
+    sed -i -e 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf
 fi
 
 trap 'echo "caught a SIGTERM"; kill -TERM $PID2; wait $PID2; kill -TERM $PID1; wait $PID1' TERM
@@ -31,3 +31,4 @@ PID1=$!
 apache2 -DFOREGROUND &
 PID2=$!
 wait $PID2
+kill $PID1 2>/dev/null
