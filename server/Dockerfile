@@ -39,9 +39,9 @@ RUN a2enmod fcgid headers && \
       ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
     mkdir -p /var/www/.qgis3 && \
     mkdir -p /var/www/plugins && \
-    chown www-data: /var/www/.qgis3 && \
+    chown www-data:root /var/www/.qgis3 && \
     mknod /var/log/docker p && \
-    chown www-data: /var/log/docker && \
+    chown www-data:root /var/log/docker && \
     ln --symbolic /project /etc/qgisserver
 
 
@@ -60,7 +60,7 @@ COPY runtime /
 COPY target /usr/local/
 
 RUN adduser www-data root && \
-    chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} /var/lib/apache2/fcgid && \
+    chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} /var/lib/apache2/fcgid /var/log/docker /var/www/.qgis3 && \
     chgrp -R root ${APACHE_LOG_DIR} /var/lib/apache2/fcgid
 
 RUN ldconfig
