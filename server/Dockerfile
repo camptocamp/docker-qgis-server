@@ -36,7 +36,7 @@ RUN a2enmod fcgid headers && \
     mkdir -p /var/www/.qgis2 && \
     mkdir -p /var/www/plugins && \
     chown www-data:root /var/www/.qgis2 && \
-    mknod /var/log/docker && \
+    mknod /var/log/docker p && \
     chown www-data:root /var/log/docker && \
     ln --symbolic /project /etc/qgisserver
 
