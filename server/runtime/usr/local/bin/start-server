@@ -24,6 +24,10 @@ rm -f $APACHE_RUN_DIR/apache2.pid
 if [ ! -p /var/log/qgis.log ]
 then
     mknod /var/log/qgis.log p
+    if [[ "${UID}" == 0 ]]
+    then
+        chown www-data:root /var/log/qgis.log
+    fi
 fi
 
 (while true
