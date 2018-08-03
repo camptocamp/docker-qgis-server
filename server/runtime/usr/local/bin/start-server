@@ -21,10 +21,15 @@ trap '' WINCH
 
 rm -f $APACHE_RUN_DIR/apache2.pid
 
+if [ ! -p /var/log/qgis.log ]
+then
+    mknod /var/log/qgis.log p
+fi
+
 (while true
 do
     echo "Listening"
-    cat /var/log/docker
+    cat /var/log/qgis.log
 done) &
 PID1=$!
 
