@@ -24,7 +24,7 @@ dockerBuild {
     }
 
     //rebuild every nights
-    setCronTrigger('H H(0-8) * * *')
+    setCronTrigger('H H(18-23) * * *')
 
     stage('Build') {
         checkout scm
