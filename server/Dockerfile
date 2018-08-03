@@ -40,14 +40,12 @@ RUN a2enmod fcgid headers && \
     mkdir -p /var/www/.qgis3 && \
     mkdir -p /var/www/plugins && \
     chown www-data:root /var/www/.qgis3 && \
-    mknod /var/log/docker p && \
-    chown www-data:root /var/log/docker && \
     ln --symbolic /project /etc/qgisserver
 
 
 # A few tunable variables for QGIS
 ENV QGIS_SERVER_LOG_LEVEL=0 \
-    QGIS_SERVER_LOG_FILE=/var/log/docker \
+    QGIS_SERVER_LOG_FILE=/var/log/qgis.log \
     PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
     QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
     QGIS_CUSTOM_CONFIG_PATH=/tmp \
@@ -60,7 +58,7 @@ COPY runtime /
 COPY target /usr/local/
 
 RUN adduser www-data root && \
-    chmod -R g+w ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} /var/lib/apache2/fcgid /var/log/docker /var/www/.qgis3 && \
+    chmod -R g+rw ${APACHE_CONFDIR} ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} /var/lib/apache2/fcgid /var/log /var/www/.qgis3 && \
     chgrp -R root ${APACHE_LOG_DIR} /var/lib/apache2/fcgid
 
 RUN ldconfig
