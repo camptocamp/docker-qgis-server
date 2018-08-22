@@ -19,7 +19,7 @@ RUN apt-get -y update && \
       libqtwebkit4 libqwt6abi1 libspatialindex4v5 libspatialite7 libsqlite3-0 \
       python python-qt4 python-qt4-sql \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-      apache2 libapache2-mod-fcgid \
+      apache2 libapache2-mod-fcgid grass \
       python-gdal python-psycopg2 python-qscintilla2 python-pil python-shapely \
       python-qscintilla2 libqjson0 && \
     apt-get clean && \
