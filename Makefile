@@ -21,6 +21,8 @@ else
 DOCKER_COMPOSE_VERSION = $(DOCKER_COMPOSE_VERSION_ACTUAL)
 endif
 
+DOCKER_TTY := $(shell [ -t 0 ] && echo -ti)
+
 .PHONY: all
 all: build acceptance
 
@@ -38,7 +40,7 @@ build-builder:
 .PHONY: build-src
 build-src: build-builder update-src
 	mkdir -p server/build server/target
-	docker run --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
+	docker run $(DOCKER_TTY) --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
 
 run-builder: build-builder update-src
 	mkdir -p server/build server/target

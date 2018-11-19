@@ -20,10 +20,10 @@ RUN apt-get -y update && \
       python3 python3-pip python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
       python3-pyqt5.qtsql PyQt5.QtSvg \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-      apache2 libapache2-mod-fcgid grass \
+      apache2 libapache2-mod-fcgid grass-core \
       python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3.7-dev \
       libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
-      libqt5serialport5 libqt5quickwidgets5 && \
+      libqt5serialport5 libqt5quickwidgets5 libexiv2-14 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
