@@ -45,7 +45,7 @@ RUN a2enmod fcgid headers && \
 
 # A few tunable variables for QGIS
 ENV QGIS_SERVER_LOG_LEVEL=0 \
-    QGIS_SERVER_LOG_FILE=/var/log/qgis.log \
+    QGIS_SERVER_LOG_STDERR=1 \
     PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
     QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
     QGIS_CUSTOM_CONFIG_PATH=/tmp \
