@@ -52,7 +52,9 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
     MAX_CACHE_LAYERS="" \
     QGIS_PLUGINPATH=/var/www/plugins \
     QGIS_AUTH_DB_DIR_PATH=/etc/qgisserver/ \
-    MAX_REQUESTS_PER_PROCESS=1000
+    MAX_REQUESTS_PER_PROCESS=1000 \
+    MIN_PROCESSES=1 \
+    MAX_PROCESSES=5
 
 COPY runtime /
 COPY target /usr/local/
