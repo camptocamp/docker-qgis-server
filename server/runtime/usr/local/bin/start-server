@@ -1,5 +1,12 @@
 #!/bin/bash -e
 
+# Be able to instal font without create a new image
+if [ -e /etc/qgisserver/fonts/ ]
+then
+    cp /etc/qgisserver/fonts/* /usr/local/share/fonts
+    fc-cache --really-force --system-only
+fi
+
 # save the environment to be able to restore it in the FCGI daemon (used
 # in /usr/local/bin/qgis_mapsev_wrapper) for the startup code.
 env | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env

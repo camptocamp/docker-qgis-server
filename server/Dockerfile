@@ -27,6 +27,10 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Be able to install font as nonroot
+RUN chmod u+s /usr/bin/fc-cache && \
+    chmod o+w /usr/local/share/fonts
+
 RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
 RUN a2enmod fcgid headers && \
