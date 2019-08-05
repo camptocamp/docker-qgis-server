@@ -27,6 +27,8 @@ You can use the following variables (`-e` option in `docker run`):
 * MAX_PROCESSES: The maximum number of fcgi processes to keep (defaults to 5)
 * QGIS_CATCH_SEGV: Set to "1" if you want stacktraces in the logs in case of segmentation faults.
 
+Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
+
 ## Running the client
 
 If you want to edit a project file, you can run the client with the following command:

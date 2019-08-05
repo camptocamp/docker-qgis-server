@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Be able to install fonts without creating a new image
+if [ -e /etc/qgisserver/fonts/ ]
+then
+    fc-cache --really-force --system-only
+fi
+
 # We expect the container is started with the
 # the users ~ directory mounted as /home/$USER
 
