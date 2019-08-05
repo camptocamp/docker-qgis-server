@@ -1,9 +1,8 @@
 #!/bin/bash -e
 
-# Be able to instal font without create a new image
+# Be able to install fonts without creating a new image
 if [ -e /etc/qgisserver/fonts/ ]
 then
-    cp /etc/qgisserver/fonts/* /usr/local/share/fonts
     fc-cache --really-force --system-only
 fi
 
