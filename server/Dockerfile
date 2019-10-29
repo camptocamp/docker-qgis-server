@@ -41,6 +41,8 @@ RUN a2enmod fcgid headers && \
       s!^(\s*CustomLog)\s+\S+!#\1 /proc/self/fd/1!g; \
       s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
       ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
+    sed -ri 's!LogFormat "(.*)" combined!LogFormat "%{us}T %{X-Request-Id}i \1" combined!g' /etc/apache2/apache2.conf && \
+    echo 'ErrorLogFormat "%{X-Request-Id}i [%l] [pid %P] %M"' >> /etc/apache2/apache2.conf && \
     mkdir -p /var/www/.qgis3 && \
     mkdir -p /var/www/plugins && \
     chown www-data:root /var/www/.qgis3 && \
