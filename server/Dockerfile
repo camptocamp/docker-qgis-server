@@ -38,7 +38,7 @@ RUN a2enmod fcgid headers && \
     rm /etc/apache2/mods-enabled/alias.conf && \
     mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
     sed -ri ' \
-      s!^(\s*CustomLog)\s+\S+!#\1 /proc/self/fd/1!g; \
+      s!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g; \
       s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
       ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
     mkdir -p /var/www/.qgis3 && \
