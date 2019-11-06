@@ -13,15 +13,15 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     LANG=C.UTF-8
 
 RUN apt-get -y update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y libproj12 libgeos-3.6.2 libgdal20 \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libproj12 libgeos-3.6.2 libgdal20 \
       libexpat1 libfcgi libgslcblas0 libpq5 libqca-qt5-2 libqca2-plugins libzip4 \
       libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
       libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 libqt5keychain1 \
-      python3 python3-pip python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
+      python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
       python3-pyqt5.qtsql PyQt5.QtSvg \
       spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
       apache2 libapache2-mod-fcgid grass-core \
-      python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3.7-dev \
+      python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
       libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
       libqt5serialport5 libqt5quickwidgets5 libexiv2-14 && \
     apt-get clean && \
