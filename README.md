@@ -25,7 +25,11 @@ You can use the following variables (`-e` option in `docker run`):
 * MIN_PROCESSES: The minimum number of fcgi processes to keep (defaults to 1)
 * MAX_PROCESSES: The maximum number of fcgi processes to keep (defaults to 5)
 * QGIS_CATCH_SEGV: Set to "1" if you want stacktraces in the logs in case of segmentation faults.
-
+* BUSY_TIMEOUT: The maximum time limit for request handling (defaults to 300)
+* IDLE_TIMEOUT: Application processes which have not handled a request for
+this period of time will be terminated (defaults to 300)
+* IO_TIMEOUT: The maximum period of time the module will wait while trying to
+read from or write to a FastCGI application (defaults to 40)
 Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
 
 ## Running the client
