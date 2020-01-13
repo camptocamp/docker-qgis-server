@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER Camptocamp<info@camptocamp.com>
+LABEL maintainer="info@camptocamp.com"
 
 # A few variables needed by apache
 ENV APACHE_CONFDIR=/etc/apache2 \
@@ -13,8 +13,8 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     LANG=C.UTF-8
 
 RUN apt-get -y update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libproj12 libgeos-3.6.2 libgdal20 \
-      libexpat1 libfcgi libgslcblas0 libpq5 libqca-qt5-2 libqca2-plugins libzip4 \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libproj12 libgeos-3.6.2 \
+      libgdal20 libexpat1 libfcgi libgslcblas0 libpq5 libqca-qt5-2 libqca2-plugins libzip4 \
       libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
       libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 libqt5keychain1 \
       python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
@@ -33,8 +33,8 @@ RUN chmod u+s /usr/bin/fc-cache && \
 
 RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
-RUN a2enmod fcgid headers && \
-    a2dismod -f auth_basic authn_file authn_core authz_host authz_user autoindex dir status && \
+RUN a2enmod fcgid headers status && \
+    a2dismod -f auth_basic authn_file authn_core authz_user autoindex dir && \
     rm /etc/apache2/mods-enabled/alias.conf && \
     mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
     sed -ri ' \
