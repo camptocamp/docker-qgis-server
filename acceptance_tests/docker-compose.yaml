@@ -1,4 +1,4 @@
-mapserver:
+qgisserver:
   image: camptocamp/qgis-server:${DOCKER_TAG}
   environment:
     QGIS_SERVER_LOG_LEVEL: "0"

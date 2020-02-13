@@ -1,14 +1,13 @@
 from c2cwsgiutils.acceptance import utils
 import logging
 import psycopg2
-import sys
 import time
 
 
 BASE_URL = 'http://' + utils.DOCKER_GATEWAY + ':8380/'
 DB_ADDR = utils.DOCKER_GATEWAY
 LOG = logging.getLogger(__name__)
-PROJECT_NAME='qgis'
+PROJECT_NAME = 'qgis'
 
 
 def wait_db():
@@ -26,5 +25,5 @@ def wait_db():
             time.sleep(0.5)
 
 
-def wait_mapserver():
+def wait_qgisserver():
     utils.wait_url(BASE_URL + '?SERVICE=WFS&VERSION=2.0.0&REQUEST=describeFeaturetype&TYPENAME=polygons')
