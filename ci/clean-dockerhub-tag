@@ -23,10 +23,11 @@ def clean(tag_=lambda tag: tag):
         ref = json.loads(event_file.read())["ref"]
 
     response = requests.delete(
-        "https://hub.docker.com/v2/repositories/camptocamp/qgis-server/tags/{tag}/".format(tag=ref,),
-        headers={"Authorization": "JWT " + token,},
+        "https://hub.docker.com/v2/repositories/camptocamp/qgis-server/tags/{tag}/".format(tag=ref),
+        headers={"Authorization": "JWT " + token},
     )
     if not response.ok:
+        print('Error on deleting tag: ' + ref)
         print(response.text)
         sys.exit(2)
 
