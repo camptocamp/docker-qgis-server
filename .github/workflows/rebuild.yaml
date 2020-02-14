@@ -13,16 +13,17 @@ jobs:
     timeout-minutes: 90
 
     strategy:
+      fail-fast: false
       matrix:
         branch:
           - master
-          - 2.16
-          - 2.18
-          - 3.0
-          - 3.2
-          - 3.4
-          - 3.8
-          - 3.10
+          - '2.16'
+          - '2.18'
+          - '3.0'
+          - '3.2'
+          - '3.4'
+          - '3.8'
+          - '3.10'
 
     env:
       MAIN_BRANCH: master
