@@ -1,0 +1,57 @@
+---
+
+name: Rebuild
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+
+jobs:
+  main:
+    runs-on: ubuntu-18.04
+    name: Rebuild
+    timeout-minutes: 90
+
+    strategy:
+      matrix:
+        branch:
+          - master
+          - 2.16
+          - 2.18
+          - 3.0
+          - 3.2
+          - 3.4
+          - 3.8
+          - 3.10
+
+    env:
+      MAIN_BRANCH: master
+      MAJOR_VERSION: 2.5
+      CI: true
+      PATH: /bin:/usr/bin:/usr/local/bin:/home/runner/.local/bin
+      SUMMON_PROVIDER: /usr/local/bin/gopass
+
+    steps:
+      # Versions
+      - run: docker --version
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ matrix.branch }}
+
+      - run: make pull
+      - run: make -j3 build
+      - run: make -j3 acceptance-quick
+
+      - uses: camptocamp/initialise-gopass-summon-action@v1
+        with:
+          ci-gpg-private-key: ${{secrets.CI_GPG_PRIVATE_KEY}}
+          github-gopass-ci-token: ${{secrets.GITHUB_GOPASS_CI_TOKEN}}
+        if: github.repository == 'camptocamp/docker-qgis-server'
+      - run: mkdir -p ~/.docker
+      - run: |
+          summon --yaml '
+            TOKEN: !var gs/ci/dockerhub/token
+          ' bash -c 'envsubst < ci/docker-config.json.tmpl > ~/.docker/config.json'
+      - name: Publish to Docker hub
+        run: ci/publish ${{ matrix.branch }}
+        if: github.repository == 'camptocamp/docker-qgis-server'
