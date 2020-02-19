@@ -26,36 +26,9 @@ DOCKER_TTY := $(shell [ -t 0 ] && echo -ti)
 .PHONY: all
 all: build acceptance
 
-src:
-	git clone git://github.com/qgis/QGIS.git src
-
-.PHONY: update-src
-update-src: src
-	./checkout_release $(QGIS_BRANCH)
-
-.PHONY: build-builder
-build-builder:
-	docker build --tag $(DOCKER_BASE)-builder:$(DOCKER_TAG) builder
-
-.PHONY: build-src
-build-src: build-builder update-src
-	mkdir -p server/build server/target
-	docker run $(DOCKER_TTY) --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG)
-
-run-builder: build-builder update-src
-	mkdir -p server/build server/target
-	docker run -ti --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG) bash
-
-rerun-builder:
-	mkdir -p server/build server/target
-	docker run -ti --rm -e UID=$(UID) -e GID=$(GID) --volume $(ROOT)/src:/src --volume $(ROOT)/server/build:/build --volume $(ROOT)/server/target:/usr/local --volume $(HOME)/.ccache:/home/builder/.ccache $(DOCKER_BASE)-builder:$(DOCKER_TAG) bash
-
-.PHONY: build-server
-build-server: build-src
-	docker build --tag $(DOCKER_BASE):$(DOCKER_TAG) server
-
 .PHONY: build
-build: build-server
+build: build
+	docker build --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
 .PHONY: build-acceptance-config
 build-acceptance-config:
@@ -79,7 +52,7 @@ acceptance-quick: build-acceptance
 
 .PHONY: pull
 pull:
-	for image in `find -name Dockerfile | xargs grep --no-filename FROM | awk '{print $$2}'`; do docker pull $$image; done
+	for image in `find -name Dockerfile | xargs grep --no-filename ^FROM | awk '{print $$2}'`; do docker pull $$image; done
 
 .PHONY: run-client
 run-client: build-server
