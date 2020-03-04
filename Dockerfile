@@ -27,10 +27,7 @@ RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /
 COPY checkout_release /tmp
 RUN cd /src; /tmp/checkout_release ${QGIS_BRANCH}
 
-ENV \
-    CXX=/usr/lib/ccache/clang++ \
-    CC=/usr/lib/ccache/clang \
-    QT_SELECT=5
+ENV QT_SELECT=5
 
 WORKDIR /src/build
 RUN cmake .. \
@@ -43,9 +40,7 @@ RUN cmake .. \
       -DBUILD_TESTING=OFF \
       -DENABLE_TESTS=OFF
 
-RUN ccache -M10G
 RUN ninja install
-RUN ccache -s
 
 
 FROM ubuntu:18.04 as runner
