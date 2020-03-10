@@ -41,7 +41,8 @@ RUN cmake .. \
       -DWITH_SERVER=ON \
       -DWITH_3D=ON \
       -DBUILD_TESTING=OFF \
-      -DENABLE_TESTS=OFF
+      -DENABLE_TESTS=OFF \
+      WITH_GEOREFERENCER=ON
 
 RUN ccache -M10G
 RUN ninja install
