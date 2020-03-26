@@ -1,7 +1,3 @@
-* master:  ![Continuous integration](https://github.com/camptocamp/docker-qgis-server/workflows/Continuous%20integration/badge.svg)
-* 3.10: ![Continuous integration](https://github.com/camptocamp/docker-qgis-server/workflows/Continuous%20integration/badge.svg?branch=3.10)
-* 3.12: ![Continuous integration](https://github.com/camptocamp/docker-qgis-server/workflows/Continuous%20integration/badge.svg?branch=3.12)
-
 # Docker image for QGIS server
 
 ## Usage
