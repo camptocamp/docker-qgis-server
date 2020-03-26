@@ -5,7 +5,7 @@ from c2cwsgiutils.acceptance.composition import Composition
 from c2cwsgiutils.acceptance.connection import Connection
 import pytest
 
-from acceptance_tests import BASE_URL, PROJECT_NAME, wait_db, wait_mapserver
+from acceptance_tests import BASE_URL, PROJECT_NAME, wait_db, wait_qgisserver
 
 
 @pytest.fixture(scope="session")
@@ -13,9 +13,9 @@ def composition(request):
     """
     Fixture that start/stop the Docker composition used for all the tests.
     """
-    result = Composition(request, PROJECT_NAME, "docker-compose.yml")
+    result = Composition(request, PROJECT_NAME, "docker-compose.yaml")
     wait_db()
-    wait_mapserver()
+    wait_qgisserver()
     return result
 
 
