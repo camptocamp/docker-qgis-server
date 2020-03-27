@@ -9,7 +9,7 @@ jobs:
   main:
     runs-on: ubuntu-18.04
     name: Continuous integration
-    timeout-minutes: 100
+    timeout-minutes: 120
 
     env:
       MAIN_BRANCH: master
