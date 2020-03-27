@@ -2,6 +2,10 @@ FROM ubuntu:18.04 as builder
 LABEL maintainer="info@camptocamp.com"
 
 RUN apt-get update && \
+    apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
+    add-apt-repository ppa:ubuntugis/ppa && \
+    apt autoremove --assume-yes software-properties-common && \
+    apt-get update && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
         flex bison libproj-dev libgeos-dev libgdal-dev libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
         libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
@@ -63,7 +67,11 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     APACHE_LOG_DIR=/var/log/apache2 \
     LANG=C.UTF-8
 
-RUN apt-get -y update && \
+RUN apt-get update && \
+    apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
+    add-apt-repository ppa:ubuntugis/ppa && \
+    apt autoremove --assume-yes software-properties-common && \
+    apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libproj12 libgeos-3.6.2 \
       libgdal20 libexpat1 libfcgi libgslcblas0 libpq5 libqca-qt5-2 libqca2-plugins libzip4 \
       libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
