@@ -126,6 +126,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 COPY --from=builder /usr/local/bin /usr/local/bin/
 COPY --from=builder /usr/local/lib /usr/local/lib/
 COPY --from=builder /usr/local/share /usr/local/share/
+COPY --from=builder /usr/local/include /usr/local/include/
 COPY runtime /
 
 RUN adduser www-data root && \
