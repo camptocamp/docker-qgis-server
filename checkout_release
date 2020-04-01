@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 if [ "$#" -ne 1 ]
 then
@@ -7,8 +7,6 @@ then
   echo "Checkout the last tag matching final-* of the given branch"
   exit 1
 fi
-
-cd src
 
 BRANCH=$1
 
