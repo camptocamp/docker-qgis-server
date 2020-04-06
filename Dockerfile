@@ -18,7 +18,7 @@ RUN apt-get update && \
         xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build curl ccache clang libpython3-dev \
         libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 qt3d5-dev \
         qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
-        qt3d-scene2d-plugin libqt5serialport5-dev libexiv2-dev grass-dev && \
+        qt3d-scene2d-plugin libqt5serialport5-dev libexiv2-dev grass-dev protobuf-compiler libprotobuf-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -82,7 +82,7 @@ RUN apt-get update && \
       apache2 libapache2-mod-fcgid grass-core \
       python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
       libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
-      libqt5serialport5 libqt5quickwidgets5 libexiv2-14 && \
+      libqt5serialport5 libqt5quickwidgets5 libexiv2-14 libprotobuf10 libprotobuf-lite10 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
