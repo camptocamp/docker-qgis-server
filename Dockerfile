@@ -121,7 +121,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
     MAX_PROCESSES=5 \
     BUSY_TIMEOUT=300 \
     IDLE_TIMEOUT=300 \
-    IO_TIMEOUT=40
+    FCGID_IO_TIMEOUT=40
 
 COPY --from=builder /usr/local/bin /usr/local/bin/
 COPY --from=builder /usr/local/lib /usr/local/lib/
