@@ -11,7 +11,7 @@ fi
 env | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
 
 # Save the list of variables to be passed along with the FCGI requests (used in
-# /etv/apache2/conf-enabled/qgis.conf).
+# /etc/apache2/conf-enabled/qgis.conf).
 env | sed -e 's/.\+/export "\0"/' > /tmp/init-env
 
 if [[ "${UID}" != 0 ]]
