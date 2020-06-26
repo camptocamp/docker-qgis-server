@@ -3,7 +3,7 @@
 ## Supported Versions
 
 Version | Supported Until | [Supported Until](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule)
---- | ---
+--- | --- | ---
 <= 3.2 | Unsupported | 
 3.4 | 31/06/2022 | 17/01/2020
 3.6 | 17/05/2019 | 17/05/2019
