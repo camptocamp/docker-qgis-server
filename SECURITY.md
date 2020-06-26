@@ -12,7 +12,3 @@ Version | Supported Until | [Supported Until](https://www.qgis.org/en/site/getin
 3.12 | 15/05/2020 | 15/05/2020
 3.14 | 11/09/2020 | 11/09/2020
 3.16 | 31/06/2022 | 15/01/2022
-
-[Reporting Upstream Vulnerability](https://www.mapserver.org/development/bugs.html?highlight=security)
-
-[Upstream Vulnerability](https://www.cvedetails.com/product/17181/UMN-Mapserver.html)
