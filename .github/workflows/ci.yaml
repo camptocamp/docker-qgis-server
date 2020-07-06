@@ -1,5 +1,4 @@
 ---
-
 name: Continuous integration
 
 on:
@@ -24,8 +23,8 @@ jobs:
       - uses: actions/checkout@v1
 
       - run: make pull
-      - run: make -j3 build
-      - run: make -j3 acceptance-quick
+      - run: make build
+      - run: make acceptance-quick
 
       - uses: camptocamp/initialise-gopass-summon-action@v1
         with:
