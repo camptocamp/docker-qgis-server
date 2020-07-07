@@ -1,28 +1,28 @@
-FROM ubuntu:18.04 as builder
+FROM osgeo/gdal:ubuntu-small-3.1.1 as builder
 LABEL maintainer="info@camptocamp.com"
 
-RUN apt-get update && \
-    apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
-    add-apt-repository ppa:ubuntugis/ppa && \
+RUN apt update && \
+    apt upgrade --assume-yes && \
+    apt install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt autoremove --assume-yes software-properties-common && \
-    apt-get update && \
-    LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
-        flex bison libproj-dev libgeos-dev libgdal-dev libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
-        libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
-        libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
-        qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
-        libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
-        pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools pyqt5-dev \
-        pyqt5-dev-tools python3-pyqt5.qtsql pyqt5.qsci-dev python3-sip python3-sip-dev python3-gdal \
-        python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
-        xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build curl ccache clang libpython3-dev \
-        libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 qt3d5-dev \
-        qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
-        qt3d-scene2d-plugin libqt5serialport5-dev libexiv2-dev grass-dev protobuf-compiler libprotobuf-dev && \
-    apt-get clean && \
+    LC_ALL=C DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends cmake gcc \
+    flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
+    libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
+    libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
+    qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
+    libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
+    pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools pyqt5-dev \
+    pyqt5-dev-tools python3-pyqt5.qtsql pyqt5.qsci-dev python3-sip python3-sip-dev \
+    python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
+    xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
+    libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
+    libexiv2-dev grass-dev protobuf-compiler libprotobuf-dev && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+
+RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
 ARG QGIS_BRANCH
 
@@ -38,22 +38,23 @@ ENV \
 
 WORKDIR /src/build
 RUN cmake .. \
-      -GNinja \
-      -DCMAKE_BUILD_TYPE=Release \
-      -DCMAKE_INSTALL_PREFIX=/usr/local \
-      -DWITH_DESKTOP=ON \
-      -DWITH_SERVER=ON \
-      -DWITH_3D=ON \
-      -DBUILD_TESTING=OFF \
-      -DENABLE_TESTS=OFF \
-      -DWITH_GEOREFERENCER=ON
+    -GNinja \
+    -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    -DWITH_DESKTOP=ON \
+    -DWITH_SERVER=ON \
+    -DBUILD_TESTING=OFF \
+    -DENABLE_TESTS=OFF \
+    -DWITH_GEOREFERENCER=ON
 
 RUN ccache -M10G
 RUN ninja install
 RUN ccache -s
 
 
-FROM ubuntu:18.04 as runner
+FROM osgeo/gdal:ubuntu-small-3.1.1 as runner
 LABEL maintainer="info@camptocamp.com"
 
 # A few variables needed by apache
@@ -69,21 +70,20 @@ ENV APACHE_CONFDIR=/etc/apache2 \
 
 RUN apt-get update && \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
-    add-apt-repository ppa:ubuntugis/ppa && \
     apt autoremove --assume-yes software-properties-common && \
     apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libproj12 libgeos-3.6.2 \
-      libgdal20 libexpat1 libfcgi libgslcblas0 libpq5 libqca-qt5-2 libqca2-plugins libzip4 \
-      libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
-      libqt5webkit5 libqwt-qt5-6 libspatialindex4v5 libspatialite7 libsqlite3-0 libqt5keychain1 \
-      python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
-      python3-pyqt5.qtsql PyQt5.QtSvg \
-      spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-      apache2 libapache2-mod-fcgid grass-core \
-      python3-gdal python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
-      libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
-      libqt5serialport5 libqt5quickwidgets5 libexiv2-14 libprotobuf10 libprotobuf-lite10 \
-      libgsl23 && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
+    libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
+    libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
+    python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
+    python3-pyqt5.qtsql PyQt5.QtSvg \
+    spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
+    apache2 libapache2-mod-fcgid grass-core \
+    python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
+    libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
+    libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
+    libgsl23 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -98,9 +98,9 @@ RUN a2enmod fcgid headers status && \
     rm /etc/apache2/mods-enabled/alias.conf && \
     mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
     sed -ri ' \
-      s!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g; \
-      s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
-      ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
+    s!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g; \
+    s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
+    ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf && \
     sed -ri 's!LogFormat "(.*)" combined!LogFormat "%{us}T %{X-Request-Id}i \1" combined!g' /etc/apache2/apache2.conf && \
     echo 'ErrorLogFormat "%{X-Request-Id}i [%l] [pid %P] %M"' >> /etc/apache2/apache2.conf && \
     mkdir -p /var/www/.qgis3 && \
