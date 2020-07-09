@@ -67,12 +67,12 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     APACHE_LOG_DIR=/var/log/apache2 \
     LANG=C.UTF-8
 
-RUN apt-get update && \
+RUN apt update && \
     apt upgrade --assume-yes && \
-    apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
+    apt install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt autoremove --assume-yes software-properties-common && \
-    apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    apt update && \
+    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
@@ -84,7 +84,7 @@ RUN apt-get update && \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 && \
-    apt-get clean && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Be able to install font as nonroot
