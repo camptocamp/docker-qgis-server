@@ -2,7 +2,6 @@ FROM osgeo/gdal:ubuntu-small-3.1.1 as builder
 LABEL maintainer="info@camptocamp.com"
 
 RUN apt update && \
-    apt upgrade --assume-yes && \
     apt install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt autoremove --assume-yes software-properties-common && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends cmake gcc \
@@ -69,6 +68,7 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     LANG=C.UTF-8
 
 RUN apt-get update && \
+    apt upgrade --assume-yes && \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt autoremove --assume-yes software-properties-common && \
     apt-get update && \
