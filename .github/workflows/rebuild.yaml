@@ -1,10 +1,9 @@
 ---
-
 name: Rebuild
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: '30 2 * * *'
 
 jobs:
   main:
@@ -19,7 +18,7 @@ jobs:
           - master
           - '3.4'
           - '3.10'
-          - '3.12'
+          - '3.14'
 
     env:
       MAIN_BRANCH: master
