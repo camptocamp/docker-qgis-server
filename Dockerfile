@@ -15,7 +15,8 @@ RUN apt update && \
     python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
-    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev && \
+    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
+    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -46,7 +47,12 @@ RUN cmake .. \
     -DWITH_SERVER=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DWITH_GEOREFERENCER=ON
+    -DWITH_GEOREFERENCER=ON \
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
+    -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
+    -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so.5 \
+    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
+    -DWITH_3D=ON
 
 RUN ccache -M10G
 RUN ninja install
@@ -74,6 +80,8 @@ RUN apt update && \
     apt update && \
     DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
+    qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
+    qt3d-scene2d-plugin \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
     python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
