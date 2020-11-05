@@ -46,7 +46,11 @@ RUN cmake .. \
     -DWITH_SERVER=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DWITH_GEOREFERENCER=ON
+    -DWITH_GEOREFERENCER=ON \
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
+    -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
+    -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so.5 \
+    -DWITH_3D=ON
 
 RUN ccache -M10G
 RUN ninja install
