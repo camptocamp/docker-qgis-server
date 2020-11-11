@@ -28,7 +28,8 @@ all: build acceptance
 
 .PHONY: build
 build: build
-	docker build --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+	docker build --target=runner-server --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+	docker build --target=runner-desktop --tag=$(DOCKER_BASE):$(DOCKER_TAG)-desktop --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
 .PHONY: build-acceptance-config
 build-acceptance-config:
@@ -52,11 +53,11 @@ acceptance-quick: build-acceptance
 
 .PHONY: pull
 pull:
-	for image in `find -name Dockerfile | xargs grep --no-filename ^FROM | awk '{print $$2}'`; do docker pull $$image; done
+	for image in `find -name Dockerfile | xargs grep --no-filename ^FROM |grep -v 'FROM runner'|grep -v 'FROM builder'| awk '{print $$2}'`; do docker pull $$image; done
 
 .PHONY: run-client
 run-client: build
-	docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG) /usr/local/bin/start-client
+	docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG)-desktop
 
 clean:
 	rm -rf acceptance_tests/junitxml/ server/build server/target
