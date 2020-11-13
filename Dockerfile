@@ -15,7 +15,7 @@ RUN apt update && \
     python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
-    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev && \
+    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -82,7 +82,7 @@ RUN apt update && \
     apache2 libapache2-mod-fcgid \
     python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
-    libgsl23 && \
+    libgsl23 libzstd1 && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
