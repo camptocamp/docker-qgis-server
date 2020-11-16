@@ -17,3 +17,5 @@ fi
 
 docker tag camptocamp/qgis-server camptocamp/qgis-server:${TAG}
 docker push camptocamp/qgis-server:${TAG}
+docker tag camptocamp/qgis-server:latest-desktop camptocamp/qgis-server:${TAG}-desktop
+docker push camptocamp/qgis-server:${TAG}-desktop
