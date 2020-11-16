@@ -15,11 +15,12 @@ RUN apt update && \
     python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
-    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev && \
+    libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
+    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
 RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
@@ -42,36 +43,47 @@ RUN cmake .. \
     -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
-    -DWITH_DESKTOP=ON \
+    -DWITH_DESKTOP=OFF \
     -DWITH_SERVER=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DWITH_GEOREFERENCER=ON
+    -DWITH_GEOREFERENCER=ON \
+    -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
-RUN ccache -M10G
+RUN ccache --max-size=10G
+RUN ninja
+RUN ccache --show-stats
+
+FROM builder as builder-server
+
 RUN ninja install
-RUN ccache -s
 
+FROM builder as builder-desktop
+
+RUN cmake .. \
+    -GNinja \
+    -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    -DWITH_DESKTOP=ON \
+    -DWITH_SERVER=OFF \
+    -DBUILD_TESTING=OFF \
+    -DENABLE_TESTS=OFF \
+    -DWITH_GEOREFERENCER=ON \
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
+    -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
+    -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so.5 \
+    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
+    -DWITH_3D=ON
+
+RUN ninja install
+RUN ccache --show-stats
 
 FROM osgeo/gdal:ubuntu-small-3.1.1 as runner
 LABEL maintainer="info@camptocamp.com"
 
-# A few variables needed by apache
-ENV APACHE_CONFDIR=/etc/apache2 \
-    APACHE_ENVVARS=/etc/apache2/envvars \
-    APACHE_RUN_USER=www-data \
-    APACHE_RUN_GROUP=www-data \
-    APACHE_RUN_DIR=/var/run/apache2 \
-    APACHE_PID_FILE=/etc/apache2/apache2.pid \
-    APACHE_LOCK_DIR=/var/lock/apache2 \
-    APACHE_LOG_DIR=/var/log/apache2 \
-    LANG=C.UTF-8
-
 RUN apt update && \
-    apt upgrade --assume-yes && \
-    apt install --assume-yes --no-install-recommends apt-utils software-properties-common && \
-    apt autoremove --assume-yes software-properties-common && \
-    apt update && \
     DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
@@ -86,11 +98,29 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+
+FROM runner as runner-server
+
+RUN apt update && \
+    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends libfcgi && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Be able to install font as nonroot
 RUN chmod u+s /usr/bin/fc-cache && \
     chmod o+w /usr/local/share/fonts
 
-RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+# A few variables needed by Apache
+ENV APACHE_CONFDIR=/etc/apache2 \
+    APACHE_ENVVARS=/etc/apache2/envvars \
+    APACHE_RUN_USER=www-data \
+    APACHE_RUN_GROUP=www-data \
+    APACHE_RUN_DIR=/var/run/apache2 \
+    APACHE_PID_FILE=/etc/apache2/apache2.pid \
+    APACHE_LOCK_DIR=/var/lock/apache2 \
+    APACHE_LOG_DIR=/var/log/apache2 \
+    LANG=C.UTF-8
 
 RUN a2enmod fcgid headers status && \
     a2dismod -f auth_basic authn_file authn_core authz_user autoindex dir && \
@@ -105,8 +135,7 @@ RUN a2enmod fcgid headers status && \
     mkdir -p /var/www/.qgis3 && \
     mkdir -p /var/www/plugins && \
     chown www-data:root /var/www/.qgis3 && \
-    ln --symbolic /project /etc/qgisserver
-
+    ln --symbolic /etc/qgisserver /project
 
 # A few tunable variables for QGIS
 ENV QGIS_SERVER_LOG_LEVEL=0 \
@@ -124,10 +153,8 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
     FCGID_IDLE_TIMEOUT=300 \
     FCGID_IO_TIMEOUT=40
 
-COPY --from=builder /usr/local/bin /usr/local/bin/
-COPY --from=builder /usr/local/lib /usr/local/lib/
-COPY --from=builder /usr/local/share /usr/local/share/
-COPY --from=builder /usr/local/include /usr/local/include/
+COPY --from=builder-server /usr/local/bin /usr/local/bin/
+COPY --from=builder-server /usr/local/lib /usr/local/lib/
 COPY runtime /
 
 RUN adduser www-data root && \
@@ -139,3 +166,22 @@ RUN ldconfig
 WORKDIR /etc/qgisserver
 EXPOSE 80
 CMD ["/usr/local/bin/start-server"]
+
+FROM runner as runner-desktop
+
+RUN apt update && \
+    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
+    qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
+    qt3d-scene2d-plugin && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
+COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
+COPY --from=builder-desktop /usr/local/share /usr/local/share/
+COPY runtime-desktop /
+
+RUN ldconfig
+
+WORKDIR /etc/qgisserver
+CMD ["/usr/local/bin/start-client"]
