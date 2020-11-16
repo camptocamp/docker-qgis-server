@@ -47,7 +47,6 @@ RUN cmake .. \
     -DWITH_SERVER=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DWITH_GEOREFERENCER=ON \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
 RUN ccache --max-size=10G
@@ -155,6 +154,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
+COPY --from=builder-server /usr/local/share/qgis/python /usr/local/share/qgis/python/
 COPY runtime /
 
 RUN adduser www-data root && \
