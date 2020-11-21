@@ -35,5 +35,5 @@ Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thu
 
 If you want to edit a project file, you can run the client from a Linux machine with the following command:
 ```bash
-docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} camptocamp/qgis-server:latest /usr/local/bin/start-client
+docker run --rm -ti -e DISPLAY=unix${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME} camptocamp/qgis-server:latest-desktop
 ```
