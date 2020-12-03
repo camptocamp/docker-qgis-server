@@ -1,0 +1,389 @@
+commit c21188e6e1c5dd65d39101ccf65bb6cf47ed06e3
+Author: Stéphane Brunner <stephane.brunner@camptocamp.com>
+Date:   Wed Dec 2 12:20:03 2020 +0100
+
+    Use c2csiutils - Publish to GitHub Container Registry
+
+diff --git a/.dependabot/config.yaml b/.dependabot/config.yaml
+index 3be251c..35214c0 100644
+--- a/.dependabot/config.yaml
++++ b/.dependabot/config.yaml
+@@ -13,6 +13,12 @@ update_configs:
+     ignored_updates:
+       - match:
+           dependency_name: none
++  - package_manager: python
++    directory: /ci
++    update_schedule: live
++    automerged_updates:
++      - match:
++          update_type: all
+   - package_manager: docker
+     directory: /
+     update_schedule: weekly
+diff --git a/.github/workflows/audit.yaml b/.github/workflows/audit.yaml
+index 830e0c0..6848ebc 100644
+--- a/.github/workflows/audit.yaml
++++ b/.github/workflows/audit.yaml
+@@ -6,7 +6,7 @@ on:
+     - cron: '30 2 * * *'
+ 
+ jobs:
+-  main:
++  audit:
+     runs-on: ubuntu-20.04
+     name: Audit
+     timeout-minutes: 5
+@@ -18,41 +18,23 @@ jobs:
+           - release_2
+           - release_3
+           - release_4
++          - master
+ 
+     steps:
+-      - uses: actions/checkout@v1
++      - uses: actions/checkout@v2
+         with:
+           ref: ${{ matrix.branch }}
+-      - uses: actions/setup-python@v2
+-        with:
+-          python-version: 3.8
+ 
+-      - run: sudo python3 -m pip install safety
+       - run: |
+-          for file in $(find -name requirements.txt)
+-          do
+-            echo Audit ${file}
+-            (
+-              cd $(dirname ${file}) &&
+-              safety check --full-report --file=requirements.txt\
+-                --ignore=$(cat pip-cwe-ignore 2> /dev/null | sed -e 's/,/ --ignore=/g' || true) \
+-
+-            )
+-          done
++          sudo rm /etc/apt/sources.list.d/*.list
++          sudo apt update
++          sudo apt install --yes python3-wheel
+ 
+       - uses: asdf-vm/actions/install@v1
+         with:
+           tool_versions: python 3.8.0
+-        if: always()
+-      - run: sudo python3 -m pip install pipenv
+-        if: always()
+-      - run: |
+-          for file in $(find -name Pipfile)
+-          do
+-            echo Audit ${file}
+-            (
+-              cd $(dirname ${file}) &&
+-              pipenv check --ignore=$(cat pipenv-cwe-ignore 2> /dev/null || echo 0)
+-            )
+-          done
+-        if: always()
++
++      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
++
++      - name: Audit
++        run: c2cciutils-audit
+diff --git a/.github/workflows/clean-dockerhub-tag.yaml b/.github/workflows/clean-dockerhub-tag.yaml
+deleted file mode 100644
+index 164540a..0000000
+--- a/.github/workflows/clean-dockerhub-tag.yaml
++++ /dev/null
+@@ -1,20 +0,0 @@
+----
+-name: Clean docker hub tags
+-
+-on: delete
+-
+-jobs:
+-  clean:
+-    runs-on: ubuntu-20.04
+-    name: Clean docker hub tags
+-    timeout-minutes: 5
+-    env:
+-      SUMMON_PROVIDER: /usr/local/bin/gopass
+-    steps:
+-      - uses: actions/checkout@v1
+-      - uses: camptocamp/initialise-gopass-summon-action@v1
+-        with:
+-          ci-gpg-private-key: ${{secrets.CI_GPG_PRIVATE_KEY}}
+-          github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
+-      - name: Clean docker hub tags
+-        run: ci/clean-dockerhub-tag
+diff --git a/.github/workflows/clean.yaml b/.github/workflows/clean.yaml
+new file mode 100644
+index 0000000..38c449d
+--- /dev/null
++++ b/.github/workflows/clean.yaml
+@@ -0,0 +1,29 @@
++---
++name: Clean docker hub tags
++
++on: delete
++
++jobs:
++  clean:
++    runs-on: ubuntu-20.04
++    name: Clean docker hub tags
++    timeout-minutes: 5
++
++    steps:
++      - uses: actions/checkout@v2
++
++      - uses: camptocamp/initialise-gopass-summon-action@v2
++        with:
++          ci-gpg-private-key: ${{secrets.CI_GPG_PRIVATE_KEY}}
++          github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
++          patterns: docker
++
++      - run: |
++          sudo rm /etc/apt/sources.list.d/*.list
++          sudo apt update
++          sudo apt install --yes python3-wheel
++
++      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
++
++      - name: Clean docker hub tags
++        run: c2cciutils-clean
+diff --git a/.github/workflows/ci.yaml b/.github/workflows/main.yaml
+similarity index 59%
+rename from .github/workflows/ci.yaml
+rename to .github/workflows/main.yaml
+index c99be9e..2f999ce 100644
+--- a/.github/workflows/ci.yaml
++++ b/.github/workflows/main.yaml
+@@ -6,7 +6,6 @@ on:
+ 
+ env:
+   IN_CI: '1'
+-  SUMMON_PROVIDER: /usr/local/bin/gopass
+ 
+ jobs:
+   build:
+@@ -14,9 +13,6 @@ jobs:
+     runs-on: ubuntu-20.04
+     timeout-minutes: 15
+ 
+-    env:
+-      PATH: /bin:/usr/bin:/usr/local/bin:/home/runner/.local/bin
+-
+     steps:
+       - uses: actions/checkout@v2
+ 
+@@ -26,6 +22,16 @@ jobs:
+           github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
+           patterns: pypi docker
+ 
++      - run: |
++          sudo rm /etc/apt/sources.list.d/*.list
++          sudo apt update
++          sudo apt install --yes python3-wheel
++
++      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
++
++      - name: Checks
++        run: c2cciutils-checks
++
+       - name: Pull
+         run: make pull
+ 
+@@ -38,12 +44,5 @@ jobs:
+       - name: Install GDAL
+         run: docker run --rm camptocamp/c2cwsgiutils install-gdal
+ 
+-      - name: Check Python package
+-        run: |
+-          sudo apt install --yes python3-setuptools python3-wheel
+-          python3 -m pip install --requirement=requirements-publish.txt
+-          python3 ./setup.py sdist bdist_wheel
+-          twine check dist/*
+-
+-      - name: Release
+-        run: scripts/publish ${{github.ref}}
++      - name: Publish
++        run: c2cciutils-publish
+diff --git a/.github/workflows/rebuild.yaml b/.github/workflows/rebuild.yaml
+index 740e05d..498f217 100644
+--- a/.github/workflows/rebuild.yaml
++++ b/.github/workflows/rebuild.yaml
+@@ -18,8 +18,10 @@ jobs:
+       fail-fast: false
+       matrix:
+         branch:
++          - release_2
+           - release_3
+           - release_4
++          - master
+ 
+     steps:
+       - uses: actions/checkout@v2
+@@ -32,6 +34,16 @@ jobs:
+           github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
+           patterns: pypi docker
+ 
++      - run: |
++          sudo rm /etc/apt/sources.list.d/*.list
++          sudo apt update
++          sudo apt install --yes python3-wheel
++
++      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
++
++      - name: Checks
++        run: c2cciutils-checks
++
+       - name: Pull
+         run: make pull
+ 
+@@ -41,5 +53,5 @@ jobs:
+       - name: Acceptance
+         run: make acceptance
+ 
+-      - name: Release
+-        run: scripts/publish ${{github.ref}}
++      - name: Publish
++        run: c2cciutils-publish --version=${{github.ref}}
+diff --git a/ci/clean-dockerhub-tag b/ci/clean-dockerhub-tag
+deleted file mode 100755
+index 6d15208..0000000
+--- a/ci/clean-dockerhub-tag
++++ /dev/null
+@@ -1,57 +0,0 @@
+-#!/usr/bin/env python3
+-# -*- coding: utf-8 -*-
+-
+-import json
+-import os
+-import subprocess
+-import sys
+-
+-import requests
+-
+-
+-def clean(image: str, tag: str, token: str) -> None:
+-    print("Delete image '{image}:{tag}'.".format(image=image, tag=tag))
+-
+-    response = requests.head(
+-        "https://hub.docker.com/v2/repositories/{image}/tags/{tag}/".format(image=image, tag=tag),
+-        headers={"Authorization": "JWT " + token},
+-    )
+-    if response.status_code == 404:
+-        return
+-    if not response.ok:
+-        print("Error checking image '{image}:{tag}' status.".format(image=image, tag=tag))
+-        print(response.text)
+-        sys.exit(2)
+-
+-    response = requests.delete(
+-        "https://hub.docker.com/v2/repositories/{image}/tags/{tag}/".format(image=image, tag=tag),
+-        headers={"Authorization": "JWT " + token},
+-    )
+-    if not response.ok:
+-        print("Error on deleting tag: " + tag)
+-        print(response.text)
+-        sys.exit(2)
+-
+-
+-def main() -> None:
+-    token = requests.post(
+-        "https://hub.docker.com/v2/users/login/",
+-        headers={"Content-Type": "application/json"},
+-        data=json.dumps(
+-            {
+-                "username": subprocess.check_output(["gopass", "gs/ci/dockerhub/username"]).decode(),
+-                "password": subprocess.check_output(["gopass", "gs/ci/dockerhub/password"]).decode(),
+-            }
+-        ),
+-    ).json()["token"]
+-
+-    with open(os.environ["GITHUB_EVENT_PATH"]) as event_file:
+-        ref = json.loads(event_file.read())["ref"]
+-
+-    ref = ref.replace("/", "_")
+-
+-    clean("camptocamp/c2cwsgiutils", ref, token)
+-
+-
+-if __name__ == "__main__":
+-    main()
+diff --git a/ci/config.yaml b/ci/config.yaml
+new file mode 100644
+index 0000000..706f6ad
+--- /dev/null
++++ b/ci/config.yaml
+@@ -0,0 +1,15 @@
++version:
++  branch_to_version_re:
++    - from: release_([0-9]+)
++      to: \1
++    - from: master
++      to: '5'
++
++checks:
++  versions:
++    extra_versions:
++      - '5'
++
++  black:
++    ignore_patterns_re:
++      - .*\.html
+diff --git a/ci/requirements.txt b/ci/requirements.txt
+new file mode 100644
+index 0000000..13f70ca
+--- /dev/null
++++ b/ci/requirements.txt
+@@ -0,0 +1 @@
++c2cciutils==1.0.dev20201202131358
+diff --git a/requirements-publish.txt b/requirements-publish.txt
+deleted file mode 100644
+index e06f85f..0000000
+--- a/requirements-publish.txt
++++ /dev/null
+@@ -1,5 +0,0 @@
+-pipfile==0.0.2
+-twine==3.2.0
+-keyrings.alt==4.0.1
+-setuptools==50.3.2
+-wheel==0.36.0
+diff --git a/scripts/publish b/scripts/publish
+deleted file mode 100755
+index 9d77062..0000000
+--- a/scripts/publish
++++ /dev/null
+@@ -1,35 +0,0 @@
+-#!/bin/bash -eux
+-
+-tag=''
+-
+-if [[ $1 =~ ^refs/tags/([0-9]+(\.[0-9]+)*)$ ]]; then
+-    tag="${BASH_REMATCH[1]}"
+-    echo "Create release ${tag} in pypi"
+-    scripts/release '${tag}'
+-    echo "Release tag ${tag}"
+-elif [[ $1 =~ ^refs/heads/(release_[0-9]+)$ ]]; then
+-    tag="${BASH_REMATCH[1]}"
+-    echo "Release major ${tag}"
+-elif [[ $1 == refs/heads/master ]]; then
+-    tag=latest
+-    echo "Release latest"
+-else
+-    echo "No release to do for $1"
+-fi
+-if [[ -n "${tag}" ]]; then
+-    if [[ "${tag}" != "latest" ]]; then
+-        docker tag camptocamp/c2cwsgiutils camptocamp/c2cwsgiutils:${tag}
+-    fi
+-    docker tag camptocamp/c2cwsgiutils ghcr.io/camptocamp/c2cwsgiutils:${tag}
+-
+-    docker push camptocamp/c2cwsgiutils:${tag}
+-    docker push ghcr.io/camptocamp/c2cwsgiutils:${tag}
+-
+-    if [[ $1 == refs/heads/master ]]; then
+-        docker push camptocamp/c2cwsgiutils-redis-sentinel:5
+-        docker tag camptocamp/c2cwsgiutils-redis-sentinel:5 ghcr.io/camptocamp/c2cwsgiutils-redis-sentinel:5
+-        docker push ghcr.io/camptocamp/c2cwsgiutils-redis-sentinel:5
+-    fi
+-
+-    rm -rf ~/.docker* # Docker logout
+-fi
