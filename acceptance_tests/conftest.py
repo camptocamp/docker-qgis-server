@@ -2,26 +2,24 @@
 Common fixtures for every tests.
 """
 import pytest
-from c2cwsgiutils.acceptance.composition import Composition
 from c2cwsgiutils.acceptance.connection import Connection
 
-from acceptance_tests import BASE_URL, PROJECT_NAME, wait_db, wait_qgisserver
+from acceptance_tests import wait_db, wait_qgisserver
 
 
 @pytest.fixture(scope="session")
-def composition(request):
+def wait():
     """
     Fixture that start/stop the Docker composition used for all the tests.
     """
-    result = Composition(request, PROJECT_NAME, "docker-compose.yaml")
     wait_db()
     wait_qgisserver()
-    return result
+    return
 
 
 @pytest.fixture
-def connection(composition):
+def connection(wait):
     """
     Fixture that returns a connection to a running batch container.
     """
-    return Connection(BASE_URL, "http://www.example.com/")
+    return Connection("http://qgis:8080/", "http://www.example.com/")
