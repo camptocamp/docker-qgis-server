@@ -138,5 +138,5 @@ RUN adduser www-data root && \
 RUN ldconfig
 
 WORKDIR /etc/qgisserver
-EXPOSE 80
+EXPOSE 8080
 CMD ["/usr/local/bin/start-server"]
