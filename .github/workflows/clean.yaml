@@ -18,8 +18,11 @@ jobs:
           github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
           patterns: docker
 
-      - run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
-      - run: python3 -m pip install --user --editable=.
+      - run: |
+          sudo rm /etc/apt/sources.list.d/*.list
+          sudo apt update
+          sudo apt install --yes python3-wheel
+      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
 
       - name: Clean docker hub tags
         run: c2cciutils-clean
