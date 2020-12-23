@@ -23,8 +23,7 @@ jobs:
           patterns: docker
         if: github.repository == 'camptocamp/docker-qgis-server'
       - run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
-
-      - run: sudo python3 -m pip install --requirement=ci/requirements.txt
+      - run: python3 -m pip install --user --editable=.
 
       - name: Checks
         run: c2cciutils-checks
