@@ -18,7 +18,6 @@ jobs:
           - master
           - '3.4'
           - '3.10'
-          - '3.14'
           - '3.16'
 
     steps:
@@ -38,7 +37,7 @@ jobs:
 
       - name: Checks
         run: c2cciutils-checks
-    
+
       - run: make pull
       - run: make -j3 build
       - run: make -j3 acceptance-quick
