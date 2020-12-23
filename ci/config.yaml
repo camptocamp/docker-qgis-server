@@ -14,4 +14,3 @@ publish:
         tags:
           - '{version}'
           - '{version}-desktop'
-    
