@@ -12,7 +12,7 @@ docker run -d -p 8380:80 --volume=$PWD/etc/qgisserver:/etc/qgisserver camptocamp
 With the previous command, you'll get to your server with this URL:
 http://localhost:8380/?SERVICE=WMS&REQUEST=GetCapabilities
 
-## Tunning
+## Tuning
 
 You can use the following variables (`-e` option in `docker run`):
 

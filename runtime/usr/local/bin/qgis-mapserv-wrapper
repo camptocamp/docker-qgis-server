@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# add the evironment variables that were set when apache was started
+# add the environment variables that were set when apache was started
 export HOME=/var/www
 export QT_QPA_PLATFORM=offscreen
 source /tmp/init-env
