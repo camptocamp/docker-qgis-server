@@ -1,4 +1,4 @@
-FROM osgeo/gdal:ubuntu-small-3.1.1 as builder
+FROM osgeo/gdal:ubuntu-small-3.2.0 as builder
 LABEL maintainer="info@camptocamp.com"
 
 RUN apt update && \
@@ -79,7 +79,7 @@ RUN cmake .. \
 RUN ninja install
 RUN ccache --show-stats
 
-FROM osgeo/gdal:ubuntu-small-3.1.1 as runner
+FROM osgeo/gdal:ubuntu-small-3.2.0 as runner
 LABEL maintainer="info@camptocamp.com"
 
 RUN apt update && \
