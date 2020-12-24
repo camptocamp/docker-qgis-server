@@ -1,29 +1,20 @@
 ---
-name: Rebuild
+name: Continuous integration
 
 on:
-  schedule:
-    - cron: '30 2 * * *'
+  push:
 
 jobs:
   main:
     runs-on: ubuntu-20.04
-    name: Rebuild
+    name: Continuous integration
     timeout-minutes: 150
-
-    strategy:
-      fail-fast: false
-      matrix:
-        branch:
-          - master
-          - '3.4'
-          - '3.10'
-          - '3.16'
+    if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
     steps:
+      # Versions
+      - run: docker --version
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ matrix.branch }}
 
       - uses: camptocamp/initialise-gopass-summon-action@v2
         with:
@@ -31,16 +22,15 @@ jobs:
           github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
           patterns: docker
         if: github.repository == 'camptocamp/docker-qgis-server'
-
       - run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
       - run: python3 -m pip install --user --requirement=ci/requirements.txt
 
       - name: Checks
         run: c2cciutils-checks
-
       - run: make pull
-      - run: make -j3 build
-      - run: make -j3 acceptance-quick
+      - run: make build
+      - run: make acceptance-quick
 
       - name: Publish
-        run: c2cciutils-publish --type=rebuild --branch=${{ matrix.branch }}
+        run: c2cciutils-publish
+        if: github.repository == 'camptocamp/docker-qgis-server'

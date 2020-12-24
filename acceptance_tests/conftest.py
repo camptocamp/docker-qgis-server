@@ -1,9 +1,9 @@
 """
 Common fixtures for every tests.
 """
+import pytest
 from c2cwsgiutils.acceptance.composition import Composition
 from c2cwsgiutils.acceptance.connection import Connection
-import pytest
 
 from acceptance_tests import BASE_URL, PROJECT_NAME, wait_db, wait_qgisserver
 
@@ -24,4 +24,4 @@ def connection(composition):
     """
     Fixture that returns a connection to a running batch container.
     """
-    return Connection(BASE_URL, 'http://www.example.com/')
+    return Connection(BASE_URL, "http://www.example.com/")
