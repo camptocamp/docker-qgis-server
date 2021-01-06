@@ -40,7 +40,7 @@ jobs:
 
       - run: make pull
       - run: make -j3 build
-      - run: make -j3 acceptance-quick
+      - run: make -j3 acceptance
 
       - name: Publish
         run: c2cciutils-publish --type=rebuild --branch=${{ matrix.branch }}

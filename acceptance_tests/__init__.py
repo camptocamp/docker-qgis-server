@@ -4,16 +4,13 @@ import time
 import psycopg2
 from c2cwsgiutils.acceptance import utils
 
-BASE_URL = "http://" + utils.DOCKER_GATEWAY + ":8380/"
-DB_ADDR = utils.DOCKER_GATEWAY
 LOG = logging.getLogger(__name__)
-PROJECT_NAME = "qgis"
 
 
 def wait_db():
     timeout = time.time() + 60.0
 
-    conn_string = "host='%s' port='15432' dbname='test' user='www-data' password='www-data'" % DB_ADDR
+    conn_string = "host='db' port='5432' dbname='test' user='www-data' password='www-data'"
     while True:
         try:
             LOG.info("Trying to connect to the DB... ")
@@ -26,4 +23,4 @@ def wait_db():
 
 
 def wait_qgisserver():
-    utils.wait_url(BASE_URL + "?SERVICE=WFS&VERSION=2.0.0&REQUEST=describeFeaturetype&TYPENAME=polygons")
+    utils.wait_url("http://qgis:8080?SERVICE=WFS&VERSION=2.0.0&REQUEST=describeFeaturetype&TYPENAME=polygons")
