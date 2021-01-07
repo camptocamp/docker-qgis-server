@@ -1,26 +1,34 @@
-qgisserver:
-  image: camptocamp/qgis-server:${DOCKER_TAG}
-  environment:
-    QGIS_SERVER_LOG_LEVEL: "0"
-    QGIS_CATCH_SEGV: "1"
-  links:
-    - db
-  ports:
-    - 8380:8080
-  volumes_from:
-    - acceptance_config
-  user: www-data
+version: '2'
 
-db:
-  image: camptocamp/postgres:9.6
-  environment:
-    POSTGRES_USER: www-data
-    POSTGRES_PASSWORD: www-data
-    POSTGRES_DB: test
-  ports:
-    - 15432:5432
-  volumes_from:
-    - acceptance_config
+services:
+  qgis:
+    image: camptocamp/qgis-server:${DOCKER_TAG}
+    environment:
+      QGIS_SERVER_LOG_LEVEL: '0'
+      QGIS_CATCH_SEGV: '1'
+    links:
+      - db
+    # ports:
+    #   - 8380:8080
+    volumes_from:
+      - acceptance_config
+    user: www-data
 
-acceptance_config:
-  image: camptocamp/qgis-server-acceptance_config:${DOCKER_TAG}
+  db:
+    image: camptocamp/postgres:9.6
+    environment:
+      POSTGRES_USER: www-data
+      POSTGRES_PASSWORD: www-data
+      POSTGRES_DB: test
+    # ports:
+    #   - 15432:5432
+    volumes_from:
+      - acceptance_config
+
+  acceptance_config:
+    image: camptocamp/qgis-server-acceptance_config:${DOCKER_TAG}
+
+  run:
+    image: camptocamp/qgis-server-acceptance:${DOCKER_TAG}
+    volumes:
+      - ./junitxml:/tmp/junitxml
