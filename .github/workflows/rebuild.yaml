@@ -39,8 +39,11 @@ jobs:
         run: c2cciutils-checks
 
       - run: make pull
-      - run: make -j3 build
-      - run: make -j3 acceptance
+      - run: make build
+      - run: make run
+      - run: make acceptance
+      - run: (cd acceptance_tests; docker-compose logs)
+        if: failure()
 
       - name: Publish
         run: c2cciutils-publish --type=rebuild --branch=${{ matrix.branch }}
