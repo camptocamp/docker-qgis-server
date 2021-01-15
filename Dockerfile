@@ -37,10 +37,13 @@ ENV \
     QT_SELECT=5
 
 WORKDIR /src/build
+#RUN sed -i '/cmake_minimum_required/a set(CMAKE_EXE_LINKER_FLAGS "-static")' ../CMakeLists.txt
 RUN cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
     -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -Dstatic_libraries=ON \
+    -DCMAKE_EXE_LINKER_FLAGS=-static \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=OFF \
