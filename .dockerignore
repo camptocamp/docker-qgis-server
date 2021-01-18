@@ -2,3 +2,5 @@
 !checkout_release
 !runtime
 !runtime-desktop
+!requirements.txt
+!Pipfile*
