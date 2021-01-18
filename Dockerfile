@@ -26,7 +26,7 @@ RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
 ARG QGIS_BRANCH
 
-RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /src
+RUN git clone https://github.com/sbrunner/QGIS --branch=${QGIS_BRANCH} --depth=100 /src
 
 COPY checkout_release /tmp
 RUN cd /src; /tmp/checkout_release ${QGIS_BRANCH}
