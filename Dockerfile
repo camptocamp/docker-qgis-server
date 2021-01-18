@@ -8,8 +8,8 @@ RUN apt update && \
     flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
     libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
     libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
-    qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
-    libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
+    qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev \
+    libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
     pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools pyqt5-dev \
     pyqt5-dev-tools python3-pyqt5.qtsql pyqt5.qsci-dev python3-sip python3-sip-dev \
     python3-geolinks python3-six qtscript5-dev python3-pyqt5.qsci spawn-fcgi xauth xfonts-100dpi \
@@ -20,9 +20,51 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
+RUN ln -s /usr/local/lib/pkgconfig/proj.pc /usr/lib/pkgconfig/proj.pc
+RUN ln -s /usr/local/share/proj /usr/share/proj
+RUN ln -s /usr/local/bin/projinfo /usr/bin/projinfo
+RUN ln -s /usr/local/bin/invproj /usr/bin/invproj
+RUN ln -s /usr/local/bin/proj /usr/bin/proj
+RUN ln -s /usr/local/bin/projsync /usr/bin/projsync
+RUN ln -s /usr/local/include/proj_experimental.h /usr/include/proj_experimental.h
+RUN ln -s /usr/local/include/proj_symbol_rename.h /usr/include/proj_symbol_rename.h
+RUN ln -s /usr/local/include/proj.h /usr/include/proj.h
+RUN ln -s /usr/local/include/proj /usr/include/proj
+RUN ln -s /usr/local/include/proj_constants.h /usr/include/proj_constants.h
+RUN cat /usr/lib/pkgconfig/proj.pc
+RUN false
+
+#ARG SPATIALITE_VERSION=5.0.0
+#WORKDIR /opt/spatialite
+#RUN curl "http://www.gaia-gis.it/gaia-sins/libspatialite-${SPATIALITE_VERSION}.tar.gz" > libspatialite-${SPATIALITE_VERSION}.tar.gz && \
+#     tar zxvf libspatialite-${SPATIALITE_VERSION}.tar.gz && cd libspatialite-${SPATIALITE_VERSION} && \
+#     ./configure && \
+#     make && \
+#     make install
+# Get from https://github.com/OSGeo/gdal/blob/master/gdal/docker/alpine-normal/Dockerfile#L231
+# Build spatialite
+RUN find -name *proj*
+ARG SPATIALITE_VERSION=5.0.0
+RUN if test "${SPATIALITE_VERSION}" != ""; then ( \
+    curl "http://www.gaia-gis.it/gaia-sins/libspatialite-${SPATIALITE_VERSION}.tar.gz" > libspatialite-${SPATIALITE_VERSION}.tar.gz \
+    && tar xzf libspatialite-${SPATIALITE_VERSION}.tar.gz \
+    && rm -f libspatialite-${SPATIALITE_VERSION}.tar.gz \
+    && cd libspatialite-${SPATIALITE_VERSION} \
+    && ./configure --prefix=/usr --disable-static \
+    && make -j$(nproc) \
+    && make install \
+    && mkdir -p /build_spatialite/usr/lib \
+    && cp -P /usr/lib/libspatialite*.so* /build_spatialite/usr/lib \
+    && for i in /build_spatialite/usr/lib/*; do strip -s $i 2>/dev/null || /bin/true; done \
+    && cd .. \
+    && rm -rf libspatialite-${SPATIALITE_VERSION} \
+    ); else \
+        mkdir -p /build_spatialite/usr/lib; \
+    fi
+
 RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
-RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
 ARG QGIS_BRANCH
 
