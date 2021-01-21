@@ -16,13 +16,16 @@ jobs:
       #      - run: git clone https://c2c-bot-gis-ci:${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       #- run: "git config --global http.https://github.com/.extraheader 'AUTHORIZATION: basic ${{ secrets.GOPASS_CI_GITHUB_TOKEN }}'"
       #- run: git clone https://github.com/camptocamp/docker-qgis-server.git
-      - run: echo ${{ secrets.GOPASS_CI_GITHUB_TOKEN }} | gh auth login --with-token
-      - run: gh repo clone camptocamp/docker-qgis-server
-      - run: cd docker-qgis-server; git remote -v
-      - run: cd docker-qgis-server; git remote set-url origin https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
-      - run: cd docker-qgis-server; git remote -v
-      - run: cd docker-qgis-server; git config --list
-      - run: cd docker-qgis-server; git push origin HEAD:yes
+
+      #      - run: echo ${{ secrets.GOPASS_CI_GITHUB_TOKEN }} | gh auth login --with-token
+      #      - run: gh repo clone camptocamp/docker-qgis-server
+      #      - run: cd docker-qgis-server; git remote -v
+      #      - run: cd docker-qgis-server; git remote set-url origin https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
+      #      - run: cd docker-qgis-server; git remote -v
+      #      - run: cd docker-qgis-server; git config --list
+      #      - run: cd docker-qgis-server; git push origin HEAD:yes
+      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
+      - run: cd docker-qgis-server; git push origin HEAD:yes2
 
   log:
     runs-on: ubuntu-20.04
