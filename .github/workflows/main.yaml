@@ -20,6 +20,7 @@ jobs:
       - run: gh repo clone camptocamp/docker-qgis-server
       - run: cd docker-qgis-server; git remote -v
       - run: cd docker-qgis-server; git config --list
+      - run: cat ~/.git-credentials
       - run: cd docker-qgis-server; git push origin HEAD:yes
 
   log:
@@ -32,3 +33,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: git remote -v
       - run: git config --list
+      - run: cat ~/.git-credentials
