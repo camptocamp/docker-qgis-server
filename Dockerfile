@@ -18,9 +18,10 @@ RUN apt-get update && \
         xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build curl ccache clang libpython3-dev \
         libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 qt3d5-dev \
         qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
-        qt3d-scene2d-plugin libqt5serialport5-dev libexiv2-dev grass-dev && \
+        qt3d-scene2d-plugin libqt5serialport5-dev libexiv2-dev grass-dev binutils && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
