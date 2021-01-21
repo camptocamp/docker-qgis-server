@@ -15,3 +15,14 @@ jobs:
       #      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       - run: git clone https://c2c-bot-gis-ci:${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       - run: cd docker-qgis-server; git push HEAD:yes
+
+  log:
+    runs-on: ubuntu-20.04
+    name: Log
+    timeout-minutes: 120
+    if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: git remote -v
+      - run: git config --list
