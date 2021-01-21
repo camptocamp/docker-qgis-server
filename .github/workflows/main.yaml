@@ -19,6 +19,8 @@ jobs:
       - run: echo ${{ secrets.GOPASS_CI_GITHUB_TOKEN }} | gh auth login --with-token
       - run: gh repo clone camptocamp/docker-qgis-server
       - run: cd docker-qgis-server; git remote -v
+      - run: cd docker-qgis-server; git remote set-url origin https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
+      - run: cd docker-qgis-server; git remote -v
       - run: cd docker-qgis-server; git config --list
       - run: cd docker-qgis-server; git push origin HEAD:yes
 
