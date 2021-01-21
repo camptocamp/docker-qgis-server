@@ -15,7 +15,7 @@ jobs:
       #      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       #      - run: git clone https://c2c-bot-gis-ci:${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       - run: "git config --global http.https://github.com/.extraheader 'AUTHORIZATION: basic ${{ secrets.GOPASS_CI_GITHUB_TOKEN }}'"
-      - run: git clone https://github.com/camptocamp/docker-qgis-server
+      - run: git clone https://github.com/camptocamp/docker-qgis-server.git
       - run: cd docker-qgis-server; git remote -v
       - run: cd docker-qgis-server; git config --list
       - run: cd docker-qgis-server; git push HEAD:yes
