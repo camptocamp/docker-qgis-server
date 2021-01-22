@@ -12,6 +12,7 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
     steps:
+      - run: codespell
       - run: hadolint
       #      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       #      - run: git clone https://c2c-bot-gis-ci:${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
