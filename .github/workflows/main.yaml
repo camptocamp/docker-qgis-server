@@ -12,6 +12,7 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
     steps:
+      - run: hadolint
       #      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       #      - run: git clone https://c2c-bot-gis-ci:${{ secrets.GOPASS_CI_GITHUB_TOKEN }}:x-oauth-basic@github.com/camptocamp/docker-qgis-server.git
       #- run: "git config --global http.https://github.com/.extraheader 'AUTHORIZATION: basic ${{ secrets.GOPASS_CI_GITHUB_TOKEN }}'"
@@ -24,8 +25,8 @@ jobs:
       #      - run: cd docker-qgis-server; git remote -v
       #      - run: cd docker-qgis-server; git config --list
       #      - run: cd docker-qgis-server; git push origin HEAD:yes
-      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
-      - run: cd docker-qgis-server; git push origin HEAD:yes2
+  #      - run: git clone https://${{ secrets.GOPASS_CI_GITHUB_TOKEN }}@github.com/camptocamp/docker-qgis-server.git
+  #      - run: cd docker-qgis-server; git push origin HEAD:yes2
 
   log:
     runs-on: ubuntu-20.04
