@@ -16,10 +16,9 @@ RUN apt update && \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
     libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
-    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin binutils && \
+    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin && \
     apt clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+    rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
@@ -94,9 +93,10 @@ RUN apt update && \
     apache2 libapache2-mod-fcgid \
     python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
-    libgsl23 libzstd1 && \
+    libgsl23 libzstd1 binutils && \
     apt clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
