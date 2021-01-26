@@ -18,7 +18,14 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip3 --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+COPY requirements.txt /tmp/
+RUN python3 -m pip install --disable-pip-version-check --no-cache-dir --requirement=/tmp/requirements.txt && \
+  rm --recursive --force /tmp/*
+
+COPY Pipfile Pipfile.lock ./
+RUN pipenv install --system --clear && \
+  rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
+  strip /usr/local/lib/python3.*/dist-packages/*/*.so || true
 
 ARG QGIS_BRANCH
 
