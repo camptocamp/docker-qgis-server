@@ -1,4 +1,4 @@
-QGIS_BRANCH = master
+QGIS_BRANCH = release-3_18 
 DOCKER_TAG ?= latest
 DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
