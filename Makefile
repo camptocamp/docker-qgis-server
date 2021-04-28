@@ -29,7 +29,7 @@ run: build-acceptance build
 
 .PHONY: acceptance
 acceptance:
-	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run py.test -vv --color=yes --junitxml=/tmp/junitxml/results.xml
+	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run pytest -vv --color=yes --junitxml=/tmp/junitxml/results.xml
 
 .PHONY: pull
 pull:
