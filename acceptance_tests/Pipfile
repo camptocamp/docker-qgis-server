@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-pytest = "==6.2.3"
+pytest = "==6.2.4"
 
 [requires]
 python_version = "3.8"
