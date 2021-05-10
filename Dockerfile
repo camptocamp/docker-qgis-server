@@ -45,9 +45,10 @@ ENV \
 
 WORKDIR /src/build
 RUN cmake .. \
-    -GNinja \
     -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
     -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -CMAKE_C_COMPILER=gcc \
+    -CMAKE_CXX_COMPILER=g++ \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=OFF \
@@ -57,23 +58,16 @@ RUN cmake .. \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
 RUN ccache --max-size=10G
-RUN ulimit -v &&
-    ulimit -m &&
-    ulimit -v 1000000 &&
-    ulimit -m 1000000 &&
-    ulimit -v &&
-    ulimit -m &&
-    ninja -k 8
+RUN make
 RUN ccache --show-stats
 
 FROM builder as builder-server
 
-RUN ninja install
+RUN make install
 
 FROM builder as builder-desktop
 
 RUN cmake .. \
-    -GNinja \
     -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
     -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
     -DCMAKE_BUILD_TYPE=Release \
@@ -89,7 +83,8 @@ RUN cmake .. \
     -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
     -DWITH_3D=ON
 
-RUN ninja install
+RUN make
+RUN make install
 RUN ccache --show-stats
 
 FROM osgeo/gdal:ubuntu-small-3.2.2 as runner
