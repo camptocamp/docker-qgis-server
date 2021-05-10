@@ -57,7 +57,7 @@ RUN cmake .. \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
 RUN ccache --max-size=10G
-RUN ninja
+RUN ninja -k 2
 RUN ccache --show-stats
 
 FROM builder as builder-server
