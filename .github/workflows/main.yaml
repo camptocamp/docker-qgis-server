@@ -16,10 +16,13 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
     steps:
-      # Versions
-      - run: docker --version
+      - name: Add swap
+        run: |
+          sudo dd if=/dev/zero of=/swapfile bs=1024 count=4194304
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
       - uses: actions/checkout@v2
-
       - uses: camptocamp/initialise-gopass-summon-action@v2
         with:
           ci-gpg-private-key: ${{secrets.CI_GPG_PRIVATE_KEY}}
