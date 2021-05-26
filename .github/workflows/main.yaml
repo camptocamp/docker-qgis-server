@@ -18,6 +18,9 @@ jobs:
     steps:
       # Versions
       - run: docker --version
+      - run: ls -lh /
+      - run: swapon
+      - run: 'false'
       - uses: actions/checkout@v2
 
       - uses: camptocamp/initialise-gopass-summon-action@v2
