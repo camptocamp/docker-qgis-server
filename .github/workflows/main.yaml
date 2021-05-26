@@ -12,16 +12,18 @@ jobs:
   main:
     runs-on: ubuntu-20.04
     name: Continuous integration
-    timeout-minutes: 150
+    timeout-minutes: 300
     if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
     steps:
       - name: Add swap
         run: |
-          sudo dd if=/dev/zero of=/swapfile bs=1024 count=4194304
+          sudo dd if=/dev/zero of=/swapfile bs=1024 count=8388608
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
           sudo swapon /swapfile
+      - run: swapon
+      - run: free
       - uses: actions/checkout@v2
       - uses: camptocamp/initialise-gopass-summon-action@v2
         with:
@@ -47,4 +49,4 @@ jobs:
         if: env.HAS_SECRETS == 'HAS_SECRETS'
 
       - run: df -h
-        if: failure()
+        if: always()
