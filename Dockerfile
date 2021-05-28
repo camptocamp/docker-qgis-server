@@ -57,7 +57,7 @@ RUN cmake .. \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
 RUN ccache --max-size=10G
-RUN ninja
+RUN ninja -j 1
 RUN ccache --show-stats
 
 FROM builder as builder-server
@@ -83,6 +83,7 @@ RUN cmake .. \
     -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
     -DWITH_3D=ON
 
+RUN ninja -j 1
 RUN ninja install
 RUN ccache --show-stats
 
