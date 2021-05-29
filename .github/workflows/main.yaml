@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Add swap
         run: |
-          sudo dd if=/dev/zero of=/swapfile bs=1024 count=6000000
+          sudo dd if=/dev/zero of=/swapfile bs=1024 count=7000000
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
           sudo swapon /swapfile
