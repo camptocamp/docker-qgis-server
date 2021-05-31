@@ -56,7 +56,7 @@ RUN cmake .. \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
-RUN ccache --max-size=10G
+RUN ccache --max-size=1G
 RUN ninja -j 1
 RUN ccache --show-stats
 
