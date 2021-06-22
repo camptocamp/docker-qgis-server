@@ -94,11 +94,11 @@ RUN apt update && \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-    python3 python3-pip python3-setuptools python3-pyqt5 python3-owslib python3-jinja2 python3-pygments \
-    python3-pyqt5.qtsql \
+    python3 python3-pip python3-setuptools python3-owslib python3-jinja2 python3-pygments \
+    python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
     apache2 libapache2-mod-fcgid \
-    python3-pyqt5.qsci python3-pil python3-psycopg2 python3-shapely libpython3-dev \
+    python3-pil python3-psycopg2 python3-shapely libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 libzstd1 binutils && \
     apt clean && \
