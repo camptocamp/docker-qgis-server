@@ -10,7 +10,7 @@ from acceptance_tests import wait_db, wait_qgisserver
 @pytest.fixture(scope="session")
 def wait():
     """
-    Fixture that start/stop the Docker composition used for all the tests.
+    Fixture that will wait that the composition is started, used for all the tests.
     """
     wait_db()
     wait_qgisserver()
