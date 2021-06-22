@@ -12,4 +12,5 @@ Version | Supported Until | [Upstream Supported Until](https://www.qgis.org/en/s
 3.12 | Unsupported | Unsupported
 3.14 | Unsupported | Unsupported
 3.16 | 18/02/2022 | 18/02/2022
-3.18 | 18/06/2021 | 18/06/2021
+3.18 | Unsupported | Unsupported
+3.20 | 22/10/2021 | 22/10/2021
