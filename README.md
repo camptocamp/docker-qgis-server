@@ -17,18 +17,21 @@ http://localhost:8380/?SERVICE=WMS&REQUEST=GetCapabilities
 
 You can use the following variables (`-e` option in `docker run`):
 
--   `QGIS_SERVER_LOG_LEVEL`: The debug level for the logs (`0`=max debug, `3`=no debug logs)
--   `PGSERVICEFILE`: If you want to change the default of `/etc/qgisserver/pg_service.conf`
--   `QGIS_PROJECT_FILE`: If you want to change the default of `/etc/qgisserver/project.qgs`
--   `QGIS_CATCH_SEGV`: Set to `1` if you want stacktraces in the logs in case of segmentation faults.
--   `FCGID_MAX_REQUESTS_PER_PROCESS`: The number of requests a QGIS server will serve before being restarted by apache
--   `FCGID_MIN_PROCESSES`: The minimum number of fcgi processes to keep (defaults to `1`)
--   `FCGID_MAX_PROCESSES`: The maximum number of fcgi processes to keep (defaults to `5`)
--   `FCGID_IO_TIMEOUT`: This is the maximum period of time the module will wait while trying to read from or
-    write to a FastCGI application (default to `40`)
--   `FCGID_BUSY_TIMEOUT`: The maximum time limit for request handling (defaults to `300`)
--   `FCGID_IDLE_TIMEOUT`: Application processes which have not handled a request for
-    this period of time will be terminated (defaults to `300`)
+- `QGIS_SERVER_LOG_LEVEL`: The debug level for the logs (`0`=max debug, `3`=no debug logs)
+- `PGSERVICEFILE`: If you want to change the default of `/etc/qgisserver/pg_service.conf`
+- `QGIS_PROJECT_FILE`: If you want to change the default of `/etc/qgisserver/project.qgs`
+- `QGIS_CATCH_SEGV`: Set to `1` if you want stacktraces in the logs in case of segmentation faults.
+- `FCGID_MAX_REQUESTS_PER_PROCESS`: The number of requests a QGIS server will serve before being restarted by apache
+- `FCGID_MIN_PROCESSES`: The minimum number of fcgi processes to keep (defaults to `1`)
+- `FCGID_MAX_PROCESSES`: The maximum number of fcgi processes to keep (defaults to `5`)
+- `FCGID_IO_TIMEOUT`: This is the maximum period of time the module will wait while trying to read from or
+  write to a FastCGI application (default to `40`)
+- `FCGID_BUSY_TIMEOUT`: The maximum time limit for request handling (defaults to `300`)
+- `FCGID_IDLE_TIMEOUT`: Application processes which have not handled a request for
+  this period of time will be terminated (defaults to `300`)
+- `FILTER_ENV`: Filter the environment variables with e.g.:
+  `| grep -vi _SERVICE_ | grep -vi _TCP | grep -vi _UDP | grep -vi _PORT` to remove the default
+  Kubernetes environment variables (default in an empty string)
 
 [See also QGIS server documentation](https://docs.qgis.org/3.16/en/docs/server_manual/config.html?highlight=environment#environment-variables)
 
