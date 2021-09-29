@@ -64,6 +64,7 @@ RUN ccache --show-stats
 FROM builder as builder-server
 
 RUN ninja install
+RUN rm -rf /usr/local/share/qgis/i18n/
 
 FROM builder as builder-desktop
 
@@ -146,14 +147,9 @@ RUN a2enmod fcgid headers status && \
     ln --symbolic /etc/qgisserver /project
 
 # A few tunable variables for QGIS
-ENV QGIS_SERVER_LOG_LEVEL=0 \
-    QGIS_SERVER_LOG_STDERR=1 \
-    PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
-    QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
+ENV QGIS_SERVER_LOG_STDERR=1 \
     QGIS_CUSTOM_CONFIG_PATH=/tmp \
-    MAX_CACHE_LAYERS="" \
     QGIS_PLUGINPATH=/var/www/plugins \
-    QGIS_AUTH_DB_DIR_PATH=/etc/qgisserver/ \
     FCGID_MAX_REQUESTS_PER_PROCESS=1000 \
     FCGID_MIN_PROCESSES=1 \
     FCGID_MAX_PROCESSES=5 \
@@ -164,7 +160,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
-COPY --from=builder-server /usr/local/share/qgis/python /usr/local/share/qgis/python/
+COPY --from=builder-server /usr/local/share/qgis /usr/local/share/qgis
 COPY runtime /
 
 RUN adduser www-data root && \

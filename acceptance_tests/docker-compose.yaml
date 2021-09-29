@@ -6,6 +6,9 @@ services:
     environment:
       QGIS_SERVER_LOG_LEVEL: '0'
       QGIS_CATCH_SEGV: '1'
+      QGIS_PROJECT_FILE: /etc/qgisserver/project.qgs
+      QGIS_AUTH_DB_DIR_PATH: /etc/qgisserver/
+      PGSERVICEFILE: /etc/qgisserver/pg_service.conf
     links:
       - db
     # ports:
