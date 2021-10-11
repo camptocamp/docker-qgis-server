@@ -17,9 +17,6 @@ http://localhost:8380/?SERVICE=WMS&REQUEST=GetCapabilities
 
 You can use the following variables (`-e` option in `docker run`):
 
-- `QGIS_SERVER_LOG_LEVEL`: The debug level for the logs (`0`=max debug, `3`=no debug logs)
-- `PGSERVICEFILE`: If you want to change the default of `/etc/qgisserver/pg_service.conf`
-- `QGIS_PROJECT_FILE`: If you want to change the default of `/etc/qgisserver/project.qgs`
 - `QGIS_CATCH_SEGV`: Set to `1` if you want stacktraces in the logs in case of segmentation faults.
 - `FCGID_MAX_REQUESTS_PER_PROCESS`: The number of requests a QGIS server will serve before being restarted by apache
 - `FCGID_MIN_PROCESSES`: The minimum number of fcgi processes to keep (defaults to `1`)
@@ -33,7 +30,7 @@ You can use the following variables (`-e` option in `docker run`):
   `| grep -vi _SERVICE_ | grep -vi _TCP | grep -vi _UDP | grep -vi _PORT` to remove the default
   Kubernetes environment variables (default in an empty string)
 
-[See also QGIS server documentation](https://docs.qgis.org/3.16/en/docs/server_manual/config.html?highlight=environment#environment-variables)
+[See also QGIS server documentation](https://docs.qgis.org/latest/en/docs/server_manual/config.html?highlight=environment#environment-variables)
 
 Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
 
@@ -44,3 +41,15 @@ If you want to edit a project file, you can run the client from a Linux machine 
 ```bash
 docker run --rm -ti --env=DISPLAY=unix${DISPLAY} --volume=/tmp/.X11-unix:/tmp/.X11-unix --volume=${HOME}:${HOME} camptocamp/qgis-server:master-desktop
 ```
+
+## Changelog
+
+### QGIS 3.22
+
+We removed the default values for the following environment variables to better fit with the QGIS documentation:
+
+- `QGIS_SERVER_LOG_LEVEL`, was `0`
+- `QGIS_PROJECT_FILE`, was `/etc/qgisserver/project.qgs`
+- `MAX_CACHE_LAYERS`, was `""`
+- `QGIS_AUTH_DB_DIR_PATH`, was `/etc/qgisserver/`
+- `PGSERVICEFILE`, was `/etc/qgisserver/pg_service.conf`

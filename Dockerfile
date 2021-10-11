@@ -1,10 +1,10 @@
 FROM osgeo/gdal:ubuntu-small-3.3.2 as builder
 LABEL maintainer="info@camptocamp.com"
 
-RUN apt update && \
-    apt install --assume-yes --no-install-recommends apt-utils software-properties-common && \
-    apt autoremove --assume-yes software-properties-common && \
-    LC_ALL=C DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends cmake gcc \
+RUN apt-get update && \
+    apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
+    apt-get autoremove --assume-yes software-properties-common && \
+    LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
     flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
     libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
     libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
@@ -17,17 +17,18 @@ RUN apt update && \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
     libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
     qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin && \
-    apt clean && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /tmp/
 RUN python3 -m pip install --disable-pip-version-check --no-cache-dir --requirement=/tmp/requirements.txt && \
   rm --recursive --force /tmp/*
 
+WORKDIR /tmp
 COPY Pipfile Pipfile.lock ./
 RUN pipenv sync --system --clear && \
   rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
-  strip /usr/local/lib/python3.*/dist-packages/*/*.so || true
+  (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
 RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
@@ -36,7 +37,7 @@ ARG QGIS_BRANCH
 RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /src
 
 COPY checkout_release /tmp
-RUN cd /src; /tmp/checkout_release ${QGIS_BRANCH}
+RUN cd /src && /tmp/checkout_release ${QGIS_BRANCH}
 
 ENV \
     CXX=/usr/lib/ccache/clang++ \
@@ -63,6 +64,7 @@ RUN ccache --show-stats
 FROM builder as builder-server
 
 RUN ninja install
+RUN rm -rf /usr/local/share/qgis/i18n/
 
 FROM builder as builder-desktop
 
@@ -89,8 +91,8 @@ RUN ccache --show-stats
 FROM osgeo/gdal:ubuntu-small-3.3.2 as runner
 LABEL maintainer="info@camptocamp.com"
 
-RUN apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
@@ -101,7 +103,7 @@ RUN apt update && \
     python3-pil python3-psycopg2 python3-shapely libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 libzstd1 binutils && \
-    apt clean && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
@@ -109,9 +111,9 @@ RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml moc
 
 FROM runner as runner-server
 
-RUN apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends libfcgi && \
-    apt clean && \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libfcgi && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Be able to install font as nonroot
@@ -145,14 +147,9 @@ RUN a2enmod fcgid headers status && \
     ln --symbolic /etc/qgisserver /project
 
 # A few tunable variables for QGIS
-ENV QGIS_SERVER_LOG_LEVEL=0 \
-    QGIS_SERVER_LOG_STDERR=1 \
-    PGSERVICEFILE=/etc/qgisserver/pg_service.conf \
-    QGIS_PROJECT_FILE=/etc/qgisserver/project.qgs \
+ENV QGIS_SERVER_LOG_STDERR=1 \
     QGIS_CUSTOM_CONFIG_PATH=/tmp \
-    MAX_CACHE_LAYERS="" \
     QGIS_PLUGINPATH=/var/www/plugins \
-    QGIS_AUTH_DB_DIR_PATH=/etc/qgisserver/ \
     FCGID_MAX_REQUESTS_PER_PROCESS=1000 \
     FCGID_MIN_PROCESSES=1 \
     FCGID_MAX_PROCESSES=5 \
@@ -163,7 +160,7 @@ ENV QGIS_SERVER_LOG_LEVEL=0 \
 
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
-COPY --from=builder-server /usr/local/share/qgis/python /usr/local/share/qgis/python/
+COPY --from=builder-server /usr/local/share/qgis /usr/local/share/qgis
 COPY runtime /
 
 RUN adduser www-data root && \
@@ -178,11 +175,11 @@ CMD ["/usr/local/bin/start-server"]
 
 FROM runner as runner-desktop
 
-RUN apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install --assume-yes --no-install-recommends \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
     qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
     qt3d-scene2d-plugin && \
-    apt clean && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
