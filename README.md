@@ -32,6 +32,7 @@ You can use the following variables (`-e` option in `docker run`):
 - FILTER_ENV: Filter the environment variables with e.g.:
   `| grep -vi \_SERVICE* | grep -vi \_TCP | grep -vi \_UDP | grep -vi \_PORT` to remove the default
   Kubernetes environment variables (default in an empty string)
+- `GET_ENV`: alternative to `FILTER_ENV`, a command that return the environment variables (defaults to `env`)
 
 Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
 
