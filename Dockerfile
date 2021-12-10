@@ -156,7 +156,8 @@ ENV QGIS_SERVER_LOG_STDERR=1 \
     FCGID_BUSY_TIMEOUT=300 \
     FCGID_IDLE_TIMEOUT=300 \
     FCGID_IO_TIMEOUT=40 \
-    FILTER_ENV=''
+    FILTER_ENV='' \
+    GET_ENV=env
 
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
