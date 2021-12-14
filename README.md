@@ -29,6 +29,7 @@ You can use the following variables (`-e` option in `docker run`):
 - `FILTER_ENV`: Filter the environment variables with e.g.:
   `| grep -vi _SERVICE_ | grep -vi _TCP | grep -vi _UDP | grep -vi _PORT` to remove the default
   Kubernetes environment variables (default in an empty string)
+- `GET_ENV`: alternative to `FILTER_ENV`, a command that return the environment variables (defaults to `env`)
 
 [See also QGIS server documentation](https://docs.qgis.org/latest/en/docs/server_manual/config.html?highlight=environment#environment-variables)
 
