@@ -8,11 +8,11 @@ fi
 
 # save the environment to be able to restore it in the FCGI daemon (used
 # in /usr/local/bin/qgis_mapsev_wrapper) for the startup code.
-env ${FILTER_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
+${GET_ENV} ${FILTER_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
 
 # Save the list of variables to be passed along with the FCGI requests (used in
 # /etc/apache2/conf-enabled/qgis.conf).
-env ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
+${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
 
 if [[ "${UID}" != 0 ]]
 then
