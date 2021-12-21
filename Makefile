@@ -1,4 +1,4 @@
-QGIS_BRANCH = configurable-serviceurl
+QGIS_BRANCH = fix-headers
 DOCKER_TAG ?= latest
 DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
