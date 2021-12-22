@@ -3,6 +3,11 @@ name: Continuous integration
 
 on:
   push:
+  pull_request:
+
+env:
+  HAS_SECRETS: ${{ secrets.HAS_SECRETS }}
+  DOCKER_BUILDKIT: '1'
 
 jobs:
   main:
@@ -27,8 +32,31 @@ jobs:
 
       - name: Checks
         run: c2cciutils-checks
-      - run: make pull
-      - run: make build
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          key: docker-cache
+          path: /tmp/docker/cache
+      - name: Fill the cache
+        run: |
+          mkdir -p /tmp/docker/cache/.ccache
+          mkdir cache
+          cp -ar /tmp/docker/cache/.ccache cache
+          touch cache/.ccache/a-file
+          docker build --file=Dockerfile-fillcache .
+          rm -rf cache
+
+      - run: make build-server
+      - run: make build-desktop
+      - run: make build-cache
+
+      - name: Extract cache
+        run: |
+          docker run --rm --detach --name=cache qgis-cache
+          docker cp cache:/.ccache /tmp/docker/cache
+          docker stop cache
+
       - run: make run
       - run: make acceptance
       - run: (cd acceptance_tests; docker-compose logs)
