@@ -11,14 +11,14 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt-get autoremove --assume-yes software-properties-common && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
-    flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
+    flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev build-essential \
     libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
     libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
     qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
     libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
     pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools \
-    pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
-    python3-sip python3-sip-dev python3-geolinks python3-six qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
+    python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning python3-sip python3-sip-dev \
+    pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
     libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
@@ -33,7 +33,7 @@ RUN --mount=type=cache,target=/root/.cache,id=root-cache \
 WORKDIR /tmp
 COPY Pipfile Pipfile.lock ./
 RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-  pipenv sync --system && \
+  pipenv sync --system --dev && \
   rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
   (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
@@ -110,18 +110,24 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-    python3 python3-pip python3-setuptools python3-owslib python3-jinja2 python3-pygments \
+    python3 python3-pip python3-setuptools \
     python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    apache2 libapache2-mod-fcgid \
-    python3-pil python3-psycopg2 python3-shapely libpython3-dev \
+    apache2 libapache2-mod-fcgid libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
-    libgsl23 libzstd1 binutils && \
+    libgsl23 libzstd1 binutils libpq-dev build-essential && \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
-# hadolint ignore=DL3042
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    python3 -m pip install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+COPY requirements.txt /tmp/
+RUN python3 -m pip install --disable-pip-version-check --no-cache-dir --requirement=/tmp/requirements.txt && \
+    rm --recursive --force /tmp/*
+
+COPY Pipfile Pipfile.lock /tmp/
+# hadolint disable=DL3003
+RUN cd /tmp && PIP_NO_BINARY=fiona,rasterio,shapely PROJ_DIR=/usr/local/ pipenv sync --system && \
+    rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
+    strip /usr/local/lib/python3.*/dist-packages/*/*.so && \
+    apt-get auto-remove --assume-yes binutils gcc g++
 
 FROM runner as runner-server
 
