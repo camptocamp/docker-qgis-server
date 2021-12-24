@@ -40,16 +40,27 @@ RUN --mount=type=cache,target=/root/.cache,id=root-cache \
 RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
 ARG QGIS_BRANCH
+ARG GIT_REMOTE
 
-RUN git clone https://github.com/sbrunner/QGIS --branch=${QGIS_BRANCH} --depth=1 /src && \
-    (cd /src; git log -n 1)
+WORKDIR /src/build
+
+# Save 100s. on rebuild
+RUN --mount=type=cache,target=/git,id=git \
+    cd /git && \
+    [ -e .git ] || ( git init && git remote add origin http://example.com ) && \
+    git remote set-url origin ${GIT_REMOTE} && \
+    git fetch origin && \
+    git checkout ${QGIS_BRANCH} && \
+    git reset --hard origin/${QGIS_BRANCH} && \
+    git log -n 1 && \
+    cp -ar -- * /src/ && \
+    echo to-trigger-new-build 4
 
 ENV \
     CXX=/usr/lib/ccache/clang++ \
     CC=/usr/lib/ccache/clang \
     QT_SELECT=5
 
-WORKDIR /src/build
 RUN cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \

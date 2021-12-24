@@ -1,6 +1,8 @@
 QGIS_BRANCH = fix-headers
-DOCKER_TAG ?= latest
-DOCKER_BASE = camptocamp/qgis-server
+GIT_REMOTE = https://github.com/sbrunner/QGIS
+
+export DOCKER_TAG ?= latest
+export DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 DOCKER_COMPOSE_TTY := $(shell [ ! -t 0 ] && echo -T)
@@ -11,15 +13,18 @@ all: build acceptance
 
 .PHONY: build-server
 build-server:
-	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-server --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-server --tag=$(DOCKER_BASE):$(DOCKER_TAG) \
+	--build-arg=QGIS_BRANCH=$(QGIS_BRANCH) --build-arg=GIT_REMOTE=$(GIT_REMOTE) .
 
 .PHONY: build-desktop
 build-desktop:
-	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-desktop --tag=$(DOCKER_BASE):$(DOCKER_TAG)-desktop --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-desktop --tag=$(DOCKER_BASE):$(DOCKER_TAG)-desktop \
+	--build-arg=QGIS_BRANCH=$(QGIS_BRANCH) --build-arg=GIT_REMOTE=$(GIT_REMOTE) .
 
 .PHONY: build-cache
 build-cache:
-	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=cache --tag=qgis-cache --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=cache --tag=qgis-cache \
+	--build-arg=QGIS_BRANCH=$(QGIS_BRANCH) --build-arg=GIT_REMOTE=$(GIT_REMOTE) .
 
 .PHONY: build
 build: build-server build-desktop
