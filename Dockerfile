@@ -119,7 +119,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 COPY requirements.txt /tmp/
-RUN python3 -m pip install --disable-pip-version-check --no-cache-dir --requirement=/tmp/requirements.txt && \
+RUN python3 -m pip install --disable-pip-version-check --requirement=/tmp/requirements.txt && \
     rm --recursive --force /tmp/*
 
 COPY Pipfile Pipfile.lock /tmp/
