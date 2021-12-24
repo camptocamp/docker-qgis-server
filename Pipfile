@@ -4,15 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-psycopg2 = "==2.9.2"
-numpy = "==1.21.5"
-PyYAML = "==6.0"
-PythonQwt = "==0.9.2"
-Pillow = "==8.4.0"
-Shapely = "==1.8.0"
-OWSLib = "==0.25.0"
-Jinja2 = "==3.0.3"
-Pygments = "==2.10.0"
 
 [dev-packages]
 
