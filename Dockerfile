@@ -1,7 +1,13 @@
-FROM osgeo/gdal:ubuntu-small-3.4.0 as builder
+FROM osgeo/gdal:ubuntu-small-3.4.0 as base
+
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    apt-get update
+
+FROM base as builder
 LABEL maintainer="info@camptocamp.com"
 
-RUN apt-get update && \
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt-get autoremove --assume-yes software-properties-common && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
@@ -16,17 +22,18 @@ RUN apt-get update && \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
     libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
-    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin
 
 COPY requirements.txt /tmp/
-RUN python3 -m pip install --disable-pip-version-check --no-cache-dir --requirement=/tmp/requirements.txt && \
+# hadolint ignore=DL3042
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+  python3 -m pip install --disable-pip-version-check --requirement=/tmp/requirements.txt && \
   rm --recursive --force /tmp/*
 
 WORKDIR /tmp
 COPY Pipfile Pipfile.lock ./
-RUN pipenv sync --system --clear && \
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+  pipenv sync --system && \
   rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
   (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
@@ -34,7 +41,8 @@ RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
 
 ARG QGIS_BRANCH
 
-RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /src
+RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /src && \
+    (cd /src; git log -n 1)
 
 COPY checkout_release /tmp
 RUN cd /src && /tmp/checkout_release ${QGIS_BRANCH}
@@ -57,9 +65,11 @@ RUN cmake .. \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
 
-RUN ccache --max-size=10G
-RUN ninja
-RUN ccache --show-stats
+RUN --mount=type=cache,target=/root/.ccache,id=ccache \
+    ccache --show-stats && \
+    ccache --max-size=2G && \
+    ninja && \
+    ccache --show-stats
 
 FROM builder as builder-server
 
@@ -79,19 +89,23 @@ RUN cmake .. \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DWITH_GEOREFERENCER=ON \
+    -DWITH_3D=ON \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
     -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so.5 \
-    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
-    -DWITH_3D=ON
+    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras
+
+RUN --mount=type=cache,target=/root/.ccache,id=ccache \
+    ninja && \
+    ccache --show-stats
 
 RUN ninja install
-RUN ccache --show-stats
 
-FROM osgeo/gdal:ubuntu-small-3.4.0 as runner
+FROM base as runner
 LABEL maintainer="info@camptocamp.com"
 
-RUN apt-get update && \
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
@@ -103,18 +117,17 @@ RUN apt-get update && \
     python3-pil python3-psycopg2 python3-shapely libpython3-dev \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 libzstd1 binutils && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
-RUN python3 -m pip --no-cache-dir install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+# hadolint ignore=DL3042
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+    python3 -m pip install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
 
 FROM runner as runner-server
 
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libfcgi && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libfcgi
 
 # Be able to install font as nonroot
 RUN chmod u+s /usr/bin/fc-cache && \
@@ -176,12 +189,11 @@ CMD ["/usr/local/bin/start-server"]
 
 FROM runner as runner-desktop
 
-RUN apt-get update && \
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
     qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
-    qt3d-scene2d-plugin && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    qt3d-scene2d-plugin
 
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
 COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
@@ -192,3 +204,11 @@ RUN ldconfig
 
 WORKDIR /etc/qgisserver
 CMD ["/usr/local/bin/start-client"]
+
+FROM builder as cache
+
+RUN --mount=type=cache,target=/root/.ccache,id=ccache \
+    ccache --show-stats && \
+    cp -ar /root/.ccache /.ccache
+
+CMD ["tail", "-f", "/dev/null"]
