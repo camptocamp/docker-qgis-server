@@ -22,7 +22,7 @@ You can use the following variables (`-e` option in `docker run`):
 - `FCGID_MIN_PROCESSES`: The minimum number of fcgi processes to keep (defaults to `1`)
 - `FCGID_MAX_PROCESSES`: The maximum number of fcgi processes to keep (defaults to `5`)
 - `FCGID_IO_TIMEOUT`: This is the maximum period of time the module will wait while trying to read from or
-  write to a FastCGI application (default to `40`)
+  write to a FastCGI application (default is `40`)
 - `FCGID_BUSY_TIMEOUT`: The maximum time limit for request handling (defaults to `300`)
 - `FCGID_IDLE_TIMEOUT`: Application processes which have not handled a request for
   this period of time will be terminated (defaults to `300`)
