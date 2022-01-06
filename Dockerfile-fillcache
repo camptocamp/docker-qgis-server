@@ -1,0 +1,5 @@
+FROM osgeo/gdal:ubuntu-small-3.4.0
+
+COPY cache/.ccache /.ccache
+RUN --mount=type=cache,target=/root/.ccache,id=ccache \
+    mv /.ccache/* /root/.ccache

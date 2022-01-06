@@ -4,3 +4,4 @@
 !runtime-desktop
 !requirements.txt
 !Pipfile*
+!cache
