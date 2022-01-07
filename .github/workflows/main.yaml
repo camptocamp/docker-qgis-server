@@ -61,7 +61,3 @@ jobs:
       - run: make acceptance
       - run: (cd acceptance_tests; docker-compose logs)
         if: failure()
-
-      - name: Publish
-        run: c2cciutils-publish
-        if: github.repository == 'camptocamp/docker-qgis-server'
