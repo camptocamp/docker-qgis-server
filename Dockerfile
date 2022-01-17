@@ -1,13 +1,17 @@
 FROM osgeo/gdal:ubuntu-small-3.3.2 as base
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
-    apt-get update
+    apt-get update && \
+    apt-get upgrade --yes
+
+SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
 FROM base as builder
 LABEL maintainer="info@camptocamp.com"
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
+    . /etc/os-release && \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     apt-get autoremove --assume-yes software-properties-common && \
     LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
@@ -18,22 +22,30 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
     pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools \
     pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
-    python3-sip python3-sip-dev python3-geolinks python3-six qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
+    python3-sip python3-sip-dev qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
     libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
     libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
-    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin
+    qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin gnupg gcc && \
+    echo "deb https://deb.nodesource.com/node_14.x ${VERSION_CODENAME} main" > /etc/apt/sources.list.d/nodesource.list && \
+    curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+    apt-get update && \
+    apt-get install --assume-yes --no-install-recommends 'nodejs=14.*'
 
-COPY requirements.txt /tmp/
-# hadolint ignore=DL3042
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-  python3 -m pip install --disable-pip-version-check --requirement=/tmp/requirements.txt && \
-  rm --recursive --force /tmp/*
+COPY package.json package-lock.json /usr/lib/
+RUN cd /usr/lib/; npm install
 
 WORKDIR /tmp
+
+COPY requirements.txt ./
+# hadolint ignore=DL3042
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+  python3 -m pip install --disable-pip-version-check --requirement=requirements.txt && \
+  rm --recursive --force /tmp/*
+
 COPY Pipfile Pipfile.lock ./
 RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-  pipenv sync --system && \
+  pipenv sync --system --dev && \
   rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
   (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
@@ -61,6 +73,7 @@ RUN cmake .. \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=OFF \
     -DWITH_SERVER=ON \
+    -DWITH_SERVER_LANDINGPAGE_WEBAPP=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
@@ -110,18 +123,27 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
     libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
     libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-    python3 python3-pip python3-setuptools python3-owslib python3-jinja2 python3-pygments \
+    python3 python3-pip python3-setuptools \
     python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    apache2 libapache2-mod-fcgid \
-    python3-pil python3-psycopg2 python3-shapely libpython3-dev \
+    apache2 libapache2-mod-fcgid libpython3-dev python3 libpq-dev gcc \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 libzstd1 binutils && \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
+WORKDIR /tmp
+
+COPY requirements.txt ./
 # hadolint ignore=DL3042
 RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    python3 -m pip install future psycopg2 numpy nose2 pyyaml mock termcolor PythonQwt
+  python3 -m pip install --disable-pip-version-check --requirement=requirements.txt && \
+  rm --recursive --force /tmp/*
+
+COPY Pipfile Pipfile.lock ./
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+  pipenv sync --system && \
+  rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
+  (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
 FROM runner as runner-server
 
@@ -175,6 +197,9 @@ ENV QGIS_SERVER_LOG_STDERR=1 \
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
 COPY --from=builder-server /usr/local/share/qgis /usr/local/share/qgis
+COPY --from=builder-server /src/build/output/data/resources/server/api/ogc/static/landingpage \
+    /usr/local/share/qgis/resources/server/api/ogc/static/landingpage
+
 COPY runtime /
 
 RUN adduser www-data root && \

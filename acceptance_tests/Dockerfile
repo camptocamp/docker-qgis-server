@@ -1,4 +1,4 @@
-FROM camptocamp/c2cwsgiutils:5
+FROM python:3.8
 
 RUN mkdir -p /tmp/junitxml
 
@@ -15,6 +15,5 @@ RUN pipenv sync --system --clear --dev && \
 COPY . ./
 
 ENV DOCKER_RUN 1
-WORKDIR /acceptance_tests
 
 CMD ["sleep", "infinity"]
