@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 psycopg2 = "==2.9.3"
-numpy = "==1.22.0"
+numpy = "==1.22.1"
 pyyaml = "==6.0"
 pythonqwt = "==0.10.1"
 
