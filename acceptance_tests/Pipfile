@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+c2cwsgiutils = {extras = ["standard"], version = "==4.1.4"}
 pytest = "==6.2.5"
 
 [requires]
