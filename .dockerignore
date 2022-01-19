@@ -5,3 +5,5 @@
 !requirements.txt
 !Pipfile*
 !cache
+!package.json
+!package-lock.json
