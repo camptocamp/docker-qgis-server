@@ -176,7 +176,6 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==21.3"
->>>>>>> acb4537... Reactivate Landing page and tests, lock more packages
         },
         "pillow": {
             "hashes": [
