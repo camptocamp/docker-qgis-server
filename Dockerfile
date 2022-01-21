@@ -141,7 +141,7 @@ RUN --mount=type=cache,target=/root/.cache,id=root-cache \
 
 COPY Pipfile Pipfile.lock ./
 RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-  PIP_NO_BINARY=shapely pipenv sync --system && \
+  pipenv sync --system && \
   rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* && \
   (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
