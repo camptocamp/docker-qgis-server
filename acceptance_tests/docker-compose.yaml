@@ -17,6 +17,24 @@ services:
       - acceptance_config
     user: www-data
 
+  # The landing page don't work when the QGIS_PROJECT_FILE environment variable is defined.
+  qgis-landingpage:
+    image: camptocamp/qgis-server:${DOCKER_TAG}
+    environment:
+      QGIS_SERVER_LOG_LEVEL: '0'
+      QGIS_CATCH_SEGV: '1'
+      QGIS_AUTH_DB_DIR_PATH: /etc/qgisserver/
+      PGSERVICEFILE: /etc/qgisserver/pg_service.conf
+      QGIS_SERVER_LANDING_PAGE_PREFIX: /mapserv_proxy/qgis
+      QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES: /etc/qgisserver
+    links:
+      - db
+    # ports:
+    #   - 8380:8080
+    volumes_from:
+      - acceptance_config
+    user: www-data
+
   db:
     image: camptocamp/postgres:9.6
     environment:

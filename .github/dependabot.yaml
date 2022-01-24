@@ -18,19 +18,32 @@ updates:
   - package-ecosystem: docker
     directory: /acceptance_tests/config
     schedule:
-      interval: daily
+      interval: weekly
     ignore:
       - dependency-name: none
 
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
     ignore:
       - dependency-name: none
+    allow:
+      - dependency-type: all
   - package-ecosystem: pip
     directory: /acceptance_tests
     schedule:
-      interval: daily
+      interval: weekly
     ignore:
       - dependency-name: none
+    allow:
+      - dependency-type: all
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: none
+    allow:
+      - dependency-type: all
