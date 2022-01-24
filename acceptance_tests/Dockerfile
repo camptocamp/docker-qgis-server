@@ -1,4 +1,4 @@
-FROM python:3.10.0
+FROM python:3.10.2
 
 RUN mkdir -p /tmp/junitxml
 
