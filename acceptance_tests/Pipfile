@@ -7,7 +7,7 @@ name = "pypi"
 
 [dev-packages]
 c2cwsgiutils = {extras = ["standard"], version = "==5.0.0"}
-pytest = "==6.2.5"
+pytest = "==7.0.0"
 
 [requires]
 python_version = "3.8"
