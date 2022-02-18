@@ -126,7 +126,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     python3 python3-pip python3-setuptools \
     python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
     spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    apache2 libapache2-mod-fcgid libpython3-dev python3 libpq-dev gcc \
+    apache2 libapache2-mod-fcgid python3 \
     libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
     libgsl23 libzstd1 binutils && \
     strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
