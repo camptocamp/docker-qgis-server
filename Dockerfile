@@ -221,6 +221,11 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     qt3d-assimpsceneimport-plugin qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin \
     qt3d-scene2d-plugin
 
+COPY requirements-desktop.txt ./
+RUN --mount=type=cache,target=/root/.cache,id=root-cache \
+  python3 -m pip install --disable-pip-version-check --requirement=requirements-desktop.txt && \
+  rm --recursive --force /tmp/*
+
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
 COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
 COPY --from=builder-desktop /usr/local/share /usr/local/share/
