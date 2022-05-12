@@ -2,16 +2,16 @@
 
 ## Usage
 
-Expects a `project.qgs` project file and all the files it depends on in the `/etc/qgisserver/`
-directory. Either you create another image to add those files or you inject them using
-a volume. For example:
+The Docker container needs to have access to all files of the QGIS project to be published.
+Either you create another image to add the files or you inject them using a volume. 
+For example, if your QGIS project is stored in `/data/gqis/project.qgz`:
 
 ```bash
-docker run --detach --publish=8380:80 --volume=$PWD/etc/qgisserver:/etc/qgisserver camptocamp/qgis-server
+docker run --detach --publish=8380:80 --volume=/data/qgis:/etc/qgisserver camptocamp/qgis-server
 ```
 
 With the previous command, you'll get to your server with this URL:
-http://localhost:8380/?SERVICE=WMS&REQUEST=GetCapabilities
+http://localhost:8380/?MAP=/etc/qgisserver/project.qgz&SERVICE=WMS&REQUEST=GetCapabilities
 
 ## Tuning
 
