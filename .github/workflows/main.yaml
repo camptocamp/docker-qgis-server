@@ -60,8 +60,8 @@ jobs:
 
       - run: make run
       - run: make acceptance
-      - run: (cd acceptance_tests; docker-compose logs)
-        if: failure()
+      - run: (cd acceptance_tests && c2cciutils-docker-logs)
+        if: always()
 
       - name: Publish
         run: c2cciutils-publish
