@@ -3,6 +3,7 @@
 !runtime
 !runtime-desktop
 !requirements.txt
+!requirements-desktop.txt
 !Pipfile*
 !cache
 !package.json
