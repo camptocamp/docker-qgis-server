@@ -59,6 +59,8 @@ jobs:
           docker stop cache
 
       - run: make run
+      - run: (cd acceptance_tests && c2cciutils-docker-logs)
+        if: always()
       - run: make acceptance
       - run: (cd acceptance_tests && c2cciutils-docker-logs)
         if: always()
