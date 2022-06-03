@@ -2,6 +2,7 @@ FROM ubuntu:18.04 as builder
 LABEL maintainer="info@camptocamp.com"
 
 RUN apt-get update && \
+    apt-get upgrade --assume-yes && \
     apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common && \
     add-apt-repository ppa:ubuntugis/ppa && \
     apt autoremove --assume-yes software-properties-common && \
