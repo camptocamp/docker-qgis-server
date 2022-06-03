@@ -1,7 +1,8 @@
 FROM osgeo/gdal:ubuntu-small-3.2.2 as base
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
-    apt-get update
+    apt-get update && \
+    apt-get upgrade --assume-yes
 
 FROM base as builder
 LABEL maintainer="info@camptocamp.com"
