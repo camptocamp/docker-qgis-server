@@ -6,26 +6,26 @@ updates:
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
   - package-ecosystem: docker
     directory: /acceptance_tests
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
   - package-ecosystem: docker
     directory: /acceptance_tests/config
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
 
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
     allow:
@@ -33,7 +33,7 @@ updates:
   - package-ecosystem: pip
     directory: /acceptance_tests
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
     allow:
@@ -42,7 +42,7 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     ignore:
       - dependency-name: none
     allow:
