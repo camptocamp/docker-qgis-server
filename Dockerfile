@@ -67,7 +67,7 @@ RUN cmake .. \
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats && \
-    ccache --max-size=2G && \
+    ccache --max-size=3G && \
     ninja && \
     ccache --show-stats
 
