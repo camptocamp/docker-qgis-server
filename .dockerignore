@@ -4,7 +4,8 @@
 !runtime-desktop
 !requirements.txt
 !requirements-desktop.txt
-!Pipfile*
 !cache
 !package.json
 !package-lock.json
+!pyproject.toml
+!poetry.lock

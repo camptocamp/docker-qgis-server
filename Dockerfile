@@ -1,17 +1,38 @@
-FROM osgeo/gdal:ubuntu-small-3.5.0 as base
+FROM osgeo/gdal:ubuntu-small-3.5.0 as base-all
+LABEL maintainer Camptocamp "info@camptocamp.com"
+SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
-RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+RUN --mount=type=cache,target=/var/lib/apt/lists \
+    --mount=type=cache,target=/var/cache,sharing=locked \
     apt-get update \
-    && apt-get upgrade --yes
+    && apt-get upgrade --assume-yes \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends python3-pip
+
+# Used to convert the locked packages by poetry to pip requirements format
+# We don't directly use `poetry install` because it force to use a virtual environment.
+FROM base-all as poetry
+
+# Install Poetry
+WORKDIR /tmp
+COPY requirements.txt ./
+RUN --mount=type=cache,target=/root/.cache \
+    python3 -m pip install --disable-pip-version-check --requirement=requirements.txt
+
+# Do the conversion
+COPY poetry.lock pyproject.toml ./
+RUN poetry export --output=requirements.txt \
+    && poetry export --extras=desktop --output=requirements-desktop.txt
+
+# Base, the biggest thing is to install the Python packages
+FROM base-all as builder
+LABEL maintainer="info@camptocamp.com"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
-FROM base as builder
-LABEL maintainer="info@camptocamp.com"
-
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
-    . /etc/os-release \
+    apt-get update \
+    && . /etc/os-release \
     && apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common \
     && apt-get autoremove --assume-yes software-properties-common \
     && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
@@ -20,7 +41,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
         qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
         libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
-        pkg-config poppler-utils python3 python3-dev python3-pip python3-setuptools \
+        pkg-config poppler-utils python3 python3-dev python3-pip \
         pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
         python3-sip python3-sip-dev qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
         xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
@@ -38,16 +59,9 @@ RUN npm install
 
 WORKDIR /tmp
 
-COPY requirements.txt ./
-# hadolint ignore=DL3042
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    python3 -m pip install --disable-pip-version-check --requirement=requirements.txt \
-    && rm --recursive --force /tmp/*
-
-COPY Pipfile Pipfile.lock ./
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    pipenv sync --system --dev \
-    && rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* \
+RUN --mount=type=cache,target=/root/.cache \
+    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
+    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt \
     && (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
 RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
@@ -115,36 +129,29 @@ RUN --mount=type=cache,target=/root/.ccache,id=ccache \
 
 RUN ninja install
 
-FROM base as runner
+FROM base-all as runner
 LABEL maintainer="info@camptocamp.com"
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
-    libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
-    libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
-    libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-    python3 python3-pip python3-setuptools \
-    python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
-    spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    apache2 libapache2-mod-fcgid python3 \
-    libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
-    libgsl23 libzstd1 binutils \
+    apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
+        libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
+        libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
+        python3 python3-pip \
+        python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
+        spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
+        apache2 libapache2-mod-fcgid python3 \
+        libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
+        libgsl23 libzstd1 binutils \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
 
-COPY requirements.txt ./
-# hadolint ignore=DL3042
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    python3 -m pip install --disable-pip-version-check --requirement=requirements.txt \
-    && rm --recursive --force /tmp/*
-
-COPY Pipfile Pipfile.lock ./
-RUN --mount=type=cache,target=/root/.cache,id=root-cache \
-    pipenv sync --system \
-    && rm --recursive --force /usr/local/lib/python3.*/dist-packages/tests/ /tmp/* /root/.cache/* \
-    && (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
+RUN --mount=type=cache,target=/root/.cache \
+    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
+    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt
 
 FROM runner as runner-server
 
@@ -226,6 +233,10 @@ COPY requirements-desktop.txt ./
 RUN --mount=type=cache,target=/root/.cache,id=root-cache \
     python3 -m pip install --disable-pip-version-check --requirement=requirements-desktop.txt \
     && rm --recursive --force /tmp/*
+
+RUN --mount=type=cache,target=/root/.cache \
+    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
+    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements-desktop.txt
 
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
 COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
