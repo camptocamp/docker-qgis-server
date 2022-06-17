@@ -61,7 +61,7 @@
                 "sha256:fdb6f7bd51c2d1714cea40718f6149ad9be6a2ee7d93b19e9f00934c0f2a74d9",
                 "sha256:ffa9297c3a453fba4717d06df579af42ab9a28022444cae7fa605af4df612d54"
             ],
-            "index": "pypi",
+            "markers": "python_version >= '3.7'",
             "version": "==6.4.1"
         },
         "geolinks": {
