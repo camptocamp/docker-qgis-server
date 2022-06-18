@@ -44,9 +44,13 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          key: docker-cache-${{ matrix.branch }}
-          restore-keys: docker-cache
           path: /tmp/docker/cache
+          key: docker-cache-${{ matrix.branch }}-${{ matrix.branch }}-${{ github.run_id }}
+          restore-keys: |
+            docker-cache-${{ matrix.branch }}-${{ matrix.branch }}-
+            docker-cache-${{ matrix.branch }}-
+            docker-cache-
+            docker-cache
       - name: Fill the cache
         run: |
           mkdir -p /tmp/docker/cache/.ccache
