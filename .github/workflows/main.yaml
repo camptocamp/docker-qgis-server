@@ -37,10 +37,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/docker/cache
-          key: docker-cache-${{ github.base_ref }}-${{ github.run_id }}
+          key: docker-cache-${{ github.base_ref }}-${{ github.head_ref }}-${{ github.run_id }}
           restore-keys: |
             docker-cache-${{ github.base_ref }}-${{ github.head_ref }}-
             docker-cache-${{ github.base_ref }}-
+            docker-cache-master-
             docker-cache-
             docker-cache
         if: github.event_name == 'pull_request'
@@ -48,10 +49,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/docker/cache
-          key: docker-cache-${{ github.head_ref }}-${{ github.run_id }}
+          key: docker-cache-${{ github.ref_name }}-${{ github.ref_name }}-${{ github.run_id }}
           restore-keys: |
-            docker-cache-${{ github.head_ref }}-${{ github.head_ref }}-
-            docker-cache-${{ github.head_ref }}-
+            docker-cache-${{ github.ref_name }}-${{ github.ref_name }}-
+            docker-cache-${{ github.ref_name }}-
+            docker-cache-master-
             docker-cache-
             docker-cache
         if: github.event_name == 'push'
