@@ -2,26 +2,35 @@ QGIS_BRANCH = master
 DOCKER_TAG ?= latest
 DOCKER_BASE = camptocamp/qgis-server
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+export DOCKER_BUILDKIT = 1
 
 DOCKER_COMPOSE_TTY := $(shell [ ! -t 0 ] && echo -T)
 BUILD_OPTIONS = build
 
+.PHONY: help
+help: ## Display this help message
+	@echo "Usage: make <target>"
+	@echo
+	@echo "Available targets:"
+	@grep --extended-regexp --no-filename '^[a-zA-Z_-]+:.*## ' $(MAKEFILE_LIST) | sort | \
+		awk 'BEGIN {FS = ":.*?## "}; {printf "	%-20s%s\n", $$1, $$2}'
+
 .PHONY: all
-all: build acceptance
+all: build acceptance ## Build and run acceptance tests
 
 .PHONY: build-server
-build-server:
+build-server: ## Build the server Docker image
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-server --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
 .PHONY: build-desktop
-build-desktop:
+build-desktop: ## Build the desktop Docker image
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-desktop --tag=$(DOCKER_BASE):$(DOCKER_TAG)-desktop --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
 .PHONY: build-cache
 build-cache:
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=cache --tag=qgis-cache --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
-.PHONY: build
+.PHONY: build ## Build all the Docker images
 build: build-server build-desktop
 
 .PHONY: build-acceptance-config
@@ -38,16 +47,12 @@ run: build-acceptance
 	cd acceptance_tests; docker-compose up -d
 
 .PHONY: acceptance
-acceptance: run
+acceptance: run ## Run the acceptance tests
 	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run pytest -vv --color=yes --junitxml=/tmp/junitxml/results.xml
 	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) qgis python3 -c 'import qgis'
 
-.PHONY: pull
-pull:
-	for image in `find -name Dockerfile | xargs grep --no-filename ^FROM |grep -v 'FROM runner'|grep -v 'FROM builder'| awk '{print $$2}'`; do docker pull $$image; done
-
 .PHONY: run-client
-run-client:
+run-client: ## Run the desktop application
 	docker run --rm -ti -e DISPLAY=unix${DISPLAY} --volume=/tmp/.X11-unix:/tmp/.X11-unix --volume=${HOME}:${HOME} $(DOCKER_BASE):$(DOCKER_TAG)-desktop
 
 clean:

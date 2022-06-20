@@ -3,18 +3,14 @@ line-length = 110
 target-version = ['py38']
 
 [tool.poetry]
-name = 'qgis'
+name = 'acceptence'
 version = '0.0.0'
 description = 'Not used'
 authors = []
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
-geolinks = "0.2.0 "
-six = "1.16.0"
-nose2 = "0.11.0"
-mock = "4.0.3"
-lxml = { version = "4.9.0", optional = true }
 
-[tool.poetry.extras]
-desktop = ["lxml"]
+[tool.poetry.dev-dependencies]
+c2cwsgiutils = {extras = ["standard"], version = "==5.0.0"}
+pytest = "==7.1.2"
