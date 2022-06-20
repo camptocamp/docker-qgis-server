@@ -5,9 +5,6 @@ on:
   schedule:
     - cron: '30 2 * * *'
 
-env:
-  DOCKER_BUILDKIT: '1'
-
 jobs:
   main:
     runs-on: ubuntu-20.04
@@ -23,6 +20,7 @@ jobs:
           - '3.20'
           - '3.22'
           - '3.24'
+          - '3.26'
 
     steps:
       - uses: actions/checkout@v3
@@ -60,6 +58,8 @@ jobs:
           touch cache/.ccache/a-file
           docker build --file=Dockerfile-fillcache .
           rm -rf cache
+        env:
+          DOCKER_BUILDKIT: '1'
 
       - run: make build-server
       - run: make build-desktop
