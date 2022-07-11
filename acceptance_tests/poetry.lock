@@ -45,7 +45,7 @@ python-versions = "*"
 
 [[package]]
 name = "c2cwsgiutils"
-version = "5.0.0"
+version = "5.1.0"
 description = "Common utilities for Camptocamp WSGI applications"
 category = "dev"
 optional = false
@@ -69,8 +69,8 @@ pyyaml = {version = "*", optional = true, markers = "extra == \"standard\""}
 requests = {version = "*", optional = true, markers = "extra == \"standard\""}
 requests-oauthlib = {version = "*", optional = true, markers = "extra == \"standard\""}
 sentry-sdk = {version = "*", optional = true, markers = "extra == \"standard\""}
-SQLAlchemy = {version = "*", optional = true, markers = "extra == \"standard\""}
-SQLAlchemy-Utils = {version = "*", optional = true, markers = "extra == \"standard\""}
+sqlalchemy = {version = "*", optional = true, markers = "extra == \"standard\""}
+sqlalchemy-utils = {version = "*", optional = true, markers = "extra == \"standard\""}
 ujson = {version = "*", optional = true, markers = "extra == \"standard\""}
 waitress = {version = "*", optional = true, markers = "extra == \"standard\""}
 "zope.interface" = {version = "*", optional = true, markers = "extra == \"standard\""}
@@ -78,8 +78,7 @@ waitress = {version = "*", optional = true, markers = "extra == \"standard\""}
 
 [package.extras]
 broadcast = ["redis"]
-profiler = ["linesman"]
-standard = ["alembic", "boltons", "cornice", "gunicorn", "lxml", "netifaces", "objgraph", "pipfile", "psycopg2", "pyramid", "pyramid-tm", "sentry-sdk", "requests", "ujson", "cee-syslog-handler", "sqlalchemy", "sqlalchemy-utils", "zope.interface", "zope.sqlalchemy", "pyyaml", "pyjwt", "requests-oauthlib", "setuptools", "waitress"]
+standard = ["alembic", "boltons", "cee-syslog-handler", "cornice", "gunicorn", "lxml", "netifaces", "objgraph", "pipfile", "psycopg2", "pyjwt", "pyramid", "pyramid-tm", "pyyaml", "requests", "requests-oauthlib", "sentry-sdk", "sqlalchemy", "sqlalchemy-utils", "ujson", "waitress", "zope.interface", "zope.sqlalchemy"]
 
 [[package]]
 name = "cee-syslog-handler"
@@ -718,7 +717,7 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "95bfb5c2011c576735104c12629bc7184ad7aa94a814a3a5dddb0d3c5aef1484"
+content-hash = "eb56b6e8035aa52e038abeb1d0fc5817e821744022e1edd863f4516a4e324c4a"
 
 [metadata.files]
 alembic = [
@@ -737,7 +736,7 @@ boltons = [
     {file = "boltons-21.0.0.tar.gz", hash = "sha256:65e70a79a731a7fe6e98592ecfb5ccf2115873d01dbc576079874629e5c90f13"},
 ]
 c2cwsgiutils = [
-    {file = "c2cwsgiutils-5.0.0-py3-none-any.whl", hash = "sha256:ebaf0f110bb1c5fccc9034daeb13c51bd932eca6eb12e76af7c57ffa4ca9a9cf"},
+    {file = "c2cwsgiutils-5.1.0-py3-none-any.whl", hash = "sha256:e203358c25f1fa1affc3ab2d33318f4666d62e21aae6e4df3bc542369b98a216"},
 ]
 cee-syslog-handler = [
     {file = "cee_syslog_handler-0.6.0-py3-none-any.whl", hash = "sha256:13b60f5b4f9f04e2868316d88bf63d51b4b4b273ba7df12af6f21ee10e223ca3"},
