@@ -24,6 +24,7 @@ jobs:
     steps:
       # Versions
       - run: docker --version
+      - run: docker system prune --all --volumes --force
       - uses: actions/checkout@v3
 
       - uses: camptocamp/initialise-gopass-summon-action@v2
