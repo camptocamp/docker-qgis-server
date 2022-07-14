@@ -69,6 +69,7 @@ jobs:
 
       - name: Extract cache
         run: |
+          rm -rf /tmp/docker/cache/.ccache
           docker run --rm --detach --name=cache qgis-cache
           docker cp cache:/.ccache /tmp/docker/cache
           docker stop cache
