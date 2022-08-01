@@ -129,7 +129,7 @@ venusian = "*"
 
 [[package]]
 name = "graphviz"
-version = "0.20"
+version = "0.20.1"
 description = "Simple Python interface for Graphviz"
 category = "dev"
 optional = false
@@ -137,7 +137,7 @@ python-versions = ">=3.7"
 
 [package.extras]
 dev = ["tox (>=3)", "flake8", "pep8-naming", "wheel", "twine"]
-docs = ["sphinx (>=4)", "sphinx-autodoc-typehints", "sphinx-rtd-theme"]
+docs = ["sphinx (>=5)", "sphinx-autodoc-typehints", "sphinx-rtd-theme"]
 test = ["pytest (>=7)", "pytest-mock (>=3)", "mock (>=4)", "pytest-cov", "coverage"]
 
 [[package]]
@@ -283,8 +283,8 @@ optional = false
 python-versions = "*"
 
 [package.extras]
+docs = ["pylons-sphinx-themes", "Sphinx (>=1.7.5)"]
 paste = ["paste"]
-docs = ["Sphinx (>=1.7.5)", "pylons-sphinx-themes"]
 
 [[package]]
 name = "pipfile"
@@ -322,7 +322,7 @@ PasteDeploy = ">=2.0"
 plaster = ">=0.5"
 
 [package.extras]
-testing = ["pytest", "pytest-cov"]
+testing = ["pytest-cov", "pytest"]
 
 [[package]]
 name = "pluggy"
@@ -333,8 +333,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
+testing = ["pytest-benchmark", "pytest"]
+dev = ["tox", "pre-commit"]
 
 [[package]]
 name = "psycopg2"
@@ -361,10 +361,10 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
+tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
+docs = ["zope.interface", "sphinx-rtd-theme", "sphinx"]
+dev = ["pre-commit", "mypy", "coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)", "cryptography (>=3.3.1)", "zope.interface", "sphinx-rtd-theme", "sphinx"]
 crypto = ["cryptography (>=3.3.1)"]
-dev = ["sphinx", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.3.1)", "pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)", "mypy", "pre-commit"]
-docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
-tests = ["pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)"]
 
 [[package]]
 name = "pyparsing"
@@ -396,8 +396,8 @@ webob = ">=1.8.3"
 "zope.interface" = ">=3.8.0"
 
 [package.extras]
-docs = ["Sphinx (>=3.0.0)", "docutils", "pylons-sphinx-themes (>=1.0.8)", "pylons-sphinx-latesturl", "repoze.sphinx.autointerface", "sphinx-copybutton", "sphinxcontrib-autoprogram"]
-testing = ["webtest (>=1.3.1)", "zope.component (>=4.0)", "coverage", "pytest (>=5.4.2)", "pytest-cov"]
+testing = ["pytest-cov", "pytest (>=5.4.2)", "coverage", "zope.component (>=4.0)", "webtest (>=1.3.1)"]
+docs = ["sphinxcontrib-autoprogram", "sphinx-copybutton", "repoze.sphinx.autointerface", "pylons-sphinx-latesturl", "pylons-sphinx-themes (>=1.0.8)", "docutils", "Sphinx (>=3.0.0)"]
 
 [[package]]
 name = "pyramid-tm"
@@ -490,22 +490,22 @@ certifi = "*"
 urllib3 = ">=1.10.0"
 
 [package.extras]
-aiohttp = ["aiohttp (>=3.5)"]
-beam = ["apache-beam (>=2.12)"]
-bottle = ["bottle (>=0.12.13)"]
-celery = ["celery (>=3)"]
-chalice = ["chalice (>=1.16.0)"]
-django = ["django (>=1.8)"]
-falcon = ["falcon (>=1.4)"]
-flask = ["flask (>=0.11)", "blinker (>=1.1)"]
-httpx = ["httpx (>=0.16.0)"]
-pure_eval = ["pure-eval", "executing", "asttokens"]
-pyspark = ["pyspark (>=2.4.4)"]
-quart = ["quart (>=0.16.1)", "blinker (>=1.1)"]
-rq = ["rq (>=0.6)"]
-sanic = ["sanic (>=0.8)"]
-sqlalchemy = ["sqlalchemy (>=1.2)"]
 tornado = ["tornado (>=5)"]
+sqlalchemy = ["sqlalchemy (>=1.2)"]
+sanic = ["sanic (>=0.8)"]
+rq = ["rq (>=0.6)"]
+quart = ["blinker (>=1.1)", "quart (>=0.16.1)"]
+pyspark = ["pyspark (>=2.4.4)"]
+pure_eval = ["asttokens", "executing", "pure-eval"]
+httpx = ["httpx (>=0.16.0)"]
+flask = ["blinker (>=1.1)", "flask (>=0.11)"]
+falcon = ["falcon (>=1.4)"]
+django = ["django (>=1.8)"]
+chalice = ["chalice (>=1.16.0)"]
+celery = ["celery (>=3)"]
+bottle = ["bottle (>=0.12.13)"]
+beam = ["apache-beam (>=2.12)"]
+aiohttp = ["aiohttp (>=3.5)"]
 
 [[package]]
 name = "six"
@@ -614,7 +614,7 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-docs = ["Sphinx (>=1.3.1)", "docutils", "pylons-sphinx-themes"]
+docs = ["pylons-sphinx-themes", "docutils", "Sphinx (>=1.3.1)"]
 
 [[package]]
 name = "ujson"
@@ -646,8 +646,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-docs = ["sphinx", "repoze.sphinx.autointerface"]
-testing = ["pytest", "pytest-cov", "coverage"]
+testing = ["coverage", "pytest-cov", "pytest"]
+docs = ["repoze.sphinx.autointerface", "sphinx"]
 
 [[package]]
 name = "waitress"
@@ -759,8 +759,8 @@ cornice = [
     {file = "cornice-6.0.1.tar.gz", hash = "sha256:6edf6f206ff1c3d108d7a7b9ae640a2f4737cfc04f0914ccc4eefe511d3a8985"},
 ]
 graphviz = [
-    {file = "graphviz-0.20-py3-none-any.whl", hash = "sha256:62c5f48bcc534a45b4588c548ff75e419c1f1f3a33d31a91796ae80a7f581e4a"},
-    {file = "graphviz-0.20.zip", hash = "sha256:76bdfb73f42e72564ffe9c7299482f9d72f8e6cb8d54bce7b48ab323755e9ba5"},
+    {file = "graphviz-0.20.1-py3-none-any.whl", hash = "sha256:587c58a223b51611c0cf461132da386edd896a029524ca61a1462b880bf97977"},
+    {file = "graphviz-0.20.1.zip", hash = "sha256:8c58f14adaa3b947daf26c19bc1e98c4e0702cdc31cf99153e6f06904d492bf8"},
 ]
 greenlet = [
     {file = "greenlet-1.1.2-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:58df5c2a0e293bf665a51f8a100d3e9956febfbf1d9aaf8c0677cf70218910c6"},
