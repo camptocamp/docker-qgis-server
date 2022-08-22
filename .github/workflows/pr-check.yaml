@@ -20,3 +20,4 @@ jobs:
         with:
           required_labels: enhancement, bug, refactor, documentation, chore, dependencies
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: github.actor != 'renovate[bot]'
