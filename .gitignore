@@ -1,2 +1,3 @@
 /acceptance_tests/junitxml/
 /node_modules
+/.github/changelog-generator-cache

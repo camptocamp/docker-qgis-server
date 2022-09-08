@@ -1,9 +1,8 @@
----
 name: Rebuild
 
 on:
   schedule:
-    - cron: '30 2 * * *'
+    - cron: 30 2 * * *
 
 jobs:
   main:
@@ -23,6 +22,7 @@ jobs:
           - '3.26'
 
     steps:
+      - run: docker system prune --all --force
       - run: docker system prune --all --volumes --force
 
       - uses: actions/checkout@v3
