@@ -151,7 +151,8 @@ WORKDIR /tmp
 
 RUN --mount=type=cache,target=/root/.cache \
     --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt
+    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt \
+    && python3 -m pip freeze > /requirements.txt
 
 FROM runner as runner-server
 
@@ -236,7 +237,8 @@ RUN --mount=type=cache,target=/root/.cache,id=root-cache \
 
 RUN --mount=type=cache,target=/root/.cache \
     --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements-desktop.txt
+    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements-desktop.txt \
+    && python3 -m pip freeze > /requirements.txt
 
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
 COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
