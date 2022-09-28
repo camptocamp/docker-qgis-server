@@ -217,7 +217,7 @@
 - \[Backport master\] Have one separate image for the desktop [\#70](https://github.com/camptocamp/docker-qgis-server/pull/70) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
 - \[Backport master\] Use Ubuntu 20.04 [\#69](https://github.com/camptocamp/docker-qgis-server/pull/69) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
 - \[Backport master\] Fix clean Docker hub tags [\#68](https://github.com/camptocamp/docker-qgis-server/pull/68) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
-- \[Backport master\] Use secret defined in organisation [\#67](https://github.com/camptocamp/docker-qgis-server/pull/67) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
+- \[Backport master\] Use secret defined in organization [\#67](https://github.com/camptocamp/docker-qgis-server/pull/67) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
 - \[Backport master\] Add Clean docker hub tags workflow [\#66](https://github.com/camptocamp/docker-qgis-server/pull/66) ([c2c-bot-gis-ci](https://github.com/c2c-bot-gis-ci))
 
 ## [3.16.0](https://github.com/camptocamp/docker-qgis-server/tree/3.16.0) (2020-07-10)
@@ -258,7 +258,7 @@
 - Add Apache server status [\#32](https://github.com/camptocamp/docker-qgis-server/pull/32) ([sbrunner](https://github.com/sbrunner))
 - added fcgi options BUSY_TIMEOUT IDLE_TIMEOUT and IO_TIMEOUT [\#31](https://github.com/camptocamp/docker-qgis-server/pull/31) ([ochriste](https://github.com/ochriste))
 - \[Backport master\] Fix access logs [\#30](https://github.com/camptocamp/docker-qgis-server/pull/30) ([backporting[bot]](https://github.com/apps/backporting))
-- Add some additional informations to the logs [\#23](https://github.com/camptocamp/docker-qgis-server/pull/23) ([sbrunner](https://github.com/sbrunner))
+- Add some additional information to the logs [\#23](https://github.com/camptocamp/docker-qgis-server/pull/23) ([sbrunner](https://github.com/sbrunner))
 - Enable access log [\#19](https://github.com/camptocamp/docker-qgis-server/pull/19) ([sbrunner](https://github.com/sbrunner))
 - Be able to install font with a config image as non root user [\#18](https://github.com/camptocamp/docker-qgis-server/pull/18) ([sbrunner](https://github.com/sbrunner))
 
