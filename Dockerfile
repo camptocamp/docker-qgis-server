@@ -32,32 +32,42 @@ SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     apt-get update \
+    && apt-get install --assume-yes --no-install-recommends apt-utils gnupg2 \
     && . /etc/os-release \
-    && apt-get install --assume-yes --no-install-recommends apt-utils software-properties-common \
-    && apt-get autoremove --assume-yes software-properties-common \
-    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends cmake gcc \
-        flex bison libzip-dev libexpat1-dev libfcgi-dev libgsl-dev \
-        libpq-dev libqca-qt5-2-dev libqca-qt5-2-dev libqca-qt5-2-plugins qttools5-dev-tools \
-        libqt5scintilla2-dev libqt5opengl5-dev libqt5sql5-sqlite libqt5webkit5-dev qtpositioning5-dev \
-        qtxmlpatterns5-dev-tools libqt5xmlpatterns5-dev libqt5svg5-dev libqwt-qt5-dev libspatialindex-dev \
-        libspatialite-dev libsqlite3-dev libqt5designer5 qttools5-dev qt5keychain-dev lighttpd locales \
-        pkg-config poppler-utils python3 python3-dev python3-pip \
-        pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
-        python3-sip python3-sip-dev qtscript5-dev spawn-fcgi xauth xfonts-100dpi \
-        xfonts-75dpi xfonts-base xfonts-scalable xvfb git ninja-build ccache clang libpython3-dev \
-        libqt53dcore5 libqt53dextras5 libqt53dlogic5 libqt53dinput5 libqt53drender5 libqt5serialport5-dev \
-        libexiv2-dev libgeos-dev protobuf-compiler libprotobuf-dev libzstd-dev qt3d5-dev qt3d-assimpsceneimport-plugin \
-        qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin gnupg gcc \
     && echo "deb https://deb.nodesource.com/node_14.x ${VERSION_CODENAME} main" > /etc/apt/sources.list.d/nodesource.list \
     && curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
     && apt-get update \
-    && apt-get install --assume-yes --no-install-recommends 'nodejs=14.*'
+    && echo 'Install packages from https://github.com/qgis/QGIS/blob/<branch>/INSTALL.md \
+        Remove already in GDAL image: proj, GDAL and openjpeg ->: \
+            gdal-bin python3-gdal python3-pyproj libgdal-dev libproj-dev \
+        Remove error with SIP v6: sip-tools python3-pyqtbuild' \
+    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        bison ca-certificates ccache cmake cmake-curses-gui dh-python doxygen expect flex flip git \
+        graphviz grass-dev libexiv2-dev libexpat1-dev libfcgi-dev libgeos-dev libgsl-dev libpdal-dev \
+        libpq-dev libprotobuf-dev libqca-qt5-2-dev libqca-qt5-2-plugins libqscintilla2-qt5-dev \
+        libqt5opengl5-dev libqt5serialport5-dev libqt5sql5-sqlite libqt5svg5-dev libqt5webkit5-dev \
+        libqt5xmlpatterns5-dev libqwt-qt5-dev libspatialindex-dev libspatialite-dev libsqlite3-dev \
+        libsqlite3-mod-spatialite libyaml-tiny-perl libzip-dev libzstd-dev lighttpd locales ninja-build \
+        ocl-icd-opencl-dev opencl-headers pandoc pdal pkg-config poppler-utils protobuf-compiler \
+        pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-all-dev python3-autopep8 python3-dateutil \
+        python3-dev python3-future python3-httplib2 python3-jinja2 python3-lxml \
+        python3-markupsafe python3-mock python3-nose2 python3-owslib python3-plotly python3-psycopg2 \
+        python3-pygments python3-pyqt5 python3-pyqt5.qsci python3-pyqt5.qtpositioning \
+        python3-pyqt5.qtsql python3-pyqt5.qtsvg python3-pyqt5.qtwebkit python3-requests \
+        python3-sip python3-sip-dev python3-termcolor python3-tz python3-yaml qt3d-assimpsceneimport-plugin \
+        qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin qt3d5-dev \
+        qtbase5-dev qtbase5-private-dev qtkeychain-qt5-dev qtpositioning5-dev qttools5-dev \
+        qttools5-dev-tools spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base \
+        xfonts-scalable xvfb \
+    && echo 'Install some more packages' \
+    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        gnupg gcc clang nodejs
 
 WORKDIR /usr/lib/
 COPY package.json package-lock.json ./
 RUN npm install
 
-WORKDIR /tmp
+WORKDIR /tmp/
 
 RUN --mount=type=cache,target=/root/.cache \
     --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
@@ -91,7 +101,7 @@ RUN cmake .. \
     -DWITH_SERVER_LANDINGPAGE_WEBAPP=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DCMAKE_PREFIX_PATH="/src/external/qt3dextra-headers/cmake"
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
@@ -106,6 +116,7 @@ RUN rm -rf /usr/local/share/qgis/i18n/
 
 FROM builder as builder-desktop
 
+# -DWITH_3D=ON generate error: undefined reference to `Qt3DExtras::Qt3DWindow::Qt3DWindow(QScreen*)'
 RUN cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
@@ -117,10 +128,9 @@ RUN cmake .. \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DWITH_GEOREFERENCER=ON \
-    -DWITH_3D=ON \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
-    -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so.5 \
+    -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so \
     -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
@@ -136,15 +146,15 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
-        libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip5 \
+        libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip4 \
         libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
         libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-        python3 python3-pip \
+        python3 python3-pip ocl-icd-libopencl1 \
         python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         apache2 libapache2-mod-fcgid python3 \
-        libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf17 libprotobuf-lite17 \
-        libgsl23 libzstd1 binutils \
+        libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
+        libgsl27 libzstd1 binutils glibc-tools \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
