@@ -13,11 +13,13 @@ if [ ${BRANCH} == master ]; then
     git checkout ${BRANCH}
     git pull --rebase
 else
+    git checkout ${BRANCH}
+    git pull --rebase
     TAG_PREFIX=$(echo ${BRANCH} | sed -e 's/release-/final-/')
 
-    git fetch --tags
-    LAST_RELEASE=$(git log --format=%H --tags=${TAG_PREFIX}* --no-walk | head -1)
-    git checkout --detach ${LAST_RELEASE}
+    #git fetch --tags
+    #LAST_RELEASE=$(git log --format=%H --tags=${TAG_PREFIX}* --no-walk | head -1)
+    #git checkout --detach ${LAST_RELEASE}
 fi
 
 echo

@@ -28,6 +28,11 @@ FROM base-all as builder
 LABEL maintainer="info@camptocamp.com"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
+#RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+#    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \\
+#    && apt-get install --assume-yes --no-install-recommends apt-utils gnupg2 \
+#    && echo "deb https://deb.nodesource.com/node_14.x ${VERSION_CODENAME} main" > /etc/apt/sources.list.d/nodesource.list \
+#    && curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
@@ -117,7 +122,7 @@ RUN cmake .. \
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
-    && ccache --max-size=2G \
+    && ccache --max-size=3G \
     && ninja \
     && ccache --show-stats
 
