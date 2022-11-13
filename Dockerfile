@@ -53,6 +53,28 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     && apt-get update \
     && apt-get install --assume-yes --no-install-recommends 'nodejs=14.*'
 
+# Already in GDAL image: proj, GDAL and openjpeg -> remove:
+# https://github.com/qgis/QGIS/blob/${QGIS_BRANCH}/INSTALL.md
+## gdal-bin python3-gdal python3-pyproj libgdal-dev libproj-dev
+## error -> remove: sip-tools python3-pyqtbuild
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
+    apt-get update \
+    && echo Install packages from INSTALL.md without \
+    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        python3-markupsafe python3-mock python3-nose2 python3-owslib python3-plotly python3-psycopg2 \
+        python3-termcolor python3-tz python3-yaml \
+        python3-all-dev python3-autopep8 python3-dateutil \
+        python3-future python3-httplib2 python3-jinja2 python3-lxml \
+        python3-pygments python3-requests \
+        cmake-curses-gui dh-python doxygen expect flip \
+        graphviz grass-dev libpdal-dev \
+        libsqlite3-mod-spatialite libyaml-tiny-perl \
+        ocl-icd-opencl-dev opencl-headers pandoc pdal qtbase5-private-dev \
+        python3-pyqt5.qtsvg \
+        python3-pyqt5.qtwebkit
+
+
 WORKDIR /usr/lib/
 COPY package.json package-lock.json ./
 RUN npm install
