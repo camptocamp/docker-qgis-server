@@ -1,4 +1,4 @@
-FROM python:3.10.6 as base-all
+FROM python:3.10.8 as base-all
 LABEL maintainer "info@camptocamp.org"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
