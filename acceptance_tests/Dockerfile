@@ -1,7 +1,13 @@
 FROM python:3.11.0 as base-all
 LABEL maintainer "info@camptocamp.org"
 
+# Fail on error on pipe, see: https://github.com/hadolint/hadolint/wiki/DL4006.
+# Treat unset variables as an error when substituting.
+# Print commands and their arguments as they are executed.
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
+
+# Workeround for newer version of setuptools
+ENV SETUPTOOLS_USE_DISTUTILS=stdlib
 
 RUN --mount=type=cache,target=/var/lib/apt/lists \
     --mount=type=cache,target=/var/cache,sharing=locked \
