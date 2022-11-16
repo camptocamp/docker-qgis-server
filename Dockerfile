@@ -41,7 +41,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         Remove already in GDAL image: proj, GDAL and openjpeg ->: \
             gdal-bin python3-gdal python3-pyproj libgdal-dev libproj-dev \
         Remove error with SIP v6: sip-tools python3-pyqtbuild' \
-    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
         bison ca-certificates ccache cmake cmake-curses-gui dh-python doxygen expect flex flip git \
         graphviz grass-dev libexiv2-dev libexpat1-dev libfcgi-dev libgeos-dev libgsl-dev libpdal-dev \
         libpq-dev libprotobuf-dev libqca-qt5-2-dev libqca-qt5-2-plugins libqscintilla2-qt5-dev \
@@ -60,7 +60,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         qttools5-dev-tools spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base \
         xfonts-scalable xvfb \
     && echo 'Install some more packages' \
-    && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
         gnupg gcc clang nodejs
 
 WORKDIR /usr/lib/
@@ -182,8 +182,7 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     APACHE_RUN_DIR=/var/run/apache2 \
     APACHE_PID_FILE=/etc/apache2/apache2.pid \
     APACHE_LOCK_DIR=/var/lock/apache2 \
-    APACHE_LOG_DIR=/var/log/apache2 \
-    LANG=C.UTF-8
+    APACHE_LOG_DIR=/var/log/apache2
 
 RUN a2enmod fcgid headers status \
     && a2dismod -f auth_basic authn_file authn_core authz_user autoindex dir \
