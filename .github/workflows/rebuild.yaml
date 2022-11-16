@@ -16,10 +16,9 @@ jobs:
         branch:
           - master
           - '3.16'
-          - '3.20'
           - '3.22'
-          - '3.24'
           - '3.26'
+          - '3.28'
 
     steps:
       - run: docker system prune --all --force

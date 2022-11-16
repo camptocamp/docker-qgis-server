@@ -1,0 +1,58 @@
+---
+name: Audit
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+
+jobs:
+  audit:
+    runs-on: ubuntu-20.04
+    name: Audit
+    timeout-minutes: 10
+
+    strategy:
+      fail-fast: false
+      matrix:
+        branch:
+          - '3.16'
+          - '3.22'
+          - '3.26'
+          - '3.28'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ matrix.branch }}
+          token: ${{ secrets.GOPASS_CI_GITHUB_TOKEN }}
+
+      - uses: camptocamp/initialise-gopass-summon-action@v2
+        with:
+          ci-gpg-private-key: ${{secrets.CI_GPG_PRIVATE_KEY}}
+          github-gopass-ci-token: ${{secrets.GOPASS_CI_GITHUB_TOKEN}}
+
+      - run: python3 -m venv ~/.venv
+      - run: ~/.venv/bin/pip install --pre c2cciutils[audit]
+      - run: python3 -m pip install --pre c2cciutils[audit]
+
+      - name: Check .tool-versions file existence
+        id: tool-versions
+        uses: andstor/file-existence-action@v2
+        with:
+          files: .tool-versions
+      - uses: asdf-vm/actions/install@v1
+        if: steps.tool-versions.outputs.files_exists == 'true'
+      - run: cat /tmp/python-build.*.log
+        if: failure()
+      - run: python --version
+
+      - name: Audit
+        run: ~/.venv/bin/c2cciutils-audit --branch=${{ matrix.branch }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Audit Snyk debug
+        run: ~/.venv/bin/c2cciutils-audit --branch=${{ matrix.branch }}
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DEBUG: '*snyk*'
