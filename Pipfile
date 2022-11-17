@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 psycopg2 = "==2.8.6"
-numpy = "==1.19.5"
-pyyaml = "==5.3.1"
+numpy = "==1.22.2"
+pyyaml = "==5.4"
 pythonqwt = "==0.8.3"
 
 [dev-packages]
