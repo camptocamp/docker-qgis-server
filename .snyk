@@ -5,9 +5,9 @@ ignore:
   SNYK-PYTHON-POETRYCORE-3018918:
     - '*':
         reason: Used only in build
-        created: 2022-11-17T10:36:39.729Z
+        created: 2022-11-17T13:09:43.530Z
   SNYK-PYTHON-POETRYCORE-3018923:
     - '*':
         reason: Used only in build
-        created: 2022-11-17T10:36:49.044Z
+        created: 2022-11-17T13:09:52.131Z
 patch: {}
