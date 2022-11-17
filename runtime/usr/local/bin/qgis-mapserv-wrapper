@@ -8,8 +8,7 @@ source /tmp/init-env
 # GDAL uses CWD to write temporary files. So we better be in a location writable by www-data.
 cd /tmp
 
-if [[ "${QGIS_CATCH_SEGV}" == 1 ]]
-then
+if [[ "${QGIS_CATCH_SEGV}" == 1 ]]; then
     exec catchsegv /usr/local/bin/qgis_mapserv.fcgi "$@" > /var/log/qgis.log
 else
     exec /usr/local/bin/qgis_mapserv.fcgi "$@"
