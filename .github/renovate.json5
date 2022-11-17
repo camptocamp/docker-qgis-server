@@ -8,7 +8,7 @@
   prHourlyLimit: 0,
   prConcurrentLimit: 0,
   lockFileMaintenance: { enabled: true, automerge: true },
-  baseBranches: ['master', '3.26'],
+  baseBranches: ['master', '3.16', '3.22', '3.26', '3.28'],
   packageRules: [
     /** Less strict version for Docker images */
     {
