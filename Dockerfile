@@ -1,4 +1,4 @@
-FROM osgeo/gdal:ubuntu-small-3.3.2 as base
+FROM osgeo/gdal:ubuntu-small-3.3.3 as base
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     apt-get update && \
