@@ -11,3 +11,6 @@ publish:
         tags:
           - '{version}'
           - '{version}-desktop'
+
+audit:
+  pip: false
