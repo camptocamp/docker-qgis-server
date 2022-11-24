@@ -1,5 +1,53 @@
 # Changelog
 
+## [3.28.0](https://github.com/camptocamp/docker-qgis-server/tree/3.28.0) (2022-11-16)
+
+[Full Changelog](https://github.com/camptocamp/docker-qgis-server/compare/3.26.0...3.28.0)
+
+#### :books: Documentation
+
+- Add generated changelog [\#409](https://github.com/camptocamp/docker-qgis-server/pull/409) ([sbrunner](https://github.com/sbrunner))
+
+#### :wrench: Build, CI, Tests, Code style
+
+- Create or update a Poetry group for Renovate [\#462](https://github.com/camptocamp/docker-qgis-server/pull/462) ([sbrunner](https://github.com/sbrunner))
+- Fix repository in workflow used to delete old workflow runs [\#460](https://github.com/camptocamp/docker-qgis-server/pull/460) ([sbrunner](https://github.com/sbrunner))
+- Fix repository in workflow used to delete old workflow runs [\#459](https://github.com/camptocamp/docker-qgis-server/pull/459) ([sbrunner](https://github.com/sbrunner))
+- Add workflow to delete old workflow runs [\#458](https://github.com/camptocamp/docker-qgis-server/pull/458) ([sbrunner](https://github.com/sbrunner))
+- Fix code style [\#456](https://github.com/camptocamp/docker-qgis-server/pull/456) ([sbrunner](https://github.com/sbrunner))
+- Use the standard name for pull request checks workflow [\#454](https://github.com/camptocamp/docker-qgis-server/pull/454) ([sbrunner](https://github.com/sbrunner))
+- Fix the get config in changelog workflow [\#452](https://github.com/camptocamp/docker-qgis-server/pull/452) ([sbrunner](https://github.com/sbrunner))
+- Group Poetry packages in Renovate pull requests [\#451](https://github.com/camptocamp/docker-qgis-server/pull/451) ([sbrunner](https://github.com/sbrunner))
+- Schedule Renovate on early Saturday [\#450](https://github.com/camptocamp/docker-qgis-server/pull/450) ([sbrunner](https://github.com/sbrunner))
+- Add the global requirements file to be scanned with Snyk [\#442](https://github.com/camptocamp/docker-qgis-server/pull/442) ([sbrunner](https://github.com/sbrunner))
+- Fix the changelog generator workflow [\#441](https://github.com/camptocamp/docker-qgis-server/pull/441) ([sbrunner](https://github.com/sbrunner))
+- Clean all the images already present in the image given by GitHub [\#440](https://github.com/camptocamp/docker-qgis-server/pull/440) ([sbrunner](https://github.com/sbrunner))
+- Update the changelog generation workflow [\#439](https://github.com/camptocamp/docker-qgis-server/pull/439) ([sbrunner](https://github.com/sbrunner))
+- Remove Dependabot configuration [\#438](https://github.com/camptocamp/docker-qgis-server/pull/438) ([sbrunner](https://github.com/sbrunner))
+- Fix disk full [\#416](https://github.com/camptocamp/docker-qgis-server/pull/416) ([sbrunner](https://github.com/sbrunner))
+- Fix the changelog generation [\#415](https://github.com/camptocamp/docker-qgis-server/pull/415) ([sbrunner](https://github.com/sbrunner))
+- Update the changelog [\#411](https://github.com/camptocamp/docker-qgis-server/pull/411) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Create version 3.26 [\#399](https://github.com/camptocamp/docker-qgis-server/pull/399) ([sbrunner](https://github.com/sbrunner))
+
+#### :package: Dependencies update
+
+- Update python Docker tag to v3.11.0 \(master\) [\#478](https://github.com/camptocamp/docker-qgis-server/pull/478) ([renovate[bot]](https://github.com/apps/renovate))
+- \[Snyk\] Security upgrade poetry-core from 1.0.8 to 1.1.0a7 [\#444](https://github.com/camptocamp/docker-qgis-server/pull/444) ([sbrunner](https://github.com/sbrunner))
+- Update camptocamp/postgres Docker tag to v14 \(master\) [\#430](https://github.com/camptocamp/docker-qgis-server/pull/430) ([renovate[bot]](https://github.com/apps/renovate))
+- Update all patch versions \(master\) \(patch\) [\#429](https://github.com/camptocamp/docker-qgis-server/pull/429) ([renovate[bot]](https://github.com/apps/renovate))
+- Update all patch versions \(master\) \(patch\) [\#425](https://github.com/camptocamp/docker-qgis-server/pull/425) ([renovate[bot]](https://github.com/apps/renovate))
+- Lock file maintenance \(master\) [\#418](https://github.com/camptocamp/docker-qgis-server/pull/418) ([renovate[bot]](https://github.com/apps/renovate))
+- Update all minor versions \(master\) \(minor\) [\#417](https://github.com/camptocamp/docker-qgis-server/pull/417) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency c2cwsgiutils to v5.1.0 \(master\) [\#413](https://github.com/camptocamp/docker-qgis-server/pull/413) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency poetry to v1.1.14 \(master\) [\#412](https://github.com/camptocamp/docker-qgis-server/pull/412) ([renovate[bot]](https://github.com/apps/renovate))
+- Lock file maintenance \(master\) [\#410](https://github.com/camptocamp/docker-qgis-server/pull/410) ([renovate[bot]](https://github.com/apps/renovate))
+- Lock file maintenance \(master\) [\#408](https://github.com/camptocamp/docker-qgis-server/pull/408) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency camptocamp/postgres to v11 \(master\) [\#407](https://github.com/camptocamp/docker-qgis-server/pull/407) ([renovate[bot]](https://github.com/apps/renovate))
+- Update all patch versions \(master\) \(patch\) [\#406](https://github.com/camptocamp/docker-qgis-server/pull/406) ([renovate[bot]](https://github.com/apps/renovate))
+- Lock file maintenance \(master\) [\#401](https://github.com/camptocamp/docker-qgis-server/pull/401) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3 [\#398](https://github.com/camptocamp/docker-qgis-server/pull/398) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/cache action to v3 [\#397](https://github.com/camptocamp/docker-qgis-server/pull/397) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [3.26.0](https://github.com/camptocamp/docker-qgis-server/tree/3.26.0) (2022-06-20)
 
 [Full Changelog](https://github.com/camptocamp/docker-qgis-server/compare/3.24.0...3.26.0)
