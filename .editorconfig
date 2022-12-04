@@ -17,7 +17,7 @@ block_comment_start = /*
 block_comment = *
 block_comment_end = */
 
-[*.{json,json5,yaml,yml}]
+[*.{json,json5,yaml,yml,whitesource}]
 indent_size = 2
 
 [Makefile]
