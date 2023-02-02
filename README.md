@@ -3,11 +3,11 @@
 ## Usage
 
 The Docker container needs to have access to all files of the QGIS project to be published.
-Either you create another image to add the files or you inject them using a volume. 
-For example, if your QGIS project is stored in `/data/gqis/project.qgz`:
+Either you create another image to add the files or you inject them using a volume.
+For example, if your QGIS project is stored in `./qgis/project.qgz`:
 
 ```bash
-docker run --detach --publish=8380:80 --volume=/data/qgis:/etc/qgisserver camptocamp/qgis-server
+docker run --detach --publish=8380:80 --volume=${PWD}/qgis:/etc/qgisserver camptocamp/qgis-server
 ```
 
 With the previous command, you'll get to your server with this URL:
