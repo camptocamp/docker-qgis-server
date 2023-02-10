@@ -106,20 +106,20 @@ source = ["Cython (>=0.29.7)"]
 
 [[package]]
 name = "mock"
-version = "4.0.3"
+version = "5.0.1"
 description = "Rolling backport of unittest.mock for all Pythons"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "mock-4.0.3-py3-none-any.whl", hash = "sha256:122fcb64ee37cfad5b3f48d7a7d51875d7031aaf3d8be7c42e2bee25044eee62"},
-    {file = "mock-4.0.3.tar.gz", hash = "sha256:7d3fbbde18228f4ff2f1f119a45cdffa458b4c0dee32eb4d2bb2f82554bac7bc"},
+    {file = "mock-5.0.1-py3-none-any.whl", hash = "sha256:c41cfb1e99ba5d341fbcc5308836e7d7c9786d302f995b2c271ce2144dece9eb"},
+    {file = "mock-5.0.1.tar.gz", hash = "sha256:e3ea505c03babf7977fd21674a69ad328053d414f05e6433c30d8fa14a534a6b"},
 ]
 
 [package.extras]
 build = ["blurb", "twine", "wheel"]
 docs = ["sphinx"]
-test = ["pytest (<5.4)", "pytest-cov"]
+test = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "nose2"
@@ -155,4 +155,4 @@ desktop = ["lxml"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.11"
-content-hash = "a735f092f4e9e8f7788ff7520257a0d2e456a03af9c8e4775fa36c241e6e1ab2"
+content-hash = "78d6d592302209486ef99aaea5442dc5bdabd2068954f07b6b5af8ecc72737ec"
