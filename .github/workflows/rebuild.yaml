@@ -18,6 +18,7 @@ jobs:
           - '3.16'
           - '3.22'
           - '3.28'
+          - '3.30'
 
     steps:
       - run: docker system prune --all --force
