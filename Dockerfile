@@ -58,7 +58,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin qt3d5-dev \
         qtbase5-dev qtbase5-private-dev qtkeychain-qt5-dev qtpositioning5-dev qttools5-dev \
         qttools5-dev-tools spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base \
-        xfonts-scalable xvfb \
+        xfonts-scalable xvfb qtmultimedia5-dev \
     && echo 'Install some more packages' \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
         gnupg gcc clang nodejs
@@ -154,7 +154,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         apache2 libapache2-mod-fcgid python3 \
         libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
-        libgsl27 libzstd1 binutils glibc-tools \
+        libgsl27 libzstd1 binutils glibc-tools libqt5multimediawidgets5 \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
