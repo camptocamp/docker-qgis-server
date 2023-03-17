@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Be able to install fonts without creating a new image
-if [ -e /etc/qgisserver/fonts/ ]
-then
+if [ -e /etc/qgisserver/fonts/ ]; then
     fc-cache --really-force --system-only
 fi
 
@@ -12,9 +11,9 @@ fi
 # Make the user matching the user from the mounted home
 # We assume there will only be one user dir in home
 # hence tail -1
-USER_ID=`ls -lahn /home | tail -1 | awk {'print $3'}`
-GROUP_ID=`ls -lahn /home | tail -1 | awk {'print $4'}`
-USER_NAME=`ls -lah /home/ | tail -1 | awk '{print $9}'`
+USER_ID=$(ls -lahn /home | tail -1 | awk {'print $3'})
+GROUP_ID=$(ls -lahn /home | tail -1 | awk {'print $4'})
+USER_NAME=$(ls -lah /home/ | tail -1 | awk '{print $9}')
 export HOME=/home/$USER_NAME
 cd $HOME
 
