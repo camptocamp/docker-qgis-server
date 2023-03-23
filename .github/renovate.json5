@@ -13,6 +13,13 @@
     schedule: 'after 5pm on the first day of the month',
   },
   baseBranches: ['master', '3.16', '3.22', '3.28'],
+  'pre-commit': { enabled: true },
+  regexManagers: [
+    {
+      fileMatch: ['^.pre-commit-config.yaml$'],
+      matchStrings: [" +- '?(?<depName>[^' @=]+)(@|==)(?<currentValue>[^' @=]+)'? # (?<datasource>.+)"],
+    },
+  ],
   packageRules: [
     /** Less strict version for Docker images */
     {
