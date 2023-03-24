@@ -54,3 +54,12 @@ We removed the default values for the following environment variables to better 
 - `MAX_CACHE_LAYERS`, was `""`
 - `QGIS_AUTH_DB_DIR_PATH`, was `/etc/qgisserver/`
 - `PGSERVICEFILE`, was `/etc/qgisserver/pg_service.conf`
+
+## Contributing
+
+Install the pre-commit hooks:
+
+```bash
+pip install pre-commit
+pre-commit install --allow-missing-config
+```

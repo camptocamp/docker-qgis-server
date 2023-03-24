@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eux
 
 # Be able to install fonts without creating a new image
 if [ -e /etc/qgisserver/fonts/ ]; then
@@ -11,13 +11,16 @@ fi
 # Make the user matching the user from the mounted home
 # We assume there will only be one user dir in home
 # hence tail -1
-USER_ID=$(ls -lahn /home | tail -1 | awk {'print $3'})
-GROUP_ID=$(ls -lahn /home | tail -1 | awk {'print $4'})
+# shellcheck disable=SC2012
+USER_ID=$(ls -lahn /home | tail -1 | awk '{print $3}')
+# shellcheck disable=SC2012
+GROUP_ID=$(ls -lahn /home | tail -1 | awk '{print $4}')
+# shellcheck disable=SC2012
 USER_NAME=$(ls -lah /home/ | tail -1 | awk '{print $9}')
 export HOME=/home/$USER_NAME
-cd $HOME
+cd "$HOME"
 
-groupadd -g $GROUP_ID qgis
-useradd --shell /bin/bash --uid $USER_ID --gid $GROUP_ID $USER_NAME
+groupadd -g "$GROUP_ID" qgis
+useradd --shell /bin/bash --uid "$USER_ID" --gid "$GROUP_ID" "$USER_NAME"
 export LD_LIBRARY_PATH=/usr/lib
-su $USER_NAME -c "/usr/local/bin/qgis $*"
+su "$USER_NAME" -c "/usr/local/bin/qgis $*"
