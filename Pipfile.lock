@@ -72,9 +72,7 @@
             "version": "==5.3.1"
         },
         "future": {
-            "hashes": [
-                "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
-            ],
+            "hashes": ["sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"],
             "index": "pypi",
             "version": "==0.18.2"
         },
@@ -198,9 +196,7 @@
             "version": "==1.15.0"
         },
         "termcolor": {
-            "hashes": [
-                "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
-            ],
+            "hashes": ["sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"],
             "index": "pypi",
             "version": "==1.1.0"
         }
