@@ -125,6 +125,7 @@ RUN cmake .. \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=ON \
     -DWITH_SERVER=OFF \
+    -DWITH_3D=OFF \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DWITH_GEOREFERENCER=ON \
@@ -154,7 +155,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         apache2 libapache2-mod-fcgid python3 \
         libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
-        libgsl27 libzstd1 binutils glibc-tools libqt5multimediawidgets5 python3-pyqt5.qtmultimedia \
+        libgsl27 libzstd1 binutils glibc-tools libqt5multimediawidgets5 python3-pyqt5.qtmultimedia pdal \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
