@@ -150,5 +150,5 @@ desktop = ["lxml"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = ">=3.10,<3.11"
-content-hash = "d8a69a8306f1c70bed1417629b7879f4f1732041fe709f51f480005aa02a31f5"
+python-versions = ">=3.10,<3.12"
+content-hash = "2da897e9a7544dfbab3d74224257ee2a964233f58c66f20e5d81196bd1e27df5"
