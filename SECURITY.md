@@ -1,15 +1,22 @@
 # Security Policy
 
+The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
+
+Exception:
+
+- The version 3.22 will be supported until 23/06/2025 instead of 03/03/2023.
+
 ## Supported Versions
 
-| Version | Supported Until | [Upstream Supported Until](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule) |
-| ------- | --------------- | -------------------------------------------------------------------------------------------------------------- |
-| <= 3.14 | Unsupported     | Unsupported                                                                                                    |
-| 3.16    | Best effort     | Unsupported                                                                                                    |
-| 3.18    | Unsupported     | Unsupported                                                                                                    |
-| 3.20    | Unsupported     | Unsupported                                                                                                    |
-| 3.22    | 23/06/2025      | 03/03/2023                                                                                                     |
-| 3.24    | Unsupported     | Unsupported                                                                                                    |
-| 3.26    | Unsupported     | Unsupported                                                                                                    |
-| 3.28    | 23/02/2024      | 23/02/2024                                                                                                     |
-| 3.30    | 23/06/2023      | 23/06/2023                                                                                                     |
+| Version | Supported Until |
+| ------- | --------------- |
+| <= 3.14 | Unsupported     |
+| 3.16    | Best effort     |
+| 3.18    | Unsupported     |
+| 3.20    | Unsupported     |
+| 3.22    | 23/06/2025      |
+| 3.24    | Unsupported     |
+| 3.26    | Unsupported     |
+| 3.28    | 23/02/2024      |
+| 3.30    | 23/06/2023      |
+| 3.32    | 27/10/2023      |
