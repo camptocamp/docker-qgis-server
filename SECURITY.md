@@ -1,11 +1,5 @@
 # Security Policy
 
-The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
-
-Exception:
-
-- The version 3.22 will be supported until 23/06/2025 instead of 03/03/2023.
-
 ## Supported Versions
 
 | Version | Supported Until |
@@ -20,3 +14,9 @@ Exception:
 | 3.28    | 23/02/2024      |
 | 3.30    | 23/06/2023      |
 | 3.32    | 27/10/2023      |
+
+The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
+
+Exception:
+
+- The version 3.22 will be supported until 23/06/2025 instead of 03/03/2023.
