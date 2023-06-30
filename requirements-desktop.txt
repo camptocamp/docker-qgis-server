@@ -1,0 +1,4 @@
+# Needed for plugins like processing and grassprovider
+pyyaml==6.0
+# Needed for the MetaSearch plugin
+jinja2==3.1.2
