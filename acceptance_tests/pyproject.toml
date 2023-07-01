@@ -13,4 +13,4 @@ python = ">=3.11,<3.12"
 
 [tool.poetry.dev-dependencies]
 c2cwsgiutils = { extras = ["standard"], version = "==5.2.2" }
-pytest = "==7.3.2"
+pytest = "==7.4.0"
