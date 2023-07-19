@@ -15,16 +15,16 @@ ${GET_ENV} ${FILTER_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
 # shellcheck disable=SC2086
 ${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
 
-if [[ "${UID}" != 0 ]]; then
-    echo "Switching listen port to 8080"
+if [ "${UID}" == 0 ]; then
+    echo "Switching listen port to 80"
     cd /tmp
-    sed -i -e 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-enabled/000-default.conf
-    sed -i -e 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf
+    sed -i -e 's/<VirtualHost \*:8080>/<VirtualHost *:80>/' /etc/apache2/sites-available/000-default.conf
+    sed -i -e 's/Listen 8080$/Listen 80/' /etc/apache2/ports.conf
 fi
 
 trap 'echo "caught a SIGTERM"; kill -TERM $PID2; wait $PID2; kill -TERM $PID1; wait $PID1' TERM
 trap '' WINCH
 
-rm -f "$APACHE_RUN_DIR/apache2.pid"
+rm -f "${APACHE_PID_FILE}"
 
 exec apache2 -DFOREGROUND

@@ -1,5 +1,10 @@
 version: '2'
 
+volumes:
+  cache:
+  tmp:
+  logs:
+
 services:
   qgis:
     image: camptocamp/qgis-server:${DOCKER_TAG}
@@ -9,12 +14,18 @@ services:
       QGIS_PROJECT_FILE: /etc/qgisserver/project.qgs
       QGIS_AUTH_DB_DIR_PATH: /etc/qgisserver/
       PGSERVICEFILE: /etc/qgisserver/pg_service.conf
+      QGIS_SERVER_CACHE_DIRECTORY: /var/cache/qgisserver
+    read_only: true
     links:
       - db
     # ports:
     #   - 8380:8080
     volumes_from:
       - acceptance_config
+    volumes:
+      - cache:/var/cache/qgisserver
+      - tmp:/tmp
+      - logs:/var/log/
     user: www-data
 
   # The landing page don't work when the QGIS_PROJECT_FILE environment variable is defined.
