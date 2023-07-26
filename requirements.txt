@@ -1,3 +1,4 @@
 poetry==1.5.1
 pip==23.1.2
 requests>=2.31.0 # not directly required, pinned by Snyk to avoid a vulnerability
+certifi>=2023.7.22 # not directly required, pinned by Snyk to avoid a vulnerability
