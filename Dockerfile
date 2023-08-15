@@ -47,7 +47,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         libpq-dev libprotobuf-dev libqca-qt5-2-dev libqca-qt5-2-plugins libqscintilla2-qt5-dev \
         libqt5opengl5-dev libqt5serialport5-dev libqt5sql5-sqlite libqt5svg5-dev libqt5webkit5-dev \
         libqt5xmlpatterns5-dev libqwt-qt5-dev libspatialindex-dev libspatialite-dev libsqlite3-dev \
-        libsqlite3-mod-spatialite libyaml-tiny-perl libzip-dev libzstd-dev lighttpd locales ninja-build \
+        libsqlite3-mod-spatialite libyaml-tiny-perl libzip-dev libzstd-dev lighttpd libdraco-dev locales ninja-build \
         ocl-icd-opencl-dev opencl-headers pandoc pdal pkg-config poppler-utils protobuf-compiler \
         pyqt5-dev pyqt5-dev-tools pyqt5.qsci-dev python3-all-dev python3-autopep8 python3-dateutil \
         python3-dev python3-future python3-httplib2 python3-jinja2 python3-lxml \
@@ -155,7 +155,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
         apache2 libapache2-mod-fcgid python3 \
         libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
-        libgsl27 libzstd1 binutils glibc-tools libqt5multimediawidgets5 python3-pyqt5.qtmultimedia pdal \
+        libgsl27 libzstd1 libdraco4 binutils glibc-tools libqt5multimediawidgets5 python3-pyqt5.qtmultimedia pdal \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
