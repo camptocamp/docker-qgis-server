@@ -1,4 +1,4 @@
-FROM python:3.11.4 as base-all
+FROM python:3.11.5 as base-all
 LABEL maintainer "info@camptocamp.org"
 
 # Fail on error on pipe, see: https://github.com/hadolint/hadolint/wiki/DL4006.
