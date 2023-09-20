@@ -90,10 +90,13 @@ ENV \
     QT_SELECT=5
 
 WORKDIR /src/build
+
+RUN ln -s /usr/local/lib/libproj.so.25 "/usr/local/lib/libproj.so.25.$(grep Version /usr/local/lib/pkgconfig/proj.pc|awk '{print $2}')"
+
 RUN cmake .. \
     -GNinja \
-    -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
-    -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_C_FLAGS="-O2" \
+    -DCMAKE_CXX_FLAGS="-O2" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=OFF \
