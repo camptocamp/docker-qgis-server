@@ -23,7 +23,7 @@ jobs:
     steps:
       # Remove Python packages with wriong version
       - run: sudo apt-get remove python3-debian python3-distro-info
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ matrix.branch }}
           token: ${{ secrets.GOPASS_CI_GITHUB_TOKEN }}
