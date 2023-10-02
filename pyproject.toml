@@ -10,7 +10,7 @@ authors = []
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
-geolinks = "0.2.1"
+geolinks = "0.2.3"
 six = "1.16.0"
 nose2 = "0.13.0"
 mock = "5.0.2"
