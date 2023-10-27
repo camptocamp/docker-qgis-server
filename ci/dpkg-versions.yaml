@@ -17,7 +17,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/cdebconf: 0.261ubuntu1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1
   ubuntu_22_04/cups: 2.4.1op1-1ubuntu4.7
-  ubuntu_22_04/curl: 7.81.0-1ubuntu1.13
+  ubuntu_22_04/curl: 7.81.0-1ubuntu1.14
   ubuntu_22_04/cyrus-sasl2: 2.1.27+dfsg2-3ubuntu1.2
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
   ubuntu_22_04/db5.3: 5.3.28+dfsg1-0.8ubuntu3
@@ -40,7 +40,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/gdbm: 1.23-1
   ubuntu_22_04/geos: 3.10.2-1
   ubuntu_22_04/glib2.0: 2.72.4-0ubuntu2.2
-  ubuntu_22_04/glibc: 2.35-0ubuntu3.3
+  ubuntu_22_04/glibc: 2.35-0ubuntu3.4
   ubuntu_22_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
   ubuntu_22_04/gmp: 2:6.2.1+dfsg-3ubuntu1
   ubuntu_22_04/gnupg2: 2.2.27-3ubuntu2.1
@@ -100,7 +100,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libunwind: 1.3.2-2build2.1
   ubuntu_22_04/libwacom: 2.2.0-1
   ubuntu_22_04/libwebp: 1.2.2-2ubuntu0.22.04.2
-  ubuntu_22_04/libx11: 2:1.7.5-1ubuntu0.2
+  ubuntu_22_04/libx11: 2:1.7.5-1ubuntu0.3
   ubuntu_22_04/libxau: 1:1.0.9-1build5
   ubuntu_22_04/libxaw: 2:1.0.14-1
   ubuntu_22_04/libxcb: 1.14-3ubuntu3
@@ -113,7 +113,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libxkbfile: 1:1.1.0-1build3
   ubuntu_22_04/libxml2: 2.9.13+dfsg-1ubuntu0.3
   ubuntu_22_04/libxmu: 2:1.1.3-3
-  ubuntu_22_04/libxpm: 1:3.5.12-1ubuntu0.22.04.1
+  ubuntu_22_04/libxpm: 1:3.5.12-1ubuntu0.22.04.2
   ubuntu_22_04/libxrender: 1:0.9.10-1build4
   ubuntu_22_04/libxshmfence: 1.3-1build4
   ubuntu_22_04/libxslt: 1.1.34-4ubuntu0.22.04.1
@@ -142,7 +142,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/ocl-icd: 2.2.14-3
   ubuntu_22_04/openjpeg2: 2.4.0-6
   ubuntu_22_04/openldap: 2.5.16+dfsg-0ubuntu0.22.04.1
-  ubuntu_22_04/openssl: 3.0.2-0ubuntu1.10
+  ubuntu_22_04/openssl: 3.0.2-0ubuntu1.12
   ubuntu_22_04/orc: 1:0.4.32-2
   ubuntu_22_04/p11-kit: 0.24.0-6build1
   ubuntu_22_04/pam: 1.4.0-11ubuntu2.3
@@ -185,10 +185,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
-  ubuntu_22_04/systemd: 249.11-0ubuntu3.10
+  ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
-  ubuntu_22_04/tiff: 4.3.0-6ubuntu0.5
+  ubuntu_22_04/tiff: 4.3.0-6ubuntu0.6
   ubuntu_22_04/ubuntu-keyring: 2021.03.26
   ubuntu_22_04/ucf: '3.0043'
   ubuntu_22_04/unzip: 6.0-26ubuntu3.1
@@ -214,7 +214,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkeyboard-config: 2.33-1
   ubuntu_22_04/xorg: 1:7.7+23ubuntu2
-  ubuntu_22_04/xorg-server: 2:21.1.4-2ubuntu1.7~22.04.1
+  ubuntu_22_04/xorg-server: 2:21.1.4-2ubuntu1.7~22.04.2
   ubuntu_22_04/xxhash: 0.8.1-1
   ubuntu_22_04/xz-utils: 5.2.5-2ubuntu1
 camptocamp/qgis-server:latest-desktop:
@@ -237,7 +237,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/cdebconf: 0.261ubuntu1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1
   ubuntu_22_04/cups: 2.4.1op1-1ubuntu4.7
-  ubuntu_22_04/curl: 7.81.0-1ubuntu1.13
+  ubuntu_22_04/curl: 7.81.0-1ubuntu1.14
   ubuntu_22_04/cyrus-sasl2: 2.1.27+dfsg2-3ubuntu1.2
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
   ubuntu_22_04/db5.3: 5.3.28+dfsg1-0.8ubuntu3
@@ -261,7 +261,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/gdbm: 1.23-1
   ubuntu_22_04/geos: 3.10.2-1
   ubuntu_22_04/glib2.0: 2.72.4-0ubuntu2.2
-  ubuntu_22_04/glibc: 2.35-0ubuntu3.3
+  ubuntu_22_04/glibc: 2.35-0ubuntu3.4
   ubuntu_22_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
   ubuntu_22_04/gmp: 2:6.2.1+dfsg-3ubuntu1
   ubuntu_22_04/gnupg2: 2.2.27-3ubuntu2.1
@@ -321,7 +321,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libunwind: 1.3.2-2build2.1
   ubuntu_22_04/libwacom: 2.2.0-1
   ubuntu_22_04/libwebp: 1.2.2-2ubuntu0.22.04.2
-  ubuntu_22_04/libx11: 2:1.7.5-1ubuntu0.2
+  ubuntu_22_04/libx11: 2:1.7.5-1ubuntu0.3
   ubuntu_22_04/libxau: 1:1.0.9-1build5
   ubuntu_22_04/libxaw: 2:1.0.14-1
   ubuntu_22_04/libxcb: 1.14-3ubuntu3
@@ -334,7 +334,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libxkbfile: 1:1.1.0-1build3
   ubuntu_22_04/libxml2: 2.9.13+dfsg-1ubuntu0.3
   ubuntu_22_04/libxmu: 2:1.1.3-3
-  ubuntu_22_04/libxpm: 1:3.5.12-1ubuntu0.22.04.1
+  ubuntu_22_04/libxpm: 1:3.5.12-1ubuntu0.22.04.2
   ubuntu_22_04/libxrender: 1:0.9.10-1build4
   ubuntu_22_04/libxshmfence: 1.3-1build4
   ubuntu_22_04/libxslt: 1.1.34-4ubuntu0.22.04.1
@@ -363,7 +363,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/ocl-icd: 2.2.14-3
   ubuntu_22_04/openjpeg2: 2.4.0-6
   ubuntu_22_04/openldap: 2.5.16+dfsg-0ubuntu0.22.04.1
-  ubuntu_22_04/openssl: 3.0.2-0ubuntu1.10
+  ubuntu_22_04/openssl: 3.0.2-0ubuntu1.12
   ubuntu_22_04/orc: 1:0.4.32-2
   ubuntu_22_04/p11-kit: 0.24.0-6build1
   ubuntu_22_04/pam: 1.4.0-11ubuntu2.3
@@ -407,10 +407,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
-  ubuntu_22_04/systemd: 249.11-0ubuntu3.10
+  ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
-  ubuntu_22_04/tiff: 4.3.0-6ubuntu0.5
+  ubuntu_22_04/tiff: 4.3.0-6ubuntu0.6
   ubuntu_22_04/ubuntu-keyring: 2021.03.26
   ubuntu_22_04/ucf: '3.0043'
   ubuntu_22_04/unzip: 6.0-26ubuntu3.1
@@ -436,6 +436,6 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkeyboard-config: 2.33-1
   ubuntu_22_04/xorg: 1:7.7+23ubuntu2
-  ubuntu_22_04/xorg-server: 2:21.1.4-2ubuntu1.7~22.04.1
+  ubuntu_22_04/xorg-server: 2:21.1.4-2ubuntu1.7~22.04.2
   ubuntu_22_04/xxhash: 0.8.1-1
   ubuntu_22_04/xz-utils: 5.2.5-2ubuntu1
