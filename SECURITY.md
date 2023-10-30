@@ -19,8 +19,6 @@
 
 The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
 
-Exception:
-
-- The version 3.22 will be supported until 23/06/2025 instead of 03/03/2023.
+Exception: The version 3.22 will be supported until 23/06/2025 instead of 03/03/2023.
 
 From the version 3.34, and for the version 3.28 we start to publish the image with the long tag (like `3.28-gdal3.6`) and the short tag (like `3.28`).
