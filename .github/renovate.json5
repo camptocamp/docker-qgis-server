@@ -122,7 +122,7 @@
     },
     /** Disable upgrading the supported Python version */
     {
-      matchFileNames: ['pyproject.toml'],
+      matchFileNames: ['pyproject.toml', '/\\/pyproject.toml$/'],
       matchPackageNames: ['python'],
       enabled: false,
     },
