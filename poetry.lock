@@ -164,13 +164,13 @@ test = ["pytest", "pytest-cov"]
 
 [[package]]
 name = "nose2"
-version = "0.13.0"
+version = "0.14.0"
 description = "unittest with plugins"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "nose2-0.13.0-py3-none-any.whl", hash = "sha256:e29017c9309fe2c8b8a1f1db7a0e7526acaba0c3990f32a0d961e6a7bc5cc190"},
-    {file = "nose2-0.13.0.tar.gz", hash = "sha256:57c68ad676ef4b88b50694937eb52f4943aa1ca261074b4909b6e163046b46f0"},
+    {file = "nose2-0.14.0-py3-none-any.whl", hash = "sha256:86993e9243c744df29c1ec237aecee33e2f59abb4bdd25a313f2e806b99228a1"},
+    {file = "nose2-0.14.0.tar.gz", hash = "sha256:5c28d770a0b9a702862bd6c3755ba2cd2f7994dd518c982e5ce298d7f37466a4"},
 ]
 
 [package.extras]
@@ -194,4 +194,4 @@ desktop = ["lxml"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "1654c7559d0a120067e59e80a047459e9424d6d7ed7089f26334eaaa500cbc3f"
+content-hash = "fbf02f7e58ba701df8486960eae08eec2f48138fac0aac7ac3521112c69aab37"
