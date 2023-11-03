@@ -102,7 +102,7 @@
     },
     /** Disable upgrading the supported Python version */
     {
-      matchFileNames: ['pyproject.toml'],
+      matchFileNames: ['pyproject.toml', '**/pyproject.toml'],
       matchPackageNames: ['python'],
       enabled: false,
     },
@@ -118,12 +118,6 @@
     {
       allowedVersions: '/(0|2|4|6|8)$/',
       matchPackageNames: ['node'],
-      enabled: false,
-    },
-    /** Disable upgrading the supported Python version */
-    {
-      matchFileNames: ['pyproject.toml', '/\\/pyproject.toml$/'],
-      matchPackageNames: ['python'],
       enabled: false,
     },
   ],
