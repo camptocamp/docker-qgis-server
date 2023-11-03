@@ -120,5 +120,11 @@
       matchPackageNames: ['node'],
       enabled: false,
     },
+    /** Disable upgrading the supported Python version */
+    {
+      matchFileNames: ['pyproject.toml'],
+      matchPackageNames: ['python'],
+      enabled: false,
+    },
   ],
 }
