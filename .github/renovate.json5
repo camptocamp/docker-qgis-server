@@ -120,5 +120,13 @@
       matchPackageNames: ['node'],
       enabled: false,
     },
+    /** Group the Python update of the acceptance image */
+    {
+      matchFileNames: ['acceptance_tests/*'],
+      matchPackageNames: ['python'],
+      enabled: true,
+      automerge: true,
+      groupName: 'acceptance tests Python',
+    },
   ],
 }
