@@ -14,8 +14,8 @@
 | 3.28         | 23/02/2024      |               |                                         |
 | 3.28-gdal3.6 | Best effort     |               | Version based on Ubuntu 22.04           |
 | 3.28-gdal3.7 | Best effort     | 3.28, ltr     | Version based on Ubuntu 22.04           |
-| 3.30         | 23/06/2023      |               | Version based on GDAL 3.6, Ubuntu 22.04 |
-| 3.32         | 27/10/2023      |               | Version based on GDAL 3.7, Ubuntu 22.04 |
+| 3.30         | Unsupported     |               |                                         |
+| 3.32         | Unsupported     |               |                                         |
 | 3.34-gdal3.7 | Best effort     | lr, latest    | Version based on Ubuntu 22.04           |
 
 The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
