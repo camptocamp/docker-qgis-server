@@ -147,7 +147,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpng1.6: 1.6.37-3build5
   ubuntu_22_04/poppler: 22.02.0-2ubuntu0.2
   ubuntu_22_04/postgresql-14: 14.9-0ubuntu0.22.04.1
-  ubuntu_22_04/procps: 2:3.3.17-6ubuntu2
+  ubuntu_22_04/procps: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/proj: 8.2.1-1
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/libpsl: 0.21.0-1.2build2
@@ -417,7 +417,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpng1.6: 1.6.37-3build5
   ubuntu_22_04/poppler: 22.02.0-2ubuntu0.2
   ubuntu_22_04/postgresql-14: 14.9-0ubuntu0.22.04.1
-  ubuntu_22_04/procps: 2:3.3.17-6ubuntu2
+  ubuntu_22_04/procps: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/proj: 8.2.1-1
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/libpsl: 0.21.0-1.2build2
