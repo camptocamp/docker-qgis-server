@@ -156,7 +156,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/pyqt5: 5.15.6+dfsg-1ubuntu3
   ubuntu_22_04/pyqt5-sip: 12.9.1-1build1
-  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.3
+  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
   ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
@@ -377,7 +377,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/pyqt5: 5.15.6+dfsg-1ubuntu3
   ubuntu_22_04/pyqt5-sip: 12.9.1-1build1
-  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.3
+  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
   ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
