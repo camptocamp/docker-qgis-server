@@ -13,7 +13,8 @@
 | 3.26         | Unsupported     |               |                                         |
 | 3.28         | 23/02/2024      |               |                                         |
 | 3.28-gdal3.6 | Best effort     |               | Version based on Ubuntu 22.04           |
-| 3.28-gdal3.7 | Best effort     | 3.28, ltr     | Version based on Ubuntu 22.04           |
+| 3.28-gdal3.7 | Best effort     |               | Version based on Ubuntu 22.04           |
+| 3.28-gdal3.8 | Best effort     | 3.28, ltr     | Version based on Ubuntu 22.04           |
 | 3.30         | Unsupported     |               |                                         |
 | 3.32         | Unsupported     |               |                                         |
 | 3.34-gdal3.7 | Best effort     | lr, latest    | Version based on Ubuntu 22.04           |
