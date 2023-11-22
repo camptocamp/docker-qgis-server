@@ -31,7 +31,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libaec: 1.0.6-1
   ubuntu_22_04/aom: 3.3.0-1
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
-  ubuntu_22_04/apparmor: 3.0.4-2ubuntu2.2
+  ubuntu_22_04/apparmor: 3.0.4-2ubuntu2.3
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/armadillo: 1:10.8.2+dfsg-1
@@ -300,7 +300,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libaec: 1.0.6-1
   ubuntu_22_04/aom: 3.3.0-1
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
-  ubuntu_22_04/apparmor: 3.0.4-2ubuntu2.2
+  ubuntu_22_04/apparmor: 3.0.4-2ubuntu2.3
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/armadillo: 1:10.8.2+dfsg-1
