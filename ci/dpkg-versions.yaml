@@ -1,7 +1,7 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/acl: 2.3.1-1
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.6
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/apt: 2.4.11
@@ -137,7 +137,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/mtdev: 1.1.6-1build4
   ubuntu_22_04/ncurses: 6.3-2ubuntu0.1
   ubuntu_22_04/nettle: 3.7.3-1build2
-  ubuntu_22_04/nghttp2: 1.43.0-1build3
+  ubuntu_22_04/nghttp2: 1.43.0-1ubuntu0.1
   ubuntu_22_04/numpy: 1:1.21.5-1ubuntu22.04.1
   ubuntu_22_04/ocl-icd: 2.2.14-3
   ubuntu_22_04/openjpeg2: 2.4.0-6
@@ -220,7 +220,7 @@ camptocamp/qgis-server:latest:
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/acl: 2.3.1-1
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.6
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/apt: 2.4.11
@@ -358,7 +358,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/mtdev: 1.1.6-1build4
   ubuntu_22_04/ncurses: 6.3-2ubuntu0.1
   ubuntu_22_04/nettle: 3.7.3-1build2
-  ubuntu_22_04/nghttp2: 1.43.0-1build3
+  ubuntu_22_04/nghttp2: 1.43.0-1ubuntu0.1
   ubuntu_22_04/numpy: 1:1.21.5-1ubuntu22.04.1
   ubuntu_22_04/ocl-icd: 2.2.14-3
   ubuntu_22_04/openjpeg2: 2.4.0-6
