@@ -1,6 +1,6 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.6
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1
@@ -125,7 +125,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/mysql-8.0: 8.0.35-0ubuntu0.22.04.1
   ubuntu_22_04/ncurses: 6.3-2ubuntu0.1
   ubuntu_22_04/netcdf: 1:4.8.1-1
-  ubuntu_22_04/nghttp2: 1.43.0-1build3
+  ubuntu_22_04/nghttp2: 1.43.0-1ubuntu0.1
   ubuntu_22_04/libnsl: 1.3.0-2build2
   ubuntu_22_04/nspr: 2:4.32-3build1
   ubuntu_22_04/nss: 2:3.68.2-0ubuntu1.2
@@ -269,7 +269,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xorg-server: 2:21.1.4-2ubuntu1.7~22.04.2
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.6
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1
@@ -395,7 +395,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/mysql-8.0: 8.0.35-0ubuntu0.22.04.1
   ubuntu_22_04/ncurses: 6.3-2ubuntu0.1
   ubuntu_22_04/netcdf: 1:4.8.1-1
-  ubuntu_22_04/nghttp2: 1.43.0-1build3
+  ubuntu_22_04/nghttp2: 1.43.0-1ubuntu0.1
   ubuntu_22_04/libnsl: 1.3.0-2build2
   ubuntu_22_04/nspr: 2:4.32-3build1
   ubuntu_22_04/nss: 2:3.68.2-0ubuntu1.2
