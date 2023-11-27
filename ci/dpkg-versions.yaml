@@ -148,7 +148,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/pam: 1.4.0-11ubuntu2.3
   ubuntu_22_04/pcre2: 10.39-3ubuntu0.1
   ubuntu_22_04/pcre3: 2:8.39-13ubuntu0.22.04.1
-  ubuntu_22_04/perl: 5.34.0-3ubuntu1.2
+  ubuntu_22_04/perl: 5.34.0-3ubuntu1.3
   ubuntu_22_04/pixman: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/postgresql-14: 14.9-0ubuntu0.22.04.1
   ubuntu_22_04/procps: 2:3.3.17-6ubuntu2.1
@@ -369,7 +369,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/pam: 1.4.0-11ubuntu2.3
   ubuntu_22_04/pcre2: 10.39-3ubuntu0.1
   ubuntu_22_04/pcre3: 2:8.39-13ubuntu0.22.04.1
-  ubuntu_22_04/perl: 5.34.0-3ubuntu1.2
+  ubuntu_22_04/perl: 5.34.0-3ubuntu1.3
   ubuntu_22_04/pixman: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/postgresql-14: 14.9-0ubuntu0.22.04.1
   ubuntu_22_04/procps: 2:3.3.17-6ubuntu2.1
