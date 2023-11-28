@@ -153,7 +153,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpsl: 0.21.0-1.2build2
   ubuntu_22_04/pulseaudio: 1:15.99.1+dfsg1-1ubuntu2.1
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
   ubuntu_22_04/qca2: 2.3.4-1build1
   ubuntu_22_04/qhull: 2020.2-4
   ubuntu_22_04/qscintilla2: 2.11.6+dfsg-4
@@ -423,7 +423,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpsl: 0.21.0-1.2build2
   ubuntu_22_04/pulseaudio: 1:15.99.1+dfsg1-1ubuntu2.1
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
   ubuntu_22_04/qca2: 2.3.4-1build1
   ubuntu_22_04/qhull: 2020.2-4
   ubuntu_22_04/qscintilla2: 2.11.6+dfsg-4
