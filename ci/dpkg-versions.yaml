@@ -159,7 +159,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
   ubuntu_22_04/qca2: 2.3.4-1build1
   ubuntu_22_04/qscintilla2: 2.11.6+dfsg-4
   ubuntu_22_04/qtbase-opensource-src: 5.15.3+dfsg-2ubuntu0.2
@@ -380,7 +380,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.2
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
   ubuntu_22_04/qca2: 2.3.4-1build1
   ubuntu_22_04/qscintilla2: 2.11.6+dfsg-4
   ubuntu_22_04/qt3d-opensource-src: 5.15.3+dfsg-1
