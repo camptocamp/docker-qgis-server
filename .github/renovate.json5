@@ -38,13 +38,6 @@
       ],
       datasourceTemplate: 'github-tags',
     },
-    /** Do update on packages update (trigger a rebuild) */
-    {
-      fileMatch: ['^ci/dpkg\\-versions\\.yaml$'],
-      matchStrings: [" *(?<depName>[^'\\s]+): '?(?<currentValue>[^'\\s/]*[0-9][^'\\s/]*)'?"],
-      datasourceTemplate: 'repology',
-      versioningTemplate: 'loose',
-    },
   ],
   packageRules: [
     /** Less strict version for Docker images */
@@ -105,14 +98,6 @@
       matchFileNames: ['pyproject.toml', '**/pyproject.toml'],
       matchPackageNames: ['python'],
       enabled: false,
-    },
-    /** Update dpkg versions at any time */
-    {
-      matchBaseBranches: ['/^[0-9]+\\.[0-9]+$/', '/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/'],
-      matchFileNames: ['ci/dpkg-versions.yaml'],
-      schedule: ['at any time'],
-      groupName: 'dpkg',
-      automerge: true,
     },
     /** Only LTS version of Node */
     {
