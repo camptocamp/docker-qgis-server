@@ -4,7 +4,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/apt: 2.4.10
+  ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/attr: 1:2.5.1-1build1
   ubuntu_22_04/audit: 1:3.0.7-1build1
   ubuntu_22_04/avahi: 0.8-5ubuntu5.2
@@ -156,7 +156,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/pyqt5: 5.15.6+dfsg-1ubuntu3
   ubuntu_22_04/pyqt5-sip: 12.9.1-1build1
-  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
+  ubuntu_22_04/python-pip: 20.3.4+dfsg-4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
   ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
@@ -185,7 +185,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
-  ubuntu_22_04/systemd: 249.11-0ubuntu3.7
+  ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
   ubuntu_22_04/tiff: 4.3.0-6ubuntu0.7
@@ -223,7 +223,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apr: 1.7.0-8ubuntu0.22.04.1
   ubuntu_22_04/apr-util: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/apt: 2.4.10
+  ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/assimp: 5.2.2~ds0-1
   ubuntu_22_04/attr: 1:2.5.1-1build1
   ubuntu_22_04/audit: 1:3.0.7-1build1
@@ -377,7 +377,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/protobuf: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/pyqt5: 5.15.6+dfsg-1ubuntu3
   ubuntu_22_04/pyqt5-sip: 12.9.1-1build1
-  ubuntu_22_04/python-pip: 22.0.2+dfsg-1ubuntu0.4
+  ubuntu_22_04/python-pip: 20.3.4+dfsg-4
   ubuntu_22_04/python3-defaults: 3.10.6-1~22.04
   ubuntu_22_04/python3-stdlib-extensions: 3.10.8-1~22.04
   ubuntu_22_04/python3.10: 3.10.12-1~22.04.3
@@ -407,7 +407,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
-  ubuntu_22_04/systemd: 249.11-0ubuntu3.7
+  ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
   ubuntu_22_04/tiff: 4.3.0-6ubuntu0.7
