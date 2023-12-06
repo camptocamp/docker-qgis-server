@@ -7,5 +7,6 @@
 !cache
 !package.json
 !package-lock.json
+!.nvmrc
 !pyproject.toml
 !poetry.lock
