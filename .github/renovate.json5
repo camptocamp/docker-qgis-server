@@ -95,7 +95,7 @@
     },
     /** Disable upgrading the supported Python version */
     {
-      matchFileNames: ['pyproject.toml', '**/pyproject.toml'],
+      matchFileNames: ['pyproject.toml'],
       matchPackageNames: ['python'],
       enabled: false,
     },
@@ -109,7 +109,6 @@
     {
       matchFileNames: ['acceptance_tests/*'],
       matchPackageNames: ['python'],
-      enabled: true,
       automerge: true,
       groupName: 'acceptance tests Python',
     },
