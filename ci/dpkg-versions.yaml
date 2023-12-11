@@ -187,7 +187,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
   ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
-  ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
+  ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.2
   ubuntu_22_04/tiff: 4.3.0-6ubuntu0.7
   ubuntu_22_04/ubuntu-keyring: 2021.03.26
   ubuntu_22_04/ucf: '3.0043'
@@ -409,7 +409,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
   ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
-  ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.1
+  ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.2
   ubuntu_22_04/tiff: 4.3.0-6ubuntu0.7
   ubuntu_22_04/ubuntu-keyring: 2021.03.26
   ubuntu_22_04/ucf: '3.0043'
