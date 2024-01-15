@@ -184,7 +184,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/spatialindex: 1.9.3-2
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
-  ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
+  ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.3
   ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.2
@@ -406,7 +406,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/spatialindex: 1.9.3-2
   ubuntu_22_04/spatialite: 5.0.1-2build2
   ubuntu_22_04/spawn-fcgi: 1.6.4-2
-  ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.1
+  ubuntu_22_04/sqlite3: 3.37.2-2ubuntu0.3
   ubuntu_22_04/systemd: 249.11-0ubuntu3.11
   ubuntu_22_04/sysvinit: 3.01-1ubuntu1
   ubuntu_22_04/tar: 1.34+dfsg-1ubuntu0.1.22.04.2
