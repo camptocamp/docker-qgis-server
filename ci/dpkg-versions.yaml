@@ -267,7 +267,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libxcb-xkb1: 1.14-3ubuntu3
   ubuntu_22_04/libxcb1: 1.14-3ubuntu3
   ubuntu_22_04/libxdmcp6: 1:1.1.3-0ubuntu5
-  ubuntu_22_04/libxerces-c3.2: 3.2.3+debian-3build1
+  ubuntu_22_04/libxerces-c3.2: 3.2.3+debian-3ubuntu0.1
   ubuntu_22_04/libxext6: 2:1.3.4-1build1
   ubuntu_22_04/libxfixes3: 1:6.0.0-1
   ubuntu_22_04/libxfont2: 1:2.0.5-1build1
@@ -623,7 +623,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libxcb-xkb1: 1.14-3ubuntu3
   ubuntu_22_04/libxcb1: 1.14-3ubuntu3
   ubuntu_22_04/libxdmcp6: 1:1.1.3-0ubuntu5
-  ubuntu_22_04/libxerces-c3.2: 3.2.3+debian-3build1
+  ubuntu_22_04/libxerces-c3.2: 3.2.3+debian-3ubuntu0.1
   ubuntu_22_04/libxext6: 2:1.3.4-1build1
   ubuntu_22_04/libxfixes3: 1:6.0.0-1
   ubuntu_22_04/libxfont2: 1:2.0.5-1build1
