@@ -1,6 +1,7 @@
 """
 Common fixtures for every tests.
 """
+
 import logging
 import time
 
