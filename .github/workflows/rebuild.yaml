@@ -42,7 +42,7 @@ jobs:
         run: c2cciutils-checks
 
       - name: Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: /tmp/docker/cache
           key: docker-cache-${{ matrix.branch }}-${{ matrix.branch }}-${{ github.run_id }}
