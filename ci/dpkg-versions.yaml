@@ -162,7 +162,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.16+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.16+dfsg-0ubuntu0.22.04.2
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -174,7 +174,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.35-0ubuntu0.22.04.1
+  ubuntu_22_04/libmysqlclient21: 8.0.36-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
@@ -372,7 +372,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/python3-lib2to3: 3.10.8-1~22.04
   ubuntu_22_04/python3-minimal: 3.10.6-1~22.04
   ubuntu_22_04/python3-numpy: 1:1.21.5-1ubuntu22.04.1
-  ubuntu_22_04/python3-pil: 9.0.1-1ubuntu0.1
+  ubuntu_22_04/python3-pil: 9.0.1-1ubuntu0.2
   ubuntu_22_04/python3-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-pkg-resources: 59.6.0-1.2ubuntu0.22.04.1
   ubuntu_22_04/python3-pyqt5: 5.15.6+dfsg-1ubuntu3
@@ -408,8 +408,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.7
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.7
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.8
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.8
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
@@ -575,7 +575,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.16+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.16+dfsg-0ubuntu0.22.04.2
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -587,7 +587,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.35-0ubuntu0.22.04.1
+  ubuntu_22_04/libmysqlclient21: 8.0.36-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
@@ -792,7 +792,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/python3-lib2to3: 3.10.8-1~22.04
   ubuntu_22_04/python3-minimal: 3.10.6-1~22.04
   ubuntu_22_04/python3-numpy: 1:1.21.5-1ubuntu22.04.1
-  ubuntu_22_04/python3-pil: 9.0.1-1ubuntu0.1
+  ubuntu_22_04/python3-pil: 9.0.1-1ubuntu0.2
   ubuntu_22_04/python3-pip: 22.0.2+dfsg-1ubuntu0.4
   ubuntu_22_04/python3-pkg-resources: 59.6.0-1.2ubuntu0.22.04.1
   ubuntu_22_04/python3-pyqt5: 5.15.6+dfsg-1ubuntu3
@@ -832,5 +832,5 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.7
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.7
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.8
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.8
