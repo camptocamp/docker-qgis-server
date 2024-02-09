@@ -22,7 +22,7 @@ jobs:
 
     steps:
       # Versions
-      - run: docker --version"
+      - run: docker --version
 
       - run: df -h
       - run: docker system prune --all --force
