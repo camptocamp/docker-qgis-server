@@ -148,15 +148,16 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        python3 python3-pip \
+        python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
+        python3-pyqt5.qtmultimedia python3-pyqt5.qtserialport \
+        xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
+        spawn-fcgi xauth apache2 libapache2-mod-fcgid binutils glibc-tools pdal ocl-icd-libopencl1 \
         libfcgi libgslcblas0 libqca-qt5-2 libqca-qt5-2-plugins libzip4 \
         libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
         libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
-        python3 python3-pip ocl-icd-libopencl1 \
-        python3-pyqt5 python3-pyqt5.qtsql python3-pyqt5.qsci python3-pyqt5.qtpositioning \
-        spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-        apache2 libapache2-mod-fcgid python3 \
         libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
-        libgsl27 libzstd1 libdraco4 binutils glibc-tools libqt5multimediawidgets5 python3-pyqt5.qtmultimedia pdal \
+        libgsl27 libzstd1 libdraco4 libqt5multimediawidgets5 \
     && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 WORKDIR /tmp
