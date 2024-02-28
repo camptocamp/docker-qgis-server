@@ -17,9 +17,7 @@ LOG = logging.getLogger(__name__)
 def wait_db():
     timeout = time.time() + 60.0
 
-    conn_string = (
-        "host='db' port='5432' dbname='test' user='www-data' password='www-data'"
-    )
+    conn_string = "host='db' port='5432' dbname='test' user='www-data' password='www-data'"
     while True:
         try:
             LOG.info("Trying to connect to the DB... ")
