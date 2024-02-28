@@ -1,6 +1,10 @@
 [tool.black]
 line-length = 110
-target-version = ["py39"]
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 110
 
 [tool.poetry]
 name = 'qgis'
@@ -9,7 +13,7 @@ description = 'Not used'
 authors = []
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.10,<3.11"
 geolinks = "0.2.3"
 six = "1.16.0"
 nose2 = "0.14.1"

@@ -6,9 +6,12 @@ from c2cwsgiutils.acceptance.connection import CacheExpected
 def test_get_capabilities(connection):
     ns = "{http://www.opengis.net/wms}"
     answer = connection.get_xml(
-        "?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0", cache_expected=CacheExpected.DONT_CARE
+        "?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0",
+        cache_expected=CacheExpected.DONT_CARE,
     )
-    assert [e.text for e in answer.findall(f"{ns}Service/{ns}Title")] == ["test"], ElementTree.dump(answer)
+    assert [e.text for e in answer.findall(f"{ns}Service/{ns}Title")] == [
+        "test"
+    ], ElementTree.dump(answer)
     assert [e.text for e in answer.findall(f".//{ns}Layer/{ns}Name")] == [
         "test",
         "polygons",
