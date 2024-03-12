@@ -74,9 +74,6 @@ RUN --mount=type=cache,target=/root/.cache \
     python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt \
     && (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
-# TODO_ remove with GDAL 3.8
-RUN ln -s /usr/local/lib/libproj.so.* /usr/local/lib/libproj.so
-
 ARG QGIS_BRANCH
 
 RUN git clone https://github.com/qgis/QGIS --branch=${QGIS_BRANCH} --depth=100 /src
