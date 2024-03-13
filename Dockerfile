@@ -89,8 +89,6 @@ ENV \
 
 WORKDIR /src/build
 
-RUN ln -s /usr/local/lib/libproj.so.25 "/usr/local/lib/libproj.so.25.$(grep Version /usr/local/lib/pkgconfig/proj.pc|awk '{print $2}')"
-
 RUN cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2" \
