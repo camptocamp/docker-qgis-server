@@ -17,7 +17,7 @@ http://localhost:8380/?MAP=/etc/qgisserver/project.qgz&SERVICE=WMS&REQUEST=GetCa
 
 You can use the following variables (`-e` option in `docker run`):
 
-- `QGIS_CATCH_SEGV`: Set to `1` if you want stacktraces in the logs in case of segmentation faults.
+- `QGIS_CATCH_SEGV`: Set to `1` if you want stacktraces in the logs in case of segmentation faults by running `tail -f /var/log/qgis.log` in the container
 - `FCGID_MAX_REQUESTS_PER_PROCESS`: The number of requests a QGIS server will serve before being restarted by apache
 - `FCGID_MIN_PROCESSES`: The minimum number of fcgi processes to keep (defaults to `1`)
 - `FCGID_MAX_PROCESSES`: The maximum number of fcgi processes to keep (defaults to `5`)
@@ -34,6 +34,39 @@ You can use the following variables (`-e` option in `docker run`):
 [See also QGIS server documentation](https://docs.qgis.org/latest/en/docs/server_manual/config.html?highlight=environment#environment-variables)
 
 Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
+
+## Get a stack trace in case of segfault
+
+Open a bash as root on the container with something like: `docker-compose exec --user=root qgisserver bash`, then:
+
+```bash
+apt-get update
+apt-get install --assume-yes gdb
+CORE_FILENAME=$(ls -tr1 /tmp/|grep core|tail -n 1)
+gdb /usr/local/bin/qgis_mapserv.fcgi /tmp/${CORE_FILENAME}
+```
+
+Then press `<enter>`, the `bt` command will give you the stack trace.
+
+If you can't be root in the container:
+
+```bash
+CONTAINER=<container>
+CORE_FILENAME=$(docker exec ${CONTAINER} ls -tr1 /tmp/|grep core|tail -n 1)
+docker cp ${CONTAINER}:/tmp/${CORE_FILENAME} ./core
+
+docker run --rm -ti --volume=$(pwd):/core --entrypoint= camptocamp/qgis-server:<tag> bash
+```
+
+In the new shell:
+
+```bash
+apt-get update
+apt-get install --assume-yes gdb
+gdb /usr/local/bin/qgis_mapserv.fcgi /core/core
+```
+
+Then press `<enter>`, the `bt` command will give you the stack trace.
 
 ## Running the client
 
