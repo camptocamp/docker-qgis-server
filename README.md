@@ -37,36 +37,18 @@ Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thu
 
 ## Get a stack trace in case of segfault
 
+To get a good stack trace you should use the `-debug` image.
+
+Run the querty that makes the server crash, then:
+
 Open a bash as root on the container with something like: `docker-compose exec --user=root qgisserver bash`, then:
 
 ```bash
-apt-get update
-apt-get install --assume-yes gdb
 CORE_FILENAME=$(ls -tr1 /tmp/|grep core|tail -n 1)
 gdb /usr/local/bin/qgis_mapserv.fcgi /tmp/${CORE_FILENAME}
 ```
 
-Then press `<enter>`, the `bt` command will give you the stack trace.
-
-If you can't be root in the container:
-
-```bash
-CONTAINER=<container>
-CORE_FILENAME=$(docker exec ${CONTAINER} ls -tr1 /tmp/|grep core|tail -n 1)
-docker cp ${CONTAINER}:/tmp/${CORE_FILENAME} ./core
-
-docker run --rm -ti --volume=$(pwd):/core --entrypoint= camptocamp/qgis-server:<tag> bash
-```
-
-In the new shell:
-
-```bash
-apt-get update
-apt-get install --assume-yes gdb
-gdb /usr/local/bin/qgis_mapserv.fcgi /core/core
-```
-
-Then press `<enter>`, the `bt` command will give you the stack trace.
+The command `bt` will give you the stack trace.
 
 ## Running the client
 
