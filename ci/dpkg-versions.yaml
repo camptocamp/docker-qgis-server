@@ -1,4 +1,4 @@
-camptocamp/qgis-server:latest:
+camptocamp/qgis-server:latest: &qgis_server_versions
   ubuntu_22_04/adduser: 3.118ubuntu5
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7
   ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.7
@@ -411,6 +411,17 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xkb-data: 2.33-1
   ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.5
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.5
+camptocamp/qgis-server:latest-debug:
+  <<: *qgis_server_versions
+  ubuntu_22_04/gdb: 12.1-0ubuntu1~22.04
+  ubuntu_22_04/libbabeltrace1: 1.5.8-2build1
+  ubuntu_22_04/libboost-regex1.74.0: 1.74.0-14ubuntu3
+  ubuntu_22_04/libdebuginfod-common: 0.186-1build1
+  ubuntu_22_04/libdebuginfod1: 0.186-1build1
+  ubuntu_22_04/libipt2: 2.0.5-1
+  ubuntu_22_04/libmpfr6: 4.1.0-3build3
+  ubuntu_22_04/libsource-highlight-common: 3.1.9-4.1build2
+  ubuntu_22_04/libsource-highlight4v5: 3.1.9-4.1build2
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.7

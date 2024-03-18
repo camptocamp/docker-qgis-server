@@ -22,6 +22,10 @@ all: build acceptance ## Build and run acceptance tests
 build-server: ## Build the server Docker image
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-server --tag=$(DOCKER_BASE):$(DOCKER_TAG) --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
+.PHONY: build-server-debug
+build-server-debug: ## Build the server Docker debug image
+	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-server-debug --tag=$(DOCKER_BASE):$(DOCKER_TAG)-debug --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
+
 .PHONY: build-desktop
 build-desktop: ## Build the desktop Docker image
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=runner-desktop --tag=$(DOCKER_BASE):$(DOCKER_TAG)-desktop --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
@@ -31,7 +35,7 @@ build-cache:
 	DOCKER_BUILDKIT=1 docker $(BUILD_OPTIONS) --target=cache --tag=qgis-cache --build-arg=QGIS_BRANCH=$(QGIS_BRANCH) .
 
 .PHONY: build ## Build all the Docker images
-build: build-server build-desktop
+build: build-server build-server-debug build-desktop
 
 .PHONY: build-acceptance-config
 build-acceptance-config:

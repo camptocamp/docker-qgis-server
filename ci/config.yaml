@@ -15,4 +15,5 @@ publish:
       - name: camptocamp/qgis-server
         tags:
           - '{version}'
+          - '{version}-debug'
           - '{version}-desktop'
