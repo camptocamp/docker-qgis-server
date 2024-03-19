@@ -6,7 +6,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/base-passwd: 3.5.52build1
-  ubuntu_22_04/bash: 5.1-6ubuntu1
+  ubuntu_22_04/bash: 5.1-6ubuntu1.1
   ubuntu_22_04/binutils: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-common: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.6
@@ -418,7 +418,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apt: 2.4.11
   ubuntu_22_04/base-passwd: 3.5.52build1
-  ubuntu_22_04/bash: 5.1-6ubuntu1
+  ubuntu_22_04/bash: 5.1-6ubuntu1.1
   ubuntu_22_04/binutils: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-common: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.6
