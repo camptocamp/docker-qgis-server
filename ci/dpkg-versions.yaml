@@ -4,7 +4,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.8
-  ubuntu_22_04/apt: 2.4.11
+  ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
   ubuntu_22_04/binutils: 2.38-4ubuntu2.6
@@ -42,7 +42,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libapt-pkg6.0: 2.4.11
+  ubuntu_22_04/libapt-pkg6.0: 2.4.12
   ubuntu_22_04/libarmadillo10: 1:10.8.2+dfsg-1
   ubuntu_22_04/libarpack2: 3.8.0-1
   ubuntu_22_04/libasyncns0: 0.8-6build2
@@ -417,7 +417,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.8
   ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.8
-  ubuntu_22_04/apt: 2.4.11
+  ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
   ubuntu_22_04/binutils: 2.38-4ubuntu2.6
@@ -455,7 +455,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.2
   ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libapt-pkg6.0: 2.4.11
+  ubuntu_22_04/libapt-pkg6.0: 2.4.12
   ubuntu_22_04/libarmadillo10: 1:10.8.2+dfsg-1
   ubuntu_22_04/libarpack2: 3.8.0-1
   ubuntu_22_04/libassimp5: 5.2.2~ds0-1
