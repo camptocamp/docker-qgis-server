@@ -408,8 +408,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.8
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.8
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.9
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.9
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.8
@@ -832,5 +832,5 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.8
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.8
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.9
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.9
