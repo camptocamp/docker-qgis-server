@@ -115,6 +115,29 @@ FROM builder as builder-server
 RUN ninja install
 RUN rm -rf /usr/local/share/qgis/i18n/
 
+FROM builder as builder-server-debug
+
+RUN cmake .. \
+    -GNinja \
+    -DCMAKE_C_FLAGS="-O2" \
+    -DCMAKE_CXX_FLAGS="-O2" \
+    -DCMAKE_BUILD_TYPE=DEBUG \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    -DWITH_DESKTOP=OFF \
+    -DWITH_SERVER=ON \
+    -DWITH_SERVER_LANDINGPAGE_WEBAPP=ON \
+    -DBUILD_TESTING=OFF \
+    -DENABLE_TESTS=OFF \
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake
+
+RUN --mount=type=cache,target=/root/.ccache,id=ccache \
+    ccache --show-stats \
+    && ccache --max-size=2G \
+    && ninja \
+    && ccache --show-stats
+
+RUN ninja install
+
 FROM builder as builder-desktop
 
 # -DWITH_3D=ON generate error: undefined reference to `Qt3DExtras::Qt3DWindow::Qt3DWindow(QScreen*)'
@@ -236,6 +259,19 @@ RUN ldconfig
 WORKDIR /etc/qgisserver
 EXPOSE 8080
 CMD ["/usr/local/bin/start-server"]
+
+
+FROM runner-server as runner-server-debug
+
+RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
+    --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
+    apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+    gdb
+
+COPY --from=builder-server-debug /usr/local/bin /usr/local/bin/
+COPY --from=builder-server-debug /usr/local/lib /usr/local/lib/
+COPY --from=builder-server-debug /usr/local/share/qgis /usr/local/share/qgis
 
 FROM runner as runner-desktop
 
