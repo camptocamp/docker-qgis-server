@@ -18,7 +18,7 @@ ${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
 if [ "${UID}" == 0 ]; then
     echo "Switching listen port to 80"
     cd /tmp
-    sed -i -e 's/<VirtualHost \*:8080>/<VirtualHost *:80>/' /etc/apache2/sites-available/000-default.conf
+    sed -i -e 's/<VirtualHost \*:8080>/<VirtualHost *:80>/' /etc/apache2/sites-enabled/000-default.conf
     sed -i -e 's/Listen 8080$/Listen 80/' /etc/apache2/ports.conf
 fi
 
