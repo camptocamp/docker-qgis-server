@@ -50,6 +50,8 @@ run: build-acceptance
 acceptance: run ## Run the acceptance tests
 	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run pytest -vv --color=yes --junitxml=/tmp/junitxml/results.xml
 	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) qgis python3 -c 'from qgis._gui import *'
+	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) qgis curl localhost:8080
+	cd acceptance_tests; docker-compose logs qgis | grep curl/
 
 .PHONY: run-client
 run-client: ## Run the desktop application
