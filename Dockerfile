@@ -201,9 +201,8 @@ RUN a2enmod fcgid headers status \
     ' /etc/apache2/sites-enabled/000-default.conf /etc/apache2/apache2.conf \
     && sed -ri 's!LogFormat "(.*)" combined!LogFormat "%{us}T %{X-Request-Id}i \1" combined!g' /etc/apache2/apache2.conf \
     && echo 'ErrorLogFormat "%{X-Request-Id}i [%l] [pid %P] %M"' >> /etc/apache2/apache2.conf \
-    && sed -i -e 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-available/000-default.conf \
+    && sed -i -e 's/<VirtualHost \*:80>/<VirtualHost *:8080>/' /etc/apache2/sites-enabled/000-default.conf \
     && sed -i -e 's/Listen 80$/Listen 8080/' /etc/apache2/ports.conf \
-    && rm -rf /etc/apache2/conf-enabled/other-vhosts-access-log.conf \
     && mkdir -p /var/www/.qgis3 \
     && mkdir -p /var/www/plugins \
     && chown www-data:root /var/www/.qgis3 \
