@@ -119,7 +119,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.2
+  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.3
   ubuntu_22_04/libglvnd0: 1.4.0-1
   ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglx0: 1.4.0-1
@@ -532,7 +532,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.2
+  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.3
   ubuntu_22_04/libglvnd0: 1.4.0-1
   ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglx0: 1.4.0-1
