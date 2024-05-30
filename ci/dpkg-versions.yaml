@@ -59,8 +59,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libbrotli1: 1.0.9-2build6
   ubuntu_22_04/libbsd0: 0.11.5-1
   ubuntu_22_04/libbz2-1.0: 1.0.8-5build1
-  ubuntu_22_04/libc-bin: 2.35-0ubuntu3.7
-  ubuntu_22_04/libc6: 2.35-0ubuntu3.7
+  ubuntu_22_04/libc-bin: 2.35-0ubuntu3.8
+  ubuntu_22_04/libc6: 2.35-0ubuntu3.8
   ubuntu_22_04/libcap-ng0: 0.7.9-2.2build3
   ubuntu_22_04/libcap2: 1:2.44-1ubuntu0.22.04.1
   ubuntu_22_04/libcap2-bin: 1:2.44-1ubuntu0.22.04.1
@@ -131,7 +131,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgsl27: 2.7.1+dfsg-3
   ubuntu_22_04/libgslcblas0: 2.7.1+dfsg-3
   ubuntu_22_04/libgssapi-krb5-2: 1.19.2-2ubuntu0.3
-  ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.1
+  ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.2
   ubuntu_22_04/libgstreamer1.0-0: 1.20.3-0ubuntu1
   ubuntu_22_04/libgudev-1.0-0: 1:237-2build1
   ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.1
@@ -472,8 +472,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libbrotli1: 1.0.9-2build6
   ubuntu_22_04/libbsd0: 0.11.5-1
   ubuntu_22_04/libbz2-1.0: 1.0.8-5build1
-  ubuntu_22_04/libc-bin: 2.35-0ubuntu3.7
-  ubuntu_22_04/libc6: 2.35-0ubuntu3.7
+  ubuntu_22_04/libc-bin: 2.35-0ubuntu3.8
+  ubuntu_22_04/libc6: 2.35-0ubuntu3.8
   ubuntu_22_04/libcap-ng0: 0.7.9-2.2build3
   ubuntu_22_04/libcap2: 1:2.44-1ubuntu0.22.04.1
   ubuntu_22_04/libcap2-bin: 1:2.44-1ubuntu0.22.04.1
@@ -544,7 +544,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgsl27: 2.7.1+dfsg-3
   ubuntu_22_04/libgslcblas0: 2.7.1+dfsg-3
   ubuntu_22_04/libgssapi-krb5-2: 1.19.2-2ubuntu0.3
-  ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.1
+  ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.2
   ubuntu_22_04/libgstreamer1.0-0: 1.20.3-0ubuntu1
   ubuntu_22_04/libgudev-1.0-0: 1:237-2build1
   ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.1
