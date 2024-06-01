@@ -1,4 +1,4 @@
-c2cciutils[checks,publish]==1.6.18
+c2cciutils[checks,publish]==1.6.19
 pre-commit==3.6.2
 certifi>=2023.7.22 # not directly required, pinned by Snyk to avoid a vulnerability
 cryptography>=42.0.2 # not directly required, pinned by Snyk to avoid a vulnerability
