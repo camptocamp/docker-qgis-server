@@ -16,7 +16,7 @@ authors = []
 python = ">=3.10,<3.11"
 geolinks = "0.2.3"
 six = "1.16.0"
-nose2 = "0.14.2"
+nose2 = "0.15.1"
 mock = "5.1.0"
 lxml = { version = "5.2.2", optional = true }
 
