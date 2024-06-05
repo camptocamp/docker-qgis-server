@@ -15,8 +15,8 @@ env:
 
 jobs:
   main:
-    runs-on: ubuntu-22.04
     name: Continuous integration
+    runs-on: ubuntu-22.04
     timeout-minutes: 210
     if: "!startsWith(github.event.head_commit.message, '[skip ci] ')"
 
@@ -98,3 +98,11 @@ jobs:
       - name: Publish
         run: c2cciutils-publish
         if: env.HAS_SECRETS == 'HAS_SECRETS'
+      - run: git diff --exit-code --patch > /tmp/dpkg-versions.patch || true
+        if: failure()
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Update dpkg versions list.patch
+          path: /tmp/dpkg-versions.patch
+          retention-days: 1
+        if: failure()
