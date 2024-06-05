@@ -49,7 +49,13 @@ jobs:
       - run: pre-commit run --all-files
         env:
           SKIP: poetry-lock
-      - run: git diff && false
+      - run: git diff --exit-code --patch > /tmp/pre-commit.patch || true
+        if: failure()
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Apply pre-commit fix.patch
+          path: /tmp/pre-commit.patch
+          retention-days: 1
         if: failure()
       - name: Print environment information
         run: c2cciutils-env
@@ -106,6 +112,14 @@ jobs:
       - run: (cd acceptance_tests && c2cciutils-docker-logs)
         if: always()
 
+      - run: git diff --exit-code --patch > /tmp/dpkg-versions.patch || true
+        if: failure()
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Update dpkg versions list.patch
+          path: /tmp/dpkg-versions.patch
+          retention-days: 1
+        if: failure()
       - name: Publish
         run: c2cciutils-publish
         if: env.HAS_SECRETS == 'HAS_SECRETS'
