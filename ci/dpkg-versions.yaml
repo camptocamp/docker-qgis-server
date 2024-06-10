@@ -115,7 +115,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgeos3.10.2: 3.10.2-1
   ubuntu_22_04/libgeotiff5: 1.7.0-2build1
   ubuntu_22_04/libgfortran5: 12.3.0-1ubuntu1~22.04
-  ubuntu_22_04/libgif7: 5.1.9-2build2
+  ubuntu_22_04/libgif7: 5.1.9-2ubuntu0.1
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
@@ -533,7 +533,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/libgeos3.10.2: 3.10.2-1
   ubuntu_22_04/libgeotiff5: 1.7.0-2build1
   ubuntu_22_04/libgfortran5: 12.3.0-1ubuntu1~22.04
-  ubuntu_22_04/libgif7: 5.1.9-2build2
+  ubuntu_22_04/libgif7: 5.1.9-2ubuntu0.1
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
@@ -951,7 +951,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgeos3.10.2: 3.10.2-1
   ubuntu_22_04/libgeotiff5: 1.7.0-2build1
   ubuntu_22_04/libgfortran5: 12.3.0-1ubuntu1~22.04
-  ubuntu_22_04/libgif7: 5.1.9-2build2
+  ubuntu_22_04/libgif7: 5.1.9-2ubuntu0.1
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
