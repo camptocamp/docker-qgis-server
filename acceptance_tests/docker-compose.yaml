@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   qgis:
     image: camptocamp/qgis-server:${DOCKER_TAG}
