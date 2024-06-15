@@ -35,12 +35,12 @@ build-acceptance: build-acceptance-config
 .PHONY: run
 run: build-acceptance
 	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
-	cd acceptance_tests; docker-compose up -d
+	cd acceptance_tests; docker compose up -d
 
 .PHONY: acceptance
 acceptance: run
-	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run pytest -vv --color=yes --junitxml=/tmp/junitxml/results.xml
-	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) qgis python3 -c 'import qgis'
+	cd acceptance_tests; docker compose exec $(DOCKER_COMPOSE_TTY) run pytest -vv --color=yes --junitxml=/tmp/junitxml/results.xml
+	cd acceptance_tests; docker compose exec $(DOCKER_COMPOSE_TTY) qgis python3 -c 'import qgis'
 
 .PHONY: pull
 pull:
