@@ -41,7 +41,7 @@ To get a good stack trace you should use the `-debug` image.
 
 Run the querty that makes the server crash, then:
 
-Open a bash as root on the container with something like: `docker-compose exec --user=root qgisserver bash`, then:
+Open a bash as root on the container with something like: `docker compose exec --user=root qgisserver bash`, then:
 
 ```bash
 CORE_FILENAME=$(ls -tr1 /tmp/|grep core|tail -n 1)
