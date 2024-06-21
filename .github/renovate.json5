@@ -21,6 +21,7 @@
     '3.34-gdal3.7',
     '3.34-gdal3.8',
     '3.36-gdal3.8',
+    '3.38-gdal3.8',
     'master',
   ],
   'pre-commit': { enabled: true },
