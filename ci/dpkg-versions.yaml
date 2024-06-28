@@ -60,7 +60,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.6
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.6
-  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.9
+  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.10
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.16
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.16
   ubuntu_22_04/libdb5.3: 5.3.28+dfsg1-0.8ubuntu3
@@ -408,7 +408,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.6
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.6
-  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.9
+  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.10
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.16
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.16
   ubuntu_22_04/libdb5.3: 5.3.28+dfsg1-0.8ubuntu3
