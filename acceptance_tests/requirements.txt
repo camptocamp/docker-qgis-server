@@ -1,3 +1,4 @@
 poetry==1.2.2
 pip==23.3.2
 cryptography>=41.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
+certifi>=2024.7.4 # not directly required, pinned by Snyk to avoid a vulnerability
