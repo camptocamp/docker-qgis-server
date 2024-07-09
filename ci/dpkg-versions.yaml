@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.9
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -409,14 +409,14 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.10
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.10
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.11
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.11
 camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.9
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -831,14 +831,14 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.10
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.10
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.11
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.11
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.9
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.9
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -1256,5 +1256,5 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.10
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.10
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.11
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.11
