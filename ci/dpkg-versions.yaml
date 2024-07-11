@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.11
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -162,7 +162,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.17+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -413,10 +413,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.11
 camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.11
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -581,7 +581,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.17+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -835,10 +835,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.11
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.10
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.10
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.11
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.11
   ubuntu_22_04/apt: 2.4.12
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -998,7 +998,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.17+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
