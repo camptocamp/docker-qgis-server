@@ -162,7 +162,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.2
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -205,7 +205,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libperl5.34: 5.34.0-3ubuntu1.3
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
-  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.4
+  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.5
   ubuntu_22_04/libpq5: 14.12-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
@@ -581,7 +581,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.2
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -625,7 +625,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_22_04/libperl5.34: 5.34.0-3ubuntu1.3
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
-  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.4
+  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.5
   ubuntu_22_04/libpq5: 14.12-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
@@ -998,7 +998,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/liblapack3: 3.10.0-2ubuntu1
   ubuntu_22_04/liblaszip8: 3.4.3-2
   ubuntu_22_04/liblcms2-2: 2.12~rc1-2build2
-  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.1
+  ubuntu_22_04/libldap-2.5-0: 2.5.18+dfsg-0ubuntu0.22.04.2
   ubuntu_22_04/libllvm15: 1:15.0.7-0ubuntu0.22.04.3
   ubuntu_22_04/libltdl7: 2.4.6-15build2
   ubuntu_22_04/liblua5.3-0: 5.3.6-1build1
@@ -1041,7 +1041,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libperl5.34: 5.34.0-3ubuntu1.3
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
-  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.4
+  ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.5
   ubuntu_22_04/libpq5: 14.12-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
