@@ -77,5 +77,5 @@ jobs:
 
       - run: make run
       - run: make acceptance
-      - run: (cd acceptance_tests; docker-compose logs)
+      - run: (cd acceptance_tests; docker compose logs)
         if: failure()

@@ -35,11 +35,11 @@ build-acceptance: build-acceptance-config
 .PHONY: run
 run: build-acceptance
 	mkdir -p acceptance_tests/junitxml && touch acceptance_tests/junitxml/results.xml
-	cd acceptance_tests; docker-compose up -d
+	cd acceptance_tests; docker compose up -d
 
 .PHONY: acceptance
 acceptance:
-	cd acceptance_tests; docker-compose exec $(DOCKER_COMPOSE_TTY) run py.test -vv --color=yes --junitxml=/tmp/junitxml/results.xml
+	cd acceptance_tests; docker compose exec $(DOCKER_COMPOSE_TTY) run py.test -vv --color=yes --junitxml=/tmp/junitxml/results.xml
 
 .PHONY: pull
 pull:
