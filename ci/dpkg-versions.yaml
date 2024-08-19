@@ -206,7 +206,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.5
-  ubuntu_22_04/libpq5: 14.12-0ubuntu0.22.04.1
+  ubuntu_22_04/libpq5: 14.13-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
   ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.1
@@ -619,7 +619,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.5
-  ubuntu_22_04/libpq5: 14.12-0ubuntu0.22.04.1
+  ubuntu_22_04/libpq5: 14.13-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
   ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.1
