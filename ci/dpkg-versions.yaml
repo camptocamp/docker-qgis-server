@@ -11,7 +11,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/binutils-common: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.6
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
-  ubuntu_22_04/ca-certificates: 20230311ubuntu0.22.04.1
+  ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
   ubuntu_22_04/curl: 7.81.0-1ubuntu1.18
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
@@ -358,7 +358,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/binutils-common: 2.38-4ubuntu2.6
   ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.6
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
-  ubuntu_22_04/ca-certificates: 20230311ubuntu0.22.04.1
+  ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
   ubuntu_22_04/curl: 7.81.0-1ubuntu1.18
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
