@@ -102,7 +102,8 @@ RUN cmake .. \
     -DWITH_SERVER_LANDINGPAGE_WEBAPP=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
+    -DWITH_3D=OFF
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
@@ -128,7 +129,8 @@ RUN cmake .. \
     -DWITH_SERVER_LANDINGPAGE_WEBAPP=ON \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
-    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake
+    -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
+    -DWITH_3D=OFF
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
