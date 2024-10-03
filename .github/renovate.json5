@@ -39,6 +39,13 @@
       ],
       datasourceTemplate: 'github-tags',
     },
+    /** Python version in actions/setup-python action */
+    {
+      fileMatch: ['^\\.github/workflows/.*\\.yaml$'],
+      matchStrings: [' python-version: [\'"](?<currentValue>[0-9\\.]+)[\'"]'],
+      datasourceTemplate: 'python-version',
+      depNameTemplate: 'python',
+    },
   ],
   packageRules: [
     /** Less strict version for Docker images */
@@ -129,6 +136,11 @@
       matchDepNames: ['ghcr.io/osgeo/gdal'],
       matchUpdateTypes: ['major', 'minor'],
       groupName: 'gdal',
+    },
+    /** Ungroup Python dependencies */
+    {
+      matchDepNames: ['python'],
+      groupName: 'Python',
     },
   ],
 }
