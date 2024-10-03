@@ -126,7 +126,7 @@
     },
     /** Ungroup Gdal major and minor versions */
     {
-      matchDepNames: ['gdal'],
+      matchDepNames: ['ghcr.io/osgeo/gdal'],
       matchUpdateTypes: ['major', 'minor'],
       groupName: 'gdal',
     },
