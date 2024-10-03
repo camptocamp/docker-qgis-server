@@ -124,5 +124,11 @@
       matchBaseBranches: ['/^[0-9]+\\.[0-9]+$/', '/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/'],
       minimumReleaseAge: '7 days',
     },
+    /** Ungroup Gdal major and minor versions */
+    {
+      matchDepNames: ['gdal'],
+      matchUpdateTypes: ['major', 'minor'],
+      groupName: 'gdal',
+    },
   ],
 }
