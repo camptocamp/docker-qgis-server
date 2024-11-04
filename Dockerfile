@@ -91,7 +91,9 @@ ENV \
 
 WORKDIR /src/build
 
-RUN cmake .. \
+RUN LIBPROJ_FILENAME=$(ls -1 /usr/local/lib/libinternalproj.so.*.*.*.*) \
+    && ln -s "${LIBPROJ_FILENAME}" "${LIBPROJ_FILENAME/libinternalproj/libproj}" \
+    && cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2" \
     -DCMAKE_CXX_FLAGS="-O2" \
@@ -103,7 +105,8 @@ RUN cmake .. \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
-    -DWITH_3D=OFF
+    -DWITH_3D=OFF \
+    -DWITH_PDAL=OFF
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
