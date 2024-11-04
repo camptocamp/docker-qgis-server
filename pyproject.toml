@@ -5,20 +5,3 @@ target-version = ["py310"]
 [tool.isort]
 profile = "black"
 line_length = 110
-
-[tool.poetry]
-name = 'qgis'
-version = '0.0.0'
-description = 'Not used'
-authors = []
-
-[tool.poetry.dependencies]
-python = ">=3.10,<3.11"
-geolinks = "0.2.3"
-six = "1.16.0"
-nose2 = "0.15.1"
-mock = "5.1.0"
-lxml = { version = "5.3.0", optional = true }
-
-[tool.poetry.extras]
-desktop = ["lxml"]

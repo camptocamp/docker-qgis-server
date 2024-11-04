@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-small-3.9.3 as base-all
+FROM ghcr.io/osgeo/gdal:ubuntu-small-3.9.3 AS base-all
 LABEL maintainer Camptocamp "info@camptocamp.com"
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
@@ -8,23 +8,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists \
     && apt-get upgrade --assume-yes \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends python3-pip
 
-# Used to convert the locked packages by poetry to pip requirements format
-# We don't directly use `poetry install` because it force to use a virtual environment.
-FROM base-all as poetry
-
-# Install Poetry
-WORKDIR /tmp
-COPY requirements.txt ./
-RUN --mount=type=cache,target=/root/.cache \
-    python3 -m pip install --disable-pip-version-check --requirement=requirements.txt
-
-# Do the conversion
-COPY poetry.lock pyproject.toml ./
-RUN poetry export --output=requirements.txt \
-    && poetry export --extras=desktop --output=requirements-desktop.txt
-
-# Base, the biggest thing is to install the Python packages
-FROM base-all as builder
+FROM base-all AS builder
 LABEL maintainer="info@camptocamp.com"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
@@ -55,7 +39,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         python3-markupsafe python3-mock python3-nose2 python3-owslib python3-plotly python3-psycopg2 \
         python3-pygments python3-pyqt5 python3-pyqt5.qsci python3-pyqt5.qtpositioning \
         python3-pyqt5.qtsql python3-pyqt5.qtsvg python3-pyqt5.qtwebkit python3-requests \
-        python3-sip python3-sip-dev python3-termcolor python3-tz python3-yaml qt3d-assimpsceneimport-plugin \
+        python3-sip python3-sip-dev python3-termcolor python3-tz python3-yaml python3-geolinks qt3d-assimpsceneimport-plugin \
         qt3d-defaultgeometryloader-plugin qt3d-gltfsceneio-plugin qt3d-scene2d-plugin qt3d5-dev \
         qtbase5-dev qtbase5-private-dev qtkeychain-qt5-dev qtpositioning5-dev qttools5-dev \
         qttools5-dev-tools spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base \
@@ -70,11 +54,6 @@ RUN npm install
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/node_modules/.bin
 
 WORKDIR /tmp/
-
-RUN --mount=type=cache,target=/root/.cache \
-    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt \
-    && (strip /usr/local/lib/python3.*/dist-packages/*/*.so || true)
 
 ARG QGIS_BRANCH
 
@@ -111,12 +90,12 @@ RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     && ninja \
     && ccache --show-stats
 
-FROM builder as builder-server
+FROM builder AS builder-server
 
 RUN ninja install
 RUN rm -rf /usr/local/share/qgis/i18n/
 
-FROM builder as builder-server-debug
+FROM builder AS builder-server-debug
 
 RUN cmake .. \
     -GNinja \
@@ -140,7 +119,7 @@ RUN --mount=type=cache,target=/root/.ccache,id=ccache \
 
 RUN ninja install
 
-FROM builder as builder-desktop
+FROM builder AS builder-desktop
 
 # -DWITH_3D=ON generate error: undefined reference to `Qt3DExtras::Qt3DWindow::Qt3DWindow(QScreen*)'
 RUN cmake .. \
@@ -166,7 +145,7 @@ RUN --mount=type=cache,target=/root/.ccache,id=ccache \
 
 RUN ninja install
 
-FROM base-all as runner
+FROM base-all AS runner
 LABEL maintainer="info@camptocamp.com"
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
@@ -187,12 +166,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
 
 WORKDIR /tmp
 
-RUN --mount=type=cache,target=/root/.cache \
-    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements.txt \
-    && python3 -m pip freeze > /requirements.txt
-
-FROM runner as runner-server
+FROM runner AS runner-server
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
@@ -263,7 +237,7 @@ EXPOSE 8080
 CMD ["/usr/local/bin/start-server"]
 
 
-FROM runner-server as runner-server-debug
+FROM runner-server AS runner-server-debug
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
@@ -275,7 +249,7 @@ COPY --from=builder-server-debug /usr/local/bin /usr/local/bin/
 COPY --from=builder-server-debug /usr/local/lib /usr/local/lib/
 COPY --from=builder-server-debug /usr/local/share/qgis /usr/local/share/qgis
 
-FROM runner as runner-desktop
+FROM runner AS runner-desktop
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
@@ -288,11 +262,6 @@ RUN --mount=type=cache,target=/root/.cache,id=root-cache \
     python3 -m pip install --disable-pip-version-check --requirement=requirements-desktop.txt \
     && rm --recursive --force /tmp/*
 
-RUN --mount=type=cache,target=/root/.cache \
-    --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements-desktop.txt \
-    && python3 -m pip freeze > /requirements.txt
-
 COPY --from=builder-desktop /usr/local/bin /usr/local/bin/
 COPY --from=builder-desktop /usr/local/lib /usr/local/lib/
 COPY --from=builder-desktop /usr/local/share /usr/local/share/
@@ -303,7 +272,7 @@ RUN ldconfig
 WORKDIR /etc/qgisserver
 CMD ["/usr/local/bin/start-client"]
 
-FROM builder as cache
+FROM builder AS cache
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
