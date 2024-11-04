@@ -2,11 +2,7 @@
 !checkout_release
 !runtime
 !runtime-desktop
-!requirements.txt
-!requirements-desktop.txt
 !cache
 !package.json
 !package-lock.json
 !.nvmrc
-!pyproject.toml
-!poetry.lock
