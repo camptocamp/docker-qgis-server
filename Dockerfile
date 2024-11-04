@@ -161,8 +161,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         libqt5opengl5 libqt5sql5-sqlite libqt5concurrent5 libqt5positioning5 libqt5script5 \
         libqt5webkit5 libqwt-qt5-6 libspatialindex6 libspatialite7 libsqlite3-0 libqt5keychain1 \
         libqt5serialport5 libqt5quickwidgets5 libexiv2-27 libprotobuf23 libprotobuf-lite23 \
-        libgsl27 libzstd1 libdraco4 libqt5multimediawidgets5 \
-    && strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+        libgsl27 libzstd1 libdraco4 libqt5multimediawidgets5
 
 WORKDIR /tmp
 
