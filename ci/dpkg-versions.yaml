@@ -13,7 +13,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
   ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
-  ubuntu_22_04/curl: 7.81.0-1ubuntu1.18
+  ubuntu_22_04/curl: 7.81.0-1ubuntu1.19
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
   ubuntu_22_04/debconf: 1.5.79ubuntu1
   ubuntu_22_04/debianutils: 5.5-1ubuntu2
@@ -61,8 +61,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.6
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.6
   ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.11
-  ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.18
-  ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.18
+  ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.19
+  ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.19
   ubuntu_22_04/libdb5.3: 5.3.28+dfsg1-0.8ubuntu3
   ubuntu_22_04/libdbus-1-3: 1.12.20-2ubuntu4.1
   ubuntu_22_04/libdebconfclient0: 0.261ubuntu1
@@ -100,7 +100,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.3
+  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.4
   ubuntu_22_04/libglvnd0: 1.4.0-1
   ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglx0: 1.4.0-1
@@ -168,9 +168,9 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/libpsl5: 0.21.0-1.2build2
   ubuntu_22_04/libpython3-stdlib: 3.10.6-1~22.04.1
-  ubuntu_22_04/libpython3.10: 3.10.12-1~22.04.6
-  ubuntu_22_04/libpython3.10-minimal: 3.10.12-1~22.04.6
-  ubuntu_22_04/libpython3.10-stdlib: 3.10.12-1~22.04.6
+  ubuntu_22_04/libpython3.10: 3.10.12-1~22.04.7
+  ubuntu_22_04/libpython3.10-minimal: 3.10.12-1~22.04.7
+  ubuntu_22_04/libpython3.10-stdlib: 3.10.12-1~22.04.7
   ubuntu_22_04/libqca-qt5-2: 2.3.4-1build1
   ubuntu_22_04/libqca-qt5-2-plugins: 2.3.4-1build1
   ubuntu_22_04/libqscintilla2-qt5-15: 2.11.6+dfsg-4
@@ -319,8 +319,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/python3-pyqt5.sip: 12.9.1-1build1
   ubuntu_22_04/python3-setuptools: 59.6.0-1.2ubuntu0.22.04.2
   ubuntu_22_04/python3-wheel: 0.37.1-2ubuntu0.22.04.1
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.6
-  ubuntu_22_04/python3.10-minimal: 3.10.12-1~22.04.6
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.7
+  ubuntu_22_04/python3.10-minimal: 3.10.12-1~22.04.7
   ubuntu_22_04/readline-common: 8.1.2-1
   ubuntu_22_04/sed: 4.8-1ubuntu2
   ubuntu_22_04/sensible-utils: 0.0.17
@@ -360,7 +360,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
   ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
-  ubuntu_22_04/curl: 7.81.0-1ubuntu1.18
+  ubuntu_22_04/curl: 7.81.0-1ubuntu1.19
   ubuntu_22_04/dash: 0.5.11+git20210903+057cd650a4ed-3build1
   ubuntu_22_04/debconf: 1.5.79ubuntu1
   ubuntu_22_04/debianutils: 5.5-1ubuntu2
@@ -409,8 +409,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.6
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.6
   ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.11
-  ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.18
-  ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.18
+  ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.19
+  ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.19
   ubuntu_22_04/libdb5.3: 5.3.28+dfsg1-0.8ubuntu3
   ubuntu_22_04/libdbus-1-3: 1.12.20-2ubuntu4.1
   ubuntu_22_04/libdebconfclient0: 0.261ubuntu1
@@ -449,7 +449,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgl1: 1.4.0-1
   ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.3
+  ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.4
   ubuntu_22_04/libglvnd0: 1.4.0-1
   ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
   ubuntu_22_04/libglx0: 1.4.0-1
@@ -517,9 +517,9 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.1
   ubuntu_22_04/libpsl5: 0.21.0-1.2build2
   ubuntu_22_04/libpython3-stdlib: 3.10.6-1~22.04.1
-  ubuntu_22_04/libpython3.10: 3.10.12-1~22.04.6
-  ubuntu_22_04/libpython3.10-minimal: 3.10.12-1~22.04.6
-  ubuntu_22_04/libpython3.10-stdlib: 3.10.12-1~22.04.6
+  ubuntu_22_04/libpython3.10: 3.10.12-1~22.04.7
+  ubuntu_22_04/libpython3.10-minimal: 3.10.12-1~22.04.7
+  ubuntu_22_04/libpython3.10-stdlib: 3.10.12-1~22.04.7
   ubuntu_22_04/libqca-qt5-2: 2.3.4-1build1
   ubuntu_22_04/libqca-qt5-2-plugins: 2.3.4-1build1
   ubuntu_22_04/libqscintilla2-qt5-15: 2.11.6+dfsg-4
@@ -675,8 +675,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/python3-pyqt5.sip: 12.9.1-1build1
   ubuntu_22_04/python3-setuptools: 59.6.0-1.2ubuntu0.22.04.2
   ubuntu_22_04/python3-wheel: 0.37.1-2ubuntu0.22.04.1
-  ubuntu_22_04/python3.10: 3.10.12-1~22.04.6
-  ubuntu_22_04/python3.10-minimal: 3.10.12-1~22.04.6
+  ubuntu_22_04/python3.10: 3.10.12-1~22.04.7
+  ubuntu_22_04/python3.10-minimal: 3.10.12-1~22.04.7
   ubuntu_22_04/qt3d-assimpsceneimport-plugin: 5.15.3+dfsg-1
   ubuntu_22_04/qt3d-defaultgeometryloader-plugin: 5.15.3+dfsg-1
   ubuntu_22_04/qt3d-gltfsceneio-plugin: 5.15.3+dfsg-1
