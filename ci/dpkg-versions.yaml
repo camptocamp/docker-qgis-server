@@ -76,12 +76,12 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libdrm2: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdw1: 0.186-1build1
   ubuntu_22_04/libedit2: 3.1-20210910-1build1
-  ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libegl1: 1.4.0-1
   ubuntu_22_04/libelf1: 0.186-1build1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
-  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.4
+  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
   ubuntu_22_04/libffi8: 3.4.2-4
@@ -89,7 +89,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libfontenc1: 1:1.1.4-1build3
   ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.2
   ubuntu_22_04/libfreexl1: 1.0.6-1
-  ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libgcc-s1: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libgcrypt20: 1.9.4-3ubuntu3
   ubuntu_22_04/libgdbm-compat4: 1.23-1
@@ -98,11 +98,11 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgeos3.10.2: 3.10.2-1
   ubuntu_22_04/libgfortran5: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libgl1: 1.4.0-1
-  ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.3
+  ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.4
   ubuntu_22_04/libglvnd0: 1.4.0-1
-  ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libglx0: 1.4.0-1
   ubuntu_22_04/libgmp10: 2:6.2.1+dfsg-3ubuntu1
   ubuntu_22_04/libgnutls30: 3.7.3-4ubuntu1.5
@@ -425,12 +425,12 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libdrm2: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdw1: 0.186-1build1
   ubuntu_22_04/libedit2: 3.1-20210910-1build1
-  ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libegl1: 1.4.0-1
   ubuntu_22_04/libelf1: 0.186-1build1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
-  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.4
+  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
   ubuntu_22_04/libffi8: 3.4.2-4
@@ -438,7 +438,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libfontenc1: 1:1.1.4-1build3
   ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.2
   ubuntu_22_04/libfreexl1: 1.0.6-1
-  ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libgcc-s1: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libgcrypt20: 1.9.4-3ubuntu3
   ubuntu_22_04/libgdbm-compat4: 1.23-1
@@ -447,11 +447,11 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgeos3.10.2: 3.10.2-1
   ubuntu_22_04/libgfortran5: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libgl1: 1.4.0-1
-  ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.2
-  ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libgl1-mesa-dri: 23.2.1-1ubuntu3.1~22.04.3
+  ubuntu_22_04/libglapi-mesa: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libglib2.0-0: 2.72.4-0ubuntu2.4
   ubuntu_22_04/libglvnd0: 1.4.0-1
-  ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.2
+  ubuntu_22_04/libglx-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libglx0: 1.4.0-1
   ubuntu_22_04/libgmp10: 2:6.2.1+dfsg-3ubuntu1
   ubuntu_22_04/libgnutls30: 3.7.3-4ubuntu1.5
