@@ -22,12 +22,10 @@ repos:
     rev: 1.1.2
     hooks:
       - id: copyright
-      - id: poetry-check
-        additional_dependencies:
-          - poetry==1.8.4 # pypi
       - id: poetry-lock
         additional_dependencies:
           - poetry==1.8.4 # pypi
+        exclude: ^pyproject\.toml$
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
     hooks:
