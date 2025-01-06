@@ -6,7 +6,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists \
     --mount=type=cache,target=/var/cache,sharing=locked \
     apt-get update \
     && apt-get upgrade --assume-yes \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends python3-pip
+    && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends python3-pip adduser
 
 FROM base-all AS builder
 LABEL maintainer="info@camptocamp.com"
@@ -25,7 +25,8 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     && echo 'Install packages from https://github.com/qgis/QGIS/blob/<branch>/INSTALL.md \
         Remove already in GDAL image: proj, GDAL ->: \
             gdal-bin python3-gdal python3-pyproj libgdal-dev libproj-dev \
-        Remove error with SIP v6: sip-tools python3-pyqtbuild' \
+        Remove error with SIP v6: sip-tools python3-pyqtbuild \
+        Add other: python3-sip-dev' \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
         bison build-essential ca-certificates ccache cmake cmake-curses-gui dh-python doxygen expect flex \
         flip git graphviz grass-dev libdraco-dev libexiv2-dev libexpat1-dev libfcgi-dev \
@@ -44,6 +45,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         qt3d5-dev qtbase5-dev qtbase5-private-dev qtkeychain-qt5-dev qtmultimedia5-dev qtpositioning5-dev \
         qttools5-dev qttools5-dev-tools spawn-fcgi xauth xfonts-100dpi xfonts-75dpi xfonts-base \
         xfonts-scalable xvfb \
+        python3-sip-dev \
     && echo 'Install some more packages' \
     && DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
         gnupg gcc clang "nodejs=${NODE_MAJOR}.*"
