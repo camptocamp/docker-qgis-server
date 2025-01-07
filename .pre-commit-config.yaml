@@ -24,7 +24,7 @@ repos:
       - id: copyright
       - id: poetry-lock
         additional_dependencies:
-          - poetry==1.8.4 # pypi
+          - poetry==1.8.5 # pypi
         exclude: ^pyproject\.toml$
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
@@ -54,7 +54,7 @@ repos:
           - github-workflows-require-timeout
       - id: check-renovate
         additional_dependencies:
-          - pyjson5==1.6.7 # pypi
+          - pyjson5==1.6.8 # pypi
   - repo: https://github.com/sirwart/ripsecrets
     rev: v0.1.8
     hooks:
@@ -64,7 +64,7 @@ repos:
     hooks:
       - id: autoflake
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.19.0
+    rev: v3.19.1
     hooks:
       - id: pyupgrade
         args:
