@@ -22,7 +22,7 @@ repos:
     rev: 1.2.1
     hooks:
       - id: copyright
-      - id: poetry-lock
+      - id: poetry2-lock
         additional_dependencies:
           - poetry==2.0.0 # pypi
         exclude: ^pyproject\.toml$
