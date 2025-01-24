@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.12
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.13
   ubuntu_22_04/apt: 2.4.13
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -150,10 +150,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.3
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
-  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.4
+  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.5
   ubuntu_22_04/libpciaccess0: 0.16-3
   ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
   ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
@@ -347,10 +347,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.12
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.12
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.12
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.13
   ubuntu_22_04/apt: 2.4.13
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -499,10 +499,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.3
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
-  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.4
-  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.4
+  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.5
+  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.5
   ubuntu_22_04/libpciaccess0: 0.16-3
   ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
   ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
