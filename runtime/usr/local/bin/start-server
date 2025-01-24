@@ -5,26 +5,46 @@ if [ -e /etc/qgisserver/fonts/ ]; then
     fc-cache --really-force --system-only
 fi
 
-# save the environment to be able to restore it in the FCGI daemon (used
-# in /usr/local/bin/qgis_mapsev_wrapper) for the startup code.
-# shellcheck disable=SC2086
-${GET_ENV} ${FILTER_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
+if [[ "${SERVER}" == spawn-fcgi ]]; then
+    echo "Starting with spawn-fcgi"
+    # Save the environment to be able to restore it in the FCGI daemon (used in /usr/local/bin/qgis-mapserv-wrapper)
+    # shellcheck disable=SC2086
+    ${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
+    if [[ "${LIGHTTPD_FASTCGI_SOCKET}" == "" ]]; then
+        exec /usr/bin/spawn-fcgi -p "${LIGHTTPD_FASTCGI_PORT}" -n -- /usr/local/bin/qgis-mapserv-wrapper
+    else
+        exec /usr/bin/spawn-fcgi -s "${LIGHTTPD_FASTCGI_SOCKET}" -n -- /usr/local/bin/qgis-mapserv-wrapper
+    fi
+else
+    if [[ "${SERVER}" == lighttpd ]]; then
+        echo "Starting lighttpd"
+        lighttpd -tt -f "${LIGHTTPD_CONF}"
+        exec /usr/sbin/lighttpd -D -f "${LIGHTTPD_CONF}"
+    else
+        echo "Starting with apache2"
 
-# Save the list of variables to be passed along with the FCGI requests (used in
-# /etc/apache2/conf-enabled/qgis.conf).
-# shellcheck disable=SC2086
-${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
+        # save the environment to be able to restore it in the FCGI daemon (used
+        # in /usr/local/bin/qgis-mapserv-wrapper) for the startup code.
+        # shellcheck disable=SC2086
+        ${GET_ENV} ${FILTER_ENV} | sed -e 's/^\([^=]*\)=.*/PassEnv \1/' > /tmp/pass-env
 
-if [ "${UID}" == 0 ]; then
-    echo "Switching listen port to 80"
-    cd /tmp
-    sed -i -e 's/<VirtualHost \*:8080>/<VirtualHost *:80>/' /etc/apache2/sites-available/000-default.conf
-    sed -i -e 's/Listen 8080$/Listen 80/' /etc/apache2/ports.conf
+        # Save the list of variables to be passed along with the FCGI requests (used in
+        # /etc/apache2/conf-enabled/qgis.conf).
+        # shellcheck disable=SC2086
+        ${GET_ENV} ${FILTER_ENV} | sed -e 's/.\+/export "\0"/' > /tmp/init-env
+
+        if [[ "${UID}" == 0 ]]; then
+            echo "Switching listen port to 80"
+            cd /tmp
+            sed -i -e 's/<VirtualHost \*:8080>/<VirtualHost *:80>/' /etc/apache2/sites-available/000-default.conf
+            sed -i -e 's/Listen 8080$/Listen 80/' /etc/apache2/ports.conf
+        fi
+
+        trap 'echo "caught a SIGTERM"; kill -TERM $PID2; wait $PID2; kill -TERM $PID1; wait $PID1' TERM
+        trap '' WINCH
+
+        rm -f "${APACHE_PID_FILE}"
+
+        exec apache2 -DFOREGROUND
+    fi
 fi
-
-trap 'echo "caught a SIGTERM"; kill -TERM $PID2; wait $PID2; kill -TERM $PID1; wait $PID1' TERM
-trap '' WINCH
-
-rm -f "${APACHE_PID_FILE}"
-
-exec apache2 -DFOREGROUND
