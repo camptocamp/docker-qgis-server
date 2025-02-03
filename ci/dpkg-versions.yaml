@@ -114,7 +114,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.4
   ubuntu_22_04/libgstreamer1.0-0: 1.20.3-0ubuntu1.1
   ubuntu_22_04/libgudev-1.0-0: 1:237-2build1
-  ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.1
+  ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.2
   ubuntu_22_04/libhogweed6: 3.7.3-1build2
   ubuntu_22_04/libhyphen0: 2.8.8-7build2
   ubuntu_22_04/libice6: 2:1.0.10-1build2
@@ -463,7 +463,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libgstreamer-plugins-base1.0-0: 1.20.1-1ubuntu0.4
   ubuntu_22_04/libgstreamer1.0-0: 1.20.3-0ubuntu1.1
   ubuntu_22_04/libgudev-1.0-0: 1:237-2build1
-  ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.1
+  ubuntu_22_04/libharfbuzz0b: 2.7.4-1ubuntu3.2
   ubuntu_22_04/libhogweed6: 3.7.3-1build2
   ubuntu_22_04/libhyphen0: 2.8.8-7build2
   ubuntu_22_04/libice6: 2:1.0.10-1build2
