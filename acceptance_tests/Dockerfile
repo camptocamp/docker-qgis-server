@@ -1,4 +1,4 @@
-FROM python:3.13.1 as base-all
+FROM python:3.13.1 AS base-all
 LABEL maintainer "info@camptocamp.org"
 
 # Fail on error on pipe, see: https://github.com/hadolint/hadolint/wiki/DL4006.
@@ -17,7 +17,7 @@ ENV PATH=/venv/bin:$PATH
 
 # Used to convert the locked packages by poetry to pip requirements format
 # We don't directly use `poetry install` because it force to use a virtual environment.
-FROM base-all as poetry
+FROM base-all AS poetry
 
 # Install Poetry
 WORKDIR /tmp

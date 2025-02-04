@@ -16,6 +16,20 @@ def test_get_capabilities(connection):
     ], ElementTree.dump(answer)
 
 
+def test_get_capabilities_lighttpd(connection_lighttpd):
+    ns = "{http://www.opengis.net/wms}"
+    answer = connection_lighttpd.get_xml(
+        "?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0",
+        cache_expected=CacheExpected.DONT_CARE,
+        cors=False,
+    )
+    assert [e.text for e in answer.findall(f"{ns}Service/{ns}Title")] == ["test"], ElementTree.dump(answer)
+    assert [e.text for e in answer.findall(f".//{ns}Layer/{ns}Name")] == [
+        "test",
+        "polygons",
+    ], ElementTree.dump(answer)
+
+
 def test_get_map(connection):
     answer = connection.get_raw(
         "?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=polygons&STYLES=&"
