@@ -24,7 +24,7 @@ repos:
       - id: copyright
       - id: poetry2-lock
         additional_dependencies:
-          - poetry==2.0.0 # pypi
+          - poetry==2.0.1 # pypi
         exclude: ^pyproject\.toml$
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
@@ -83,6 +83,6 @@ repos:
       - id: jsonschema-validator
         files: ^ci/config\.yaml$
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 39.156.0
+    rev: 39.156.2
     hooks:
       - id: renovate-config-validator
