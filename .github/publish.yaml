@@ -7,11 +7,19 @@ docker:
         - '{version}'
         - '{version}-debug'
         - '{version}-desktop'
+  repository:
+    github:
+      host: ghcr.io
+      versions_type:
+        - tag
+        - default_branch
+        - stabilization_branch
+    dockerhub:
+      host: docker.io
+      versions_type:
+        - tag
+        - default_branch
+        - stabilization_branch
+
 dispatch:
   - {}
-version:
-  branch_to_version:
-    - from: ([0-9]+.[0-9]+-gdal[0-9]+.[0-9]+)
-      to: \1
-    - from: master
-      to: master
