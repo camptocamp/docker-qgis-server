@@ -174,7 +174,8 @@ FROM runner AS runner-server
 
 RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
-    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends libfcgi
+    DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
+        apache2 libapache2-mod-fcgid libfcgi lighttpd spawn-fcgi
 
 # Be able to install font as nonroot
 RUN chmod u+s /usr/bin/fc-cache \
@@ -188,7 +189,14 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     APACHE_RUN_DIR=/tmp/apache2 \
     APACHE_PID_FILE=/tmp/apache2/apache2.pid \
     APACHE_LOCK_DIR=/var/lock/apache2 \
-    APACHE_LOG_DIR=/var/log/apache2
+    APACHE_LOG_DIR=/var/log/apache2 \
+    SERVER=apache \
+    LIGHTTPD_CONF=/etc/lighttpd/lighttpd.conf \
+    LIGHTTPD_PORT=8080 \
+    LIGHTTPD_FASTCGI_HOST=spawn-fcgi \
+    LIGHTTPD_FASTCGI_PORT=3000 \
+    LIGHTTPD_FASTCGI_SOCKET= \
+    LIGHTTPD_ACCESSLOG_FORMAT="%h %V %u %t \"%r\" %>s %b"
 
 RUN a2enmod fcgid headers status \
     && a2dismod -f auth_basic authn_file authn_core authz_user autoindex dir \
@@ -236,6 +244,7 @@ RUN adduser www-data root \
 
 RUN ldconfig
 
+VOLUME /tmp
 WORKDIR /etc/qgisserver
 EXPOSE 8080
 CMD ["/usr/local/bin/start-server"]

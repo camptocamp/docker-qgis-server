@@ -13,7 +13,7 @@ docker run --detach --publish=8380:80 --volume=${PWD}/qgis:/etc/qgisserver campt
 With the previous command, you'll get to your server with this URL:
 http://localhost:8380/?MAP=/etc/qgisserver/project.qgz&SERVICE=WMS&REQUEST=GetCapabilities
 
-## Tuning
+## Apache Tunings
 
 You can use the following variables (`-e` option in `docker run`):
 
@@ -34,6 +34,27 @@ You can use the following variables (`-e` option in `docker run`):
 [See also QGIS server documentation](https://docs.qgis.org/latest/en/docs/server_manual/config.html?highlight=environment#environment-variables)
 
 Fonts present in the `/etc/qgisserver/fonts` directory will be installed and thus usable by QGIS.
+
+## Lighttpd
+
+You can also use lighttpd as the web server.
+
+The main benefit of that is to have only one running process per container, that's useful especially on Kubernetes.
+
+For that you need tow containers, one for the MapServer and `spawn-fcgi`, and one for `lighttpd`.
+
+The environment variable needed by mapserver should be on the `spawn-fcgi` container.
+
+The MapServer logs will be available on the 'lighttpd' container.
+
+Used environment variables:
+
+- `LIGHTTPD_CONF`: The lighttpd configuration file (defaults to `/etc/lighttpd/lighttpd.conf`)
+- `LIGHTTPD_PORT`: The port lighttpd will listen on (defaults to `8080`)
+- `LIGHTTPD_FASTCGI_HOST`: The host of the FastCGI server (`spawn-fcgi`, defaults to `spawn-fcgi`)
+- `LIGHTTPD_FASTCGI_PORT`: The port of the FastCGI server (`spawn-fcgi`, defaults to `3000`)
+- `LIGHTTPD_FASTCGI_SOCKET`: The socket of the FastCGI server (defaults to `''`)
+- `LIGHTTPD_ACCESSLOG_FORMAT`: The format of the access log (defaults to `"%h %V %u %t \"%r\" %>s %b"`)
 
 ## Get a stack trace in case of segfault
 

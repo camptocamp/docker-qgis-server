@@ -53,3 +53,11 @@ def connection_landingpage():
     Fixture that returns a connection to a running batch container.
     """
     return Connection("http://qgis-landingpage:8080/", "http://www.example.com/")
+
+
+@pytest.fixture
+def connection_lighttpd():
+    """
+    Fixture that returns a connection to a running batch container.
+    """
+    return Connection("http://qgis-lighttpd:8080/", "http://www.example.com/")

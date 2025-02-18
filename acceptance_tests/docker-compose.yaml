@@ -44,6 +44,33 @@ services:
       - acceptance_config
     user: www-data
 
+  qgis-spawn-fcgi:
+    image: camptocamp/qgis-server:${DOCKER_TAG}
+    environment:
+      SERVER: spawn-fcgi
+      QGIS_SERVER_LOG_LEVEL: '0'
+      QGIS_PROJECT_FILE: /etc/qgisserver/project.qgs
+    read_only: true
+    links:
+      - db
+    volumes:
+      - cache:/var/cache/qgisserver
+    volumes_from:
+      - acceptance_config
+    user: 12311:12311
+
+  qgis-lighttpd:
+    image: camptocamp/qgis-server:${DOCKER_TAG}
+    environment:
+      SERVER: lighttpd
+      LIGHTTPD_FASTCGI_HOST: qgis-spawn-fcgi
+    read_only: true
+    links:
+      - db
+    # ports:
+    #   - 8385:8080
+    user: 12311:12311
+
   db:
     image: camptocamp/postgres:17-postgis-3
     environment:
