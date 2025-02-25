@@ -21,6 +21,8 @@
     '3.34-gdal3.8',
     '3.36-gdal3.8',
     '3.38-gdal3.8',
+    '3.40-gdal3.10',
+    '3.42-gdal3.10',
     'master',
   ],
   packageRules: [
