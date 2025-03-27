@@ -87,11 +87,11 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libdrm-nouveau2: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdrm-radeon1: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdrm2: 2.4.113-2~ubuntu0.22.04.1
-  ubuntu_22_04/libdw1: 0.186-1build1
+  ubuntu_22_04/libdw1: 0.186-1ubuntu0.1
   ubuntu_22_04/libedit2: 3.1-20210910-1build1
   ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libegl1: 1.4.0-1
-  ubuntu_22_04/libelf1: 0.186-1build1
+  ubuntu_22_04/libelf1: 0.186-1ubuntu0.1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
   ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
@@ -500,11 +500,11 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libdrm-nouveau2: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdrm-radeon1: 2.4.113-2~ubuntu0.22.04.1
   ubuntu_22_04/libdrm2: 2.4.113-2~ubuntu0.22.04.1
-  ubuntu_22_04/libdw1: 0.186-1build1
+  ubuntu_22_04/libdw1: 0.186-1ubuntu0.1
   ubuntu_22_04/libedit2: 3.1-20210910-1build1
   ubuntu_22_04/libegl-mesa0: 23.2.1-1ubuntu3.1~22.04.3
   ubuntu_22_04/libegl1: 1.4.0-1
-  ubuntu_22_04/libelf1: 0.186-1build1
+  ubuntu_22_04/libelf1: 0.186-1ubuntu0.1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
   ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
