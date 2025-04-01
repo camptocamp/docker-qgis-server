@@ -10,4 +10,4 @@ python = ">=3.13,<3.14"
 [tool.poetry.dev-dependencies]
 c2cwsgiutils = { extras = ["tests"], version = "6.1.7" }
 psycopg2 = "2.9.10"
-pytest = "8.3.4"
+pytest = "8.3.5"
