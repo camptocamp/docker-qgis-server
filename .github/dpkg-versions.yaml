@@ -367,8 +367,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/xfonts-scalable: 1:1.0.3-1.3
   ubuntu_24_04/xfonts-utils: 1:7.7+6build3
   ubuntu_24_04/xkb-data: 2.41-2ubuntu1.1
-  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.2
-  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.2
+  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.3
+  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.3
 camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/adduser: 3.137ubuntu1
   ubuntu_24_04/apache2: 2.4.58-1ubuntu8.5
@@ -747,8 +747,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/xfonts-scalable: 1:1.0.3-1.3
   ubuntu_24_04/xfonts-utils: 1:7.7+6build3
   ubuntu_24_04/xkb-data: 2.41-2ubuntu1.1
-  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.2
-  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.2
+  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.3
+  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.3
 camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/adduser: 3.137ubuntu1
   ubuntu_24_04/apache2: 2.4.58-1ubuntu8.5
@@ -1130,5 +1130,5 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/xfonts-scalable: 1:1.0.3-1.3
   ubuntu_24_04/xfonts-utils: 1:7.7+6build3
   ubuntu_24_04/xkb-data: 2.41-2ubuntu1.1
-  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.2
-  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.2
+  ubuntu_24_04/xserver-common: 2:21.1.12-1ubuntu1.3
+  ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.3
