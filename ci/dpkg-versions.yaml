@@ -35,7 +35,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/iso-codes: 4.9.0-1
   ubuntu_22_04/libacl1: 2.3.1-1
   ubuntu_22_04/libaec0: 1.0.6-1
-  ubuntu_22_04/libaom3: 3.3.0-1
+  ubuntu_22_04/libaom3: 3.3.0-1ubuntu0.1
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_22_04/libapparmor1: 3.0.4-2ubuntu2.4
   ubuntu_22_04/libapr1: 1.7.0-8ubuntu0.22.04.2
@@ -279,14 +279,14 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libssl3: 3.0.2-0ubuntu1.19
   ubuntu_22_04/libstdc++6: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libsuperlu5: 5.3.0+dfsg1-2
-  ubuntu_22_04/libsystemd0: 249.11-0ubuntu3.12
+  ubuntu_22_04/libsystemd0: 249.11-0ubuntu3.15
   ubuntu_22_04/libsz2: 1.0.6-1
   ubuntu_22_04/libtasn1-6: 4.18.0-4ubuntu0.1
   ubuntu_22_04/libtiff5: 4.3.0-6ubuntu0.10
   ubuntu_22_04/libtinfo6: 6.3-2ubuntu0.1
   ubuntu_22_04/libtirpc-common: 1.3.2-2ubuntu0.1
   ubuntu_22_04/libtirpc3: 1.3.2-2ubuntu0.1
-  ubuntu_22_04/libudev1: 249.11-0ubuntu3.12
+  ubuntu_22_04/libudev1: 249.11-0ubuntu3.15
   ubuntu_22_04/libunistring2: 1.0-1
   ubuntu_22_04/libunwind8: 1.3.2-2build2.1
   ubuntu_22_04/liburiparser1: 0.9.6+dfsg-1
@@ -408,8 +408,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.13
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.13
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.14
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.14
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
   ubuntu_22_04/apache2: 2.4.52-1ubuntu4.13
@@ -447,7 +447,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/iso-codes: 4.9.0-1
   ubuntu_22_04/libacl1: 2.3.1-1
   ubuntu_22_04/libaec0: 1.0.6-1
-  ubuntu_22_04/libaom3: 3.3.0-1
+  ubuntu_22_04/libaom3: 3.3.0-1ubuntu0.1
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_22_04/libapparmor1: 3.0.4-2ubuntu2.4
   ubuntu_22_04/libapr1: 1.7.0-8ubuntu0.22.04.2
@@ -699,14 +699,14 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libssl3: 3.0.2-0ubuntu1.19
   ubuntu_22_04/libstdc++6: 12.3.0-1ubuntu1~22.04
   ubuntu_22_04/libsuperlu5: 5.3.0+dfsg1-2
-  ubuntu_22_04/libsystemd0: 249.11-0ubuntu3.12
+  ubuntu_22_04/libsystemd0: 249.11-0ubuntu3.15
   ubuntu_22_04/libsz2: 1.0.6-1
   ubuntu_22_04/libtasn1-6: 4.18.0-4ubuntu0.1
   ubuntu_22_04/libtiff5: 4.3.0-6ubuntu0.10
   ubuntu_22_04/libtinfo6: 6.3-2ubuntu0.1
   ubuntu_22_04/libtirpc-common: 1.3.2-2ubuntu0.1
   ubuntu_22_04/libtirpc3: 1.3.2-2ubuntu0.1
-  ubuntu_22_04/libudev1: 249.11-0ubuntu3.12
+  ubuntu_22_04/libudev1: 249.11-0ubuntu3.15
   ubuntu_22_04/libunistring2: 1.0-1
   ubuntu_22_04/libunwind8: 1.3.2-2build2.1
   ubuntu_22_04/liburiparser1: 0.9.6+dfsg-1
@@ -832,5 +832,5 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/xfonts-scalable: 1:1.0.3-1.2ubuntu1
   ubuntu_22_04/xfonts-utils: 1:7.7+6build2
   ubuntu_22_04/xkb-data: 2.33-1
-  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.13
-  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.13
+  ubuntu_22_04/xserver-common: 2:21.1.4-2ubuntu1.7~22.04.14
+  ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.14
