@@ -1,5 +1,5 @@
 FROM ghcr.io/osgeo/gdal:ubuntu-small-3.10.2 AS base-all
-LABEL maintainer Camptocamp "info@camptocamp.com"
+LABEL org.opencontainers.image.authors="Camptocamp <info@camptocamp.com>"
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
 RUN --mount=type=cache,target=/var/lib/apt/lists \
