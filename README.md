@@ -13,6 +13,8 @@ docker run --detach --publish=8380:80 --volume=${PWD}/qgis:/etc/qgisserver campt
 With the previous command, you'll get to your server with this URL:
 http://localhost:8380/?MAP=/etc/qgisserver/project.qgz&SERVICE=WMS&REQUEST=GetCapabilities
 
+Note: When we run the container as root the open port will be `80`, and it will be `8080` otherwise.
+
 ## Apache Tunings
 
 You can use the following variables (`-e` option in `docker run`):
