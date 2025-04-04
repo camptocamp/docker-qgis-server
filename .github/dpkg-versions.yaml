@@ -28,7 +28,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -147,7 +147,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
-  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1build0.1
+  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
@@ -400,7 +400,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/gdb: 15.0.50.20240403-0ubuntu1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -523,7 +523,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
-  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1build0.1
+  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
@@ -779,7 +779,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -899,7 +899,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
-  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1build0.1
+  ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
