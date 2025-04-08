@@ -1,15 +1,15 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.14
   ubuntu_22_04/apt: 2.4.13
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
-  ubuntu_22_04/binutils: 2.38-4ubuntu2.7
-  ubuntu_22_04/binutils-common: 2.38-4ubuntu2.7
-  ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.7
+  ubuntu_22_04/binutils: 2.38-4ubuntu2.8
+  ubuntu_22_04/binutils-common: 2.38-4ubuntu2.8
+  ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.8
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
   ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
@@ -52,7 +52,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libavahi-client3: 0.8-5ubuntu5.2
   ubuntu_22_04/libavahi-common-data: 0.8-5ubuntu5.2
   ubuntu_22_04/libavahi-common3: 0.8-5ubuntu5.2
-  ubuntu_22_04/libbinutils: 2.38-4ubuntu2.7
+  ubuntu_22_04/libbinutils: 2.38-4ubuntu2.8
   ubuntu_22_04/libblas3: 3.10.0-2ubuntu1
   ubuntu_22_04/libblkid1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libblosc1: 1.21.1+ds2-2
@@ -68,8 +68,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libcharls2: 2.3.4-1
   ubuntu_22_04/libcom-err2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
-  ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.7
-  ubuntu_22_04/libctf0: 2.38-4ubuntu2.7
+  ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.8
+  ubuntu_22_04/libctf0: 2.38-4ubuntu2.8
   ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.11
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.20
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.20
@@ -94,7 +94,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libelf1: 0.186-1ubuntu0.1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
-  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
+  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.6
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
   ubuntu_22_04/libffi8: 3.4.2-4
@@ -412,16 +412,16 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.14
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.13
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.13
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.14
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.14
   ubuntu_22_04/apt: 2.4.13
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
-  ubuntu_22_04/binutils: 2.38-4ubuntu2.7
-  ubuntu_22_04/binutils-common: 2.38-4ubuntu2.7
-  ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.7
+  ubuntu_22_04/binutils: 2.38-4ubuntu2.8
+  ubuntu_22_04/binutils-common: 2.38-4ubuntu2.8
+  ubuntu_22_04/binutils-x86-64-linux-gnu: 2.38-4ubuntu2.8
   ubuntu_22_04/bsdutils: 1:2.37.2-4ubuntu3.4
   ubuntu_22_04/ca-certificates: 20240203~22.04.1
   ubuntu_22_04/coreutils: 8.32-4.1ubuntu1.2
@@ -465,7 +465,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libavahi-client3: 0.8-5ubuntu5.2
   ubuntu_22_04/libavahi-common-data: 0.8-5ubuntu5.2
   ubuntu_22_04/libavahi-common3: 0.8-5ubuntu5.2
-  ubuntu_22_04/libbinutils: 2.38-4ubuntu2.7
+  ubuntu_22_04/libbinutils: 2.38-4ubuntu2.8
   ubuntu_22_04/libblas3: 3.10.0-2ubuntu1
   ubuntu_22_04/libblkid1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libblosc1: 1.21.1+ds2-2
@@ -481,8 +481,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libcharls2: 2.3.4-1
   ubuntu_22_04/libcom-err2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
-  ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.7
-  ubuntu_22_04/libctf0: 2.38-4ubuntu2.7
+  ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.8
+  ubuntu_22_04/libctf0: 2.38-4ubuntu2.8
   ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.11
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.20
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.20
@@ -507,7 +507,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libelf1: 0.186-1ubuntu0.1
   ubuntu_22_04/libevdev2: 1.12.1+dfsg-1
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
-  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.5
+  ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.6
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
   ubuntu_22_04/libffi8: 3.4.2-4
