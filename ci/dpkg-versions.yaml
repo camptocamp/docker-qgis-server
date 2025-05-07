@@ -96,7 +96,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
   ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.6
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
-  ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
+  ubuntu_22_04/libfcgi0ldbl: 2.4.2-2ubuntu0.1
   ubuntu_22_04/libffi8: 3.4.2-4
   ubuntu_22_04/libflac8: 1.3.3-2ubuntu0.2
   ubuntu_22_04/libfontconfig1: 2.13.1-4.2ubuntu5
@@ -174,7 +174,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.41-0ubuntu0.22.04.1
+  ubuntu_22_04/libmysqlclient21: 8.0.42-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
@@ -509,7 +509,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libexiv2-27: 0.27.5-3ubuntu1
   ubuntu_22_04/libexpat1: 2.4.7-1ubuntu0.6
   ubuntu_22_04/libext2fs2: 1.46.5-2ubuntu1.2
-  ubuntu_22_04/libfcgi0ldbl: 2.4.2-2build2
+  ubuntu_22_04/libfcgi0ldbl: 2.4.2-2ubuntu0.1
   ubuntu_22_04/libffi8: 3.4.2-4
   ubuntu_22_04/libflac8: 1.3.3-2ubuntu0.2
   ubuntu_22_04/libfontconfig1: 2.13.1-4.2ubuntu5
@@ -587,7 +587,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.41-0ubuntu0.22.04.1
+  ubuntu_22_04/libmysqlclient21: 8.0.42-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
