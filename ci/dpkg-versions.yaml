@@ -273,7 +273,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libsndfile1: 1.0.31-2ubuntu0.2
   ubuntu_22_04/libspatialindex6: 1.9.3-2
   ubuntu_22_04/libspatialite7: 5.0.1-2build2
-  ubuntu_22_04/libsqlite3-0: 3.37.2-2ubuntu0.3
+  ubuntu_22_04/libsqlite3-0: 3.37.2-2ubuntu0.4
   ubuntu_22_04/libss2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libssh-4: 0.9.6-2ubuntu0.22.04.3
   ubuntu_22_04/libssl3: 3.0.2-0ubuntu1.19
@@ -693,7 +693,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libsndfile1: 1.0.31-2ubuntu0.2
   ubuntu_22_04/libspatialindex6: 1.9.3-2
   ubuntu_22_04/libspatialite7: 5.0.1-2build2
-  ubuntu_22_04/libsqlite3-0: 3.37.2-2ubuntu0.3
+  ubuntu_22_04/libsqlite3-0: 3.37.2-2ubuntu0.4
   ubuntu_22_04/libss2: 1.46.5-2ubuntu1.2
   ubuntu_22_04/libssh-4: 0.9.6-2ubuntu0.22.04.3
   ubuntu_22_04/libssl3: 3.0.2-0ubuntu1.19
