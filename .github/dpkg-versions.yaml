@@ -107,7 +107,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.2
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -482,7 +482,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.2
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -859,7 +859,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.2
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
