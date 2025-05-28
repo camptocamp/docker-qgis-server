@@ -119,7 +119,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libgraphite2-3: 1.3.14-2build1
   ubuntu_24_04/libgsl27: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgslcblas0: 2.7.1+dfsg-6ubuntu2
-  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.2
   ubuntu_24_04/libgstreamer1.0-0: 1.24.2-1ubuntu0.1
   ubuntu_24_04/libgudev-1.0-0: 1:238-5ubuntu1
@@ -130,16 +130,16 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libicu74: 74.2-1ubuntu3.1
   ubuntu_24_04/libidn2-0: 2.3.7-2build1.1
   ubuntu_24_04/libimagequant0: 2.18.0-1build1
-  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3
-  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3
+  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3.1
+  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3.1
   ubuntu_24_04/libjansson4: 2.14-2build2
   ubuntu_24_04/libjbig0: 2.1-6.1ubuntu2
   ubuntu_24_04/libjpeg-turbo8: 2.1.5-2ubuntu2
   ubuntu_24_04/libjpeg8: 8c-2ubuntu11
-  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkeyutils1: 1.6.3-3build1
-  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.5
-  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
@@ -352,7 +352,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/spawn-fcgi: 1.6.4-2
   ubuntu_24_04/sysvinit-utils: 3.08-6ubuntu3
   ubuntu_24_04/tar: 1.35+dfsg-3build1
-  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04
+  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04.1
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
@@ -494,7 +494,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libgraphite2-3: 1.3.14-2build1
   ubuntu_24_04/libgsl27: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgslcblas0: 2.7.1+dfsg-6ubuntu2
-  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.2
   ubuntu_24_04/libgstreamer1.0-0: 1.24.2-1ubuntu0.1
   ubuntu_24_04/libgudev-1.0-0: 1:238-5ubuntu1
@@ -505,17 +505,17 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libicu74: 74.2-1ubuntu3.1
   ubuntu_24_04/libidn2-0: 2.3.7-2build1.1
   ubuntu_24_04/libimagequant0: 2.18.0-1build1
-  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3
-  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3
+  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3.1
+  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3.1
   ubuntu_24_04/libipt2: 2.0.6-1build1
   ubuntu_24_04/libjansson4: 2.14-2build2
   ubuntu_24_04/libjbig0: 2.1-6.1ubuntu2
   ubuntu_24_04/libjpeg-turbo8: 2.1.5-2ubuntu2
   ubuntu_24_04/libjpeg8: 8c-2ubuntu11
-  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkeyutils1: 1.6.3-3build1
-  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.5
-  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
@@ -731,7 +731,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/spawn-fcgi: 1.6.4-2
   ubuntu_24_04/sysvinit-utils: 3.08-6ubuntu3
   ubuntu_24_04/tar: 1.35+dfsg-3build1
-  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04
+  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04.1
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/ucf: 3.0043+nmu1
   ubuntu_24_04/unminimize: 0.2.1
@@ -871,7 +871,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgraphite2-3: 1.3.14-2build1
   ubuntu_24_04/libgsl27: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgslcblas0: 2.7.1+dfsg-6ubuntu2
-  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.2
   ubuntu_24_04/libgstreamer1.0-0: 1.24.2-1ubuntu0.1
   ubuntu_24_04/libgudev-1.0-0: 1:238-5ubuntu1
@@ -882,16 +882,16 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libicu74: 74.2-1ubuntu3.1
   ubuntu_24_04/libidn2-0: 2.3.7-2build1.1
   ubuntu_24_04/libimagequant0: 2.18.0-1build1
-  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3
-  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3
+  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3.1
+  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3.1
   ubuntu_24_04/libjansson4: 2.14-2build2
   ubuntu_24_04/libjbig0: 2.1-6.1ubuntu2
   ubuntu_24_04/libjpeg-turbo8: 2.1.5-2ubuntu2
   ubuntu_24_04/libjpeg8: 8c-2ubuntu11
-  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkeyutils1: 1.6.3-3build1
-  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.5
-  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.5
+  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
@@ -1115,7 +1115,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/spawn-fcgi: 1.6.4-2
   ubuntu_24_04/sysvinit-utils: 3.08-6ubuntu3
   ubuntu_24_04/tar: 1.35+dfsg-3build1
-  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04
+  ubuntu_24_04/tzdata: 2025b-0ubuntu0.24.04.1
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
