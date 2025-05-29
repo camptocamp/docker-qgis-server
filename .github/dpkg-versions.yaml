@@ -4,7 +4,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.6
-  ubuntu_24_04/apt: 2.7.14build2
+  ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
   ubuntu_24_04/bash-completion: 1:2.11-8
@@ -41,7 +41,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libapt-pkg6.0t64: 2.7.14build2
+  ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassuan0: 2.5.6-1build1
   ubuntu_24_04/libasyncns0: 0.8-6build4
   ubuntu_24_04/libattr1: 1:2.5.2-1build1.1
@@ -333,7 +333,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.1
-  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-pyqt5: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qsci: 2.14.1+dfsg-1build3
   ubuntu_24_04/python3-pyqt5.qtmultimedia: 5.15.10+dfsg-1build6
@@ -341,7 +341,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/python3-pyqt5.qtserialport: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qtsql: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
-  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
   ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.5
   ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.5
@@ -375,7 +375,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.6
-  ubuntu_24_04/apt: 2.7.14build2
+  ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
   ubuntu_24_04/bash-completion: 1:2.11-8
@@ -413,7 +413,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libapt-pkg6.0t64: 2.7.14build2
+  ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassuan0: 2.5.6-1build1
   ubuntu_24_04/libasyncns0: 0.8-6build4
   ubuntu_24_04/libattr1: 1:2.5.2-1build1.1
@@ -712,7 +712,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.1
-  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-pyqt5: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qsci: 2.14.1+dfsg-1build3
   ubuntu_24_04/python3-pyqt5.qtmultimedia: 5.15.10+dfsg-1build6
@@ -720,7 +720,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/python3-pyqt5.qtserialport: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qtsql: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
-  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
   ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.5
   ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.5
@@ -755,7 +755,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.6
   ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.6
-  ubuntu_24_04/apt: 2.7.14build2
+  ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
   ubuntu_24_04/bash-completion: 1:2.11-8
@@ -792,7 +792,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
   ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libapt-pkg6.0t64: 2.7.14build2
+  ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassimp5: 5.3.1+ds-2build1
   ubuntu_24_04/libassuan0: 2.5.6-1build1
   ubuntu_24_04/libasyncns0: 0.8-6build4
@@ -1092,7 +1092,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.1
-  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-pkg-resources: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-pyqt5: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qsci: 2.14.1+dfsg-1build3
   ubuntu_24_04/python3-pyqt5.qtmultimedia: 5.15.10+dfsg-1build6
@@ -1100,7 +1100,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/python3-pyqt5.qtserialport: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.qtsql: 5.15.10+dfsg-1build6
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
-  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.1
+  ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
   ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.5
   ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.5
