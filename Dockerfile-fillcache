@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-small-3.10.3
+FROM ghcr.io/osgeo/gdal:ubuntu-small-3.11.0
 
 COPY cache/.ccache /.ccache
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
