@@ -103,6 +103,9 @@ jobs:
           docker cp cache:/.ccache /tmp/docker/cache
           docker stop cache
 
+      - name: Cleanup
+        run: docker buildx prune --all --force
+
       - run: make run
       - run: (cd acceptance_tests && c2cciutils-docker-logs)
         if: always()
