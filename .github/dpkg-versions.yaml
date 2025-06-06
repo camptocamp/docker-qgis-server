@@ -204,10 +204,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libqt5positioning5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5positioningquick5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5printsupport5t64: 5.15.13+dfsg-1ubuntu1
-  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1
+  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1ubuntu0.1
   ubuntu_24_04/libqt5script5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5sensors5: 5.15.13-1
   ubuntu_24_04/libqt5serialport5: 5.15.13-1
@@ -581,10 +581,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libqt5positioning5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5positioningquick5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5printsupport5t64: 5.15.13+dfsg-1ubuntu1
-  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1
+  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1ubuntu0.1
   ubuntu_24_04/libqt5script5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5sensors5: 5.15.13-1
   ubuntu_24_04/libqt5serialport5: 5.15.13-1
@@ -964,10 +964,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libqt5positioning5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5positioningquick5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5printsupport5t64: 5.15.13+dfsg-1ubuntu1
-  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1
-  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1
+  ubuntu_24_04/libqt5qml5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5qmlmodels5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quick5: 5.15.13+dfsg-1ubuntu0.1
+  ubuntu_24_04/libqt5quickwidgets5: 5.15.13+dfsg-1ubuntu0.1
   ubuntu_24_04/libqt5script5: 5.15.13+dfsg-1
   ubuntu_24_04/libqt5sensors5: 5.15.13-1
   ubuntu_24_04/libqt5serialport5: 5.15.13-1
