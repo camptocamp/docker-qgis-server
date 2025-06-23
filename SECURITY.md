@@ -5,9 +5,9 @@
 | Version       | Supported Until | Alternate Tag    | Info                          |
 | ------------- | --------------- | ---------------- | ----------------------------- |
 | <= 3.26       | Unsupported     |                  |                               |
-| 3.28          | 23/06/2026      |                  |                               |
+| 3.28          | Best effort     |                  |                               |
 | 3.28-gdal3.6  | Unsupported     |                  | Version based on Ubuntu 22.04 |
-| 3.28-gdal3.7  | 23/06/2026      |                  | Version based on Ubuntu 22.04 |
+| 3.28-gdal3.7  | Best effort     |                  | Version based on Ubuntu 22.04 |
 | 3.28-gdal3.8  | Best effort     | 3.28             | Version based on Ubuntu 22.04 |
 | 3.30          | Unsupported     |                  |                               |
 | 3.32          | Unsupported     |                  |                               |
@@ -20,8 +20,10 @@
 | 3.38-gdal3.8  | Unsupported     | 3.38             | Version based on Ubuntu 22.04 |
 | 3.40          | Best effort     |                  |                               |
 | 3.40-gdal3.10 | Best effort     | 3.40, ltr        | Version based on Ubuntu 24.04 |
-| 3.42          | Best effort     |                  |                               |
-| 3.42-gdal3.10 | Best effort     | 3.42, lr, latest | Version based on Ubuntu 24.04 |
+| 3.42          | Unsupported     |                  |                               |
+| 3.42-gdal3.10 | Unsupported     | 3.42             | Version based on Ubuntu 24.04 |
+| 3.44          | Best effort     |                  |                               |
+| 3.44-gdal3.10 | Best effort     | 3.44, lr, latest | Version based on Ubuntu 24.04 |
 
 The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
 
