@@ -11,7 +11,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/binutils: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-common: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-x86-64-linux-gnu: 2.42-4ubuntu2.5
-  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.2
+  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.3
   ubuntu_24_04/ca-certificates: '20240203'
   ubuntu_24_04/coreutils: 9.4-3ubuntu6
   ubuntu_24_04/curl: 8.5.0-2ubuntu10.6
@@ -28,7 +28,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -52,7 +52,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libavahi-common3: 0.8-13ubuntu6
   ubuntu_24_04/libbinutils: 2.42-4ubuntu2.5
   ubuntu_24_04/libblas3: 3.12.0-3build1.1
-  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
@@ -151,7 +151,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
-  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libmp3lame0: 3.100-6build1
   ubuntu_24_04/libmpg123-0t64: 1.32.5-1ubuntu1.1
   ubuntu_24_04/libmtdev1t64: 1.1.6-1.1build1
@@ -236,13 +236,13 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libsframe1: 2.42-4ubuntu2.5
   ubuntu_24_04/libsharpyuv0: 1.3.2-0.4build3
   ubuntu_24_04/libsm6: 2:1.2.3-1build3
-  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libsndfile1: 1.2.2-1ubuntu5.24.04.1
   ubuntu_24_04/libspatialindex6: 1.9.3-3build1
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
   ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
-  ubuntu_24_04/libssh-4: 0.10.6-2build2
+  ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
   ubuntu_24_04/libstdc++6: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libsystemd0: 255.4-1ubuntu8.8
@@ -252,7 +252,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libudev1: 255.4-1ubuntu8.8
   ubuntu_24_04/libunistring5: 1.1-2build1.1
   ubuntu_24_04/libunwind8: 1.6.2-3build1.1
-  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libvorbis0a: 1.3.7-1build3
   ubuntu_24_04/libvorbisenc2: 1.3.7-1build3
   ubuntu_24_04/libvulkan1: 1.3.275.0-1build1
@@ -315,7 +315,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
   ubuntu_24_04/mesa-libgallium: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/mount: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
   ubuntu_24_04/netbase: '6.4'
@@ -356,7 +356,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
-  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.3
   ubuntu_24_04/x11-common: 1:7.7+23ubuntu3
   ubuntu_24_04/x11-xkb-utils: 7.7+8build2
   ubuntu_24_04/xauth: 1:1.1.2-1build1
@@ -382,7 +382,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/binutils: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-common: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-x86-64-linux-gnu: 2.42-4ubuntu2.5
-  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.2
+  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.3
   ubuntu_24_04/ca-certificates: '20240203'
   ubuntu_24_04/coreutils: 9.4-3ubuntu6
   ubuntu_24_04/curl: 8.5.0-2ubuntu10.6
@@ -400,7 +400,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/gdb: 15.0.50.20240403-0ubuntu1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -425,7 +425,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libbabeltrace1: 1.5.11-3build3
   ubuntu_24_04/libbinutils: 2.42-4ubuntu2.5
   ubuntu_24_04/libblas3: 3.12.0-3build1.1
-  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
@@ -527,7 +527,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
-  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libmp3lame0: 3.100-6build1
   ubuntu_24_04/libmpfr6: 4.2.1-1build1.1
   ubuntu_24_04/libmpg123-0t64: 1.32.5-1ubuntu1.1
@@ -613,7 +613,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libsframe1: 2.42-4ubuntu2.5
   ubuntu_24_04/libsharpyuv0: 1.3.2-0.4build3
   ubuntu_24_04/libsm6: 2:1.2.3-1build3
-  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libsndfile1: 1.2.2-1ubuntu5.24.04.1
   ubuntu_24_04/libsource-highlight-common: 3.1.9-4.3build1
   ubuntu_24_04/libsource-highlight4t64: 3.1.9-4.3build1
@@ -621,7 +621,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
   ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
-  ubuntu_24_04/libssh-4: 0.10.6-2build2
+  ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
   ubuntu_24_04/libstdc++6: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libsystemd0: 255.4-1ubuntu8.8
@@ -631,7 +631,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libudev1: 255.4-1ubuntu8.8
   ubuntu_24_04/libunistring5: 1.1-2build1.1
   ubuntu_24_04/libunwind8: 1.6.2-3build1.1
-  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libvorbis0a: 1.3.7-1build3
   ubuntu_24_04/libvorbisenc2: 1.3.7-1build3
   ubuntu_24_04/libvulkan1: 1.3.275.0-1build1
@@ -694,7 +694,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
   ubuntu_24_04/mesa-libgallium: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/mount: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
   ubuntu_24_04/netbase: '6.4'
@@ -736,7 +736,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/ucf: 3.0043+nmu1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
-  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.3
   ubuntu_24_04/x11-common: 1:7.7+23ubuntu3
   ubuntu_24_04/x11-xkb-utils: 7.7+8build2
   ubuntu_24_04/xauth: 1:1.1.2-1build1
@@ -762,7 +762,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/binutils: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-common: 2.42-4ubuntu2.5
   ubuntu_24_04/binutils-x86-64-linux-gnu: 2.42-4ubuntu2.5
-  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.2
+  ubuntu_24_04/bsdutils: 1:2.39.3-9ubuntu6.3
   ubuntu_24_04/ca-certificates: '20240203'
   ubuntu_24_04/coreutils: 9.4-3ubuntu6
   ubuntu_24_04/curl: 8.5.0-2ubuntu10.6
@@ -779,7 +779,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.2
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -804,7 +804,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libavahi-common3: 0.8-13ubuntu6
   ubuntu_24_04/libbinutils: 2.42-4ubuntu2.5
   ubuntu_24_04/libblas3: 3.12.0-3build1.1
-  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libblkid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
@@ -903,7 +903,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libmd0: 1.1.0-2build1.1
   ubuntu_24_04/libmd4c0: 0.4.8-1build1
   ubuntu_24_04/libminizip1t64: 1:1.3.dfsg-3.1ubuntu2.1
-  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libmount1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libmp3lame0: 3.100-6build1
   ubuntu_24_04/libmpg123-0t64: 1.32.5-1ubuntu1.1
   ubuntu_24_04/libmtdev1t64: 1.1.6-1.1build1
@@ -996,13 +996,13 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libsframe1: 2.42-4ubuntu2.5
   ubuntu_24_04/libsharpyuv0: 1.3.2-0.4build3
   ubuntu_24_04/libsm6: 2:1.2.3-1build3
-  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libsmartcols1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libsndfile1: 1.2.2-1ubuntu5.24.04.1
   ubuntu_24_04/libspatialindex6: 1.9.3-3build1
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
   ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
-  ubuntu_24_04/libssh-4: 0.10.6-2build2
+  ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
   ubuntu_24_04/libstdc++6: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libsystemd0: 255.4-1ubuntu8.8
@@ -1012,7 +1012,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libudev1: 255.4-1ubuntu8.8
   ubuntu_24_04/libunistring5: 1.1-2build1.1
   ubuntu_24_04/libunwind8: 1.6.2-3build1.1
-  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/libuuid1: 2.39.3-9ubuntu6.3
   ubuntu_24_04/libvorbis0a: 1.3.7-1build3
   ubuntu_24_04/libvorbisenc2: 1.3.7-1build3
   ubuntu_24_04/libvulkan1: 1.3.275.0-1build1
@@ -1074,7 +1074,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
   ubuntu_24_04/mesa-libgallium: 24.2.8-1ubuntu1~24.04.1
-  ubuntu_24_04/mount: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
   ubuntu_24_04/netbase: '6.4'
@@ -1119,7 +1119,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
-  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.2
+  ubuntu_24_04/util-linux: 2.39.3-9ubuntu6.3
   ubuntu_24_04/x11-common: 1:7.7+23ubuntu3
   ubuntu_24_04/x11-xkb-utils: 7.7+8build2
   ubuntu_24_04/xauth: 1:1.1.2-1build1
