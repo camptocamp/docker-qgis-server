@@ -209,8 +209,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpq5: 14.18-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
-  ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.2
-  ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.2
+  ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.4
+  ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.4
   ubuntu_22_04/libpsl5: 0.21.0-1.2build2
   ubuntu_22_04/libpulse0: 1:15.99.1+dfsg1-1ubuntu2.2
   ubuntu_22_04/libpython3-stdlib: 3.10.6-1~22.04.1
@@ -622,8 +622,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpq5: 14.18-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
-  ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.2
-  ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.2
+  ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.4
+  ubuntu_22_04/libprotobuf23: 3.12.4-1ubuntu7.22.04.4
   ubuntu_22_04/libpsl5: 0.21.0-1.2build2
   ubuntu_22_04/libpulse0: 1:15.99.1+dfsg1-1ubuntu2.2
   ubuntu_22_04/libpython3-stdlib: 3.10.6-1~22.04.1
