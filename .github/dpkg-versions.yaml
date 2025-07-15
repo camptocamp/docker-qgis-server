@@ -56,8 +56,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.4
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.4
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -112,7 +112,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
-  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.3
+  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
   ubuntu_24_04/libgomp1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgpg-error0: 1.47-3build2.1
   ubuntu_24_04/libgprofng0: 2.42-4ubuntu2.5
@@ -429,8 +429,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.4
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.4
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -487,7 +487,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
-  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.3
+  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
   ubuntu_24_04/libgomp1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgpg-error0: 1.47-3build2.1
   ubuntu_24_04/libgprofng0: 2.42-4ubuntu2.5
@@ -808,8 +808,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.4
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.4
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -864,7 +864,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libglx-mesa0: 24.2.8-1ubuntu1~24.04.1
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
-  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.3
+  ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
   ubuntu_24_04/libgomp1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgpg-error0: 1.47-3build2.1
   ubuntu_24_04/libgprofng0: 2.42-4ubuntu2.5
