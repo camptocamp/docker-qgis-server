@@ -240,7 +240,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libsndfile1: 1.2.2-1ubuntu5.24.04.1
   ubuntu_24_04/libspatialindex6: 1.9.3-3build1
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
-  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
+  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.4
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
@@ -619,7 +619,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libsource-highlight4t64: 3.1.9-4.3build1
   ubuntu_24_04/libspatialindex6: 1.9.3-3build1
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
-  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
+  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.4
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
@@ -1000,7 +1000,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libsndfile1: 1.2.2-1ubuntu5.24.04.1
   ubuntu_24_04/libspatialindex6: 1.9.3-3build1
   ubuntu_24_04/libspatialite8t64: 5.1.0-3build1
-  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.3
+  ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.4
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.1
   ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.5
