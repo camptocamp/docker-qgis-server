@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.7
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.8
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
@@ -371,10 +371,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.4
 camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.7
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.8
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
@@ -751,10 +751,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.4
 camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.7
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.7
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.8
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.8
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
