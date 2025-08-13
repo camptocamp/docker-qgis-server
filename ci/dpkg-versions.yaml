@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.15
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.16
   ubuntu_22_04/apt: 2.4.14
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -174,7 +174,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.42-0ubuntu0.22.04.2
+  ubuntu_22_04/libmysqlclient21: 8.0.43-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
@@ -412,10 +412,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/xvfb: 2:21.1.4-2ubuntu1.7~22.04.15
 camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/adduser: 3.118ubuntu5
-  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.15
-  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.15
+  ubuntu_22_04/apache2: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-bin: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-data: 2.4.52-1ubuntu4.16
+  ubuntu_22_04/apache2-utils: 2.4.52-1ubuntu4.16
   ubuntu_22_04/apt: 2.4.14
   ubuntu_22_04/base-passwd: 3.5.52build1
   ubuntu_22_04/bash: 5.1-6ubuntu1.1
@@ -587,7 +587,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libmount1: 2.37.2-4ubuntu3.4
   ubuntu_22_04/libmpdec3: 2.5.1-2build2
   ubuntu_22_04/libmtdev1: 1.1.6-1build4
-  ubuntu_22_04/libmysqlclient21: 8.0.42-0ubuntu0.22.04.2
+  ubuntu_22_04/libmysqlclient21: 8.0.43-0ubuntu0.22.04.1
   ubuntu_22_04/libncurses6: 6.3-2ubuntu0.1
   ubuntu_22_04/libncursesw6: 6.3-2ubuntu0.1
   ubuntu_22_04/libnetcdf19: 1:4.8.1-1
