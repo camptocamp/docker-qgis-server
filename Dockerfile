@@ -231,6 +231,7 @@ ENV QGIS_SERVER_LOG_STDERR=1 \
     PYTHONPATH=/usr/local/share/qgis/python/:/var/www/plugins/
 
 COPY --from=builder-server /usr/local/bin /usr/local/bin/
+COPY --from=builder-server /usr/local/www/cgi-bin/ /usr/local/www/cgi-bin/
 COPY --from=builder-server /usr/local/lib /usr/local/lib/
 COPY --from=builder-server /usr/local/share/qgis /usr/local/share/qgis
 COPY --from=builder-server /src/build/output/data/resources/server/api/ogc/static/landingpage \
