@@ -13,7 +13,7 @@
     'github>camptocamp/gs-renovate-config-preset:own.json5#1.4.2',
     'github>camptocamp/gs-renovate-config-preset:security.json5#1.4.2',
   ],
-  baseBranches: [
+  baseBranchPatterns: [
     '3.16',
     '3.22',
     '3.28-gdal3.6',
