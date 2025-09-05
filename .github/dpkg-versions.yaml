@@ -77,11 +77,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libdrm-amdgpu1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-common: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-intel1: 2.4.122-1~ubuntu0.24.04.1
-  ubuntu_24_04/libdrm-radeon1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm2: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdw1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libedit2: 3.1-20230828-1build1
-  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libegl1: 1.7.0-1build1
   ubuntu_24_04/libelf1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libevdev2: 1.13.1+dfsg-1build1
@@ -96,7 +95,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libfreetype6: 2.13.2+dfsg-1build3
   ubuntu_24_04/libfreexl1: 2.0.0-1build2
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
-  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgcrypt20: 1.10.3-2build1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
@@ -105,11 +104,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libgeos3.12.1t64: 3.12.1-3build1
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
-  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.1
-  ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
+  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
-  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
   ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
@@ -144,7 +142,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
-  ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
+  ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
   ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
@@ -269,7 +267,6 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libx11-xcb1: 2:1.8.7-1build1
   ubuntu_24_04/libxau6: 1:1.0.9-1build6
   ubuntu_24_04/libxaw7: 2:1.0.14-1build2
-  ubuntu_24_04/libxcb-dri2-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-dri3-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-glx0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-icccm4: 0.4.1-1.1build3
@@ -291,7 +288,6 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libxdmcp6: 1:1.1.3-0ubuntu6
   ubuntu_24_04/libxerces-c3.2t64: 3.2.4+debian-1.2ubuntu2
   ubuntu_24_04/libxext6: 2:1.3.4-1build2
-  ubuntu_24_04/libxfixes3: 1:6.0.0-2build1
   ubuntu_24_04/libxfont2: 1:2.0.6-1build1
   ubuntu_24_04/libxkbcommon-x11-0: 1.6.0-1build1
   ubuntu_24_04/libxkbcommon0: 1.6.0-1build1
@@ -314,7 +310,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/logsave: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
-  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
@@ -452,11 +448,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libdrm-amdgpu1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-common: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-intel1: 2.4.122-1~ubuntu0.24.04.1
-  ubuntu_24_04/libdrm-radeon1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm2: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdw1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libedit2: 3.1-20230828-1build1
-  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libegl1: 1.7.0-1build1
   ubuntu_24_04/libelf1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libevdev2: 1.13.1+dfsg-1build1
@@ -471,7 +466,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libfreetype6: 2.13.2+dfsg-1build3
   ubuntu_24_04/libfreexl1: 2.0.0-1build2
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
-  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgcrypt20: 1.10.3-2build1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
@@ -480,11 +475,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libgeos3.12.1t64: 3.12.1-3build1
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
-  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.1
-  ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
+  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
-  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
   ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
@@ -520,7 +514,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
-  ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
+  ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
   ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
@@ -648,7 +642,6 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libx11-xcb1: 2:1.8.7-1build1
   ubuntu_24_04/libxau6: 1:1.0.9-1build6
   ubuntu_24_04/libxaw7: 2:1.0.14-1build2
-  ubuntu_24_04/libxcb-dri2-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-dri3-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-glx0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-icccm4: 0.4.1-1.1build3
@@ -670,7 +663,6 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libxdmcp6: 1:1.1.3-0ubuntu6
   ubuntu_24_04/libxerces-c3.2t64: 3.2.4+debian-1.2ubuntu2
   ubuntu_24_04/libxext6: 2:1.3.4-1build2
-  ubuntu_24_04/libxfixes3: 1:6.0.0-2build1
   ubuntu_24_04/libxfont2: 1:2.0.6-1build1
   ubuntu_24_04/libxkbcommon-x11-0: 1.6.0-1build1
   ubuntu_24_04/libxkbcommon0: 1.6.0-1build1
@@ -693,7 +685,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/logsave: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
-  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
@@ -829,11 +821,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libdrm-amdgpu1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-common: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm-intel1: 2.4.122-1~ubuntu0.24.04.1
-  ubuntu_24_04/libdrm-radeon1: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdrm2: 2.4.122-1~ubuntu0.24.04.1
   ubuntu_24_04/libdw1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libedit2: 3.1-20230828-1build1
-  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libegl-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libegl1: 1.7.0-1build1
   ubuntu_24_04/libelf1t64: 0.190-1.1ubuntu0.1
   ubuntu_24_04/libevdev2: 1.13.1+dfsg-1build1
@@ -848,7 +839,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libfreetype6: 2.13.2+dfsg-1build3
   ubuntu_24_04/libfreexl1: 2.0.0-1build2
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
-  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgcrypt20: 1.10.3-2build1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
@@ -857,11 +848,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgeos3.12.1t64: 3.12.1-3build1
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
-  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.1
-  ubuntu_24_04/libglapi-mesa: 24.2.8-1ubuntu1~24.04.1
+  ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
-  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
   ubuntu_24_04/libgmp10: 2:6.3.0+dfsg-2ubuntu6.1
   ubuntu_24_04/libgnutls30t64: 3.8.3-1.1ubuntu3.4
@@ -896,7 +886,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/liblcms2-2: 2.14-2build1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
-  ubuntu_24_04/libllvm19: 1:19.1.1-1ubuntu1~24.04.2
+  ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
   ubuntu_24_04/liblua5.4-0: 5.4.6-3build2
   ubuntu_24_04/liblz4-1: 1.9.4-1build1.1
   ubuntu_24_04/liblzma5: 5.6.1+really5.4.5-1ubuntu0.2
@@ -1029,7 +1019,6 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libx11-xcb1: 2:1.8.7-1build1
   ubuntu_24_04/libxau6: 1:1.0.9-1build6
   ubuntu_24_04/libxaw7: 2:1.0.14-1build2
-  ubuntu_24_04/libxcb-dri2-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-dri3-0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-glx0: 1.15-1ubuntu2
   ubuntu_24_04/libxcb-icccm4: 0.4.1-1.1build3
@@ -1051,7 +1040,6 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libxdmcp6: 1:1.1.3-0ubuntu6
   ubuntu_24_04/libxerces-c3.2t64: 3.2.4+debian-1.2ubuntu2
   ubuntu_24_04/libxext6: 2:1.3.4-1build2
-  ubuntu_24_04/libxfixes3: 1:6.0.0-2build1
   ubuntu_24_04/libxfont2: 1:2.0.6-1build1
   ubuntu_24_04/libxkbcommon-x11-0: 1.6.0-1build1
   ubuntu_24_04/libxkbcommon0: 1.6.0-1build1
@@ -1073,7 +1061,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/logsave: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/mawk: 1.3.4.20240123-1build1
   ubuntu_24_04/media-types: 10.1.0
-  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.1
+  ubuntu_24_04/mesa-libgallium: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/mount: 2.39.3-9ubuntu6.3
   ubuntu_24_04/ncurses-base: 6.4+20240113-1ubuntu2
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2
