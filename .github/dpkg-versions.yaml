@@ -65,7 +65,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.5
   ubuntu_24_04/libctf0: 2.42-4ubuntu2.5
-  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.3
+  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.4
   ubuntu_24_04/libcurl3t64-gnutls: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libcurl4t64: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libdb5.3t64: 5.3.28+dfsg2-7
@@ -434,7 +434,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.5
   ubuntu_24_04/libctf0: 2.42-4ubuntu2.5
-  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.3
+  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.4
   ubuntu_24_04/libcurl3t64-gnutls: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libcurl4t64: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libdb5.3t64: 5.3.28+dfsg2-7
@@ -809,7 +809,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.5
   ubuntu_24_04/libctf0: 2.42-4ubuntu2.5
-  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.3
+  ubuntu_24_04/libcups2t64: 2.4.7-1.2ubuntu7.4
   ubuntu_24_04/libcurl3t64-gnutls: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libcurl4t64: 8.5.0-2ubuntu10.6
   ubuntu_24_04/libdb5.3t64: 5.3.28+dfsg2-7
