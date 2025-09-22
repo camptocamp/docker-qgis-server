@@ -56,8 +56,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -160,10 +160,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libopus0: 1.4-1build1
   ubuntu_24_04/liborc-0.4-0t64: 1:0.4.38-1ubuntu0.1
   ubuntu_24_04/libp11-kit0: 0.25.3-4ubuntu2.1
-  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.4
+  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.5
   ubuntu_24_04/libpciaccess0: 0.17-3ubuntu0.24.04.2
   ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
@@ -419,8 +419,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -527,10 +527,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libopus0: 1.4-1build1
   ubuntu_24_04/liborc-0.4-0t64: 1:0.4.38-1ubuntu0.1
   ubuntu_24_04/libp11-kit0: 0.25.3-4ubuntu2.1
-  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.4
+  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.5
   ubuntu_24_04/libpciaccess0: 0.17-3ubuntu0.24.04.2
   ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
@@ -788,8 +788,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.5
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.5
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -892,10 +892,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libopus0: 1.4-1build1
   ubuntu_24_04/liborc-0.4-0t64: 1:0.4.38-1ubuntu0.1
   ubuntu_24_04/libp11-kit0: 0.25.3-4ubuntu2.1
-  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.4
-  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.4
+  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.5
+  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.5
   ubuntu_24_04/libpciaccess0: 0.17-3ubuntu0.24.04.2
   ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
