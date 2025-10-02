@@ -30,8 +30,10 @@ jobs:
       - run: docker --version
 
       - run: df -h
-      - run: docker system prune --all --force
-      - run: sudo rm -rf /usr/local/lib/android
+      - name: Clean all docker images
+        run: docker system prune --all --force
+      # Inspired by https://github.com/jlumbroso/free-disk-space/
+      - run: sudo rm -rf /usr/local/lib/android /usr/share/dotnet "$AGENT_TOOLSDIRECTORY"
       - run: df -h
 
       - uses: actions/checkout@v4
