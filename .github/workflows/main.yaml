@@ -129,3 +129,5 @@ jobs:
           path: /tmp/dpkg-versions.patch
           retention-days: 1
         if: failure()
+
+      - run: docker system prune --all --force
