@@ -179,7 +179,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libprotobuf32t64: 3.21.12-8.2ubuntu0.2
   ubuntu_24_04/libpsl5t64: 0.21.2-1.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
-  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2
+  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
   ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.8
@@ -324,8 +324,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/procps: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/proj-data: 9.4.0-1build2
   ubuntu_24_04/python-is-python3: 3.11.4-1
-  ubuntu_24_04/python3: 3.12.3-0ubuntu2
-  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2
+  ubuntu_24_04/python3: 3.12.3-0ubuntu2.1
+  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2.1
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.3
@@ -552,7 +552,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libprotobuf32t64: 3.21.12-8.2ubuntu0.2
   ubuntu_24_04/libpsl5t64: 0.21.2-1.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
-  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2
+  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
   ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.8
@@ -699,8 +699,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/procps: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/proj-data: 9.4.0-1build2
   ubuntu_24_04/python-is-python3: 3.11.4-1
-  ubuntu_24_04/python3: 3.12.3-0ubuntu2
-  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2
+  ubuntu_24_04/python3: 3.12.3-0ubuntu2.1
+  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2.1
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.3
@@ -924,7 +924,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libpsl5t64: 0.21.2-1.1build1
   ubuntu_24_04/libpugixml1v5: 1.14-0.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
-  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2
+  ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
   ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.8
   ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.8
@@ -1075,8 +1075,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/procps: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/proj-data: 9.4.0-1build2
   ubuntu_24_04/python-is-python3: 3.11.4-1
-  ubuntu_24_04/python3: 3.12.3-0ubuntu2
-  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2
+  ubuntu_24_04/python3: 3.12.3-0ubuntu2.1
+  ubuntu_24_04/python3-minimal: 3.12.3-0ubuntu2.1
   ubuntu_24_04/python3-numpy: 1:1.26.4+ds-6ubuntu1
   ubuntu_24_04/python3-pil: 10.2.0-1ubuntu1
   ubuntu_24_04/python3-pip: 24.0+dfsg-1ubuntu1.3
