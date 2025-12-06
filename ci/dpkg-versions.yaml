@@ -70,7 +70,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.11
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.11
-  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.15
+  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.16
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.21
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.21
   ubuntu_22_04/libdav1d5: 0.9.2-1
@@ -206,7 +206,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.12
-  ubuntu_22_04/libpq5: 14.19-0ubuntu0.22.04.1
+  ubuntu_22_04/libpq5: 14.20-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
   ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.4
@@ -483,7 +483,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libcrypt1: 1:4.4.27-1
   ubuntu_22_04/libctf-nobfd0: 2.38-4ubuntu2.11
   ubuntu_22_04/libctf0: 2.38-4ubuntu2.11
-  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.15
+  ubuntu_22_04/libcups2: 2.4.1op1-1ubuntu4.16
   ubuntu_22_04/libcurl3-gnutls: 7.81.0-1ubuntu1.21
   ubuntu_22_04/libcurl4: 7.81.0-1ubuntu1.21
   ubuntu_22_04/libdav1d5: 0.9.2-1
@@ -619,7 +619,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
   ubuntu_22_04/libpng16-16: 1.6.37-3build5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.12
-  ubuntu_22_04/libpq5: 14.19-0ubuntu0.22.04.1
+  ubuntu_22_04/libpq5: 14.20-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
   ubuntu_22_04/libproj22: 8.2.1-1
   ubuntu_22_04/libprotobuf-lite23: 3.12.4-1ubuntu7.22.04.4
