@@ -28,7 +28,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -104,7 +104,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.6
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -294,7 +294,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libxrandr2: 2:1.5.2-2build1
   ubuntu_24_04/libxrender1: 1:0.9.10-1.1build1
   ubuntu_24_04/libxshmfence1: 1.3-1build5
-  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.2
+  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.3
   ubuntu_24_04/libxt6t64: 1:1.2.1-1.2build1
   ubuntu_24_04/libxxf86vm1: 1:1.1.4-1build4
   ubuntu_24_04/libxxhash0: 0.8.2-2build1
@@ -390,7 +390,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/gdb: 15.0.50.20240403-0ubuntu1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -469,7 +469,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.6
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -663,7 +663,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libxrandr2: 2:1.5.2-2build1
   ubuntu_24_04/libxrender1: 1:0.9.10-1.1build1
   ubuntu_24_04/libxshmfence1: 1.3-1build5
-  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.2
+  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.3
   ubuntu_24_04/libxt6t64: 1:1.2.1-1.2build1
   ubuntu_24_04/libxxf86vm1: 1:1.1.4-1build4
   ubuntu_24_04/libxxhash0: 0.8.2-2build1
@@ -759,7 +759,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.3
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.1
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -836,7 +836,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.4
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.6
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -1034,7 +1034,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libxrandr2: 2:1.5.2-2build1
   ubuntu_24_04/libxrender1: 1:0.9.10-1.1build1
   ubuntu_24_04/libxshmfence1: 1.3-1build5
-  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.2
+  ubuntu_24_04/libxslt1.1: 1.1.39-0exp1ubuntu0.24.04.3
   ubuntu_24_04/libxt6t64: 1:1.2.1-1.2build1
   ubuntu_24_04/libxxf86vm1: 1:1.1.4-1build4
   ubuntu_24_04/libxxhash0: 0.8.2-2build1
