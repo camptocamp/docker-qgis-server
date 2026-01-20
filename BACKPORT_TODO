@@ -1,0 +1,20 @@
+Backport of #1858 to 3.44-gdal3.10
+
+Error on cherry-picking: 56d935d69aaaffe5fc0d28554ed4123b2a51290d
+
+To continue do:
+```bash
+git fetch && \
+  git checkout ghci/backport/1858-to-3.44-gdal3.10 && \
+  git reset --hard HEAD^ && \
+  git cherry-pick 56d935d69aaaffe5fc0d28554ed4123b2a51290d
+```
+Resolve the conflict, then:
+```bash
+git add <file> && \
+  git cherry-pick --continue
+```
+When all the conflicts are resolved, push the branch:
+```bash
+git push origin ghci/backport/1858-to-3.44-gdal3.10 --force
+```
