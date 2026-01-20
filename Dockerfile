@@ -33,8 +33,7 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
     --mount=type=cache,target=/var/cache,id=var-cache,sharing=locked \
     apt-get update \
     && apt-get install --assume-yes --no-install-recommends apt-utils gnupg2 \
-    && . /etc/os-release \
-    && echo "deb https://deb.nodesource.com/node_14.x ${VERSION_CODENAME} main" > /etc/apt/sources.list.d/nodesource.list \
+    && echo "deb https://deb.nodesource.com/node_20.x nodistro main" > /etc/apt/sources.list.d/nodesource.list \
     && curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
     && apt-get update \
     && echo 'Install packages from https://github.com/qgis/QGIS/blob/<branch>/INSTALL.md \
@@ -61,7 +60,8 @@ RUN --mount=type=cache,target=/var/lib/apt/lists,id=apt-list \
         xfonts-scalable xvfb \
     && echo 'Install some more packages' \
     && LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install --assume-yes --no-install-recommends \
-        gnupg gcc clang nodejs
+        gnupg gcc clang nodejs \
+    && npm install --global yarn
 
 WORKDIR /usr/lib/
 COPY package.json package-lock.json ./
