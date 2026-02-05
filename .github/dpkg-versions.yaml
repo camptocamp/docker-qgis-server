@@ -56,8 +56,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -104,7 +104,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.7
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.8
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -169,7 +169,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.2
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.3
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.4
   ubuntu_24_04/libpq5: 16.11-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
@@ -178,9 +178,9 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libpsl5t64: 0.21.2-1.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
   ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
-  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.11
   ubuntu_24_04/libqca-qt5-2: 2.3.8-1build3
   ubuntu_24_04/libqca-qt5-2-plugins: 2.3.8-1build3
   ubuntu_24_04/libqscintilla2-qt5-15: 2.14.1+dfsg-1build3
@@ -333,8 +333,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
   ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
-  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.11
   ubuntu_24_04/readline-common: 8.2-4build1
   ubuntu_24_04/sed: 4.9-2build1
   ubuntu_24_04/sensible-utils: 0.0.22
@@ -419,8 +419,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -469,7 +469,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.7
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.8
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -536,7 +536,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.2
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.3
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.4
   ubuntu_24_04/libpq5: 16.11-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
@@ -545,9 +545,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libpsl5t64: 0.21.2-1.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
   ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
-  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.11
   ubuntu_24_04/libqca-qt5-2: 2.3.8-1build3
   ubuntu_24_04/libqca-qt5-2-plugins: 2.3.8-1build3
   ubuntu_24_04/libqscintilla2-qt5-15: 2.14.1+dfsg-1build3
@@ -702,8 +702,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
   ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
-  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.11
   ubuntu_24_04/readline-common: 8.2-4build1
   ubuntu_24_04/sed: 4.9-2build1
   ubuntu_24_04/sensible-utils: 0.0.22
@@ -788,8 +788,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1.1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.6
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.6
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
@@ -836,7 +836,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgfortran5: 14.2.0-4ubuntu2~24.04
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.0.7-0ubuntu0.24.04.2
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.7
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.8
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -901,7 +901,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.2
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.3
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.4
   ubuntu_24_04/libpq5: 16.11-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
@@ -911,9 +911,9 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libpugixml1v5: 1.14-0.1build1
   ubuntu_24_04/libpulse0: 1:16.1+dfsg1-2ubuntu10.1
   ubuntu_24_04/libpython3-stdlib: 3.12.3-0ubuntu2.1
-  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/libpython3.12-minimal: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12-stdlib: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/libpython3.12t64: 3.12.3-1ubuntu0.11
   ubuntu_24_04/libqca-qt5-2: 2.3.8-1build3
   ubuntu_24_04/libqca-qt5-2-plugins: 2.3.8-1build3
   ubuntu_24_04/libqscintilla2-qt5-15: 2.14.1+dfsg-1build3
@@ -1072,8 +1072,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/python3-pyqt5.sip: 12.13.0-1build3
   ubuntu_24_04/python3-setuptools: 68.1.2-2ubuntu1.2
   ubuntu_24_04/python3-wheel: 0.42.0-2
-  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.10
-  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.10
+  ubuntu_24_04/python3.12: 3.12.3-1ubuntu0.11
+  ubuntu_24_04/python3.12-minimal: 3.12.3-1ubuntu0.11
   ubuntu_24_04/qt3d-assimpsceneimport-plugin: 5.15.13+dfsg-1
   ubuntu_24_04/qt3d-defaultgeometryloader-plugin: 5.15.13+dfsg-1
   ubuntu_24_04/qt3d-gltfsceneio-plugin: 5.15.13+dfsg-1
