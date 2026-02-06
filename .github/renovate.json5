@@ -1,66 +1,73 @@
 {
-  "extends": [
-    "github>camptocamp/gs-renovate-config-preset:base.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:group.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:ci.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:preset.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:pre-commit.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:docker.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:json-schema.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:shellcheck.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:python.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:stabilization-branches.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:own.json5#1.4.3",
-    "github>camptocamp/gs-renovate-config-preset:security.json5#1.4.3",
+  extends: [
+    'github>camptocamp/gs-renovate-config-preset:base.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:group.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:ci.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:preset.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:pre-commit.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:docker.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:json-schema.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:shellcheck.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:python.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:stabilization-branches.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:own.json5#1.4.3',
+    'github>camptocamp/gs-renovate-config-preset:security.json5#1.4.3',
   ],
-  baseBranchPatterns: ["master", "3.28-gdal3.7", "3.28-gdal3.8", "3.34-gdal3.8", "3.40-gdal3.10", "3.44-gdal3.10"],
+  baseBranchPatterns: [
+    'master',
+    '3.28-gdal3.7',
+    '3.28-gdal3.8',
+    '3.34-gdal3.8',
+    '3.40-gdal3.10',
+    '3.44-gdal3.10',
+  ],
   packageRules: [
     /** Less strict version for Docker images */
     {
-      matchDatasources: ["docker"],
-      versioning: "loose",
+      matchDatasources: ['docker'],
+      versioning: 'loose',
     },
     /** Docker images version */
     {
-      matchDatasources: ["docker"],
-      versioning: "regex:^(?<compatibility>.*)-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$",
-      matchDepNames: ["ghcr.io/osgeo/gdal"],
+      matchDatasources: ['docker'],
+      versioning: 'regex:^(?<compatibility>.*)-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$',
+      matchDepNames: ['ghcr.io/osgeo/gdal'],
     },
     {
-      matchDatasources: ["docker"],
-      versioning: "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$",
-      matchDepNames: ["python"],
+      matchDatasources: ['docker'],
+      versioning: 'regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$',
+      matchDepNames: ['python'],
     },
     /** Accept only the patch on stabilization branches */
     {
-      matchBaseBranches: ["/^[0-9]+\\.[0-9]+$/", "/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/"],
-      matchUpdateTypes: ["major", "minor", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
+      matchBaseBranches: ['/^[0-9]+\\.[0-9]+$/', '/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/'],
+      matchUpdateTypes: ['major', 'minor', 'pin', 'digest', 'lockFileMaintenance', 'rollback', 'bump'],
       enabled: false,
     },
     /** Disable upgrading the supported Python version */
     {
-      matchFileNames: ["pyproject.toml"],
+      matchFileNames: ['pyproject.toml'],
       enabled: false,
-      matchDepNames: ["python"],
+      matchDepNames: ['python'],
     },
     /** Group the Python update of the acceptance image */
     {
-      matchFileNames: ["acceptance_tests/*"],
+      matchFileNames: ['acceptance_tests/*'],
       automerge: true,
-      groupName: "acceptance tests Python",
-      matchDepNames: ["python"],
+      groupName: 'acceptance tests Python',
+      matchDepNames: ['python'],
     },
     /** Packages published very recently are not pushed to stabilization branches for security reasons */
     {
-      matchBaseBranches: ["/^[0-9]+\\.[0-9]+$/", "/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/"],
-      minimumReleaseAge: "7 days",
+      matchBaseBranches: ['/^[0-9]+\\.[0-9]+$/', '/^[0-9]+\\.[0-9]+-gdal[0-9]+\\.[0-9]+$/'],
+      minimumReleaseAge: '7 days',
     },
     /** Ungroup Gdal major and minor versions */
     {
-      matchDepNames: ["ghcr.io/osgeo/gdal"],
-      matchUpdateTypes: ["major", "minor"],
-      groupName: "gdal",
+      matchDepNames: ['ghcr.io/osgeo/gdal'],
+      matchUpdateTypes: ['major', 'minor'],
+      groupName: 'gdal',
     },
   ],
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
 }
