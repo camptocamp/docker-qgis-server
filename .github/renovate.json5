@@ -14,18 +14,12 @@
     'github>camptocamp/gs-renovate-config-preset:security.json5#1.4.3',
   ],
   baseBranchPatterns: [
-    '3.16',
-    '3.22',
-    '3.28-gdal3.6',
+    'master',
     '3.28-gdal3.7',
     '3.28-gdal3.8',
-    '3.34-gdal3.7',
     '3.34-gdal3.8',
-    '3.36-gdal3.8',
-    '3.38-gdal3.8',
     '3.40-gdal3.10',
-    '3.42-gdal3.10',
-    'master',
+    '3.44-gdal3.10',
   ],
   packageRules: [
     /** Less strict version for Docker images */
