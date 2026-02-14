@@ -8,6 +8,6 @@ authors = []
 python = ">=3.13,<3.14"
 
 [tool.poetry.dev-dependencies]
-c2cwsgiutils = { extras = ["tests"], version = "6.1.7" }
+c2cwsgiutils = { extras = ["tests"], version = "6.1.9" }
 psycopg2 = "2.9.10"
 pytest = "8.4.1"
