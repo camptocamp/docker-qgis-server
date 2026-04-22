@@ -59,8 +59,8 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
   ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
-  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
-  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
+  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.4
+  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.4
   ubuntu_24_04/libcom-err2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.8
@@ -428,8 +428,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
   ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
-  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
-  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
+  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.4
+  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.4
   ubuntu_24_04/libcom-err2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.8
@@ -803,8 +803,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
   ubuntu_24_04/libc6: 2.39-0ubuntu8.7
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
-  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.2
-  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.2
+  ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.4
+  ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.4
   ubuntu_24_04/libcom-err2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libcrypt1: 1:4.4.36-4build1
   ubuntu_24_04/libctf-nobfd0: 2.42-4ubuntu2.8
