@@ -139,7 +139,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
-  ubuntu_24_04/liblcms2-2: 2.14-2build1
+  ubuntu_24_04/liblcms2-2: 2.14-2ubuntu0.1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
   ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
@@ -511,7 +511,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
-  ubuntu_24_04/liblcms2-2: 2.14-2build1
+  ubuntu_24_04/liblcms2-2: 2.14-2ubuntu0.1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
   ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
@@ -883,7 +883,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
   ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
-  ubuntu_24_04/liblcms2-2: 2.14-2build1
+  ubuntu_24_04/liblcms2-2: 2.14-2ubuntu0.1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.2
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
   ubuntu_24_04/libllvm20: 1:20.1.2-0ubuntu1~24.04.2
