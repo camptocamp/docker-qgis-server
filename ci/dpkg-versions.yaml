@@ -188,7 +188,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libodbcinst2: 2.3.9-5ubuntu0.1
   ubuntu_22_04/libogdi4.1: 4.1.0+ds-5
   ubuntu_22_04/libogg0: 1.3.5-0ubuntu3
-  ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.4
+  ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.5
   ubuntu_22_04/libopus0: 1.3.1-0.1build2
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
@@ -204,7 +204,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpdal-util13: 2.3.0+ds-2ubuntu4
   ubuntu_22_04/libperl5.34: 5.34.0-3ubuntu1.5
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
-  ubuntu_22_04/libpng16-16: 1.6.37-3ubuntu0.4
+  ubuntu_22_04/libpng16-16: 1.6.37-3ubuntu0.5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.12
   ubuntu_22_04/libpq5: 14.22-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
@@ -601,7 +601,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libodbcinst2: 2.3.9-5ubuntu0.1
   ubuntu_22_04/libogdi4.1: 4.1.0+ds-5
   ubuntu_22_04/libogg0: 1.3.5-0ubuntu3
-  ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.4
+  ubuntu_22_04/libopenjp2-7: 2.4.0-6ubuntu0.5
   ubuntu_22_04/libopus0: 1.3.1-0.1build2
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
@@ -617,7 +617,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpdal-util13: 2.3.0+ds-2ubuntu4
   ubuntu_22_04/libperl5.34: 5.34.0-3ubuntu1.5
   ubuntu_22_04/libpixman-1-0: 0.40.0-1ubuntu0.22.04.1
-  ubuntu_22_04/libpng16-16: 1.6.37-3ubuntu0.4
+  ubuntu_22_04/libpng16-16: 1.6.37-3ubuntu0.5
   ubuntu_22_04/libpoppler118: 22.02.0-2ubuntu0.12
   ubuntu_22_04/libpq5: 14.22-0ubuntu0.22.04.1
   ubuntu_22_04/libprocps8: 2:3.3.17-6ubuntu2.1
