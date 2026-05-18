@@ -63,8 +63,8 @@ WORKDIR /src/
 RUN /tmp/checkout_release ${QGIS_BRANCH}
 
 ENV \
-    CXX=/usr/lib/ccache/clang++ \
-    CC=/usr/lib/ccache/clang \
+    CXX=/usr/lib/ccache/g++ \
+    CC=/usr/lib/ccache/gcc \
     QT_SELECT=5
 
 WORKDIR /src/build
@@ -126,8 +126,8 @@ FROM builder AS builder-desktop
 # -DWITH_3D=ON generate error: undefined reference to `Qt3DExtras::Qt3DWindow::Qt3DWindow(QScreen*)'
 RUN cmake .. \
     -GNinja \
-    -DCMAKE_C_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
-    -DCMAKE_CXX_FLAGS="-O2 -DPROJ_RENAME_SYMBOLS" \
+    -DCMAKE_C_FLAGS="-O2" \
+    -DCMAKE_CXX_FLAGS="-O2" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local \
     -DWITH_DESKTOP=ON \
