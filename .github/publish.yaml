@@ -6,7 +6,6 @@ docker:
       tags:
         - '{version}'
         - '{version}-debug'
-        - '{version}-desktop'
   repository:
     github:
       host: ghcr.io
