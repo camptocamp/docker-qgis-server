@@ -69,9 +69,7 @@ ENV \
 
 WORKDIR /src/build
 
-RUN LIBPROJ_FILENAME=$(ls -1 /usr/local/lib/libinternalproj.so.*.*.*.*) \
-    && ln -s "${LIBPROJ_FILENAME}" "${LIBPROJ_FILENAME/libinternalproj/libproj}" \
-    && cmake .. \
+RUN cmake .. \
     -GNinja \
     -DCMAKE_C_FLAGS="-O2" \
     -DCMAKE_CXX_FLAGS="-O2" \
