@@ -82,7 +82,8 @@ RUN cmake .. \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DWITH_3D=OFF \
-    -DWITH_PDAL=OFF
+    -DWITH_PDAL=OFF \
+    -DWITH_INTERNAL_SPATIALINDEX=ON
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
@@ -109,7 +110,8 @@ RUN cmake .. \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
-    -DWITH_3D=OFF
+    -DWITH_3D=OFF \
+    -DWITH_INTERNAL_SPATIALINDEX=ON
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ccache --show-stats \
@@ -137,7 +139,8 @@ RUN cmake .. \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DQT5_3DEXTRA_INCLUDE_DIR=/src/external/qt3dextra-headers \
     -DQT5_3DEXTRA_LIBRARY=/usr/lib/x86_64-linux-gnu/libQt53DExtras.so \
-    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras
+    -DQt53DExtras_DIR=/src/external/qt3dextra-headers/cmake/Qt53DExtras \
+    -DWITH_INTERNAL_SPATIALINDEX=ON
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
     ninja \
