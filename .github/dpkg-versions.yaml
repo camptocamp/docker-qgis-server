@@ -97,7 +97,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
   ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04.1
-  ubuntu_24_04/libgcrypt20: 1.10.3-2build1
+  ubuntu_24_04/libgcrypt20: 1.10.3-2ubuntu0.1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
   ubuntu_24_04/libgdbm6t64: 1.23-5.1build1
   ubuntu_24_04/libgeos-c1t64: 3.12.1-3build1
@@ -468,7 +468,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
   ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04.1
-  ubuntu_24_04/libgcrypt20: 1.10.3-2build1
+  ubuntu_24_04/libgcrypt20: 1.10.3-2ubuntu0.1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
   ubuntu_24_04/libgdbm6t64: 1.23-5.1build1
   ubuntu_24_04/libgeos-c1t64: 3.12.1-3build1
@@ -841,7 +841,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libfribidi0: 1.0.13-3build1
   ubuntu_24_04/libgbm1: 25.0.7-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04.1
-  ubuntu_24_04/libgcrypt20: 1.10.3-2build1
+  ubuntu_24_04/libgcrypt20: 1.10.3-2ubuntu0.1
   ubuntu_24_04/libgdbm-compat4t64: 1.23-5.1build1
   ubuntu_24_04/libgdbm6t64: 1.23-5.1build1
   ubuntu_24_04/libgeos-c1t64: 3.12.1-3build1
