@@ -34,7 +34,7 @@ jobs:
       - run: sudo rm -rf /usr/local/lib/android
       - run: df -h
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: camptocamp/initialise-gopass-summon-action@v2
         with:
@@ -43,12 +43,12 @@ jobs:
           patterns: docker
         if: env.HAS_SECRETS == 'HAS_SECRETS'
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
       - run: python3 -m pip install --requirement=ci/requirements.txt
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
@@ -56,7 +56,7 @@ jobs:
       - run: pre-commit run --all-files --color=always
       - run: git diff --exit-code --patch > /tmp/pre-commit.patch; git diff --color; git reset --hard || true
         if: failure()
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Apply pre-commit fix.patch
           path: /tmp/pre-commit.patch
@@ -66,7 +66,7 @@ jobs:
         run: c2cciutils-env
 
       - name: Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/docker/cache
           key: docker-cache-${{ github.base_ref }}-${{ github.head_ref }}-${{ github.run_id }}
@@ -78,7 +78,7 @@ jobs:
             docker-cache
         if: github.event_name == 'pull_request'
       - name: Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/docker/cache
           key: docker-cache-${{ github.ref_name }}-${{ github.ref_name }}-${{ github.run_id }}
@@ -123,7 +123,7 @@ jobs:
         if: env.HAS_SECRETS == 'HAS_SECRETS'
       - run: git diff --exit-code --patch > /tmp/dpkg-versions.patch; git diff --color; git reset --hard || true
         if: failure()
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Update dpkg versions list.patch
           path: /tmp/dpkg-versions.patch
