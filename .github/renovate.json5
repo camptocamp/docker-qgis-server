@@ -47,13 +47,14 @@
     },
     /** Disable upgrading the supported Python version */
     {
-      matchFileNames: ['pyproject.toml'],
+      matchFileNames: ['/^(?:pyproject\\.toml|\\.python-version|\\.github/workflows/.*\\.yaml)$/'],
       enabled: false,
       matchDepNames: ['python'],
     },
     /** Group the Python update of the acceptance image */
     {
-      matchFileNames: ['acceptance_tests/*'],
+      matchFileNames: ['/^acceptance_tests/(?:Dockerfile|pyproject\\.toml|poetry\\.lock)$/'],
+      enabled: true,
       automerge: true,
       groupName: 'acceptance tests Python',
       matchDepNames: ['python'],
