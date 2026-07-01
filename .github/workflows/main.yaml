@@ -34,7 +34,7 @@ jobs:
       - run: sudo rm -rf /usr/local/lib/android
       - run: df -h
 
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - uses: camptocamp/initialise-gopass-summon-action@17703c87720ba3766abc90da60b437783b530d93 # v2.0.1
         with:
@@ -48,7 +48,7 @@ jobs:
           python-version: '3.14'
       - run: python3 -m pip install --requirement=ci/requirements.txt
 
-      - uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      - uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
@@ -66,7 +66,7 @@ jobs:
         run: c2cciutils-env
 
       - name: Cache
-        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
         with:
           path: /tmp/docker/cache
           key: docker-cache-${{ github.base_ref }}-${{ github.head_ref }}-${{ github.run_id }}
@@ -78,7 +78,7 @@ jobs:
             docker-cache
         if: github.event_name == 'pull_request'
       - name: Cache
-        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        uses: actions/cache@2c8a9bd7457de244a408f35966fab2fb45fda9c8 # v6.0.0
         with:
           path: /tmp/docker/cache
           key: docker-cache-${{ github.ref_name }}-${{ github.ref_name }}-${{ github.run_id }}
