@@ -146,7 +146,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libgsl28: 2.8+dfsg-6
   ubuntu_26_04/libgslcblas0: 2.8+dfsg-6
   ubuntu_26_04/libgsm1: 1.0.23-2
-  ubuntu_26_04/libgssapi-krb5-2: 1.22.1-2ubuntu4
+  ubuntu_26_04/libgssapi-krb5-2: 1.22.1-2ubuntu4.1
   ubuntu_26_04/libgudev-1.0-0: 1:238-7build1
   ubuntu_26_04/libharfbuzz-subset0: 12.3.2-2
   ubuntu_26_04/libharfbuzz0b: 12.3.2-2
@@ -166,10 +166,10 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libjpeg-turbo8: 2.1.5-4ubuntu4
   ubuntu_26_04/libjpeg8: 8c-2ubuntu12
   ubuntu_26_04/libjxl0.11: 0.11.1-6ubuntu4.2
-  ubuntu_26_04/libk5crypto3: 1.22.1-2ubuntu4
+  ubuntu_26_04/libk5crypto3: 1.22.1-2ubuntu4.1
   ubuntu_26_04/libkeyutils1: 1.6.3-6ubuntu3
-  ubuntu_26_04/libkrb5-3: 1.22.1-2ubuntu4
-  ubuntu_26_04/libkrb5support0: 1.22.1-2ubuntu4
+  ubuntu_26_04/libkrb5-3: 1.22.1-2ubuntu4.1
+  ubuntu_26_04/libkrb5support0: 1.22.1-2ubuntu4.1
   ubuntu_26_04/liblapack3: 3.12.1-7ubuntu1
   ubuntu_26_04/liblcms2-2: 2.17-1ubuntu0.2
   ubuntu_26_04/libldap-common: 2.6.10+dfsg-1ubuntu5
@@ -467,7 +467,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/spawn-fcgi: 1.6.6-1build1
   ubuntu_26_04/sse3-support: 27ubuntu2
   ubuntu_26_04/sysvinit-utils: 3.15-5ubuntu1
-  ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.3
+  ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.4
   ubuntu_26_04/tzdata: 2026b-0ubuntu0.26.04.1
   ubuntu_26_04/ubuntu-keyring: 2023.11.28.1build1
   ubuntu_26_04/unzip: 6.0-29ubuntu1
@@ -637,7 +637,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libgsl28: 2.8+dfsg-6
   ubuntu_26_04/libgslcblas0: 2.8+dfsg-6
   ubuntu_26_04/libgsm1: 1.0.23-2
-  ubuntu_26_04/libgssapi-krb5-2: 1.22.1-2ubuntu4
+  ubuntu_26_04/libgssapi-krb5-2: 1.22.1-2ubuntu4.1
   ubuntu_26_04/libgudev-1.0-0: 1:238-7build1
   ubuntu_26_04/libharfbuzz-subset0: 12.3.2-2
   ubuntu_26_04/libharfbuzz0b: 12.3.2-2
@@ -659,10 +659,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libjpeg8: 8c-2ubuntu12
   ubuntu_26_04/libjson-c5: 0.18+ds-3
   ubuntu_26_04/libjxl0.11: 0.11.1-6ubuntu4.2
-  ubuntu_26_04/libk5crypto3: 1.22.1-2ubuntu4
+  ubuntu_26_04/libk5crypto3: 1.22.1-2ubuntu4.1
   ubuntu_26_04/libkeyutils1: 1.6.3-6ubuntu3
-  ubuntu_26_04/libkrb5-3: 1.22.1-2ubuntu4
-  ubuntu_26_04/libkrb5support0: 1.22.1-2ubuntu4
+  ubuntu_26_04/libkrb5-3: 1.22.1-2ubuntu4.1
+  ubuntu_26_04/libkrb5support0: 1.22.1-2ubuntu4.1
   ubuntu_26_04/liblapack3: 3.12.1-7ubuntu1
   ubuntu_26_04/liblcms2-2: 2.17-1ubuntu0.2
   ubuntu_26_04/libldap-common: 2.6.10+dfsg-1ubuntu5
@@ -965,7 +965,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/spawn-fcgi: 1.6.6-1build1
   ubuntu_26_04/sse3-support: 27ubuntu2
   ubuntu_26_04/sysvinit-utils: 3.15-5ubuntu1
-  ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.3
+  ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.4
   ubuntu_26_04/tzdata: 2026b-0ubuntu0.26.04.1
   ubuntu_26_04/ubuntu-keyring: 2023.11.28.1build1
   ubuntu_26_04/ucf: 3.0052ubuntu1
@@ -1104,7 +1104,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgraphite2-3: 1.3.14-2ubuntu0.24.04.1
   ubuntu_24_04/libgsl27: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgslcblas0: 2.7.1+dfsg-6ubuntu2
-  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.7
   ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.4
   ubuntu_24_04/libgstreamer1.0-0: 1.24.2-1ubuntu0.1
   ubuntu_24_04/libgudev-1.0-0: 1:238-5ubuntu1
@@ -1120,10 +1120,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libjbig0: 2.1-6.1ubuntu2
   ubuntu_24_04/libjpeg-turbo8: 2.1.5-2ubuntu2
   ubuntu_24_04/libjpeg8: 8c-2ubuntu11
-  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libk5crypto3: 1.20.1-6ubuntu2.7
   ubuntu_24_04/libkeyutils1: 1.6.3-3build1
-  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.6
-  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.6
+  ubuntu_24_04/libkrb5-3: 1.20.1-6ubuntu2.7
+  ubuntu_24_04/libkrb5support0: 1.20.1-6ubuntu2.7
   ubuntu_24_04/liblapack3: 3.12.0-3build1.1
   ubuntu_24_04/libldap2: 2.6.7+dfsg-1~exp1ubuntu8.1
   ubuntu_24_04/liblerc4: 4.0.0+ds-4ubuntu2
@@ -1342,7 +1342,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/shared-mime-info: 2.4-4
   ubuntu_24_04/spawn-fcgi: 1.6.4-2
   ubuntu_24_04/sysvinit-utils: 3.08-6ubuntu3
-  ubuntu_24_04/tar: 1.35+dfsg-3ubuntu0.3
+  ubuntu_24_04/tar: 1.35+dfsg-3ubuntu0.4
   ubuntu_24_04/tzdata: 2026b-0ubuntu0.24.04.1
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
