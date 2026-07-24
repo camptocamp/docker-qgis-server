@@ -145,8 +145,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libicu70: 70.1-2
   ubuntu_22_04/libidn2-0: 2.3.2-2build1
   ubuntu_22_04/libimagequant0: 2.17.0-1
-  ubuntu_22_04/libinput-bin: 1.20.0-1ubuntu0.3
-  ubuntu_22_04/libinput10: 1.20.0-1ubuntu0.3
+  ubuntu_22_04/libinput-bin: 1.20.0-1ubuntu0.4
+  ubuntu_22_04/libinput10: 1.20.0-1ubuntu0.4
   ubuntu_22_04/libjansson4: 2.13.1-1.1build3
   ubuntu_22_04/libjbig0: 2.1-3.1ubuntu0.22.04.1
   ubuntu_22_04/libjpeg-turbo8: 2.1.2-0ubuntu1
@@ -192,10 +192,10 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libopus0: 1.3.1-0.1build2
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
-  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.6
+  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.7
   ubuntu_22_04/libpciaccess0: 0.16-3
   ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
   ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
@@ -337,7 +337,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libxml2: 2.9.13+dfsg-1ubuntu0.12
   ubuntu_22_04/libxmu6: 2:1.1.3-3
   ubuntu_22_04/libxmuu1: 2:1.1.3-3
-  ubuntu_22_04/libxpm4: 1:3.5.12-1ubuntu0.22.04.2
+  ubuntu_22_04/libxpm4: 1:3.5.12-1ubuntu0.22.04.3
   ubuntu_22_04/libxrender1: 1:0.9.10-1build4
   ubuntu_22_04/libxshmfence1: 1.3-1build4
   ubuntu_22_04/libxslt1.1: 1.1.34-4ubuntu0.22.04.5
@@ -558,8 +558,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libicu70: 70.1-2
   ubuntu_22_04/libidn2-0: 2.3.2-2build1
   ubuntu_22_04/libimagequant0: 2.17.0-1
-  ubuntu_22_04/libinput-bin: 1.20.0-1ubuntu0.3
-  ubuntu_22_04/libinput10: 1.20.0-1ubuntu0.3
+  ubuntu_22_04/libinput-bin: 1.20.0-1ubuntu0.4
+  ubuntu_22_04/libinput10: 1.20.0-1ubuntu0.4
   ubuntu_22_04/libjansson4: 2.13.1-1.1build3
   ubuntu_22_04/libjbig0: 2.1-3.1ubuntu0.22.04.1
   ubuntu_22_04/libjpeg-turbo8: 2.1.2-0ubuntu1
@@ -605,10 +605,10 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libopus0: 1.3.1-0.1build2
   ubuntu_22_04/liborc-0.4-0: 1:0.4.32-2ubuntu0.1
   ubuntu_22_04/libp11-kit0: 0.24.0-6build1
-  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.6
-  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.6
+  ubuntu_22_04/libpam-modules: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam-modules-bin: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.7
+  ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.7
   ubuntu_22_04/libpciaccess0: 0.16-3
   ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
   ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
@@ -757,7 +757,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libxml2: 2.9.13+dfsg-1ubuntu0.12
   ubuntu_22_04/libxmu6: 2:1.1.3-3
   ubuntu_22_04/libxmuu1: 2:1.1.3-3
-  ubuntu_22_04/libxpm4: 1:3.5.12-1ubuntu0.22.04.2
+  ubuntu_22_04/libxpm4: 1:3.5.12-1ubuntu0.22.04.3
   ubuntu_22_04/libxrender1: 1:0.9.10-1build4
   ubuntu_22_04/libxshmfence1: 1.3-1build4
   ubuntu_22_04/libxslt1.1: 1.1.34-4ubuntu0.22.04.5
