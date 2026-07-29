@@ -69,9 +69,9 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libbrotli1: 1.2.0-3build1
   ubuntu_26_04/libbsd0: 0.12.2-2build2
   ubuntu_26_04/libbz2-1.0: 1.0.8-6build2
-  ubuntu_26_04/libc-bin: 2.43-2ubuntu2
-  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2
-  ubuntu_26_04/libc6: 2.43-2ubuntu2
+  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc6: 2.43-2ubuntu2.3
   ubuntu_26_04/libcairo-gobject2: 1.18.4-3
   ubuntu_26_04/libcairo2: 1.18.4-3
   ubuntu_26_04/libcap-ng0: 0.8.5-4build5
@@ -557,9 +557,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libbrotli1: 1.2.0-3build1
   ubuntu_26_04/libbsd0: 0.12.2-2build2
   ubuntu_26_04/libbz2-1.0: 1.0.8-6build2
-  ubuntu_26_04/libc-bin: 2.43-2ubuntu2
-  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2
-  ubuntu_26_04/libc6: 2.43-2ubuntu2
+  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc6: 2.43-2ubuntu2.3
   ubuntu_26_04/libcairo-gobject2: 1.18.4-3
   ubuntu_26_04/libcairo2: 1.18.4-3
   ubuntu_26_04/libcap-ng0: 0.8.5-4build5
@@ -1042,8 +1042,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libbrotli1: 1.1.0-2build2
   ubuntu_24_04/libbsd0: 0.12.1-1build1
   ubuntu_24_04/libbz2-1.0: 1.0.8-5.1build0.1
-  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.7
-  ubuntu_24_04/libc6: 2.39-0ubuntu8.7
+  ubuntu_24_04/libc-bin: 2.39-0ubuntu8.8
+  ubuntu_24_04/libc6: 2.39-0ubuntu8.8
   ubuntu_24_04/libcap-ng0: 0.8.4-2build2
   ubuntu_24_04/libcap2: 1:2.66-5ubuntu2.4
   ubuntu_24_04/libcap2-bin: 1:2.66-5ubuntu2.4
