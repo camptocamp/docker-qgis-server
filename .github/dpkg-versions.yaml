@@ -468,7 +468,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/sse3-support: 27ubuntu2
   ubuntu_26_04/sysvinit-utils: 3.15-5ubuntu1
   ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.4
-  ubuntu_26_04/tzdata: 2026b-0ubuntu0.26.04.1
+  ubuntu_26_04/tzdata: 2026c-0ubuntu0.26.04.1
   ubuntu_26_04/ubuntu-keyring: 2023.11.28.1build1
   ubuntu_26_04/unzip: 6.0-29ubuntu1
   ubuntu_26_04/util-linux: 2.41.3-3ubuntu2
@@ -966,7 +966,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/sse3-support: 27ubuntu2
   ubuntu_26_04/sysvinit-utils: 3.15-5ubuntu1
   ubuntu_26_04/tar: 1.35+dfsg-4ubuntu0.4
-  ubuntu_26_04/tzdata: 2026b-0ubuntu0.26.04.1
+  ubuntu_26_04/tzdata: 2026c-0ubuntu0.26.04.1
   ubuntu_26_04/ubuntu-keyring: 2023.11.28.1build1
   ubuntu_26_04/ucf: 3.0052ubuntu1
   ubuntu_26_04/unzip: 6.0-29ubuntu1
@@ -1343,7 +1343,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/spawn-fcgi: 1.6.4-2
   ubuntu_24_04/sysvinit-utils: 3.08-6ubuntu3
   ubuntu_24_04/tar: 1.35+dfsg-3ubuntu0.4
-  ubuntu_24_04/tzdata: 2026b-0ubuntu0.24.04.1
+  ubuntu_24_04/tzdata: 2026c-0ubuntu0.24.04.1
   ubuntu_24_04/ubuntu-keyring: 2023.11.28.1
   ubuntu_24_04/unminimize: 0.2.1
   ubuntu_24_04/unzip: 6.0-28ubuntu4.1
