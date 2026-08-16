@@ -9,9 +9,10 @@ description = 'Not used'
 authors = []
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.12"
+python = ">=3.14,<3.15"
 
 [tool.poetry.dev-dependencies]
 c2cwsgiutils = { extras = ["tests"], version = "6.0.9" }
+lxml = ">=6.1.1"
 psycopg2 = "2.9.12"
 pytest = "9.0.3"
