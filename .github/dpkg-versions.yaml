@@ -323,7 +323,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libss2: 1.47.2-3ubuntu4
   ubuntu_26_04/libssh-4: 0.11.3-1ubuntu2
   ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.3
-  ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.3
+  ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.4
   ubuntu_26_04/libstdc++6: 16-20260322-1ubuntu1
   ubuntu_26_04/libsvtav1enc2: 2.3.0+dfsg-1build1
   ubuntu_26_04/libswresample6: 7:8.0.1-3ubuntu2
@@ -427,8 +427,8 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/ncurses-bin: 6.6+20251231-1
   ubuntu_26_04/netbase: 6.5build1
   ubuntu_26_04/ocl-icd-libopencl1: 2.3.4-1
-  ubuntu_26_04/openssl: 3.5.5-1ubuntu3.3
-  ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.3
+  ubuntu_26_04/openssl: 3.5.5-1ubuntu3.4
+  ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.4
   ubuntu_26_04/passwd: 1:4.17.4-2ubuntu3
   ubuntu_26_04/perl: 5.40.1-7ubuntu0.1
   ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.1
@@ -819,7 +819,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libss2: 1.47.2-3ubuntu4
   ubuntu_26_04/libssh-4: 0.11.3-1ubuntu2
   ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.3
-  ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.3
+  ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.4
   ubuntu_26_04/libstdc++6: 16-20260322-1ubuntu1
   ubuntu_26_04/libsvtav1enc2: 2.3.0+dfsg-1build1
   ubuntu_26_04/libswresample6: 7:8.0.1-3ubuntu2
@@ -925,8 +925,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/ncurses-bin: 6.6+20251231-1
   ubuntu_26_04/netbase: 6.5build1
   ubuntu_26_04/ocl-icd-libopencl1: 2.3.4-1
-  ubuntu_26_04/openssl: 3.5.5-1ubuntu3.3
-  ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.3
+  ubuntu_26_04/openssl: 3.5.5-1ubuntu3.4
+  ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.4
   ubuntu_26_04/passwd: 1:4.17.4-2ubuntu3
   ubuntu_26_04/perl: 5.40.1-7ubuntu0.1
   ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.1
@@ -1147,15 +1147,15 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libopenjp2-7: 2.5.0-2ubuntu0.5
   ubuntu_24_04/libopus0: 1.4-1build1
   ubuntu_24_04/liborc-0.4-0t64: 1:0.4.38-1ubuntu0.1
-  ubuntu_24_04/libp11-kit0: 0.25.3-4ubuntu2.1
-  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.6
-  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.6
-  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.6
-  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.6
+  ubuntu_24_04/libp11-kit0: 0.25.3-4ubuntu2.2
+  ubuntu_24_04/libpam-modules: 1.5.3-5ubuntu5.7
+  ubuntu_24_04/libpam-modules-bin: 1.5.3-5ubuntu5.7
+  ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.7
+  ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.7
   ubuntu_24_04/libpciaccess0: 0.17-3build1
   ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2
-  ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.3
+  ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.4
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
   ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.6
   ubuntu_24_04/libpq5: 16.15-0ubuntu0.24.04.1
@@ -1234,7 +1234,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libsqlite3-0: 3.45.1-1ubuntu2.7
   ubuntu_24_04/libss2: 1.47.0-2.4~exp1ubuntu4.1
   ubuntu_24_04/libssh-4: 0.10.6-2ubuntu0.4
-  ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.12
+  ubuntu_24_04/libssl3t64: 3.0.13-0ubuntu3.15
   ubuntu_24_04/libstdc++6: 14.2.0-4ubuntu2~24.04.1
   ubuntu_24_04/libsystemd0: 255.4-1ubuntu8.17
   ubuntu_24_04/libtasn1-6: 4.19.0-3ubuntu0.24.04.2
@@ -1308,11 +1308,11 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/ncurses-bin: 6.4+20240113-1ubuntu2.1
   ubuntu_24_04/netbase: '6.4'
   ubuntu_24_04/ocl-icd-libopencl1: 2.3.2-1build1
-  ubuntu_24_04/openssl: 3.0.13-0ubuntu3.12
+  ubuntu_24_04/openssl: 3.0.13-0ubuntu3.15
   ubuntu_24_04/passwd: 1:4.13+dfsg1-4ubuntu3.2
-  ubuntu_24_04/perl: 5.38.2-3.2ubuntu0.3
-  ubuntu_24_04/perl-base: 5.38.2-3.2ubuntu0.3
-  ubuntu_24_04/perl-modules-5.38: 5.38.2-3.2ubuntu0.3
+  ubuntu_24_04/perl: 5.38.2-3.2ubuntu0.4
+  ubuntu_24_04/perl-base: 5.38.2-3.2ubuntu0.4
+  ubuntu_24_04/perl-modules-5.38: 5.38.2-3.2ubuntu0.4
   ubuntu_24_04/procps: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/proj-data: 9.4.0-1build2
   ubuntu_24_04/python-is-python3: 3.11.4-1
