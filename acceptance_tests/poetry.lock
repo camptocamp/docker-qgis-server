@@ -801,8 +801,8 @@ test = ["zope.testing"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = ">=3.11,<3.12"
-content-hash = "4fb6e8d4827cafb1c0729a0c1107ebb25b6eddc7dedfb851b9a1d473f35b01b3"
+python-versions = ">=3.14,<3.15"
+content-hash = "45e7b7a84ed00542ad4cc740689a3ac3f9b7fb014f36d57c546028dc287554da"
 
 [metadata.files]
 alembic = [
