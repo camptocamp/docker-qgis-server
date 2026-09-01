@@ -36,7 +36,7 @@ RUN mkdir -p /tmp/junitxml
 
 RUN --mount=type=cache,target=/root/.cache \
     --mount=type=bind,from=poetry,source=/tmp,target=/poetry \
-    python3 -m pip install --disable-pip-version-check --no-deps --requirement=/poetry/requirements-dev.txt
+    python3 -m pip install --disable-pip-version-check --no-deps setuptools --requirement=/poetry/requirements-dev.txt
 
 WORKDIR /acceptance_tests
 
