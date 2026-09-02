@@ -56,7 +56,6 @@
     /** Group the Python update of the acceptance image */
     {
       matchFileNames: ['/^acceptance_tests/(?:Dockerfile|pyproject\\.toml|poetry\\.lock)$/'],
-      enabled: true,
       automerge: true,
       groupName: 'acceptance tests Python',
       matchDepNames: ['python'],
