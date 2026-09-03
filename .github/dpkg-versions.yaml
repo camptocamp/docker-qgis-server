@@ -33,7 +33,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/glycin-loaders: 2.1.1+ds-0ubuntu1
   ubuntu_26_04/glycin-thumbnailers: 2.1.1+ds-0ubuntu1
   ubuntu_26_04/gnu-coreutils: 9.7-3ubuntu2.1
-  ubuntu_26_04/gpgv: 2.4.8-4ubuntu3
+  ubuntu_26_04/gpgv: 2.4.8-4ubuntu3.1
   ubuntu_26_04/grep: 3.12-1
   ubuntu_26_04/gzip: 1.14-1~exp2ubuntu1.1
   ubuntu_26_04/hostname: 3.25build1
@@ -44,9 +44,9 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libapache2-mod-fcgid: 1:2.3.9-4build1
   ubuntu_26_04/libapparmor1: 5.0.0~beta1-0ubuntu7
   ubuntu_26_04/libapr1t64: 1.7.6-3
-  ubuntu_26_04/libaprutil1-dbd-sqlite3: 1.6.3-3ubuntu3
-  ubuntu_26_04/libaprutil1-ldap: 1.6.3-3ubuntu3
-  ubuntu_26_04/libaprutil1t64: 1.6.3-3ubuntu3
+  ubuntu_26_04/libaprutil1-dbd-sqlite3: 1.6.3-3ubuntu3.1
+  ubuntu_26_04/libaprutil1-ldap: 1.6.3-3ubuntu3.1
+  ubuntu_26_04/libaprutil1t64: 1.6.3-3ubuntu3.1
   ubuntu_26_04/libapt-pkg7.0: 3.2.0
   ubuntu_26_04/libasound2-data: 1.2.15.3-1ubuntu1.1
   ubuntu_26_04/libasound2t64: 1.2.15.3-1ubuntu1.1
@@ -322,7 +322,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libsrt1.5-gnutls: 1.5.4-3
   ubuntu_26_04/libss2: 1.47.2-3ubuntu4
   ubuntu_26_04/libssh-4: 0.11.3-1ubuntu2.1
-  ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.3
+  ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.4
   ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.5
   ubuntu_26_04/libstdc++6: 16-20260322-1ubuntu1
   ubuntu_26_04/libsvtav1enc2: 2.3.0+dfsg-1build1
@@ -520,7 +520,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/glycin-loaders: 2.1.1+ds-0ubuntu1
   ubuntu_26_04/glycin-thumbnailers: 2.1.1+ds-0ubuntu1
   ubuntu_26_04/gnu-coreutils: 9.7-3ubuntu2.1
-  ubuntu_26_04/gpgv: 2.4.8-4ubuntu3
+  ubuntu_26_04/gpgv: 2.4.8-4ubuntu3.1
   ubuntu_26_04/grep: 3.12-1
   ubuntu_26_04/gzip: 1.14-1~exp2ubuntu1.1
   ubuntu_26_04/hostname: 3.25build1
@@ -531,9 +531,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libapache2-mod-fcgid: 1:2.3.9-4build1
   ubuntu_26_04/libapparmor1: 5.0.0~beta1-0ubuntu7
   ubuntu_26_04/libapr1t64: 1.7.6-3
-  ubuntu_26_04/libaprutil1-dbd-sqlite3: 1.6.3-3ubuntu3
-  ubuntu_26_04/libaprutil1-ldap: 1.6.3-3ubuntu3
-  ubuntu_26_04/libaprutil1t64: 1.6.3-3ubuntu3
+  ubuntu_26_04/libaprutil1-dbd-sqlite3: 1.6.3-3ubuntu3.1
+  ubuntu_26_04/libaprutil1-ldap: 1.6.3-3ubuntu3.1
+  ubuntu_26_04/libaprutil1t64: 1.6.3-3ubuntu3.1
   ubuntu_26_04/libapt-pkg7.0: 3.2.0
   ubuntu_26_04/libasound2-data: 1.2.15.3-1ubuntu1.1
   ubuntu_26_04/libasound2t64: 1.2.15.3-1ubuntu1.1
@@ -818,7 +818,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libsrt1.5-gnutls: 1.5.4-3
   ubuntu_26_04/libss2: 1.47.2-3ubuntu4
   ubuntu_26_04/libssh-4: 0.11.3-1ubuntu2.1
-  ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.3
+  ubuntu_26_04/libssh2-1t64: 1.11.1-1ubuntu0.26.04.4
   ubuntu_26_04/libssl3t64: 3.5.5-1ubuntu3.5
   ubuntu_26_04/libstdc++6: 16-20260322-1ubuntu1
   ubuntu_26_04/libsvtav1enc2: 2.3.0+dfsg-1build1
@@ -1013,7 +1013,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04.1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.6
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.2
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -1023,9 +1023,9 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_24_04/libapparmor1: 4.0.1really4.0.1-0ubuntu0.24.04.3
   ubuntu_24_04/libapr1t64: 1.7.2-3.1ubuntu0.1
-  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
+  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7.1
   ubuntu_24_04/libapt-pkg6.0t64: 2.7.14build2
   ubuntu_24_04/libassimp5: 5.3.1+ds-2build1
   ubuntu_24_04/libassuan0: 2.5.6-1build1
