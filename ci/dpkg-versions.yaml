@@ -39,9 +39,9 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_22_04/libapparmor1: 3.0.4-2ubuntu2.4
   ubuntu_22_04/libapr1: 1.7.0-8ubuntu0.22.04.2
-  ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.2
+  ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.3
+  ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.3
+  ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.3
   ubuntu_22_04/libapt-pkg6.0: 2.4.14
   ubuntu_22_04/libarmadillo10: 1:10.8.2+dfsg-1
   ubuntu_22_04/libarpack2: 3.8.0-1
@@ -451,9 +451,9 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_22_04/libapparmor1: 3.0.4-2ubuntu2.4
   ubuntu_22_04/libapr1: 1.7.0-8ubuntu0.22.04.2
-  ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.2
-  ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.2
+  ubuntu_22_04/libaprutil1: 1.6.1-5ubuntu4.22.04.3
+  ubuntu_22_04/libaprutil1-dbd-sqlite3: 1.6.1-5ubuntu4.22.04.3
+  ubuntu_22_04/libaprutil1-ldap: 1.6.1-5ubuntu4.22.04.3
   ubuntu_22_04/libapt-pkg6.0: 2.4.14
   ubuntu_22_04/libarmadillo10: 1:10.8.2+dfsg-1
   ubuntu_22_04/libarpack2: 3.8.0-1
