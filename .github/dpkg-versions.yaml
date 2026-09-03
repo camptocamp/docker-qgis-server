@@ -28,7 +28,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04.1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.6
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.2
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -38,9 +38,9 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_24_04/libapparmor1: 4.0.1really4.0.1-0ubuntu0.24.04.4
   ubuntu_24_04/libapr1t64: 1.7.2-3.1ubuntu0.1
-  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
+  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7.1
   ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassuan0: 2.5.6-1build1
   ubuntu_24_04/libasyncns0: 0.8-6build4
@@ -390,7 +390,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04.1
   ubuntu_24_04/gdb: 15.0.50.20240403-0ubuntu1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.6
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.2
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -400,9 +400,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_24_04/libapparmor1: 4.0.1really4.0.1-0ubuntu0.24.04.4
   ubuntu_24_04/libapr1t64: 1.7.2-3.1ubuntu0.1
-  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
+  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7.1
   ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassuan0: 2.5.6-1build1
   ubuntu_24_04/libasyncns0: 0.8-6build4
@@ -759,7 +759,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/fonts-dejavu-mono: 2.37-8
   ubuntu_24_04/gcc-14-base: 14.2.0-4ubuntu2~24.04.1
   ubuntu_24_04/glibc-tools: 0.0~git3.23fd2b9-0ubuntu1
-  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.4
+  ubuntu_24_04/gpgv: 2.4.4-2ubuntu17.6
   ubuntu_24_04/grep: 3.11-4build1
   ubuntu_24_04/gzip: 1.12-1ubuntu3.2
   ubuntu_24_04/hostname: 3.23+nmu2ubuntu2
@@ -769,9 +769,9 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libapache2-mod-fcgid: 1:2.3.9-4
   ubuntu_24_04/libapparmor1: 4.0.1really4.0.1-0ubuntu0.24.04.4
   ubuntu_24_04/libapr1t64: 1.7.2-3.1ubuntu0.1
-  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7
-  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7
+  ubuntu_24_04/libaprutil1-dbd-sqlite3: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1-ldap: 1.6.3-1.1ubuntu7.1
+  ubuntu_24_04/libaprutil1t64: 1.6.3-1.1ubuntu7.1
   ubuntu_24_04/libapt-pkg6.0t64: 2.8.3
   ubuntu_24_04/libassimp5: 5.3.1+ds-2build1
   ubuntu_24_04/libassuan0: 2.5.6-1build1
