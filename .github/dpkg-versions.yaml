@@ -290,7 +290,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libqt6widgets6: 6.10.2+dfsg-7
   ubuntu_26_04/libqt6xml6: 6.10.2+dfsg-7
   ubuntu_26_04/libqwt-qt5-6: 6.1.4-2build3
-  ubuntu_26_04/librabbitmq4: 0.15.0-1ubuntu0.26.04.1
+  ubuntu_26_04/librabbitmq4: 0.15.0-1ubuntu0.26.04.2
   ubuntu_26_04/librav1e0.8: 0.8.1-7
   ubuntu_26_04/libreadline8t64: 8.3-4
   ubuntu_26_04/librist4: 0.2.11+dfsg-1build1
@@ -784,7 +784,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libqt6widgets6: 6.10.2+dfsg-7
   ubuntu_26_04/libqt6xml6: 6.10.2+dfsg-7
   ubuntu_26_04/libqwt-qt5-6: 6.1.4-2build3
-  ubuntu_26_04/librabbitmq4: 0.15.0-1ubuntu0.26.04.1
+  ubuntu_26_04/librabbitmq4: 0.15.0-1ubuntu0.26.04.2
   ubuntu_26_04/librav1e0.8: 0.8.1-7
   ubuntu_26_04/libreadline8t64: 8.3-4
   ubuntu_26_04/librist4: 0.2.11+dfsg-1build1
