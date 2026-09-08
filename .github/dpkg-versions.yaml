@@ -16,7 +16,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/ca-certificates: 20260601~26.04.1
   ubuntu_26_04/coreutils: 9.5-1ubuntu2+0.0.0~ubuntu25
   ubuntu_26_04/coreutils-from-uutils: 0.0.0~ubuntu25
-  ubuntu_26_04/curl: 8.18.0-1ubuntu2.4
+  ubuntu_26_04/curl: 8.18.0-1ubuntu2.5
   ubuntu_26_04/dash: 0.5.12-12ubuntu3
   ubuntu_26_04/debconf: 1.5.92
   ubuntu_26_04/debianutils: 5.23.2build1
@@ -69,9 +69,9 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libbrotli1: 1.2.0-3build1
   ubuntu_26_04/libbsd0: 0.12.2-2build2
   ubuntu_26_04/libbz2-1.0: 1.0.8-6ubuntu0.1
-  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.3
-  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.3
-  ubuntu_26_04/libc6: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.4
+  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.4
+  ubuntu_26_04/libc6: 2.43-2ubuntu2.4
   ubuntu_26_04/libcairo-gobject2: 1.18.4-3
   ubuntu_26_04/libcairo2: 1.18.4-3
   ubuntu_26_04/libcap-ng0: 0.8.5-4build5
@@ -84,8 +84,8 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libctf-nobfd0: 2.46-3ubuntu2
   ubuntu_26_04/libctf0: 2.46-3ubuntu2
   ubuntu_26_04/libcups2t64: 2.4.16-1ubuntu1.3
-  ubuntu_26_04/libcurl3t64-gnutls: 8.18.0-1ubuntu2.4
-  ubuntu_26_04/libcurl4t64: 8.18.0-1ubuntu2.4
+  ubuntu_26_04/libcurl3t64-gnutls: 8.18.0-1ubuntu2.5
+  ubuntu_26_04/libcurl4t64: 8.18.0-1ubuntu2.5
   ubuntu_26_04/libdatrie1: 0.2.14-1
   ubuntu_26_04/libdav1d7: 1.5.3-1
   ubuntu_26_04/libdb5.3t64: 5.3.28+dfsg2-10ubuntu1
@@ -211,7 +211,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libpciaccess0: 0.18.1-1ubuntu4
   ubuntu_26_04/libpcre2-16-0: 10.46-1build1
   ubuntu_26_04/libpcre2-8-0: 10.46-1build1
-  ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.1
+  ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.2
   ubuntu_26_04/libpgm-5.3-0t64: 5.3.128~dfsg-2.1build2
   ubuntu_26_04/libpipewire-0.3-0t64: 1.6.2-1ubuntu1.1
   ubuntu_26_04/libpixman-1-0: 0.46.4-1
@@ -225,9 +225,9 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libpsl5t64: 0.21.2-1.1build2
   ubuntu_26_04/libpulse0: 1:17.0+dfsg1-2ubuntu4
   ubuntu_26_04/libpython3-stdlib: 3.14.3-0ubuntu2
-  ubuntu_26_04/libpython3.14: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/libpython3.14-minimal: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/libpython3.14-stdlib: 3.14.4-1ubuntu0.1
+  ubuntu_26_04/libpython3.14: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/libpython3.14-minimal: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/libpython3.14-stdlib: 3.14.4-1ubuntu0.2
   ubuntu_26_04/libqca-qt5-2: 2.3.10-2
   ubuntu_26_04/libqca-qt5-2-plugins: 2.3.10-2
   ubuntu_26_04/libqca-qt6-2: 2.3.10-2
@@ -430,9 +430,9 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/openssl: 3.5.5-1ubuntu3.5
   ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.5
   ubuntu_26_04/passwd: 1:4.17.4-2ubuntu3
-  ubuntu_26_04/perl: 5.40.1-7ubuntu0.1
-  ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.1
-  ubuntu_26_04/perl-modules-5.40: 5.40.1-7ubuntu0.1
+  ubuntu_26_04/perl: 5.40.1-7ubuntu0.2
+  ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.2
+  ubuntu_26_04/perl-modules-5.40: 5.40.1-7ubuntu0.2
   ubuntu_26_04/procps: 2:4.0.4-9ubuntu1
   ubuntu_26_04/proj-data: 9.7.1-1
   ubuntu_26_04/python-is-python3: 3.13.3-1+build1
@@ -457,8 +457,8 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/python3-pyqt6.qtsvg: 6.10.2-2build5
   ubuntu_26_04/python3-pyqt6.sip: 13.11.0-1build1
   ubuntu_26_04/python3-wheel: 0.46.3-2
-  ubuntu_26_04/python3.14: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/python3.14-minimal: 3.14.4-1ubuntu0.1
+  ubuntu_26_04/python3.14: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/python3.14-minimal: 3.14.4-1ubuntu0.2
   ubuntu_26_04/readline-common: 8.3-4
   ubuntu_26_04/rust-coreutils: 0.8.0-0ubuntu3
   ubuntu_26_04/sed: 4.9-2ubuntu1
@@ -502,7 +502,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/ca-certificates: 20260601~26.04.1
   ubuntu_26_04/coreutils: 9.5-1ubuntu2+0.0.0~ubuntu25
   ubuntu_26_04/coreutils-from-uutils: 0.0.0~ubuntu25
-  ubuntu_26_04/curl: 8.18.0-1ubuntu2.4
+  ubuntu_26_04/curl: 8.18.0-1ubuntu2.5
   ubuntu_26_04/dash: 0.5.12-12ubuntu3
   ubuntu_26_04/debconf: 1.5.92
   ubuntu_26_04/debianutils: 5.23.2build1
@@ -557,9 +557,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libbrotli1: 1.2.0-3build1
   ubuntu_26_04/libbsd0: 0.12.2-2build2
   ubuntu_26_04/libbz2-1.0: 1.0.8-6ubuntu0.1
-  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.3
-  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.3
-  ubuntu_26_04/libc6: 2.43-2ubuntu2.3
+  ubuntu_26_04/libc-bin: 2.43-2ubuntu2.4
+  ubuntu_26_04/libc-gconv-modules-extra: 2.43-2ubuntu2.4
+  ubuntu_26_04/libc6: 2.43-2ubuntu2.4
   ubuntu_26_04/libcairo-gobject2: 1.18.4-3
   ubuntu_26_04/libcairo2: 1.18.4-3
   ubuntu_26_04/libcap-ng0: 0.8.5-4build5
@@ -572,8 +572,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libctf-nobfd0: 2.46-3ubuntu2
   ubuntu_26_04/libctf0: 2.46-3ubuntu2
   ubuntu_26_04/libcups2t64: 2.4.16-1ubuntu1.3
-  ubuntu_26_04/libcurl3t64-gnutls: 8.18.0-1ubuntu2.4
-  ubuntu_26_04/libcurl4t64: 8.18.0-1ubuntu2.4
+  ubuntu_26_04/libcurl3t64-gnutls: 8.18.0-1ubuntu2.5
+  ubuntu_26_04/libcurl4t64: 8.18.0-1ubuntu2.5
   ubuntu_26_04/libdatrie1: 0.2.14-1
   ubuntu_26_04/libdav1d7: 1.5.3-1
   ubuntu_26_04/libdb5.3t64: 5.3.28+dfsg2-10ubuntu1
@@ -705,7 +705,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libpciaccess0: 0.18.1-1ubuntu4
   ubuntu_26_04/libpcre2-16-0: 10.46-1build1
   ubuntu_26_04/libpcre2-8-0: 10.46-1build1
-  ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.1
+  ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.2
   ubuntu_26_04/libpgm-5.3-0t64: 5.3.128~dfsg-2.1build2
   ubuntu_26_04/libpipewire-0.3-0t64: 1.6.2-1ubuntu1.1
   ubuntu_26_04/libpixman-1-0: 0.46.4-1
@@ -719,9 +719,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libpsl5t64: 0.21.2-1.1build2
   ubuntu_26_04/libpulse0: 1:17.0+dfsg1-2ubuntu4
   ubuntu_26_04/libpython3-stdlib: 3.14.3-0ubuntu2
-  ubuntu_26_04/libpython3.14: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/libpython3.14-minimal: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/libpython3.14-stdlib: 3.14.4-1ubuntu0.1
+  ubuntu_26_04/libpython3.14: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/libpython3.14-minimal: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/libpython3.14-stdlib: 3.14.4-1ubuntu0.2
   ubuntu_26_04/libqca-qt5-2: 2.3.10-2
   ubuntu_26_04/libqca-qt5-2-plugins: 2.3.10-2
   ubuntu_26_04/libqca-qt6-2: 2.3.10-2
@@ -928,9 +928,9 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/openssl: 3.5.5-1ubuntu3.5
   ubuntu_26_04/openssl-provider-legacy: 3.5.5-1ubuntu3.5
   ubuntu_26_04/passwd: 1:4.17.4-2ubuntu3
-  ubuntu_26_04/perl: 5.40.1-7ubuntu0.1
-  ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.1
-  ubuntu_26_04/perl-modules-5.40: 5.40.1-7ubuntu0.1
+  ubuntu_26_04/perl: 5.40.1-7ubuntu0.2
+  ubuntu_26_04/perl-base: 5.40.1-7ubuntu0.2
+  ubuntu_26_04/perl-modules-5.40: 5.40.1-7ubuntu0.2
   ubuntu_26_04/procps: 2:4.0.4-9ubuntu1
   ubuntu_26_04/proj-data: 9.7.1-1
   ubuntu_26_04/python-is-python3: 3.13.3-1+build1
@@ -955,8 +955,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/python3-pyqt6.qtsvg: 6.10.2-2build5
   ubuntu_26_04/python3-pyqt6.sip: 13.11.0-1build1
   ubuntu_26_04/python3-wheel: 0.46.3-2
-  ubuntu_26_04/python3.14: 3.14.4-1ubuntu0.1
-  ubuntu_26_04/python3.14-minimal: 3.14.4-1ubuntu0.1
+  ubuntu_26_04/python3.14: 3.14.4-1ubuntu0.2
+  ubuntu_26_04/python3.14-minimal: 3.14.4-1ubuntu0.2
   ubuntu_26_04/readline-common: 8.3-4
   ubuntu_26_04/rust-coreutils: 0.8.0-0ubuntu3
   ubuntu_26_04/sed: 4.9-2ubuntu1
