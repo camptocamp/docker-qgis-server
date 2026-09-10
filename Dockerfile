@@ -199,7 +199,7 @@ ENV APACHE_CONFDIR=/etc/apache2 \
     LIGHTTPD_FASTCGI_SOCKET= \
     LIGHTTPD_ACCESSLOG_FORMAT="%h %V %u %t \"%r\" %>s %b"
 
-RUN a2enmod fcgid headers status \
+RUN a2enmod fcgid headers setenvif status \
     && a2dismod -f auth_basic authn_file authn_core authz_user autoindex dir \
     && rm /etc/apache2/mods-enabled/alias.conf \
     && mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} \
