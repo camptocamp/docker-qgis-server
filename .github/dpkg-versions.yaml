@@ -159,8 +159,8 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libidn2-0: 2.3.8-4build1
   ubuntu_26_04/libinih1: 61-1ubuntu1
   ubuntu_26_04/libinireader0: 61-1ubuntu1
-  ubuntu_26_04/libinput-bin: 1.31.1-1
-  ubuntu_26_04/libinput10: 1.31.1-1
+  ubuntu_26_04/libinput-bin: 1.31.1-1ubuntu1.2
+  ubuntu_26_04/libinput10: 1.31.1-1ubuntu1.2
   ubuntu_26_04/libjansson4: 2.14-2build4
   ubuntu_26_04/libjbig0: 2.1-6.1ubuntu3
   ubuntu_26_04/libjpeg-turbo8: 2.1.5-4ubuntu4
@@ -650,8 +650,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libidn2-0: 2.3.8-4build1
   ubuntu_26_04/libinih1: 61-1ubuntu1
   ubuntu_26_04/libinireader0: 61-1ubuntu1
-  ubuntu_26_04/libinput-bin: 1.31.1-1
-  ubuntu_26_04/libinput10: 1.31.1-1
+  ubuntu_26_04/libinput-bin: 1.31.1-1ubuntu1.2
+  ubuntu_26_04/libinput10: 1.31.1-1ubuntu1.2
   ubuntu_26_04/libipt2: 2.1.2-3
   ubuntu_26_04/libjansson4: 2.14-2build4
   ubuntu_26_04/libjbig0: 2.1-6.1ubuntu3
@@ -1114,8 +1114,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libice6: 2:1.0.10-1build3
   ubuntu_24_04/libicu74: 74.2-1ubuntu3.1
   ubuntu_24_04/libidn2-0: 2.3.7-2build1
-  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu2
-  ubuntu_24_04/libinput10: 1.25.0-1ubuntu2
+  ubuntu_24_04/libinput-bin: 1.25.0-1ubuntu3.7
+  ubuntu_24_04/libinput10: 1.25.0-1ubuntu3.7
   ubuntu_24_04/libjansson4: 2.14-2build2
   ubuntu_24_04/libjbig0: 2.1-6.1ubuntu2
   ubuntu_24_04/libjpeg-turbo8: 2.1.5-2ubuntu2
