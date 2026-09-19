@@ -12,7 +12,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/binutils-common: 2.46-3ubuntu2
   ubuntu_26_04/binutils-x86-64-linux-gnu: 2.46-3ubuntu2
   ubuntu_26_04/bsdutils: 1:2.41.3-3ubuntu2.2
-  ubuntu_26_04/bubblewrap: 0.11.1-1ubuntu0.2
+  ubuntu_26_04/bubblewrap: 0.11.1-1ubuntu0.3
   ubuntu_26_04/ca-certificates: 20260601~26.04.1
   ubuntu_26_04/coreutils: 9.5-1ubuntu2+0.0.0~ubuntu25
   ubuntu_26_04/coreutils-from-uutils: 0.0.0~ubuntu25
@@ -498,7 +498,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/binutils-common: 2.46-3ubuntu2
   ubuntu_26_04/binutils-x86-64-linux-gnu: 2.46-3ubuntu2
   ubuntu_26_04/bsdutils: 1:2.41.3-3ubuntu2.2
-  ubuntu_26_04/bubblewrap: 0.11.1-1ubuntu0.2
+  ubuntu_26_04/bubblewrap: 0.11.1-1ubuntu0.3
   ubuntu_26_04/ca-certificates: 20260601~26.04.1
   ubuntu_26_04/coreutils: 9.5-1ubuntu2+0.0.0~ubuntu25
   ubuntu_26_04/coreutils-from-uutils: 0.0.0~ubuntu25
