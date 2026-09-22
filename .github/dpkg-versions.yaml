@@ -131,7 +131,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libgfortran5: 16-20260322-1ubuntu1
   ubuntu_26_04/libgl1: 1.7.0-3
   ubuntu_26_04/libgl1-mesa-dri: 26.0.3-1ubuntu1
-  ubuntu_26_04/libglib2.0-0t64: 2.88.0-1
+  ubuntu_26_04/libglib2.0-0t64: 2.88.0-1ubuntu0.1
   ubuntu_26_04/libglvnd0: 1.7.0-3
   ubuntu_26_04/libglx-mesa0: 26.0.3-1ubuntu1
   ubuntu_26_04/libglx0: 1.7.0-3
@@ -622,7 +622,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libgfortran5: 16-20260322-1ubuntu1
   ubuntu_26_04/libgl1: 1.7.0-3
   ubuntu_26_04/libgl1-mesa-dri: 26.0.3-1ubuntu1
-  ubuntu_26_04/libglib2.0-0t64: 2.88.0-1
+  ubuntu_26_04/libglib2.0-0t64: 2.88.0-1ubuntu0.1
   ubuntu_26_04/libglvnd0: 1.7.0-3
   ubuntu_26_04/libglx-mesa0: 26.0.3-1ubuntu1
   ubuntu_26_04/libglx0: 1.7.0-3
@@ -1092,7 +1092,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgl1: 1.7.0-1build1
   ubuntu_24_04/libgl1-mesa-dri: 25.2.8-0ubuntu0.24.04.2
   ubuntu_24_04/libglapi-mesa: 24.0.9-0ubuntu0.3
-  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.8
+  ubuntu_24_04/libglib2.0-0t64: 2.80.0-6ubuntu3.9
   ubuntu_24_04/libglvnd0: 1.7.0-1build1
   ubuntu_24_04/libglx-mesa0: 25.2.8-0ubuntu0.24.04.2
   ubuntu_24_04/libglx0: 1.7.0-1build1
@@ -1105,7 +1105,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libgsl27: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgslcblas0: 2.7.1+dfsg-6ubuntu2
   ubuntu_24_04/libgssapi-krb5-2: 1.20.1-6ubuntu2.7
-  ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.4
+  ubuntu_24_04/libgstreamer-plugins-base1.0-0: 1.24.2-1ubuntu0.5
   ubuntu_24_04/libgstreamer1.0-0: 1.24.2-1ubuntu0.1
   ubuntu_24_04/libgudev-1.0-0: 1:238-5ubuntu1
   ubuntu_24_04/libharfbuzz0b: 8.3.0-2build2
