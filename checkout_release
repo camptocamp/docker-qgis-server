@@ -9,16 +9,8 @@ fi
 
 BRANCH=$1
 
-if [ "${BRANCH}" == master ]; then
-    git checkout "${BRANCH}"
-    git pull --rebase
-else
-    TAG_PREFIX=${BRANCH//release-/final-}
-
-    git fetch --tags
-    LAST_RELEASE=$(git log --format=%H "--tags=${TAG_PREFIX}*" --no-walk | head -1)
-    git checkout --detach "${LAST_RELEASE}"
-fi
+git checkout "${BRANCH}"
+git pull --rebase
 
 echo
 echo "Will build: -----------------------------------------"
