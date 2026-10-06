@@ -116,7 +116,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libflac14: 1.5.0+ds-5
   ubuntu_26_04/libfontconfig1: 2.17.1-3ubuntu1
   ubuntu_26_04/libfontenc1: 1:1.1.8-1build2
-  ubuntu_26_04/libfreetype6: 2.14.2+dfsg-1ubuntu0.1
+  ubuntu_26_04/libfreetype6: 2.14.2+dfsg-1ubuntu0.2
   ubuntu_26_04/libfreexl1: 2.0.0-1build3
   ubuntu_26_04/libfribidi0: 1.0.16-5
   ubuntu_26_04/libgbm1: 26.0.3-1ubuntu1
@@ -607,7 +607,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libflac14: 1.5.0+ds-5
   ubuntu_26_04/libfontconfig1: 2.17.1-3ubuntu1
   ubuntu_26_04/libfontenc1: 1:1.1.8-1build2
-  ubuntu_26_04/libfreetype6: 2.14.2+dfsg-1ubuntu0.1
+  ubuntu_26_04/libfreetype6: 2.14.2+dfsg-1ubuntu0.2
   ubuntu_26_04/libfreexl1: 2.0.0-1build3
   ubuntu_26_04/libfribidi0: 1.0.16-5
   ubuntu_26_04/libgbm1: 26.0.3-1ubuntu1
@@ -1079,7 +1079,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libflac12t64: 1.4.3+ds-2.1ubuntu2
   ubuntu_24_04/libfontconfig1: 2.15.0-1.1ubuntu2
   ubuntu_24_04/libfontenc1: 1:1.1.8-1build1
-  ubuntu_24_04/libfreetype6: 2.13.2+dfsg-1ubuntu0.1
+  ubuntu_24_04/libfreetype6: 2.13.2+dfsg-1ubuntu0.2
   ubuntu_24_04/libfreexl1: 2.0.0-1build2
   ubuntu_24_04/libgbm1: 25.2.8-0ubuntu0.24.04.2
   ubuntu_24_04/libgcc-s1: 14.2.0-4ubuntu2~24.04.1
