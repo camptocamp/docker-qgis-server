@@ -87,7 +87,7 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libffi8: 3.4.2-4
   ubuntu_22_04/libfontconfig1: 2.13.1-4.2ubuntu5
   ubuntu_22_04/libfontenc1: 1:1.1.4-1build3
-  ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.3
+  ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.4
   ubuntu_22_04/libfreexl1: 1.0.6-1
   ubuntu_22_04/libfribidi0: 1.0.8-2ubuntu3.1
   ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.4
@@ -444,7 +444,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libffi8: 3.4.2-4
   ubuntu_22_04/libfontconfig1: 2.13.1-4.2ubuntu5
   ubuntu_22_04/libfontenc1: 1:1.1.4-1build3
-  ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.3
+  ubuntu_22_04/libfreetype6: 2.11.1+dfsg-1ubuntu0.4
   ubuntu_22_04/libfreexl1: 1.0.6-1
   ubuntu_22_04/libfribidi0: 1.0.8-2ubuntu3.1
   ubuntu_22_04/libgbm1: 23.2.1-1ubuntu3.1~22.04.4
