@@ -1,4 +1,5 @@
-c2cciutils[checks,publish]==1.6.23
+c2cciutils[checks]==1.6.23
+tag-publish==1.2.6
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
 certifi>=2022.12.7 # not directly required, pinned by Snyk to avoid a vulnerability
 cryptography>=41.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
