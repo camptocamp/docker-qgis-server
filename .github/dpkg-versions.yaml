@@ -294,7 +294,7 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/librav1e0.8: 0.8.1-7
   ubuntu_26_04/libreadline8t64: 8.3-4
   ubuntu_26_04/librist4: 0.2.11+dfsg-1build1
-  ubuntu_26_04/librsvg2-2: 2.61.3+dfsg-3
+  ubuntu_26_04/librsvg2-2: 2.61.3+dfsg-3ubuntu0.1
   ubuntu_26_04/librtmp1: 2.4+20151223.gitfa8646d.1-3
   ubuntu_26_04/librttopo1: 1.1.0-4build1
   ubuntu_26_04/libsasl2-2: 2.1.28+dfsg1-9ubuntu3
@@ -788,7 +788,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/librav1e0.8: 0.8.1-7
   ubuntu_26_04/libreadline8t64: 8.3-4
   ubuntu_26_04/librist4: 0.2.11+dfsg-1build1
-  ubuntu_26_04/librsvg2-2: 2.61.3+dfsg-3
+  ubuntu_26_04/librsvg2-2: 2.61.3+dfsg-3ubuntu0.1
   ubuntu_26_04/librtmp1: 2.4+20151223.gitfa8646d.1-3
   ubuntu_26_04/librttopo1: 1.1.0-4build1
   ubuntu_26_04/libsasl2-2: 2.1.28+dfsg1-9ubuntu3
