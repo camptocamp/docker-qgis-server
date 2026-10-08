@@ -1,9 +1,9 @@
 camptocamp/qgis-server:latest:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.15
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.16
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
@@ -171,7 +171,7 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.6
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.6
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.7
   ubuntu_24_04/libpq5: 16.15-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
@@ -367,10 +367,10 @@ camptocamp/qgis-server:latest:
   ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.5
 camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.15
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.16
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
@@ -544,7 +544,7 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.6
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.6
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.7
   ubuntu_24_04/libpq5: 16.15-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
@@ -743,10 +743,10 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_24_04/xvfb: 2:21.1.12-1ubuntu1.5
 camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/adduser: 3.137ubuntu1
-  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.15
-  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.15
+  ubuntu_24_04/apache2: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-bin: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-data: 2.4.58-1ubuntu8.16
+  ubuntu_24_04/apache2-utils: 2.4.58-1ubuntu8.16
   ubuntu_24_04/apt: 2.8.3
   ubuntu_24_04/base-passwd: 3.6.3build1
   ubuntu_24_04/bash: 5.2.21-2ubuntu4
@@ -915,7 +915,7 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.1
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.6
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
-  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.6
+  ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.7
   ubuntu_24_04/libpq5: 16.15-0ubuntu0.24.04.1
   ubuntu_24_04/libproc2-0: 2:4.0.4-4ubuntu3.2
   ubuntu_24_04/libproj25: 9.4.0-1build2
