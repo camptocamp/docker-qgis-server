@@ -6,5 +6,6 @@ line-length = 110
 convention = "numpy"
 
 [project]
+name = "docker-qgis-server"
 classifiers = []
 dynamic = ["dependencies", "version"]
