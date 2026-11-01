@@ -98,7 +98,7 @@ jobs:
       # The images are given to the publishing job, which is the only one with the write permissions.
       # Compressed, the two images do not fit uncompressed in the disk left on the runner.
       - run: df -h
-      - run: docker save camptocamp/qgis-server:latest | gzip --fast > /tmp/images.docker.gz
+      - run: docker save camptocamp/qgis-server:latest camptocamp/qgis-server:latest-desktop | gzip --fast > /tmp/images.docker.gz
       - run: df -h
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
