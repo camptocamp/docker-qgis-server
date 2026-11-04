@@ -209,8 +209,8 @@ camptocamp/qgis-server:latest:
   ubuntu_26_04/libpangocairo-1.0-0: 1.57.0-1
   ubuntu_26_04/libpangoft2-1.0-0: 1.57.0-1
   ubuntu_26_04/libpciaccess0: 0.18.1-1ubuntu4
-  ubuntu_26_04/libpcre2-16-0: 10.46-1build1
-  ubuntu_26_04/libpcre2-8-0: 10.46-1build1
+  ubuntu_26_04/libpcre2-16-0: 10.46-1ubuntu0.1
+  ubuntu_26_04/libpcre2-8-0: 10.46-1ubuntu0.1
   ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.3
   ubuntu_26_04/libpgm-5.3-0t64: 5.3.128~dfsg-2.1build2
   ubuntu_26_04/libpipewire-0.3-0t64: 1.6.2-1ubuntu1.1
@@ -703,8 +703,8 @@ camptocamp/qgis-server:latest-debug:
   ubuntu_26_04/libpangocairo-1.0-0: 1.57.0-1
   ubuntu_26_04/libpangoft2-1.0-0: 1.57.0-1
   ubuntu_26_04/libpciaccess0: 0.18.1-1ubuntu4
-  ubuntu_26_04/libpcre2-16-0: 10.46-1build1
-  ubuntu_26_04/libpcre2-8-0: 10.46-1build1
+  ubuntu_26_04/libpcre2-16-0: 10.46-1ubuntu0.1
+  ubuntu_26_04/libpcre2-8-0: 10.46-1ubuntu0.1
   ubuntu_26_04/libperl5.40: 5.40.1-7ubuntu0.3
   ubuntu_26_04/libpgm-5.3-0t64: 5.3.128~dfsg-2.1build2
   ubuntu_26_04/libpipewire-0.3-0t64: 1.6.2-1ubuntu1.1
@@ -1153,8 +1153,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_24_04/libpam-runtime: 1.5.3-5ubuntu5.7
   ubuntu_24_04/libpam0g: 1.5.3-5ubuntu5.7
   ubuntu_24_04/libpciaccess0: 0.17-3build1
-  ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2
-  ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2
+  ubuntu_24_04/libpcre2-16-0: 10.42-4ubuntu2.2
+  ubuntu_24_04/libpcre2-8-0: 10.42-4ubuntu2.2
   ubuntu_24_04/libperl5.38t64: 5.38.2-3.2ubuntu0.6
   ubuntu_24_04/libpixman-1-0: 0.42.2-1build1
   ubuntu_24_04/libpng16-16t64: 1.6.43-5ubuntu0.7
