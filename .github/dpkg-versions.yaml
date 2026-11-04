@@ -197,8 +197,8 @@ camptocamp/qgis-server:latest:
   ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.8
   ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.8
   ubuntu_22_04/libpciaccess0: 0.16-3
-  ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
-  ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
+  ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.2
+  ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.2
   ubuntu_22_04/libpcre3: 2:8.39-13ubuntu0.22.04.1
   ubuntu_22_04/libpdal-base13: 2.3.0+ds-2ubuntu4
   ubuntu_22_04/libpdal-util13: 2.3.0+ds-2ubuntu4
@@ -610,8 +610,8 @@ camptocamp/qgis-server:latest-desktop:
   ubuntu_22_04/libpam-runtime: 1.4.0-11ubuntu2.8
   ubuntu_22_04/libpam0g: 1.4.0-11ubuntu2.8
   ubuntu_22_04/libpciaccess0: 0.16-3
-  ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.1
-  ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.1
+  ubuntu_22_04/libpcre2-16-0: 10.39-3ubuntu0.2
+  ubuntu_22_04/libpcre2-8-0: 10.39-3ubuntu0.2
   ubuntu_22_04/libpcre3: 2:8.39-13ubuntu0.22.04.1
   ubuntu_22_04/libpdal-base13: 2.3.0+ds-2ubuntu4
   ubuntu_22_04/libpdal-util13: 2.3.0+ds-2ubuntu4
