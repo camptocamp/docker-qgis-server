@@ -84,6 +84,13 @@ repos:
     hooks:
       - id: jsonschema-validator
         files: ^ci/config\.yaml$
+  - repo: https://github.com/sbrunner/hooks
+    rev: 1.9.0
+    hooks:
+      - id: uv-lock
+        additional_dependencies:
+          - uv==0.13.4 # pypi
+        files: ^\.github/publish/pyproject\.toml$
 ci:
   autoupdate_schedule: quarterly
   skip:
