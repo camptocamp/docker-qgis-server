@@ -95,7 +95,6 @@ jobs:
 
       - run: make build-server
       - run: make build-server-debug
-      - run: make build-desktop
       - run: make build-cache
 
       - name: Extract cache
