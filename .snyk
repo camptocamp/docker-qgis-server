@@ -58,4 +58,16 @@ ignore:
     - '*':
         reason: Not compatible with used Python version, filelock >= 4.2.1 requires Python >= 3.11 while the image uses Python 3.10
         created: 2026-10-28T18:12:36.000Z
+  SNYK-PYTHON-FILELOCK-21802489:
+    - '*':
+        reason: Not compatible with used Python version, filelock >= 4.2.1 requires Python >= 3.11 while the image uses Python 3.10
+        created: 2026-11-10T21:45:22.000Z
+  SNYK-PYTHON-FILELOCK-21802490:
+    - '*':
+        reason: Not compatible with used Python version, filelock >= 4.2.1 requires Python >= 3.11 while the image uses Python 3.10
+        created: 2026-11-10T21:45:22.000Z
+  SNYK-PYTHON-FILELOCK-21802520:
+    - '*':
+        reason: Not compatible with used Python version, filelock >= 4.2.1 requires Python >= 3.11 while the image uses Python 3.10
+        created: 2026-11-10T21:45:22.000Z
 patch: {}
