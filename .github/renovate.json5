@@ -23,6 +23,7 @@
     '3.44-gdal3.10',
     '4.0-gdal3.13',
     '4.2-gdal3.13',
+    '4.4-gdal3.13',
   ],
   packageRules: [
     /** Less strict version for Docker images */
