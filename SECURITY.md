@@ -27,7 +27,9 @@
 | 4.0           | Best effort     |                 |                               |
 | 4.0-gdal3.13  | Best effort     | 4.0             | Version based on Ubuntu 26.04 |
 | 4.2           | Best effort     |                 |                               |
-| 4.2-gdal3.13  | Best effort     | 4.2, lr, latest | Version based on Ubuntu 26.04 |
+| 4.2-gdal3.13  | Best effort     | 4.2             | Version based on Ubuntu 26.04 |
+| 4.4           | Best effort     |                 |                               |
+| 4.4-gdal3.13  | Best effort     | 4.4, lr, latest | Version based on Ubuntu 26.04 |
 
 The initial support is aligned to the [upstream support](https://www.qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule).
 
