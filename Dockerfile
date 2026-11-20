@@ -82,6 +82,7 @@ RUN cmake .. \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DWITH_3D=OFF \
+    -DWITH_WAYLAND=OFF \
     -DWITH_PDAL=OFF \
     -DWITH_INTERNAL_SPATIALINDEX=ON
 
@@ -111,6 +112,7 @@ RUN cmake .. \
     -DENABLE_TESTS=OFF \
     -DCMAKE_PREFIX_PATH=/src/external/qt3dextra-headers/cmake \
     -DWITH_3D=OFF \
+    -DWITH_WAYLAND=OFF \
     -DWITH_INTERNAL_SPATIALINDEX=ON
 
 RUN --mount=type=cache,target=/root/.ccache,id=ccache \
@@ -133,6 +135,7 @@ RUN cmake .. \
     -DWITH_DESKTOP=ON \
     -DWITH_SERVER=OFF \
     -DWITH_3D=OFF \
+    -DWITH_WAYLAND=OFF \
     -DBUILD_TESTING=OFF \
     -DENABLE_TESTS=OFF \
     -DWITH_GEOREFERENCER=ON \
