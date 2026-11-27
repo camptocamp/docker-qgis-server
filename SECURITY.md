@@ -19,11 +19,11 @@
 | 3.38          | Unsupported     |                 |                               |
 | 3.38-gdal3.8  | Unsupported     | 3.38            | Version based on Ubuntu 22.04 |
 | 3.40          | Best effort     |                 |                               |
-| 3.40-gdal3.10 | Best effort     | 3.40, ltr       | Version based on Ubuntu 24.04 |
+| 3.40-gdal3.10 | Best effort     | 3.40            | Version based on Ubuntu 24.04 |
 | 3.42          | Unsupported     |                 |                               |
 | 3.42-gdal3.10 | Unsupported     | 3.42            | Version based on Ubuntu 24.04 |
 | 3.44          | Best effort     |                 |                               |
-| 3.44-gdal3.10 | Best effort     | 3.44            | Version based on Ubuntu 24.04 |
+| 3.44-gdal3.10 | Best effort     | 3.44, ltr       | Version based on Ubuntu 24.04 |
 | 4.0           | Best effort     |                 |                               |
 | 4.0-gdal3.13  | Best effort     | 4.0             | Version based on Ubuntu 26.04 |
 | 4.2           | Best effort     |                 |                               |
